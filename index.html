@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preload" href="/css/page.css" as="style"><link rel="preconnect" href="https://unpkg.com/popper.js@1" as="script"><link rel="preconnect" href="https://unpkg.com/tippy.js@4" as="script"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="description" content="PyCon India 2025 in Bangalore"><meta name="author" content="Dates coming soon"><meta name="robots" content="index,follow"><meta property="og:site_name" content="PyCon India 2025 in Bangalore"><meta property="og:title" content="PyCon India 2025 in Bangalore"><meta property="og:description" content="PyCon India 2025 in Bangalore"><meta property="og:url" content="/"><meta name="theme-color" content="#ffffff"><title>PyCon India 2025 in Bangalore | Dates coming soon</title><link rel="stylesheet" href="/css/page.css"></head><body id="top" class="font-sans text-gray-800 bg-gray-100"><header class="header w-full min-h-screen flex flex-col justify-between"><nav class="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-white sm:bg-transparent shadow sm:shadow-none"><div class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center"></div><div class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center"><a href="/" class="no-underline"><img src="/img/group_4790.svg" alt="PyCon India Logo" max-width="100%"></a><button id="menuBtn" class="hamburger block sm:hidden focus:outline-none" type="button" onclick="navToggle();" aria-label="Show Menu"><span class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span></button></div><div id="menu" class="w-full sm:w-auto self-end sm:self-center hidden sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0"><a class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline py-2" href="/coc">Code Of Conduct</a></div><div class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center"></div></nav><div class="self-center items-center"><div class="w-full text-center"><img src="/img/pycon_2025.svg"><br><br><h1 class="tracking-wide text-orange-500 text-6xl mb-6">PyCon India 2025</h1><h2 class="tracking-wide text-4xl mb-6">Is back to Bengaluru</h2></div></div><div class="flex justify-center items-center space-x-4"><a href="/submit-cfp" class="inline-block"><button class="bg-blue-500 text-white py-2 px-4 rounded transition-transform transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit CFP</button> </a><a href="/volunteer" class="inline-block"><button class="bg-green-500 text-white py-2 px-4 rounded transition-transform transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-green-500">Volunteer</button> </a><a href="/sponsor" class="inline-block"><button class="bg-yellow-500 text-white py-2 px-4 rounded transition-transform transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-yellow-500">Sponsor</button></a></div><div class="flex flex-col justify-center"></div><div class="flex flex-col justify-center"></div><div class="flex flex-col justify-center"></div></header><main></main><footer class="w-full flex flex-col sm:flex-row sm:justify-center text-lg tracking-wide px-4 sm:px-0 py-16"><div class="text-center pr-0 sm:pr-8 py-4"><ul class="list-none"><a class="text-gray-800 hover:text-purple-600 no-underline" href="https://x.com/pyconindia" target="_blank" rel="_noopener">Twitter</a> <a class="text-gray-800 hover:text-purple-600 no-underline" href="https://www.linkedin.com/company/pyconindia" target="_blank" rel="_noopener">LinkedIn</a> <a class="text-gray-800 hover:text-purple-600 no-underline" href="https://www.facebook.com/PyConIndia/" target="_blank" rel="_noopener">Facebook</a></ul></div></footer><script src="https://unpkg.com/popper.js@1"></script><script src="https://unpkg.com/tippy.js@4"></script><script>function navToggle() {
+    let btn = document.getElementById('menuBtn');
+    let nav = document.getElementById('menu');
+
+    btn.classList.toggle('open');
+    nav.classList.toggle('flex');
+    nav.classList.toggle('hidden');
+  }
+
+  window.addEventListener('scroll', function () {
+    let btt = document.getElementById('btt');
+
+    if (window.scrollY >= 1080) {
+      btt.classList.remove('hidden');
+      btt.classList.add('block');
+    } else {
+      btt.classList.add('hidden');
+      btt.classList.remove('block');
+    }
+  });
+
+  console.log('Code/Design: ttntm.me'); // credit where credit is due
+
+  const template = document.getElementById('followTip');
+  const container = document.createElement('div');
+
+  container.appendChild(document.importNode(template.content, true));
+
+  tippy('#follow', {
+    content: container.innerHTML,
+    animation: 'scale',
+    duration: 250,
+    arrow: true,
+    placement: 'bottom',
+    interactive: true,
+  });</script></body></html>
