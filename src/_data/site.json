@@ -6,15 +6,28 @@
   "social": [
     {
       "title": "Twitter",
-      "url": "https://x.com/pyconindia"
+      "url": "https://x.com/pyconindia",
+      "icon": "fa-x-twitter"
     },
     {
       "title": "LinkedIn",
-      "url": "https://www.linkedin.com/company/pyconindia"
+      "url": "https://www.linkedin.com/company/pyconindia",
+      "icon": "fa-linkedin-in"
     },
     {
       "title": "Facebook",
-      "url": "https://www.facebook.com/PyConIndia/"
+      "url": "https://www.facebook.com/PyConIndia/",
+      "icon": "fa-facebook-f"
+    },
+    {
+      "title": "Instagram",
+      "url": "https://www.instagram.com/inpycon/",
+      "icon": "fa-instagram"
+    },
+    {
+      "title": "Mastodon",
+      "url": "https://fosstodon.org/@pyconindia",
+      "icon": "fa-mastodon"
     }
   ]
 }
