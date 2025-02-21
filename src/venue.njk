@@ -1,0 +1,131 @@
+---
+title: Venue - PyCon India 2025
+description: PyCon India 2025 Venue at Nimhans Convention Center
+layout: base.njk
+---
+
+<header class="header w-full flex flex-col justify-between">
+  {% include "navbar.njk" %}
+</header>
+
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-6xl font-extrabold text-black-900 mb-16 tracking-tight">
+            Nimhans Convention Center
+        </h1>
+
+        <div class="flex flex-col md:flex-row gap-8 mb-12">
+            <div class="w-full md:w-1/2 space-y-6">
+                <div class="bg-gradient-to-br from-purple-100 to-white p-6 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-black-800 mb-4">Overview</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Located centrally in Bengaluru, the Nimhans Convention Center spans two floors. 
+                        The ground floor hosts main conference tracks across 3 halls, featuring a booth area, 
+                        community space, and beverage stalls. The first floor offers open spaces for poster 
+                        sessions, Birds of a Feather meetings, and networking opportunities.
+                    </p>
+                </div>
+                
+                <div class="bg-white shadow-md rounded-xl p-6">
+                    <h3 class="text-2xl font-semibold text-black-900 mb-4">
+                        <i class="fas fa-map-marker-alt mr-3 text-black-600"></i>Details
+                    </h3>
+                    <div class="text-gray-700">
+                        <p><strong>Address:</strong> Nimhans Convention Center</p>
+                        <p>Hosur Road, Lakkasandra,</p>
+                        <p>Bengaluru - 560029</p>
+                        <p class="mt-2"><strong>Landmark:</strong> Near Dairy Circle</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-1/2">
+                <div class="rounded-xl overflow-hidden shadow-xl mb-6 h-[400px]">
+                    <img 
+                        src="{{ env.baseUrl }}img/nimhans-convention-center.jpeg" 
+                        alt="Nimhans Convention Center" 
+                        class="w-full h-full object-fit"
+                    >
+                </div>
+                
+                <div class="bg-gray-100 rounded-xl p-6 flex flex-col justify-between h-1/4">
+                    <h3 class="text-2xl font-semibold text-black-900 mb-4 flex items-center">
+                        <i class="fas fa-map-marked-alt mr-3 text-black-600"></i>Getting Here
+                    </h3>
+                    <div class="flex-grow flex items-end">
+                        <a href="https://www.google.com/maps/dir//WHVW%2B7RC+NIMHANS+Convention+Centre" 
+                           target="_blank" 
+                           class="inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300 no-underline">
+                            Find Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full overflow-hidden mb-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7776.895056958537!2d77.597019!3d12.94319!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b78a61be57%3A0xc4498066da178922!2sNIMHANS%20Convention%20Centre!5e0!3m2!1sen!2sin!4v1740129911793!5m2!1sen!2sin" width="100%" class="rounded-lg" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="space-y-8">
+            <div class="bg-white shadow-lg rounded-xl p-8">
+                <h3 class="text-3xl font-bold text-black-900 mb-6">
+                    Transportation Options
+                </h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-purple-50 p-6 rounded-xl group flex flex-col">
+                        <div>
+                            <h4 class="text-2xl font-semibold text-purple-800 mb-4 group-hover:text-purple-700 transition duration-300">
+                                <i class="fas fa-subway mr-3 text-purple-600 group-hover:text-purple-500 transition duration-300"></i>Namma Metro
+                            </h4>
+                            <ul class="space-y-2 text-gray-700 flex-grow">
+                                <li>
+                                    <strong>From Green Line:</strong> Disembark at South End Circle or Lalbagh metro station. From the station, you can take a short taxi/auto ride to reach NIMHANS Convention Centre.
+                                </li>
+                                <li>
+                                    <strong>Approximate Distance:</strong> 2-3 km from metro stations
+                                </li>
+                                <li>
+                                    <strong>Estimated Travel Time:</strong> 10-15 minutes by auto/taxi
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 flex space-x-4">
+                            <a href="https://english.bmrc.co.in/schematic-route-map/" 
+                               target="_blank" 
+                               class="flex-1 text-center inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 no-underline">
+                                View Green Line Stations
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-xl group flex flex-col h-full">
+                        <div>
+                            <h4 class="text-2xl font-semibold text-blue-800 mb-4 group-hover:text-blue-700 transition duration-300">
+                                <i class="fas fa-bus mr-3 text-blue-600 group-hover:text-blue-500 transition duration-300"></i>Bus
+                            </h4>
+                            <ul class="space-y-2 text-gray-700 flex-grow">
+                                <li>
+                                    <strong>KIA-5D:</strong> Get off at Jayanagar bus stand
+                                </li>
+                                <li>
+                                    <strong>KIA-7:</strong> To Kormangala Water Tank (8 mins away from NIMHANS)
+                                </li>
+                                <li>
+                                    <strong>Frequency:</strong> Buses every 10-15 minutes
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="https://kia.bengawalk.com/" 
+                               target="_blank" 
+                               class="w-full text-center inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 no-underline">
+                                Check Bus Timetable
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
