@@ -4,10 +4,10 @@
     {% include "head.njk" %}
   </head>
   <body id="top" class="font-sans text-gray-800 min-h-screen flex flex-col">
-    {% if not isFront %}
-      {% set activePage = title | lower %}
+    <header>
+      {% set activePage = title | lower if not isFront else 'home' %}
       {% include "navbar.njk" %}
-    {% endif %}
+    </header>
     
     {{ content | safe }}
     
