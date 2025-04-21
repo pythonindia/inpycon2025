@@ -1,0 +1,254 @@
+{% macro navbar() %}
+<nav class="w-full flex justify-center bg-black z-50 -mb-[1px]">
+  <!-- Desktop Navbar - With reduced height -->
+  <div class="w-full max-w-4xl mx-auto px-4 hidden md:block">
+    <div class="relative outline outline-1 outline-offset-[-1px] outline-gray-700/70 rounded-md flex justify-center items-center h-8 px-6 shadow-lg shadow-black/20 bg-black my-1">
+      <ul class="flex items-center gap-6 relative">
+        {% set menuItems = [
+          {
+            "name": "About",
+            "link": "/about",
+            "hasSubmenu": true,
+            "submenu": [
+              {"name": "Our Team", "link": "/about/team"},
+              {"name": "FAQ", "link": "/about/faq"}
+            ]
+          },
+          {
+            "name": "Schedule",
+            "link": "/schedule",
+            "hasSubmenu": false
+          },
+          {
+            "name": "Venue",
+            "link": "/venue",
+            "hasSubmenu": false
+          },
+          {
+            "name": "Program",
+            "link": "/program",
+            "hasSubmenu": false
+          },
+          {
+            "name": "Sponsors",
+            "link": "/sponsors",
+            "hasSubmenu": false
+          },
+          {
+            "name": "CoC",
+            "link": "/coc",
+            "hasSubmenu": true,
+            "submenu": [
+              {"name": "Code of Conduct Policy", "link": "/coc/coc-guidelines"},
+              {"name": "Code of Conduct Reporting", "link": "/coc/coc-reporting"}
+            ]
+          },
+          {
+            "name": "Blog",
+            "link": "/blog",
+            "hasSubmenu": false
+          }
+        ] %}
+        
+        {% for item in menuItems %}
+          <li class="relative group">
+            <a href="{{ item.link }}"
+                class="flex items-center gap-1 py-1 text-white hover:text-lime-200 text-sm font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200">
+              {{ item.name }}
+              {% if item.hasSubmenu %}
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" class="fill-current text-gray-400 group-hover:text-lime-200 transition-transform duration-200 group-hover:rotate-180">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+              {% endif %}
+            </a>
+            
+            {% if item.hasSubmenu %}
+            <div class="absolute left-0 top-full mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 transform origin-top scale-95 group-hover:scale-100">
+              <div class="inline-flex justify-start items-start gap-3 overflow-hidden rounded">   
+                <div class="flex-1 inline-flex flex-col justify-start items-start w-full">     
+                  {% for subitem in item.submenu %}
+                  <div class="self-stretch p-4 bg-[#f0eeff] hover:bg-[#d7ff7b] border border-black inline-flex justify-start items-center gap-4 transition-colors duration-150">       
+                    <div class="flex-1 inline-flex flex-col justify-start items-start gap-1">         
+                      <a href="{{ subitem.link }}" class="text-gray-600 hover:text-[#4662ff] text-sm font-medium font-['Inter'] leading-tight">
+                        {{ subitem.name }}
+                      </a>       
+                    </div>       
+                    <div class="size-5 relative overflow-hidden">         
+                      <div class="bg-gray-400 group-hover:bg-[#4e62f5] w-[5.49px] h-[9.31px] left-[7.50px] top-[5.35px] absolute transition-colors duration-150"></div>       
+                    </div>     
+                  </div>
+                  {% endfor %}
+                </div> 
+              </div>
+            </div>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Mobile Navbar Toggle - Keeping black background as requested -->
+  <div class="flex justify-between items-center px-4 py-2 w-full md:hidden bg-black border-0">
+    <div class="text-white text-sm font-bold font-['Acid_Grotesk']"></div>
+    <button id="mobile-menu-toggle" >
+    <img src="/img/assets/mobile_nav_burger.svg" class="w-6 h-6">
+    </button>
+  </div>
+
+  <!-- Mobile Menu (Full Screen) - Purple gradient background as requested -->
+  <div id="mobile-menu" class="fixed inset-0 bg-gradient-to-br from-[#4E62F5] to-[#333fff] z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-y-auto">
+    <div class="flex flex-col h-full">
+      <div class="flex justify-end items-center p-4 border-b border-white/20">
+        <button id="mobile-menu-close" class="bg-white/10 rounded-full p-2 transition-all duration-300 hover:bg-white/20">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="px-4 py-4 overflow-y-auto">
+        <div class="inline-flex flex-col justify-start items-start w-full space-y-3">
+          {% for item in menuItems %}
+            {% if not item.hasSubmenu %}
+              <!-- Regular menu item -->
+              <div class="w-full p-3 bg-white/90 backdrop-blur-sm border border-[#4E62F5]/30 rounded-lg shadow-lg shadow-black/10 inline-flex justify-between items-center hover:bg-[#d7ff7b] transition-all duration-200">
+                <div class="h-6 inline-flex flex-col justify-between items-start">
+                  <a href="{{ item.link }}" class="justify-start text-[#4E62F5] text-sm font-medium font-['Inter'] leading-tight">
+                    {{ item.name }}
+                  </a>
+                </div>
+                <div class="size-5 relative overflow-hidden">
+                  <div class="w-[5.49px] h-[9.31px] left-[7.50px] top-[5.35px] absolute bg-[#4E62F5]"></div>
+                </div>
+              </div>
+            {% else %}
+              <!-- Menu item with submenu -->
+              <div class="w-full">
+                <div class="w-full p-3 bg-white/90 backdrop-blur-sm border border-[#4E62F5]/30 rounded-lg shadow-lg shadow-black/10 inline-flex justify-between items-center cursor-pointer mobile-submenu-toggle hover:bg-[#d7ff7b] transition-all duration-200" data-target="submenu-{{ loop.index }}">
+                  <div class="h-6 inline-flex flex-col justify-between items-start">
+                    <div class="justify-start text-[#4E62F5] text-sm font-medium font-['Inter'] leading-tight">
+                      {{ item.name }}
+                    </div>
+                  </div>
+                  <div class="size-5 relative overflow-hidden mobile-arrow transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#4E62F5]">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                
+                <!-- Mobile Submenu (Initially Hidden) -->
+                <div id="submenu-{{ loop.index }}" class="w-full hidden mobile-submenu mt-1 overflow-hidden rounded-lg transition-all duration-300">
+                  <div class="w-full bg-[#d7ff7b]/90 backdrop-blur-sm border border-[#4E62F5]/30 rounded-lg p-3 flex flex-col justify-center items-start gap-3">
+                    {% for subitem in item.submenu %}
+                      <div class="self-stretch flex flex-col justify-between items-start w-full">
+                        <a href="{{ subitem.link }}" class="w-full justify-start text-gray-800 text-xs py-2 font-medium font-['Inter'] leading-tight hover:text-[#D7FF7B] transition-colors duration-200">
+                          {{ subitem.name }}
+                        </a>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      
+      <!-- Footer area in mobile menu -->
+      <div class="mt-auto p-4 border-t border-white/20 bg-white/5">
+        <div class="text-white/80 text-xs text-center">
+          © 2025 Pycon India. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for Mobile Menu Toggle -->
+  <script>
+    // Ensure this script runs after DOM is fully loaded
+    (function() {
+      function initMobileMenu() {
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+        
+        if (!mobileMenuToggle || !mobileMenuClose || !mobileMenu) {
+          console.error("Mobile menu elements not found");
+          return;
+        }
+        
+        // Open mobile menu
+        mobileMenuToggle.addEventListener('click', function() {
+          console.log("Mobile menu toggle clicked");
+          mobileMenu.classList.remove('translate-x-full');
+          body.classList.add('overflow-hidden'); // Prevent body scrolling
+        });
+        
+        // Close mobile menu
+        mobileMenuClose.addEventListener('click', function() {
+          mobileMenu.classList.add('translate-x-full');
+          body.classList.remove('overflow-hidden'); // Re-enable body scrolling
+        });
+        
+        // Submenu toggles
+        const submenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
+        
+        submenuToggles.forEach(toggle => {
+          toggle.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const targetSubmenu = document.getElementById(targetId);
+            const arrow = this.querySelector('.mobile-arrow');
+            
+            // Toggle submenu visibility with smooth animation
+            if (targetSubmenu.classList.contains('hidden')) {
+              // Close any open submenus first
+              document.querySelectorAll('.mobile-submenu:not(.hidden)').forEach(openSubmenu => {
+                if (openSubmenu.id !== targetId) {
+                  openSubmenu.classList.add('hidden');
+                  
+                  // Find and reset the corresponding toggle button
+                  const openToggleId = openSubmenu.id;
+                  const openToggle = document.querySelector(`[data-target="${openToggleId}"]`);
+                  const openArrow = openToggle.querySelector('.mobile-arrow');
+                  
+                  openToggle.classList.remove('bg-[#d7ff7b]');
+                  openToggle.classList.add('bg-white/90');
+                  openArrow.classList.remove('rotate-90');
+                }
+              });
+              
+              // Open this submenu
+              targetSubmenu.classList.remove('hidden');
+              this.classList.remove('bg-white/90');
+              this.classList.add('bg-[#d7ff7b]');
+              
+              // Rotate arrow
+              arrow.classList.add('rotate-90');
+            } else {
+              // Close this submenu
+              targetSubmenu.classList.add('hidden');
+              this.classList.remove('bg-[#d7ff7b]');
+              this.classList.add('bg-white/90');
+              
+              // Reset arrow
+              arrow.classList.remove('rotate-90');
+            }
+          });
+        });
+      }
+
+      // Check if document is already loaded
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileMenu);
+      } else {
+        // DOM already loaded, initialize immediately
+        initMobileMenu();
+      }
+    })();
+  </script>
+</nav>
+{% endmacro %}

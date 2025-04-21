@@ -3,6 +3,11 @@ layout: base.njk
 isFront: true
 ---
 
+<header>
+  {% set activePage = 'home' %}
+  {% include "navbar.njk" %}
+</header>
+
 <main class="flex-grow">
   {% include "landing/hero-banner.njk" %}
   {% include "landing/hero.njk" %}

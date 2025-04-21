@@ -1,29 +1,36 @@
-<footer class="bg-blue-600 text-white pt-20 px-20 mt-40 -mb-60">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
-
-    <div class="space-y-6 bottom-20">
-      <a href="/volunteer" class="inline-flex items-center gap-2 bg-[#D7FF7B] text-black px-6 py-2 rounded-full font-semibold shadow-md transition">
-        Become a volunteer
-      </a>
-
+{% from "components/button.njk" import button %}
+<footer class="bg-blue-600 text-white pt-10 px-6 md:pt-20 md:px-20 mt-20 md:mt-40 mb-0">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+    <!-- Mobile Logo (adjusted positioning) -->
+    <div class="block md:hidden w-full mb-6">
+      <div class="flex justify-center">
+        <img src="/img/logo.png" alt="PYCON 2025" class="w-full max-w-md -mt-24" />
+      </div>
+    </div>
+    
+    <div class="space-y-4 md:space-y-6 order-2 md:order-1 text-center md:text-left">
+      {{ button(text="Become a Volunteer", url="/volunteer", lime_bg=true) }}
+      
       <div>
         <p class="font-semibold mb-2">Connect Us on</p>
-        <div class="flex gap-4 text-white text-xl">
+        <div class="flex justify-center md:justify-start gap-4 text-white text-xl">
           <a href="https://discord.com" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
           <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://twitter.com" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
           <a href="https://matrix.org" aria-label="Matrix"><i class="fa-solid fa-comments"></i></a>
         </div>
       </div>
-
-      <div class="text-sm text-white/80">
+      
+      <div class="text-sm text-white/80 pt-2 pb-6">
         <p>Copyright © 2025 PyCon India</p>
         <p>Design by Yashika Kalra</p>
       </div>
     </div>
-
-    <div class="w-full md:w-1/2 flex justify-center relative">
-      <img src="/img/logo.png" alt="PYCON 2025" class="w-full max-w-md relative -top-60" />
+    
+    <!-- Desktop Logo (with adjusted positioning) -->
+    <div class="hidden md:block w-full md:w-1/2 order-1 md:order-2">
+      <div class="flex justify-center">
+        <img src="/img/logo.png" alt="PYCON 2025" class="w-full max-w-md -mt-44" />
+      </div>
     </div>
-  </div>
 </footer>

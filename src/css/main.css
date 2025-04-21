@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add these styles to your main CSS file */
+/* Add these styles to your main CSS file */
+@font-face {
+  font-family: 'Inter-Medium';
+  /* Add your font source here */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  /* Add your font source here */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  /* Add your font source here */
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AcidGrotesk-Regular';
+  /* Add your font source here */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Mobile menu animations */
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+#mobile-submenu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Fix border issues */
+#submenu-content a:not(:first-child) .bg-\[#f0eeff\],
+#submenu-content a:not(:first-child) .bg-\[#d7ff7b\] {
+  border-top: none;
+}
+
+/* Active state styling */
+.mobile-nav-item.active {
+  background-color: #161616;
+}
+
+/* Animation for dropdown menus */
+.group:hover .group-hover\:block {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

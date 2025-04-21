@@ -1,3 +1,4 @@
+{% from "components/button.njk" import button %}
 <section class="bg-blue-600 text-white relative my-20 px-20">
     <div
         class="max-w-7xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -7,16 +8,10 @@
                 PyCon India is completely driven by volunteers. Sponsoring the event helps to sustain and grow the conference as well as
                 the Community. Sponsor help in making the conference affordable, and maintaining the inventory for the conference.
             </p>
-            <a
-                href="/prospectus.pdf"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-lime-300 text-black px-6 py-2 rounded-full font-semibold shadow-md bg-[#D7FF7B]
-                    hover:bg-lime-200 transition">
-                Download Prospectus
-            </a>
+        {{ button(text="Download Prospectus", url="/prospectus.pdf", lime_bg=true)  }} 
         </div>
-        <div class="flex justify-end relative -top-40">
-            <img src="/img/landing/test-1.png" alt="Mascot on Bicycle" class="w-60 md:w-72"/>
+        <div class="hidden md:flex justify-end">
+            <img src="/img/landing/sponsor-sec.svg" alt="Mascot on Bicycle" class="w-72 relative"/>
         </div>
     </div>
     <div

@@ -2,9 +2,10 @@
 title: Venue - PyCon India 2025
 description: PyCon India 2025 Venue at Nimhans Convention Center
 layout: base.njk
+isFront: true
 ---
-
-<header class="header w-full flex flex-col justify-between">
+<header>
+  {% set activePage = 'venue' %}
   {% include "navbar.njk" %}
 </header>
 
@@ -129,3 +130,26 @@ layout: base.njk
         </div>
     </div>
 </div>
+
+<script>
+    // Additional script to ensure proper mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if menu elements exist
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
+            // Ensure mobile menu toggle functionality
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.classList.add('overflow-hidden');
+            });
+            
+            mobileMenuClose.addEventListener('click', function() {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+        }
+    });
+</script>

@@ -1,37 +1,30 @@
-<div class="bg-[#4E62F5] w-full space-y-6 py-20 px-40">
-    <div class="flex flex-col md:flex-row md:justify-between w-full items-start md:items-center gap-4">
+{% from "components/button.njk" import button %}
+<div class="bg-[#4E62F5] w-full space-y-6 py-20 px-4 sm:px-20 md:px-40">
+    <div class="flex justify-between w-full items-center gap-4">
         <h1 class="text-white text-4xl sm:text-5xl font-extrabold leading-tight">
             PYCON <br/>
             <span class="text-white">INDIA 2025</span>
         </h1>
-        <div class="relative bg-white text-blue-600 font-semibold px-8 py-6 sm:py-8 rounded shadow sm:text-2xl text-xl">
-            20 Sep - 23 Sep
+        <div class="relative whitespace-nowrap">
+        
+            <div class="relative z-10 text-blue-600 font-semibold px-6 sm:px-8 py-6 sm:py-8 text-xl sm:text-2xl">
+                20 Sep - 23 Sep
+            </div>
+            
+            <img src="/img/assets/date-display.svg" alt="Date background" class="absolute inset-0 w-full h-full z-0">
+            
+            <div class="absolute -bottom-8 -right-4">
+                <img src="/img/assets/star-lime-vector.svg" alt="Groovy star" class="w-12 h-12">
+            </div>
         </div>
     </div>
     <p class="text-white text-md sm:text-lg max-w-xl leading-relaxed">
         PyCon India 2024 is the premier conference for Python enthusiasts and professionals, offering an unparalleled
         opportunity to dive deep into the world of Python and explore its limitless potential. Stay tuned for updates!
     </p>
+    {{ button(text="View Schedule", url="#", lime_bg=true)  }}
     <div class="flex flex-wrap gap-4 pt-4">
-        <a
-            href="#"
-            class="inline-flex items-center px-6 py-2 rounded-full bg-lime-300 text-black font-medium bg-[#D7FF7B] transition
-                hover:bg-[#F7FFAB]">
-            View Schedule
-        </a>
-    </div>
-    <div class="flex flex-wrap gap-4 pt-4">
-        <a
-            href="#"
-            class="inline-flex items-center px-6 py-2 rounded-full border border-white hover:bg-white hover:text-blue-600 transition
-                text-white">
-            Program Guide
-        </a>
-        <a
-            href="#"
-            class="inline-flex items-center px-6 py-2 rounded-full border border-white hover:bg-white hover:text-blue-600 transition
-                text-white">
-            Dev Sprint
-        </a>
+       {{ button(text="Program Guide", url="#")  }} 
+       {{ button(text="Dev Sprint", url="#")  }}
     </div>
 </div>
