@@ -1,21 +1,22 @@
 {% from "components/button.njk" import button %}
-<section class="bg-blue-600 text-white relative my-20 px-20">
-    <div
-        class="max-w-7xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div>
-            <h2 class="text-4xl font-extrabold mb-4">Event Sponsors</h2>
-            <p class="text-white text-base mb-6">
-                PyCon India is completely driven by volunteers. Sponsoring the event helps to sustain and grow the conference as well as
-                the Community. Sponsor help in making the conference affordable, and maintaining the inventory for the conference.
-            </p>
-        {{ button(text="Download Prospectus", url="/prospectus.pdf", lime_bg=true)  }} 
-        </div>
-        <div class="hidden md:flex justify-end">
-            <img src="/img/landing/sponsor-sec.svg" alt="Mascot on Bicycle" class="w-72 relative"/>
+<section class="bg-blue-600 text-white relative my-20 px-4 sm:px-20">
+    <div class="max-w-7xl mx-auto py-16 px-2 sm:px-6">
+        <!-- Desktop image visible -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-10">
+            <div>
+                <h2 class="text-4xl font-extrabold mb-4">Event Sponsors</h2>
+                <p class="text-white text-base mb-6">
+                    PyCon India is completely driven by volunteers. Sponsoring the event helps to sustain and grow the conference as well as
+                    the Community. Sponsor help in making the conference affordable, and maintaining the inventory for the conference.
+                </p>
+                {{ button(text="Download Prospectus", url="/prospectus.pdf", lime_bg=true) }}
+            </div>
+            <div class="hidden md:flex justify-end">
+                <img src="/img/landing/sponsor-sec.svg" alt="Mascot on Bicycle" class="w-72 relative animate-bounce-slow hover:animate-wiggle" />
+            </div>
         </div>
     </div>
-    <div
-        class="max-w-7xl mx-auto px-6 pb-20 grid gap-10 text-black">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 pb-10 grid gap-4 sm:gap-10 text-black">
         {% set sponsors = {
         "PLATINUM": 3,
         "GOLD": 5,
@@ -24,13 +25,12 @@
         } %}
         {% for tier, count in sponsors %}
             <div>
-                <div class="bg-white inline-block px-8 py-2 font-bold text-lg shadow uppercase">
+                <div class="bg-white inline-block px-4 sm:px-8 py-2 font-bold text-base sm:text-lg shadow uppercase">
                     {{ tier }}
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-0 bg-transparent ">
+                <div class="grid grid-cols-5 bg-transparent overflow-x-auto">
                     {% for i in range(0, count) %}
-                        <div
-                            class="h-20 bg-white border border-black flex items-center justify-center">
+                        <div class="h-16 sm:h-20 bg-white border border-gray-300 flex items-center justify-center min-w-24">
                             <span class="text-xs font-medium text-gray-400">Logo {{ i + 1 }}</span>
                         </div>
                     {% endfor %}
@@ -38,4 +38,54 @@
             </div>
         {% endfor %}
     </div>
+    
+    <!-- Mobile image shown below -->
+    <div class="md:hidden flex justify-center pb-10">
+        <img src="/img/landing/sponsor-sec.svg" alt="Mascot on Bicycle" class="w-48 relative animate-float" />
+    </div>
 </section>
+
+<style>
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+/* Custom animation classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s infinite;
+}
+
+.hover\:animate-wiggle:hover {
+  animation: wiggle 1s ease-in-out infinite;
+}
+</style>

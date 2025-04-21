@@ -11,17 +11,35 @@
     <div class="space-y-4 md:space-y-6 order-2 md:order-1 text-center md:text-left">
       {{ button(text="Become a Volunteer", url="/volunteer", lime_bg=true) }}
       
-      <div>
-        <p class="font-semibold mb-2">Connect Us on</p>
-        <div class="flex justify-center md:justify-start gap-4 text-white text-xl">
-          <a href="https://discord.com" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
-          <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://twitter.com" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-          <a href="https://matrix.org" aria-label="Matrix"><i class="fa-solid fa-comments"></i></a>
+      <!-- Redesigned Social Media Section -->
+      <div class="relative mt-6 md:mt-8">
+        <div class="text-[#D7FF7B] text-2xl font-normal leading-tight md:leading-loose">Connect Us on</div>
+        <div class="flex justify-center md:justify-start items-start gap-4 mt-2">
+          <!-- Social Media Icons -->
+          <a href="https://discord.com" aria-label="Discord" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
+            <div class="w-7 h-7 relative overflow-hidden">
+              <img src="/img/assets/discord-social.svg" alt="Discord" class="w-full h-full object-contain" />
+            </div>
+          </a>
+          <a href="https://linkedin.com" aria-label="LinkedIn" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
+            <div class="w-7 h-7 relative overflow-hidden">
+              <img src="/img/assets/linkedin-social.svg" alt="LinkedIn" class="w-full h-full object-contain" />
+            </div>
+          </a>
+          <a href="https://x.com" aria-label="Twitter" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
+            <div class="w-7 h-7 relative overflow-hidden">
+              <img src="/img/assets/x-social.svg" alt="X (Twitter)" class="w-full h-full object-contain" />
+            </div>
+          </a>
+          <a href="https://youtube.com" aria-label="Matrix" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
+            <div class="w-7 h-7 relative overflow-hidden">
+              <img src="/img/assets/youtube-social.svg" alt="Matrix" class="w-full h-full object-contain" />
+            </div>
+          </a>
         </div>
       </div>
       
-      <div class="text-sm text-white/80 pt-2 pb-6">
+      <div class="text-sm text-[#D7FF7B] pt-2 pb-6">
         <p>Copyright © 2025 PyCon India</p>
         <p>Design by Yashika Kalra</p>
       </div>
@@ -33,4 +51,5 @@
         <img src="/img/logo.png" alt="PYCON 2025" class="w-full max-w-md -mt-44" />
       </div>
     </div>
+  </div>
 </footer>
