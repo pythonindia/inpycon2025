@@ -1,26 +1,28 @@
 {% from "components/button.njk" import button %}
 <footer class="bg-blue-600 flex text-white mb-0 w-full relative">
     <div class="relative mx-5 md:mx-[145px] pt-20 pb-8 md:pt-60 md:pb-12">
-        <div class="">{{ button(text="Become a Volunteer", url="#", lime_bg=true) }}</div>
+        <div class="">
+            {{ button(text="Become a Volunteer", url="#", lime_bg=true) }}
+        </div>
         <div class="relative mt-6">
             <div class="text-[#D7FF7B] text-lg md:text-2xl font-normal leading-tight md:leading-loose">Connect Us on</div>
             <div class="flex justify-center md:justify-start items-center gap-4 mt-2">
-                <a href="https://discord.com" aria-label="Discord" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
+                <a href="https://discord.com" aria-label="Discord" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200">
                     <div class="w-10 h-10 relative overflow-hidden">
                         <img src="/img/assets/discord-social.svg" alt="Discord" class="w-full h-full object-contain" />
                     </div>
                 </a>
-                <a href="https://linkedin.com" aria-label="LinkedIn" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
+                <a href="https://linkedin.com" aria-label="LinkedIn" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200">
                     <div class="w-10 h-10 relative overflow-hidden">
                         <img src="/img/assets/linkedin-social.svg" alt="LinkedIn" class="w-full h-full object-contain" />
                     </div>
                 </a>
-                <a href="https://x.com" aria-label="Twitter" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
+                <a href="https://x.com" aria-label="Twitter" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200">
                     <div class="w-10 h-10 relative overflow-hidden">
                         <img src="/img/assets/x-social.svg" alt="X (Twitter)" class="w-full h-full object-contain" />
                     </div>
                 </a>
-                <a href="https://youtube.com" aria-label="Matrix" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
+                <a href="https://youtube.com" aria-label="Matrix" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200">
                     <div class="w-10 h-10 relative overflow-hidden">
                         <img src="/img/assets/youtube-social.svg" alt="Matrix" class="w-full h-full object-contain" />
                     </div>
@@ -33,8 +35,7 @@
             <p>Design by Yashika Kalra</p>
         </div>
     </div>
-    <div class="absolute inset-0 flex justify-end items-end">
-        <img src="/img/logo.png" alt="PYCON 2025" class="w-6/12 pb-56 pr-2 md:w-6/12 md:pb-16 md:pr-12" />
+    <div class="absolute inset-0 flex justify-end items-end pointer-events-none">
+        <img src="/img/logo.png" alt="PYCON 2025" class="w-6/12 pb-56 pr-2 lg:w-8/12 md:w-7/12 lg:pb-16 lg:pr-12 xl:w-6/12 xl:pb-16 xl:pr-12" />
     </div>
-
 </footer>
