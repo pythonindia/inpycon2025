@@ -11,9 +11,9 @@ isFront: true
     {% set activePage = 'venue' %} 
 </header>
 
-<div class="w-full h-[608px] bg-[#4E62F5]">
+<div class="w-full h-[640px] bg-[#4E62F5]">
     <div class="pt-[200px] mx-[5%] md:mx-[145px]">
-        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl text-[#FFFFFF] text-center md:text-left">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
             Nimhans Convention Center
         </div>
 
@@ -21,20 +21,30 @@ isFront: true
             <img src="/img/assets/star-lime-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
         </div>
 
-        <div class="absolute md:top-3/4 pt-52 md:right-20 right-24 md:block">
+        <div class="absolute md:top-3/4 pt-52 md:right-20 right-12 md:block">
             <img src="/img/assets/star-purple-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
         </div>
 
-        <div class="flex flex-col md:flex-row md:space-x-8">
-            <div class="space-grotesk-regular font-medium text-xl md:text-2xl pt-8 text-[#FFFFFF] text-center md:text-left">
+        <div class="flex flex-col lg:flex-row lg:space-x-8">
+            <div class="space-grotesk-regular font-medium text-xl lg:text-sm xl:text-2xl md:text-2xl pt-8 text-[#FFFFFF] text-center lg:text-left">
                 <p>Nimhans Convention Center,</p>
                 <p>Hosur Road, Lakkasandra,</p>
                 <p>Bengaluru - 560029</p>
                 <p>Landmark: Near Dairy Circle</p>
                 <div class="pt-8">{{ button(text="Find Direction", url="#", lime_bg=true) }}</div>
             </div>
-            <div class="justify-center md:pl-44 pt-12 md:pt-20 md:block hidden">
+            <div class="pl-44 pt-28 xl:block lg:hidden md:hidden hidden">
                 {% call card(width=656, height=378, bg="lime") -%}
+                    <img src="/img/nimhans-convention-center.jpeg" alt="Nimhans Convention Center" class="w-full h-full object-cover">
+                {%- endcall %}
+            </div>
+            <div class="pl-12 pt-28 lg:block hidden xl:hidden">
+                {% call card(width=480, height=320, bg="lime") -%}
+                    <img src="/img/nimhans-convention-center.jpeg" alt="Nimhans Convention Center" class="w-full h-full object-cover">
+                {%- endcall %}
+            </div>
+            <div class="mx-auto pt-12 md:block hidden lg:hidden">
+                {% call card(width=480, height=320, bg="lime") -%}
                     <img src="/img/nimhans-convention-center.jpeg" alt="Nimhans Convention Center" class="w-full h-full object-cover">
                 {%- endcall %}
             </div>
@@ -49,7 +59,7 @@ isFront: true
 
 <div class="w-full bg-[#F0EEFF]">
     <div class="pt-[100px] mx-[5%] md:mx-[145px] md:pt-44">
-        <div class="black-han-sans-regular pt-32 md:pt-32 font-normal text-3xl md:text-5xl text-[#000000] text-center md:text-left">
+        <div class="black-han-sans-regular pt-32 lg:pt-20 xl:pt-32 md:pt-56 md:text-center font-normal text-3xl md:text-5xl text-[#000000] text-center lg:text-left">
             <p>Getting to the</p>
             <p>Conference Venue</p>
         </div>
@@ -59,8 +69,28 @@ isFront: true
                 <div class="flex-shrink-0">
                     <img src="/img/assets/train.svg" alt="Train" class="h-10 ml-0 md:h-28 mx-auto md:mx-0">
                 </div>
-                <div class="relative translate-y-[-132px] translate-x-2/4 w-[85%] mx-auto md:ml-16 md:w-[863px] md:block hidden">
+                <div class="relative xl:translate-y-[-132px] xl:translate-x-1/4 mx-auto xl:ml-16 xl:w-[863px] xl:block lg:hidden md:hidden hidden">
                     {% call card(width=863, height=430, bg="lime") -%}
+                        <div class="p-8 md:p-16 space-grotesk-regular">
+                            <p class="font-bold text-xl md:text-2xl">Via Namma Metro</p>
+                            <p class="pt-4 font-normal text-sm md:text-xl">From Green Line: Disembark at South End Circle or Lalbagh metro station. From the station, you can take a short taxi/auto ride to reach NIMHANS Convention Centre.</p>
+                            <p class="pt-4 font-normal text-sm md:text-xl">For a list of stations on the Bengaluru Metro Green line, you can refer to <a href="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true" target="_blank" rel="noopener noreferrer" class="underline">Wikipedia</a>.</p>
+                            <div class="pt-6 md:pt-10">{{ button(text="Green Line", url="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true", lime_bg=true) }}</div>
+                        </div>
+                    {%- endcall %}
+                </div>
+                <div class="lg:block hidden xl:hidden relative translate-y-[-120px] left-72 pl-[3%] w-max">
+                    {% call card(width=580, height=420, bg="lime") -%}
+                        <div class="p-8 md:p-16 space-grotesk-regular">
+                            <p class="font-bold text-xl md:text-2xl">Via Namma Metro</p>
+                            <p class="pt-4 font-normal text-sm md:text-xl">From Green Line: Disembark at South End Circle or Lalbagh metro station. From the station, you can take a short taxi/auto ride to reach NIMHANS Convention Centre.</p>
+                            <p class="pt-4 font-normal text-sm md:text-xl">For a list of stations on the Bengaluru Metro Green line, you can refer to <a href="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true" target="_blank" rel="noopener noreferrer" class="underline">Wikipedia</a>.</p>
+                            <div class="pt-6 md:pt-10">{{ button(text="Green Line", url="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true", lime_bg=true) }}</div>
+                        </div>
+                    {%- endcall %}
+                </div>
+                <div class="md:block hidden lg:hidden relative translate-y-[-120px] left-28 w-max pl-[6%] mx-auto ">
+                    {% call card(width=420, height=540, bg="lime") -%}
                         <div class="p-8 md:p-16 space-grotesk-regular">
                             <p class="font-bold text-xl md:text-2xl">Via Namma Metro</p>
                             <p class="pt-4 font-normal text-sm md:text-xl">From Green Line: Disembark at South End Circle or Lalbagh metro station. From the station, you can take a short taxi/auto ride to reach NIMHANS Convention Centre.</p>
@@ -84,8 +114,34 @@ isFront: true
 
         <div class="pt-12 relative flex flex-col md:flex-row">
             <div class="flex-grow">
-                <div class="relative md:block hidden">
+                <div class="relative xl:block lg:hidden md:hidden hidden">
                     {% call card(width=863, height=430, bg="purple") -%}
+                        <div class="p-8 md:p-16 space-grotesk-regular">
+                            <p class="font-bold text-xl md:text-2xl">Via Bus</p>
+                            <p class="pt-4 font-normal text-sm md:text-xl">KIA-5D, get off at Jayanagar bus stand and NIMHANS is a few blocks away.</p>
+                            <p class="pt-4 font-normal text-sm md:text-xl">KIA-7 to Kormangala Water Tank which is 8 mins away from NIMHANS.</p>
+                            
+                            <p class="pt-4 font-normal text-sm md:text-xl">We're excited to welcome you to PyCon India 2024 and hope you have a fantastic experience in Bengaluru! If you have any further inquiries or need assistance, feel free to contact us at <a href="mailto:contact@in.pycon.org" target="_blank" rel="noopener noreferrer" class="underline">contact@in.pycon.org</a>.</p>
+                            
+                            <div class="pt-6 md:pt-10">{{ button(text="Bus Timetable", url="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true", lime_bg=true) }}</div>
+                        </div>
+                    {%- endcall %}
+                </div>
+                <div class="relative lg:block hidden xl:hidden">
+                    {% call card(width=620, height=540, bg="purple") -%}
+                        <div class="p-8 md:p-16 space-grotesk-regular">
+                            <p class="font-bold text-xl md:text-2xl">Via Bus</p>
+                            <p class="pt-4 font-normal text-sm md:text-xl">KIA-5D, get off at Jayanagar bus stand and NIMHANS is a few blocks away.</p>
+                            <p class="pt-4 font-normal text-sm md:text-xl">KIA-7 to Kormangala Water Tank which is 8 mins away from NIMHANS.</p>
+                            
+                            <p class="pt-4 font-normal text-sm md:text-xl">We're excited to welcome you to PyCon India 2024 and hope you have a fantastic experience in Bengaluru! If you have any further inquiries or need assistance, feel free to contact us at <a href="mailto:contact@in.pycon.org" target="_blank" rel="noopener noreferrer" class="underline">contact@in.pycon.org</a>.</p>
+                            
+                            <div class="pt-6 md:pt-10">{{ button(text="Bus Timetable", url="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true", lime_bg=true) }}</div>
+                        </div>
+                    {%- endcall %}
+                </div>
+                <div class="relative md:block hidden lg:hidden">
+                    {% call card(width=420, height=720, bg="purple") -%}
                         <div class="p-8 md:p-16 space-grotesk-regular">
                             <p class="font-bold text-xl md:text-2xl">Via Bus</p>
                             <p class="pt-4 font-normal text-sm md:text-xl">KIA-5D, get off at Jayanagar bus stand and NIMHANS is a few blocks away.</p>
@@ -106,26 +162,32 @@ isFront: true
                             
                             <p class="pt-4 font-normal text-sm md:text-xl">We're excited to welcome you to PyCon India 2024 and hope you have a fantastic experience in Bengaluru! If you have any further inquiries or need assistance, feel free to contact us at <a href="mailto:contact@in.pycon.org" target="_blank" rel="noopener noreferrer" class="underline">contact@in.pycon.org</a>.</p>
                             
-                            <div class="pt-6 md:pt-10">{{ button(text="Bus Timetable", url="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true", lime_bg=true) }}</div>
+                            <div class="pt-6 md:pt-10">{{ button(text="Bus Timetable", url="https://kia.bengawalk.com/", lime_bg=true) }}</div>
                         </div>
                     {%- endcall %}
                 </div>
-                <div class="absolute translate-y-[-146px] md:right-80 hidden md:block">
+                <div class="absolute translate-y-[-146px] right-80 xl:block lg:hidden md:hidden hidden">
                     <img src="/img/assets/bus.svg" alt="Bus" class="h-56">
                 </div>
-                <div class="absolute translate-y-[-60px] pl-44 md:hidden block">
+                <div class="absolute translate-y-[-146px] lg:right-2 lg:block hidden xl:hidden">
+                    <img src="/img/assets/bus.svg" alt="Bus" class="h-56">
+                </div>
+                <div class="absolute translate-y-[-146px] md:right-4 md:block hidden lg:hidden">
+                    <img src="/img/assets/bus.svg" alt="Bus" class="h-56">
+                </div>
+                <div class="absolute translate-y-[-60px] pl-44 block md:hidden">
                     <img src="/img/assets/bus.svg" alt="Bus" class="h-28">
                 </div>
             </div>
         </div>
 
-        <div class="pt-32 w-full md:w-1/2 text-justify">
+        <div class="pt-32 w-full lg:w-2/3 xl:w-1/2 md:w-1/2 text-justify">
             <p class="p-4 font-normal text-lg md:text-xl space-grotesk-regular leading-8">
                 Located centrally in Bengaluru, the venue has 2 floors. The ground floor, has all the main tracks happening in 3 halls as per schedule. There is a booth area, community space and beverage stalls. The first floor has open spaces, poster sessions, Birds of a Feather, and more happening.
             </p>
         </div>
 
-        <div class="pt-32 w-full justify-center pl-12 md:pl-36">
+        <div class="pt-40 xl:pt-32 w-full justify-center pl-12 md:pl-4 xl:pl-36">
             <img src="/img/assets/auto.svg" alt="Auto" class="h-24 md:h-44">
         </div>
     </div>
