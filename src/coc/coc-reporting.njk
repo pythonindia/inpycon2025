@@ -10,8 +10,8 @@ layout: base.njk
 
 {%  set members = [
         {
-            "name": "Gagan S",
-            "email": "gagan200254@gmail.com"
+            "name": "Tony Stark",
+            "email": "tony@start.com"
         },
         {
             "name": "Bill Gatey",
@@ -151,7 +151,7 @@ layout: base.njk
                 {% call flatCard() -%}
                     <div class="py-4 px-4">
                         <p class="text-xl lg:text-3xl font-light">{{ member.name }}</p>
-                        <p class="pt-4 text-sm lg:text-xl"><a href="mailto:coc@in.pycon.org" target="_blank" rel="noopener noreferrer" class="underline">{{ member.email }}</a></p>
+                        <p class="pt-4 text-sm lg:text-xl"><a href="mailto:{{ member.email }}" target="_blank" rel="noopener noreferrer" class="underline">{{ member.email }}</a></p>
                     </div>
                 {%- endcall %}
             </div>
