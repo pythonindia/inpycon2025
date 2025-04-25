@@ -136,3 +136,30 @@ html {
 .tippy-tooltip[x-placement^='bottom'] .tippy-arrow {
     border-bottom-color: #ccc;
 }
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(10px) translateX(-10px);
+    }
+    50% {
+        transform: translateY(-10px) translateX(10px);
+    }
+}
+
+@keyframes floating-opposite {
+    0%, 100% {
+        transform: translateY(-10px) translateX(10px);
+    }
+    50% {
+        transform: translateY(10px) translateX(-10px);
+    }
+}
+
+@keyframes floating-logo {
+    0%, 100% {
+        transform: translateY(8px) translateX(-8px);
+    }
+    50% {
+        transform: translateY(-8px) translateX(0px);
+    }
+}
