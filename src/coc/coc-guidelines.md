@@ -1,6 +1,6 @@
 ---
-title: Code Of Conduct
-description: Code Of Conduct
+title: Code Of Conduct - Guidelines
+description: PyCon India 2025 CoC Guidelines
 layout: page.njk
 ---
 
