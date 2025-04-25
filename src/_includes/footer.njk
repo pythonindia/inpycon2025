@@ -1,10 +1,10 @@
 {% from "components/button.njk" import button %}
-<footer class="bg-blue-600 flex text-white mb-0 w-full relative">
+<footer class="bg-blue-600 flex text-white mb-0 bottom-0 w-full relative">
     <div class="relative mx-5 md:mx-[145px] pt-20 pb-8 md:pt-60 md:pb-12">
-        <div class="">
+        <div class="xl:scale-125">
             {{ button(text="Become a Volunteer", url="#", lime_bg=true) }}
         </div>
-        <div class="relative mt-6">
+        <div class="relative mt-10 pb-4 xl:scale-125 scale-100">
             <div class="text-[#D7FF7B] text-lg md:text-2xl font-normal leading-tight md:leading-loose">Connect Us on</div>
             <div class="flex justify-center md:justify-start items-center gap-4 mt-2">
                 <a href="https://discord.com" aria-label="Discord" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200">
@@ -30,12 +30,12 @@
             </div>
         </div>
 
-        <div class="relative text-sm text-[#D7FF7B] pt-2">
+        <div class="relative text-sm text-[#D7FF7B] pt-2 xl:scale-125 scale-100">
             <p>Copyright © 2025 PyCon India</p>
             <p>Design by Yashika Kalra</p>
         </div>
     </div>
     <div class="absolute inset-0 flex justify-end items-end pointer-events-none">
-        <img src="/img/logo.png" alt="PYCON 2025" class="w-6/12 pb-56 pr-2 lg:w-8/12 md:w-7/12 lg:pb-16 lg:pr-12 xl:w-6/12 xl:pb-16 xl:pr-12" />
+        <img src="/img/logo.png" alt="PYCON 2025" class="w-6/12 pb-64 pr-2 lg:w-8/12 md:w-7/12 lg:pb-16 lg:pr-12 xl:w-6/12 xl:pb-16 xl:pr-12 transition-transform duration-100" style="animation: floating-logo 2s ease-in-out infinite;"/>
     </div>
 </footer>
