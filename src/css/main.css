@@ -61,3 +61,43 @@
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+main {
+  padding-top: 3rem; /* Adjust this value based on your navbar height */
+}
+
+@media (max-width: 768px) {
+  main {
+      padding-top: 3.5rem; /* Slightly more padding for mobile */
+  }
+}
+.home-banner {
+  margin-top: 52px;
+}
+
+@media (min-width: 768px) {
+  .home-banner {
+    margin-top: 32px;
+  }
+}
+
+/* Mobile menu and overlay styles */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.home-banner {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .mobile-home-spacing header {
+    margin-top: -1rem;
+  }
+}

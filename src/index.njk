@@ -3,14 +3,78 @@ layout: base.njk
 isFront: true
 ---
 
-<header>
-  {% set activePage = 'home' %}
-</header>
+<div class="loader-wrapper">
+  <div class="loader">
+    <img src="/img/logo.svg" alt="PyCon India 2025 Logo" class="loader-logo">
+  </div>
+</div>
 
-<main class="flex-grow">
-  {% include "landing/hero-banner.njk" %}
+<main class="flex-grow relative">
+  <div class="home-banner">
+    {% include "landing/hero-banner.njk" %}
+  </div>
   {% include "landing/hero.njk" %}
   {% include "landing/keynotes.njk" %}
   {% include "landing/sponsors.njk" %}
   {% include "landing/x-wall.njk" %}
 </main>
+
+<style>
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: slideUp 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-logo {
+  width: 200px;
+  height: auto;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .loader-wrapper {
+    display: none;
+  }
+}
+</style>

@@ -4,10 +4,8 @@
     {% include "head.njk" %}
   </head>
   <body id="top" class="font-sans text-gray-800 min-h-screen flex flex-col">
-    <header>
-      {% set activePage = title | lower if not isFront else 'home' %}
-      {% include "navbar.njk" %}
-    </header>
+    {% from "components/_navbar.njk" import navbar %}
+    {{ navbar(isFront) }}
     
     {{ content | safe }}
     
