@@ -39,7 +39,7 @@
             "link": "/coc",
             "hasSubmenu": true,
             "submenu": [
-              {"name": "Code of Conduct Policy", "link": "/coc/coc-guidelines"},
+              {"name": "Code of Conduct Policy", "link": "/coc/"},
               {"name": "Code of Conduct Reporting", "link": "/coc/coc-reporting"}
             ]
           },
@@ -50,43 +50,80 @@
           }
         ] %}
         
+        <!-- Radio group for desktop menu -->
+        <input type="radio" id="desktop-menu-close-all" name="desktop-menu-radio" class="sr-only hidden" checked>
         {% for item in menuItems %}
-          <li class="relative group">
-            <a href="{{ item.link }}"
-                class="flex items-center gap-1 py-1 px-2 text-white hover:text-[#D7FF7B] text-sm font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 no-underline">
-              {{ item.name }}
-              {% if item.hasSubmenu %}
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" class="fill-current text-gray-400 group-hover:text-lime-200 transition-transform duration-200 group-hover:rotate-180">
-                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              </svg>
-              {% endif %}
-            </a>
-            
+          {% if item.hasSubmenu %}
+            <input type="radio" id="desktop-menu-radio-{{ loop.index }}" name="desktop-menu-radio" class="sr-only hidden">
+          {% endif %}
+        {% endfor %}
+        
+        {% for item in menuItems %}
+          <li class="relative">
             {% if item.hasSubmenu %}
-            <div class="absolute left-0 top-full mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 transform origin-top scale-95 group-hover:scale-100">
-              <div class="inline-flex justify-start items-start gap-3 overflow-hidden rounded">   
-                <div class="flex-1 inline-flex flex-col justify-start items-start w-full">     
-                  {% for subitem in item.submenu %}
-                  <div class="self-stretch p-4 bg-[#f0eeff] hover:bg-[#d7ff7b] border border-black inline-flex justify-start items-center gap-4 transition-colors duration-150">       
-                    <div class="flex-1 inline-flex flex-col justify-start items-start gap-1">         
-                      <a href="{{ subitem.link }}" class="text-gray-600 hover:text-[#4662ff] text-sm font-medium font-['Inter'] leading-tight no-underline">
-                        {{ subitem.name }}
-                      </a>       
-                    </div>       
-                    <div class="size-5 relative overflow-hidden">         
-                      <div class="bg-gray-400 group-hover:bg-[#4e62f5] w-[5.49px] h-[9.31px] left-[7.50px] top-[5.35px] absolute transition-colors duration-150"></div>       
-                    </div>     
-                  </div>
-                  {% endfor %}
-                </div> 
+              <!-- Menu item with submenu -->
+              <label for="desktop-menu-radio-{{ loop.index }}" 
+                     class="flex items-center gap-1 py-1 px-2 text-white hover:text-[#D7FF7B] text-sm font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 cursor-pointer">
+                {{ item.name }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" class="fill-current text-gray-400 transition-transform duration-200">
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </label>
+              
+              <!-- Hidden overlay to close menu when clicking elsewhere -->
+              <label for="desktop-menu-close-all" class="fixed inset-0 bg-transparent z-0 hidden"></label>
+              
+              <!-- Submenu dropdown -->
+              <div class="absolute left-0 top-full mt-2 w-64 invisible opacity-0 transition-all duration-200 z-10 transform origin-top scale-95">
+                <div class="inline-flex justify-start items-start gap-3 overflow-hidden rounded">   
+                  <div class="flex-1 inline-flex flex-col justify-start items-start w-full">     
+                    {% for subitem in item.submenu %}
+                    <div class="self-stretch p-4 bg-[#f0eeff] hover:bg-[#d7ff7b] border border-black inline-flex justify-start items-center gap-4 transition-colors duration-150">       
+                      <div class="flex-1 inline-flex flex-col justify-start items-start gap-1">         
+                        <a href="{{ subitem.link }}" class="text-gray-600 hover:text-[#4662ff] text-sm font-medium font-['Inter'] leading-tight no-underline">
+                          {{ subitem.name }}
+                        </a>       
+                      </div>       
+                      <div class="size-5 relative overflow-hidden">         
+                        <div class="bg-gray-400 hover:bg-[#4e62f5] w-[5.49px] h-[9.31px] left-[7.50px] top-[5.35px] absolute transition-colors duration-150"></div>       
+                      </div>     
+                    </div>
+                    {% endfor %}
+                  </div> 
+                </div>
               </div>
-            </div>
+            {% else %}
+              <!-- Regular menu item (no submenu) -->
+              <a href="{{ item.link }}"
+                  class="flex items-center gap-1 py-1 px-2 text-white hover:text-[#D7FF7B] text-sm font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 no-underline">
+                {{ item.name }}
+              </a>
             {% endif %}
           </li>
         {% endfor %}
       </ul>
     </div>
   </div>
+
+  <!-- Templete Logic CSS for desktop menu radio behavior (Can't able to declare in global css files like main.css/ tailwind.config.js) -->
+  <style>
+    {% for item in menuItems %}
+      {% if item.hasSubmenu %}
+      #desktop-menu-radio-{{ loop.index }}:checked ~ li:nth-of-type({{ loop.index }}) .fixed {
+        display: block;
+      }
+      #desktop-menu-radio-{{ loop.index }}:checked ~ li:nth-of-type({{ loop.index }}) .absolute {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+      }
+      #desktop-menu-radio-{{ loop.index }}:checked ~ li:nth-of-type({{ loop.index }}) svg {
+        transform: rotate(180deg);
+        color: #D7FF7B;
+      }
+      {% endif %}
+    {% endfor %}
+  </style>
 
   <!-- Mobile Navbar Toggle -->
   <div class="flex justify-between items-center px-4 py-2 w-full md:hidden {% if isHomePage %}bg-black z-40{% else %}bg-[#4E62F5]{% endif %} border-0">
