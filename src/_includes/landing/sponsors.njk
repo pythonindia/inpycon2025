@@ -11,8 +11,13 @@
                 </p>
                 {{ button(text="Download Prospectus", url="/prospectus.pdf", lime_bg=true) }}
             </div>
+            <!-- Desktop image -->
             <div class="hidden md:flex justify-end">
-                <img src="/img/landing/sponsor-sec.svg" alt="Mascot on Bicycle" class="w-72 relative animate-bounce-slow hover:animate-wiggle" />
+                <img 
+                    src="/img/landing/sponsor-sec.svg" 
+                    alt="Mascot on Bicycle" 
+                    class="w-72 relative transition-all duration-300 animate-bounce-slow hover:animate-wiggle"
+                />
             </div>
         </div>
     </div>
@@ -39,53 +44,12 @@
         {% endfor %}
     </div>
     
-    <!-- Mobile image shown below -->
+    <!-- Mobile image -->
     <div class="md:hidden flex justify-center pb-10">
-        <img src="/img/landing/sponsor-sec.svg" alt="Mascot on Bicycle" class="w-48 relative animate-float" />
+        <img 
+            src="/img/landing/sponsor-sec.svg" 
+            alt="Mascot on Bicycle" 
+            class="w-48 relative transition-all duration-300 animate-float"
+        />
     </div>
 </section>
-
-<style>
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-@keyframes wiggle {
-  0%, 100% {
-    transform: rotate(-3deg);
-  }
-  50% {
-    transform: rotate(3deg);
-  }
-}
-
-/* Custom animation classes */
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-bounce-slow {
-  animation: bounce-slow 4s infinite;
-}
-
-.hover\:animate-wiggle:hover {
-  animation: wiggle 1s ease-in-out infinite;
-}
-</style>
