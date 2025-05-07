@@ -1,31 +1,123 @@
-{% set titles = [
-  "Creator, Calibre & Kitty",
-  "AI Developer & Autism Advocate",
-  "Creator, Calibre & Kitty",
-  "AI Developer & Autism Advocate"
-] %}
+{% from "components/cube.njk" import cube %}
 
-{% set colors = [
-  "bg-purple-400",
-  "bg-lime-300",
-  "bg-purple-400",
-  "bg-lime-300"
-] %}
-
-<section class="relative bg-white w-full px-20">
-    <div class="max-w-7xl mx-auto py-16 px-6">
-        <h2 class="text-4xl font-extrabold text-black mb-12">Keynote Speakers</h2>
-        <div class="flex flex-col lg:flex-row gap-2">
-            {% for i in range(0, 4) %}
-                <div class="relative h-48 w-48 flex-shrink-0">
-                    <div class="absolute inset-0 transform shadow-md">
-                        <div class="w-full h-full {{ colors[i] }} border border-black"></div>
-                    </div>
-                    <div class="relative z-10 p-4 mt-48 -translate-y-full text-sm text-black font-medium">
-                        {{ titles[i] }}
-                    </div>
+<section class="relative bg-white text-black w-full pb-12 md:px-40 lg:px-28 xl:px-40 lg:pb-40">
+    <div class="black-han-sans-regular md:justify-center md:text-center pt-28 pb-8 md:pt-24 font-normal text-4xl lg:text-5xl text-[#000000] text-center lg:text-left">
+        Key Note Speakers
+    </div>
+    <div class="lg:flex xl:flex lg:scale-[0.80] xl:scale-100 pt-36 lg:pl-2 xl:pl-12 space-x-20 hidden md:hidden">
+        <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-24 transition duration-700 ease-in-out" data-cube="1">    
+            <p class="-translate-y-8 -translate-x-8">Creator, Calibre & Kitty</p>
+            {% call cube(dimen=200, bg="purple") -%}
+                <div>
+                    <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
                 </div>
-            {% endfor %}
+            {%- endcall %}
+        </div>
+        <div class="group relative motion-safe:transform motion-safe:hover:translate-y-44 transition duration-700 ease-in-out motion-safe:translate-y-32 translate-x-0 z-10" data-cube="2">
+            {% call cube(dimen=200, bg="lime") -%}
+                <div>
+                    <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
+                </div>
+            {%- endcall %}
+            <p class="translate-y-8 translate-x-12">Creator, Calibre & Kitty</p>
+        </div>
+        <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-12 transition duration-700 ease-in-out -translate-x-20" data-cube="3">    
+            <p class="-translate-y-8 -translate-x-8">Creator, Calibre & Kitty</p>
+            {% call cube(dimen=200, bg="purple") -%}
+                <div>
+                    <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
+                </div>
+            {%- endcall %}
+        </div>
+        <div class="group relative motion-safe:transform motion-safe:hover:translate-y-44 transition duration-700 ease-in-out -translate-x-20 motion-safe:translate-y-32" data-cube="4">
+            {% call cube(dimen=200, bg="lime") -%}
+                <div>
+                    <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
+                </div>
+            {%- endcall %}
+            <p class="translate-y-8 translate-x-12">Creator, Calibre & Kitty</p>
+        </div>
+    </div>
+    <!-- Medium Devices -->
+    <div class="md:flex flex-col pt-36 pb-20 pl-12 space-y-44 lg:hidden hidden">
+        <div class="flex justify-start">
+            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-24 transition duration-700 ease-in-out">    
+                <p class="-translate-y-8 -translate-x-8 text-center">Creator, Calibre & Kitty</p>
+                {% call cube(dimen=200, bg="purple") -%}
+                    <div>
+                        <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
+                    </div>
+                {%- endcall %}
+            </div>
+            <div class="group relative motion-safe:transform motion-safe:translate-y-24 motion-safe:hover:translate-y-48 translate-x-20 transition duration-700 ease-in-out">    
+                <p class="-translate-y-8 -translate-x-8 text-center">Creator, Calibre & Kitty</p>
+                {% call cube(dimen=200, bg="purple") -%}
+                    <div>
+                        <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
+                    </div>
+                {%- endcall %}
+            </div>
+        </div>
+        <div class="flex justify-start">
+            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-24 transition duration-700 ease-in-out">    
+                <p class="-translate-y-8 -translate-x-8 text-center">Creator, Calibre & Kitty</p>
+                {% call cube(dimen=200, bg="purple") -%}
+                    <div>
+                        <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
+                    </div>
+                {%- endcall %}
+            </div>
+            <div class="group relative motion-safe:transform motion-safe:translate-y-24 motion-safe:hover:translate-y-48 translate-x-20 transition duration-700 ease-in-out">    
+                <p class="-translate-y-8 -translate-x-8 text-center">Creator, Calibre & Kitty</p>
+                {% call cube(dimen=200, bg="purple") -%}
+                    <div>
+                        <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
+                    </div>
+                {%- endcall %}
+            </div>
+        </div>
+    </div>
+    <!-- Small Devices -->
+    <div class="flex flex-col overflow-y-auto h-80 space-y-40 px-4 pt-16 items-center lg:hidden md:hidden scrollbar-hide">
+        <div class="flex-shrink-0">
+            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-24 transition duration-700 ease-in-out" data-cube="1">    
+                {% call cube(dimen=200, bg="purple") -%}
+                    <div>
+                        <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
+                    </div>
+                {%- endcall %}
+                <p class="translate-y-8 translate-x-8 text-center">Creator, Calibre & Kitty</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0">
+            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-24 transition duration-700 ease-in-out" data-cube="1">    
+                {% call cube(dimen=200, bg="purple") -%}
+                    <div>
+                        <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
+                    </div>
+                {%- endcall %}
+                <p class="translate-y-8 translate-x-8 text-center">Creator, Calibre & Kitty</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0">
+            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-24 transition duration-700 ease-in-out" data-cube="1">    
+                {% call cube(dimen=200, bg="purple") -%}
+                    <div>
+                        <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
+                    </div>
+                {%- endcall %}
+                <p class="translate-y-8 translate-x-8 text-center">Creator, Calibre & Kitty</p>
+            </div>
+        </div>
+        <div class="flex-shrink-0">
+            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-24 transition duration-700 ease-in-out" data-cube="1">    
+                {% call cube(dimen=200, bg="purple") -%}
+                    <div>
+                        <img src="/img/logo.png" alt="Date background" class="w-full h-full">            
+                    </div>
+                {%- endcall %}
+                <p class="translate-y-8 translate-x-8 text-center">Creator, Calibre & Kitty</p>
+            </div>
         </div>
     </div>
 </section>
