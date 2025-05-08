@@ -82,6 +82,7 @@ module.exports = {
       'wiggle': 'wiggle 1s ease-in-out infinite',
       'slideUp': 'slideUp 2s ease-in-out forwards 2s',
       'pulse': 'pulse 2s ease-in-out infinite',
+      'spin-slow': 'spin 8s linear infinite',
     },
     backdropBlur: (theme) => theme('blur'),
     backdropBrightness: (theme) => theme('brightness'),
@@ -463,9 +464,12 @@ module.exports = {
     }),
     keyframes: {
       spin: {
-        to: {
-          transform: 'rotate(360deg)',
+        from: {
+          transform: 'rotate(0deg)'
         },
+        to: {
+          transform: 'rotate(360deg)'
+        }
       },
       ping: {
         '75%, 100%': {
