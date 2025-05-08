@@ -1,0 +1,42 @@
+<!-- participating-communities.njk -->
+{% from "components/button.njk" import button %}
+<section class="participating-communities relative bg-blue-600 px-4 md:px-8 lg:px-16 overflow-hidden -mt-0">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8">
+      <div class="flex flex-col gap-9">
+        <h2 class="text-4xl text-white font-extrabold font-['Black_Han_Sans','sans-serif']">Participating Communities</h2>
+        <p class="text-white text-xl font-['Acid_Grotesk','sans-serif'] leading-relaxed">
+          Join PyCon India's Community Partner Program and support the vibrant Python community in India. Become a partner and contribute to the growth of Python enthusiasts.
+        </p>
+
+        <div class="w-fit">
+          {{ button(text="Become a Volunteer", url="/volunteers", lime_bg=true) }}
+        </div>
+      </div>
+      
+      <!-- Right Content Area with Illustration -->
+      <div class="hidden lg:block relative h-[420px]">
+        <div class="absolute inset-0 bg-contain bg-center bg-no-repeat transition-all duration-300 animate-bounce-slow" style="background-image: url('/img/assets/bulb-illustration.svg');"></div>
+      </div>
+    </div>
+    <div class="mt-10">
+      <!-- First row of boxes -->
+      <div class="flex flex-wrap w-full">
+        {% for i in range(0, 6) %}
+          <div class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6 h-[100px] bg-white border border-black"></div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white px-4 md:px-8 lg:px-16">
+  <div class="container mx-auto">
+  <!-- First row of boxes -->
+    <div class="flex flex-wrap w-full">
+      {% for i in range(0, 6) %}
+        <div class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6 h-[100px] bg-white border border-black"></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -77,6 +77,11 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      'float': 'float 3s ease-in-out infinite',
+      'bounce-slow': 'bounce-slow 3s infinite',
+      'wiggle': 'wiggle 1s ease-in-out infinite',
+      'slideUp': 'slideUp 2s ease-in-out forwards 2s',
+      'pulse': 'pulse 2s ease-in-out infinite',
     },
     backdropBlur: (theme) => theme('blur'),
     backdropBrightness: (theme) => theme('brightness'),
@@ -469,8 +474,17 @@ module.exports = {
         },
       },
       pulse: {
+        '0%': {
+          transform: 'scale(1)',
+          opacity: '0.8',
+        },
         '50%': {
-          opacity: '.5',
+          transform: 'scale(1.1)',
+          opacity: '1',
+        },
+        '100%': {
+          transform: 'scale(1)',
+          opacity: '0.8',
         },
       },
       bounce: {
@@ -481,6 +495,27 @@ module.exports = {
         '50%': {
           transform: 'none',
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+        },
+      },
+      float: {
+        '0%, 100%': { transform: 'translateY(0px)' },
+        '50%': { transform: 'translateY(-10px)' },
+      },
+      'bounce-slow': {
+        '0%, 100%': { transform: 'translateY(0)' },
+        '50%': { transform: 'translateY(-20px)' },
+      },
+      wiggle: {
+        '0%, 100%': { transform: 'rotate(-3deg)' },
+        '50%': { transform: 'rotate(3deg)' },
+      },
+      slideUp: {
+        '0%': {
+          transform: 'translateY(0)',
+        },
+        '100%': {
+          transform: 'translateY(-100%)',
+          visibility: 'hidden',
         },
       },
     },
@@ -810,6 +845,12 @@ module.exports = {
       40: '40',
       50: '50',
     },
+    extend: {
+      spacing: {
+        'nav-mobile': '0px',
+        'nav-desktop': '32px',
+      },
+    },
   },
   variantOrder: [
     'first',
@@ -834,7 +875,7 @@ module.exports = {
     alignContent: ['responsive'],
     alignItems: ['responsive'],
     alignSelf: ['responsive'],
-    animation: ['responsive'],
+    animation: ['responsive', 'hover'],
     appearance: ['responsive'],
     backdropBlur: ['responsive'],
     backdropBrightness: ['responsive'],

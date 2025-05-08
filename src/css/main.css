@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add these styles to your main CSS file */
+/* Add these styles to your main CSS file */
+@font-face {
+  font-family: 'Inter-Medium';
+  /* Add your font source here */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  /* Add your font source here */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  /* Add your font source here */
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AcidGrotesk-Regular';
+  /* Add your font source here */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Mobile menu animations */
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+#mobile-submenu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Fix border issues */
+#submenu-content a:not(:first-child) .bg-\[#f0eeff\],
+#submenu-content a:not(:first-child) .bg-\[#d7ff7b\] {
+  border-top: none;
+}
+
+/* Active state styling */
+.mobile-nav-item.active {
+  background-color: #161616;
+}
+
+/* Animation for dropdown menus */
+.group:hover .group-hover\:block {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main {
+  padding-top: 3rem; /* Adjust this value based on your navbar height */
+}
+
+@media (max-width: 768px) {
+  main {
+      padding-top: 3.5rem; /* Slightly more padding for mobile */
+  }
+}
+.home-banner {
+  margin-top: 52px;
+}
+
+@media (min-width: 768px) {
+  .home-banner {
+    margin-top: 32px;
+  }
+}
+
+/* Mobile menu and overlay styles */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.home-banner {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .mobile-home-spacing header {
+    margin-top: -1rem;
+  }
+}
+/* Style fixes for submenu toggle arrows */
+#submenu-checkbox-1:checked ~ label .size-5 svg,
+#submenu-checkbox-2:checked ~ label .size-5 svg,
+#submenu-checkbox-3:checked ~ label .size-5 svg,
+#submenu-checkbox-4:checked ~ label .size-5 svg,
+#submenu-checkbox-5:checked ~ label .size-5 svg,
+#submenu-checkbox-6:checked ~ label .size-5 svg,
+#submenu-checkbox-7:checked ~ label .size-5 svg {
+  transform: rotate(90deg);
+}
+
+/* Prevent body scrolling when mobile menu is open */
+#mobile-menu-checkbox:checked ~ body {
+  overflow: hidden;
+}
+
+/* Add global rule to remove underlines from all navbar links */
+nav a {
+  text-decoration: none;
+}
