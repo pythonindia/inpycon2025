@@ -1,55 +1,55 @@
 {% from "components/button.njk" import button %}
-<footer class="bg-blue-600 text-white pt-10 px-6 md:pt-20 md:px-20 mt-20 md:mt-40 mb-0">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-    <!-- Mobile Logo (adjusted positioning) -->
-    <div class="block md:hidden w-full mb-6">
-      <div class="flex justify-center">
-        <img src="/img/logo.png" alt="PYCON 2025" class="w-full max-w-md -mt-24" />
-      </div>
-    </div>
-    
-    <div class="space-y-4 md:space-y-6 order-2 md:order-1 text-center md:text-left">
-      {{ button(text="Become a Volunteer", url="/volunteer", lime_bg=true) }}
-      
-      <!-- Redesigned Social Media Section -->
-      <div class="relative mt-6 md:mt-8">
-        <div class="text-[#D7FF7B] text-2xl font-normal leading-tight md:leading-loose">Connect Us on</div>
-        <div class="flex justify-center md:justify-start items-start gap-4 mt-2">
-          <!-- Social Media Icons -->
-          <!-- <a href="https://discord.com" aria-label="Discord" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
-            <div class="w-7 h-7 relative overflow-hidden">
-              <img src="/img/assets/discord-social.svg" alt="Discord" class="w-full h-full object-contain" />
-            </div>
-          </a> -->
-          <a href="https://www.linkedin.com/company/pyconindia" aria-label="LinkedIn" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
-            <div class="w-7 h-7 relative overflow-hidden">
-              <img src="/img/assets/linkedin-social.svg" alt="LinkedIn" class="w-full h-full object-contain" />
-            </div>
-          </a>
-          <a href="https://x.com/pyconindia" aria-label="Twitter" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
-            <div class="w-7 h-7 relative overflow-hidden">
-              <img src="/img/assets/x-social.svg" alt="X (Twitter)" class="w-full h-full object-contain" />
-            </div>
-          </a>
-          <!-- <a href="https://youtube.com" aria-label="Matrix" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center">
-            <div class="w-7 h-7 relative overflow-hidden">
-              <img src="/img/assets/youtube-social.svg" alt="Matrix" class="w-full h-full object-contain" />
-            </div> -->
-          </a>
+<footer class="bg-blue-600 flex text-white mb-0 bottom-0 w-full relative">
+    <div class="relative mx-[6%] md:mx-[12%] mt-24 pb-8 md:pt-20 md:pb-12 w-full md:w-auto">
+        <div class="xl:scale-125 text-center md:text-left">
+            {{ button(text="Become a Volunteer", url="https://docs.google.com/forms/d/e/1FAIpQLSdX2LEom11BbWDiLUiQp1rmeNX9l7J8bfszGidsRDoExy0D5A/viewform", lime_bg=true) }}
         </div>
-      </div>
-      
-      <div class="text-sm text-[#D7FF7B] pt-2 pb-6">
-        <p>Copyright © 2025 PyCon India</p>
-        <p>Design by Yashika Kalra</p>
-      </div>
+        <div class="relative mt-10 pb-4 xl:scale-125 scale-100">
+            <div class="text-[#D7FF7B] text-lg md:text-2xl font-normal leading-tight md:leading-loose text-center md:text-left">Connect Us on</div>
+            <div class="flex justify-center md:justify-start items-center gap-4 mt-2">
+                <div class="flex justify-center items-center">
+                    <a href="https://www.linkedin.com/company/pyconindia/posts/?feedView=all" target="_blank" aria-label="LinkedIn" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200 no-underline">
+                        <i class="fab fa-linkedin text-3xl text-[#d7ff7c]"></i>
+                    </a>
+                </div>
+                <div class="flex justify-center items-center">
+                    <a href="https://www.facebook.com/PyConIndia/" target="_blank" title="Facebook" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200 no-underline">
+                        <i class="fab fa-facebook text-3xl text-[#d7ff7c]"></i>
+                    </a>
+                </div>
+                <div class="flex justify-center items-center">
+                    <a href="https://x.com/pyconindia" target="_blank" title="X" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200 no-underline">
+                        <i class="fab fa-x-twitter text-3xl text-[#d7ff7c]"></i>
+                    </a>
+                </div>
+                <div class="flex justify-center items-center">
+                    <a href="https://www.instagram.com/inpycon/" target="_blank" title="Instagram" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200 no-underline">
+                        <i class="fab fa-instagram text-3xl text-[#d7ff7c]"></i>
+                    </a>
+                </div>
+                <div class="flex justify-center items-center">
+                    <a href="https://fosstodon.org/@pyconindia" target="_blank" title="Fosstodon" class="p-1 pr-0 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200 no-underline">
+                        <i class="fab fa-mastodon text-3xl text-[#d7ff7c]"></i>
+                    </a>
+                </div>
+                <div class="flex justify-center items-center">
+                    <a href="https://pyconindia.zulipchat.com/" target="_blank" title="ZulipChat" class="pl-0 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200 no-underline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 48 48"><path fill="#d7ff7c" stroke="blue" stroke-linecap="round" stroke-linejoin="round" d="M41.54 10.22a6.27 6.27 0 0 1-2.2 4.78L26.21 26.76c-.21.2-.61-.1-.41-.4l4.82-9.63c.1-.3 0-.6-.3-.6H11.67c-2.91 0-5.21-2.6-5.21-5.81s2.3-5.82 5.21-5.82h24.56c2.91-.1 5.31 2.51 5.31 5.72M11.67 43.5h24.66c2.91 0 5.21-2.61 5.21-5.81s-2.3-5.82-5.21-5.82H17.68a.37.37 0 0 1-.3-.6l4.82-9.62a.29.29 0 0 0-.41-.41L8.66 32.87a6.3 6.3 0 0 0-2.2 4.82c0 3.2 2.4 5.81 5.21 5.81"/></svg>
+                    </a>
+                </div>
+                <div class="flex justify-center items-center">
+                    <a href="https://www.youtube.com/channel/UCVxPTRxEcoWjEFIMXHaGgHA" target="_blank" title="Youtube" class="p-1 pr-0 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 transition-transform duration-200 no-underline">
+                        <i class="fab fa-youtube text-3xl text-[#d7ff7c]"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative text-sm text-[#D7FF7B] pt-2 xl:scale-125 scale-100 text-center md:text-left">
+            <p>Copyright © 2025 PyCon India</p>
+        </div>
     </div>
-    
-    <!-- Desktop Logo (with adjusted positioning) -->
-    <div class="hidden md:block w-full md:w-1/2 order-1 md:order-2">
-      <div class="flex justify-center">
-        <img src="/img/logo.png" alt="PYCON 2025" class="w-full max-w-md -mt-44" />
-      </div>
+    <div class="absolute inset-0 flex pb-4 justify-center md:justify-end items-end pointer-events-none">
+        <img src="/img/logo.png" alt="PYCON 2025" class="w-6/12 pb-64 lg:w-7/12 md:w-6/12 lg:pb-16 lg:pr-12 xl:w-5/12 xl:pb-16 xl:pr-12 transition-transform duration-100" style="animation: floating-logo 2s ease-in-out infinite;"/>
     </div>
-  </div>
 </footer>
