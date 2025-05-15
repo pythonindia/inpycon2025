@@ -1,0 +1,273 @@
+---
+title: Code Of Conduct - Reporting Guide
+description: PyCon India 2025 CoC Reporting Guide 
+layout: base.njk
+---
+
+{% from "components/button.njk" import button %}
+{% from "components/card.njk" import card %}
+{% from "components/flat-card.njk" import flatCard %}
+
+{%  set members = [
+        {
+            "name": "Sayan Chowdhury",
+            "email": "911@yudocaa.in"
+        },
+        {
+            "name": "Samarpita Saha",
+            "email": "samarpita27saha@gmail.com"
+        },
+        {
+            "name": "Shabnam",
+            "email": "shabnam.innovates@gmail.com"
+        },
+        {
+            "name": "Shilpi Biswas",
+            "email": "shilpi@yudocaa.in"
+        },
+        {
+            "name": "Abhishek Mishra",
+            "email": "abhi.mishra922@gmail.com"
+        },
+        {
+            "name": "Chandan Kumar",
+            "email": "raukadah@gmail.com"
+        },
+        {
+            "name": "Koti Vellanki",
+            "email": "vellankikoti@gmail.com"
+        },
+        {
+            "name": "Rayan Das",
+            "email": "raydeeam@gmail.com"
+        }
+    ]
+%}
+
+{% set report_info = [
+        {
+            "detail": "Your contact information",
+            "description": "So we can get in touch with you if additional information is needed during the investigation."
+        },
+        {
+            "detail": "Names and details of involved parties",
+            "description": "Include the names (real, nicknames, or pseudonyms) of all individuals involved in the incident, including any witnesses."
+        },
+        {
+            "detail": "Date, time, and location of the incident",
+            "description": "Be as specific as possible about when and where the incident occurred."
+        },
+        {
+            "detail": "Description of the incident",
+            "description": "Provide a detailed account of what happened, including any offensive language or actions involved."
+        },
+        {
+            "detail": "Evidence, if available",
+            "description": "Provide a detailed account of what happened, including any offensive language or actions involved."
+        },
+        {
+            "detail": "Additional context",
+            "description": "Provide a detailed account of what happened, including any offensive language or actions involved."
+        },
+        {
+            "detail": "Is the incident ongoing?",
+            "description": "Let us know if the incident is ongoing or if there is an immediate threat to someone's safety."
+        }
+    ]
+%}
+
+{% set resolution_info = [
+        {
+            "detail": "Private reprimand",
+            "description": "A private warning to the individual(s) involved."
+        },
+        {
+            "detail": "Public reprimand",
+            "description": "A public statement addressing the violation."
+        },
+        {
+            "detail": "Expulsion",
+            "description": "Removal from the conference without a refund."
+        },
+        {
+            "detail": "Evidence, if available:",
+            "description": "Provide a detailed account of what happened, including any offensive language or actions involved."
+        },
+        {
+            "detail": "Ban from PyCon India spaces",
+            "description": "Temporary or permanent restrictions on access to mailing lists, IRC, etc."
+        },
+        {
+            "detail": "Request for an apology",
+            "description": "Asking the responsible party to issue an apology to the affected individuals or the community."
+        }
+    ]
+%}
+
+
+
+<div class="w-full h-auto bg-[#4E62F5] px-[6%] pb-32 flex flex-col md:flex-row">
+    <div class="pt-40 w-full lg:w-[70%]">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+            Reporting Guide
+        </div>
+        <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-10 text-justify">
+            <p>If you experience any harassment, or unfair treatment, or witness any behavior you believe violates the PyCon India Code Of Conduct, we encourage you to report it as soon as possible. Reports can be made through the following channels:</p>
+
+            <div class="pt-8">
+                <p class="font-bold text-xl">Code of Conduct (CoC) Workgroup Area: </p>
+                <p class="pt-2">You can directly approach the CoC workgroup area with any concerns you may have. If you are unable to locate the CoC workgroup area, please ask one of our volunteers wearing Volunteer badges for assistance. They will gladly direct you to the CoC Workgroup area.</p>
+            </div>
+
+            <div class="pt-8">
+                <p class="font-bold text-xl">Email: </p>
+                <p class="pt-2">You can send an email to <a href="mailto:coc@in.pycon.org" target="_blank" rel="noopener noreferrer" class="underline">coc@in.pycon.org</a> to submit your report electronically.</p>
+            </div>
+
+            <div class="pt-8">
+                <p class="font-bold text-xl">In-person: </p>
+                <p class="pt-2">If you prefer to discuss the matter in-person, please notify any member of the PyCon India organizing team or the Code Of Conduct Committee.</p>
+            </div>
+
+            <div class="pt-8">
+                <p class="font-bold text-xl">Code of Conduct (CoC) Workgroup Area: </p>
+                <p class="pt-2">You can directly approach the CoC workgroup area with any concerns you may have. If you are unable to locate the CoC workgroup area, please ask one of our volunteers wearing Volunteer badges for assistance. They will gladly direct you to the CoC Workgroup area.</p>
+            </div>
+        
+            <p class="pt-16">Contact any of the following committee members. The Helpdesk can assist you in finding them at the venue:</p>
+        
+        
+        </div>
+    </div>
+    <div class="lg:w-[30%] w-[80%] flex items-center justify-center lg:mr-[2%] mx-auto">
+        <img src="/img/assets/guide.svg" alt="Guide" class="w-full transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+    </div>
+</div>
+
+<div class="main-container bg-[#FFFFFF] w-full h-auto px-[6%]">
+    <div class="card-section flex flex-wrap -mt-24">
+        {% for member in members %}
+            <div class="w-full sm:w-1/2 lg:w-1/3 py-6 px-10 transform transition-transform duration-500 hover:-translate-y-4 hover:translate-x-4">
+                {% call flatCard() -%}
+                    <div class="py-4 px-4">
+                        <p class="text-xl lg:text-3xl font-light">{{ member.name }}</p>
+                        <p class="pt-4 text-sm lg:text-xl"><a href="mailto:{{ member.email }}" target="_blank" rel="noopener noreferrer" class="underline">{{ member.email }}</a></p>
+                    </div>
+                {%- endcall %}
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="relative md:block hidden">
+        <div class="flex justify-end pr-[4%] lg:pr-40">
+            <img src="/img/assets/circle-pink.svg" alt="Circle" class="lg:w-6 w-[4%]">
+        </div>
+        <div class="flex justify-end pr-[12%] pt-4 lg:pr-60">
+            <img src="/img/assets/star-lime-vector.svg" alt="Groovy Star" class="lg:w-16 w-[10%]">
+        </div>
+        <div class="flex justify-end pr-[2%] lg:pr-20">
+            <img src="/img/assets/circle-purple.svg" alt="Circle" class="lg:w-10 w-[4%]">
+        </div>
+        <div class="flex justify-end pr-[8%] pt-[4%] lg:pr-40 lg:mt-10">
+            <img src="/img/assets/star-purple-vector.svg" alt="Groovy Star" class="lg:w-20 w-[12%]">
+        </div>
+    </div>
+    <div class="pb-60 lg:pb-[20%] w-full text-justify lg:w-[70%]">
+        <div class="mt-24 md:-mt-32 lg:-mt-20 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Information to Include in</p>
+                <p class="pt-2">Your Report</p>
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <p class="pb-4">When filing a report, please provide as much relevant information as possible. The following details are essential to help us understand and address the situation:</p>
+
+                {% for info in report_info %}
+                    <div class="pt-4">
+                        <p class="font-bold flex items-center"><span><img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>{{ info.detail }}:</p>
+                        <p class="pt-1 text-md">{{ info.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-36 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Reporting Concerns about </p>
+                <p class="pt-2">Volunteers or Organizers</p>
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <p class="pb-4">All reports will be treated with strict confidentiality. We understand the sensitive nature of such matters and will protect the privacy of all parties involved to the best of our ability.</p>
+                <p class="pb-4">In some cases, we may need to make a public statement, but the identities of victims and reporters will remain confidential unless instructed otherwise.</p>
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-36 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                Confidentiality
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <p class="pb-4">If your report concerns a possible violation by a volunteer or organizer, you can make your report directly to the Chair of the Code Of Conduct Committee, whose contact information will be made available during the conference.</p>
+                <p class="pb-4">The current Code Of Conduct Chair is Sayan Chowdhury, and you can reach out via email at <a href="mailto:coc@in.pycon.org" target="_blank" rel="noopener noreferrer" class="underline"> 911@yudocaa.in</a></p>
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-36 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                Response and Resolution
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <p class="pb-4">Once a report is received, the Code Of Conduct Committee will promptly initiate an investigation.</p>
+                <p class="pb-4">The Code of Conduct Working Group will review the incident, consider all the information provided, and determine the appropriate response. Possible responses may include but are not limited to:</p>
+
+                <div class="pt-4">
+                    <p class="font-bold flex items-center"><span><img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>No Violation Found:</p>
+                    <p class="pt-1 text-md">If the incident does not violate the <a href="/coc/guidelines" target="_blank" rel="noopener noreferrer" class="underline">Code Of Conduct</a>.</p>
+                </div>
+                
+                {% for info in resolution_info %}
+                    <div class="pt-4">
+                        <p class="font-bold flex items-center"><span><img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>{{ info.detail }}:</p>
+                        <p class="pt-1 text-md">{{ info.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-36 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                Timeline
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <p class="pb-4">We aim to respond to the reporter within one week of receiving the report with either a resolution or an explanation of the ongoing investigation.</p>
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-36 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                Retaliation
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <p class="pb-4">We aim to respond to the reporter within one week of receiving the report with either a resolution or an explanation of the ongoing investigation.</p>
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-36 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                License
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <p class="pb-4">We aim to respond to the reporter within one week of receiving the report with either a resolution or an explanation of the ongoing investigation.</p>
+                <p class="pb-4">Thank you for helping us maintain a respectful and inclusive atmosphere at PyCon India 2025. By reporting incidents, you contribute to the collective effort to make our conference a safe and welcoming experience for all attendees.</p>
+                <p class="pb-4">This guide has been inspired by:</p>
+                <p class="flex items-center">
+                    <span><img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>
+                    <a href="https://policies.python.org/us.pycon.org/code-of-conduct/Procedures-for-Reporting-Incidents/" target="_blank" rel="noopener noreferrer" class="underline">PyCon US 2024 - Procedures for Reporting Incidents</a>
+                </p>
+                <p class="flex items-center">
+                    <span><img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>
+                    <a href="https://www.djangoproject.com/conduct/reporting/" target="_blank" rel="noopener noreferrer" class="underline">Django Code of Conduct - Reporting Guide</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

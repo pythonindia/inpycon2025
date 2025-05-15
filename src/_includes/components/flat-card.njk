@@ -1,0 +1,6 @@
+{% macro flatCard(bg="lime") %}
+<div class="relative group w-full max-w-full border border-black 
+    {{ 'bg-[#CD89FF] hover:bg-[#D7FF7B]' if bg == 'purple' else 'bg-[#D7FF7B] hover:bg-[#CD89FF]' }} p-4">
+    {{ caller() }}
+</div>
+{% endmacro %}
