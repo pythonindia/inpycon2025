@@ -3,9 +3,19 @@ layout: base.njk
 isFront: true
 ---
 
-<header class="header w-full flex flex-col justify-between">
-  {% include "navbar.njk" %}
-</header>
-<main class="my-8 flex-grow">
-  {% include "section.header.njk" %}
+<div class="fixed inset-0 bg-black flex justify-center items-center z-[9999] animate-fadeOut">
+  <div class="flex justify-center items-center">
+    <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025 Logo" class="w-[200px] h-auto animate-pulse">
+  </div>
+</div>
+
+<main class="flex-grow relative">
+  <div class="home-banner mt-0 relative z-[1]">
+    {% include "landing/hero-banner.njk" %}
+  </div>
+  {% include "landing/hero.njk" %}
+  {% include "landing/keynotes.njk" %}
+  {% include "landing/sponsors.njk" %}
+  {% include "landing/communities.njk" %}
+  {% include "landing/x-wall.njk" %}
 </main>

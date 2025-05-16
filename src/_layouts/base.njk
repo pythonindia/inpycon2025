@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ site.language }}">
-<head>
-  {% include "head.njk" %}
-</head>
-<body id="top" class="font-sans text-gray-800 min-h-screen flex flex-col">
-  {{ content | safe }}
-  {% include "footer.njk" %}
-  {% include "js.njk" %}
-</body>
+  <head>
+    {% include "head.njk" %}
+  </head>
+  <body id="top" class="font-sans text-gray-800 min-h-screen flex flex-col {% if isFront %}is-home-page{% endif %}">
+    {% from "navbar.njk" import navbar %}
+    {{ navbar(isFront) }}
+    
+    {{ content | safe }}
+    
+    {% include "footer.njk" %}
+    {% include "js.njk" %}
+  </body>
 </html>

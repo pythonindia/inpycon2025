@@ -1,0 +1,11 @@
+{% macro flatCard(bg="lime") %}
+    {% if bg == "purple" %}
+        {% set bg_class = "bg-pycon-purple hover:bg-pycon-lime" %}
+    {% else %}
+        {% set bg_class = "bg-pycon-lime hover:bg-pycon-purple" %}
+    {% endif %}
+
+    <div class="relative group w-full max-w-full border border-black {{ bg_class }} p-4">
+        {{ caller() }}
+    </div>
+{% endmacro %}
