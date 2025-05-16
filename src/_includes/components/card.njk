@@ -1,16 +1,20 @@
 {% macro card(bg="lime") %}
-<div class="relative group w-full">
-    <!-- Background Div -->
-    <div class="absolute top-0 left-0 
-        {{ 'bg-[#CD89FF] group-hover:bg-[#D7FF7B]' if bg == 'purple' else 'bg-[#D7FF7B] group-hover:bg-[#CD89FF]' }}
-        w-full h-full border-black border-2 duration-300 group-hover:translate-y-[-2px] group-hover:translate-x-[-2px]">
-    </div>
+    {% if bg == "purple" %}
+        {% set bg_class = "bg-pycon-purple group-hover:bg-pycon-lime" %}
+    {% else %}
+        {% set bg_class = "bg-pycon-lime group-hover:bg-pycon-purple" %}
+    {% endif %}
 
-    <!-- Main Card -->
-    <div class="relative top-[12px] left-[12px] w-full bg-[#FFFFFF] border-black border-2 items-center justify-center duration-300 group-hover:translate-y-[4px] group-hover:translate-x-[4px]">
-        {% if caller %}
-            {{ caller() }}
-        {% endif %}
+    <div class="relative group w-full">
+        <!-- Background Div -->
+        <div class="absolute top-0 left-0 {{ bg_class }} w-full h-full border-black border-2 duration-300 group-hover:translate-y-[-2px] group-hover:translate-x-[-2px]">
+        </div>
+
+        <!-- Main Card -->
+        <div class="relative top-[12px] left-[12px] w-full bg-[#FFFFFF] border-black border-2 items-center justify-center duration-300 group-hover:translate-y-[4px] group-hover:translate-x-[4px]">
+            {% if caller %}
+                {{ caller() }}
+            {% endif %}
+        </div>
     </div>
-</div>
 {% endmacro %}

@@ -1,10 +1,18 @@
 {% macro button(text, url, lime_bg=false) %}
-<a href="{{ url }}" class="group no-underline inline-flex items-center gap-1.5 sm:gap-2 pl-3 sm:pl-4 pr-1.5 sm:pr-2 py-1 sm:py-1.5 
-    {{ 'bg-[#d7ff7b] hover:bg-[#c9ff50] border-black' if lime_bg else 'bg-transparent border-[#c9ff50]' }}
-    rounded-[32px] border hover:translate-y-[-2px] hover:shadow-md transition-all duration-300 focus:outline-2 focus:outline-offset-2">
-    <span class="font-['Acid_Grotesk'] text-base sm:text-lg {{ 'text-black' if lime_bg else 'text-[#c9ff50]' }} leading-relaxed whitespace-nowrap group-hover:translate-x-[-4px] transition-transform duration-200">{{ text }}</span>
-    <div class="flex justify-center items-center w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] bg-white rounded-full border {{ 'border-black' if lime_bg else 'border-black' }} group-hover:rotate-45 transition-transform duration-300">
-        <img src="{{ '/img/assets/arrow-vector.svg' | url }}" alt="Arrow" class="w-[14px] h-[10px] sm:w-[16px] sm:h-[12px] group-hover:scale-110 transition-transform duration-300">
-    </div>
-</a>
+    {% if lime_bg %}
+        {% set bg_class = "bg-pycon-lime hover:bg-pycon-lime/90" %}
+        {% set text_class = "text-black" %}
+    {% else %}
+        {% set bg_class = "bg-transparent border-pycon-lime" %}
+        {% set text_class = "text-pycon-lime" %}
+    {% endif %}
+
+    <a href="{{ url }}" class="group no-underline inline-flex items-center gap-2 px-4 py-2 {{ bg_class }} rounded-full border border-black hover:-translate-y-0.5 hover:shadow-md transition-all duration-300 focus:outline-2 focus:outline-offset-2">
+        <span class="font-['Acid_Grotesk'] text-lg {{ text_class }} leading-relaxed whitespace-nowrap group-hover:-translate-x-1 transition-transform duration-200">
+            {{ text }}
+        </span>
+        <div class="flex justify-center items-center w-8 h-8 bg-white rounded-full border border-black group-hover:rotate-45 transition-transform duration-300">
+            <img src="{{ '/img/assets/arrow-vector.svg' | url }}" alt="Arrow" class="w-4 h-3 group-hover:scale-110 transition-transform duration-300" />
+        </div>
+    </a>
 {% endmacro %}

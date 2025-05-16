@@ -4,7 +4,7 @@
     {% include "head.njk" %}
   </head>
   <body id="top" class="font-sans text-gray-800 min-h-screen flex flex-col">
-    {% from "components/_navbar.njk" import navbar %}
+    {% from "navbar.njk" import navbar %}
     {{ navbar(isFront) }}
     
     {{ content | safe }}

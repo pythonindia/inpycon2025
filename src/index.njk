@@ -3,14 +3,14 @@ layout: base.njk
 isFront: true
 ---
 
-<div class="fixed inset-0 bg-black flex justify-center items-center z-[9999] animate-slideUp">
+<div class="fixed inset-0 bg-black flex justify-center items-center z-[9999] animate-fadeOut">
   <div class="flex justify-center items-center">
-    <img src="/img/logo.svg" alt="PyCon India 2025 Logo" class="w-[200px] h-auto animate-pulse">
+    <img src="{{ env.baseUrl }}img/logo.jpeg" alt="PyCon India 2025 Logo" class="w-[200px] h-auto animate-pulse">
   </div>
 </div>
 
 <main class="flex-grow relative">
-  <div class="home-banner mt-0 md:mt-[32px] relative z-[1]">
+  <div class="home-banner mt-0 relative z-[1]">
     {% include "landing/hero-banner.njk" %}
   </div>
   {% include "landing/hero.njk" %}

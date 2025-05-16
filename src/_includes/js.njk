@@ -1,40 +1,142 @@
 <script src="https://unpkg.com/popper.js@1"></script>
 <script src="https://unpkg.com/tippy.js@4"></script>
 <script>
-  function navToggle() {
-    let btn = document.getElementById('menuBtn');
-    let nav = document.getElementById('menu');
-
-    btn.classList.toggle('open');
-    nav.classList.toggle('flex');
-    nav.classList.toggle('hidden');
-  }
-
-  window.addEventListener('scroll', function () {
-    let btt = document.getElementById('btt');
-
-    if (window.scrollY >= 1080) {
-      btt.classList.remove('hidden');
-      btt.classList.add('block');
-    } else {
-      btt.classList.add('hidden');
-      btt.classList.remove('block');
+  document.addEventListener('DOMContentLoaded', () => { 
+    // Navigation toggle
+    const toggleBtn = document.getElementById('menuBtn');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const nav = document.getElementById('menu');
+        toggleBtn.classList.toggle('open');
+        nav.classList.toggle('hidden');
+        nav.classList.toggle('flex');
+      });
     }
-  });
-
-  console.log('Code/Design: ttntm.me'); // credit where credit is due
-
-  const template = document.getElementById('followTip');
-  const container = document.createElement('div');
-
-  container.appendChild(document.importNode(template.content, true));
-
-  tippy('#follow', {
-    content: container.innerHTML,
-    animation: 'scale',
-    duration: 250,
-    arrow: true,
-    placement: 'bottom',
-    interactive: true,
+    
+    // Back to top visibility and navbar scroll effect
+    const handleScroll = () => {
+      const btt = document.getElementById('btt');
+      const navbar = document.querySelector('.glass-nav');
+      
+      if (btt) {
+        if (window.scrollY >= 1080) {
+          btt.classList.remove('hidden');
+          btt.classList.add('block');
+        } else {
+          btt.classList.add('hidden');
+          btt.classList.remove('block');
+        }
+      }
+      
+      // Handle navbar transparency on scroll
+      if (navbar) {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initialize tooltips (if tippy.js is loaded)
+    if (typeof tippy === 'function') {
+      const template = document.getElementById('followTip');
+      if (template) {
+        const container = document.createElement('div');
+        container.appendChild(document.importNode(template.content, true));
+        tippy('#follow', {
+          content: container.innerHTML,
+          animation: 'scale',
+          duration: 250,
+          arrow: true,
+          placement: 'bottom',
+          interactive: true
+        });
+      }
+    }
+    
+    // Add active class to current nav item based on URL
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute('href');
+      if (linkPath && (linkPath === currentPath || 
+         (linkPath !== '/' && currentPath.startsWith(linkPath)))) {
+        link.classList.add('active');
+      }
+    });
+    
+    // Mobile menu functionality
+    const mobileMenuCheckbox = document.getElementById('mobile-menu-checkbox');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileCloseBtn = document.getElementById('mobile-close-btn');
+    
+    // Function to open mobile menu
+    function openMobileMenu() {
+      if(mobileMenu) {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => {
+          mobileMenu.classList.add('visible');
+        }, 10);
+        document.body.classList.add('overflow-hidden'); // Prevent body scrolling
+      }
+    }
+    
+    // Function to close mobile menu
+    function closeMobileMenu() {
+      if(mobileMenu) {
+        mobileMenu.classList.remove('visible');
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+        }, 300);
+        document.body.classList.remove('overflow-hidden'); // Allow body scrolling
+        if (mobileMenuCheckbox) mobileMenuCheckbox.checked = false;
+      }
+    }
+    
+    // Toggle mobile menu with hamburger button
+    if (mobileMenuCheckbox && mobileMenu) {
+      mobileMenuCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+          openMobileMenu();
+        } else {
+          closeMobileMenu();
+        }
+      });
+    }
+    
+    // Close button functionality
+    if (mobileCloseBtn) {
+      mobileCloseBtn.addEventListener('click', closeMobileMenu);
+    }
+    
+    // Mobile submenu toggles
+    const submenuCheckboxes = document.querySelectorAll('.mobile-submenu-checkbox');
+    submenuCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        const parent = this.closest('.mobile-menu-item');
+        const submenu = parent.querySelector('.mobile-submenu');
+        const icon = parent.querySelector('.mobile-submenu-icon');
+        
+        if (this.checked) {
+          submenu.classList.remove('hidden');
+          icon.style.transform = 'rotate(90deg)';
+        } else {
+          submenu.classList.add('hidden');
+          icon.style.transform = 'rotate(0)';
+        }
+      });
+    });
+    
+    // Close mobile menu when clicking on a link
+    if(mobileMenu) {
+      const mobileLinks = mobileMenu.querySelectorAll('a:not([target="_blank"])');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+    }
   });
 </script>

@@ -850,6 +850,11 @@ module.exports = {
         'nav-mobile': '0px',
         'nav-desktop': '32px',
       },
+      colors: {
+        'pycon-blue': '#4E62F5',
+        'pycon-lime': '#D7FF7B',
+        'pycon-purple': '#CD89FF',
+      },
     },
   },
   variantOrder: [
