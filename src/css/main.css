@@ -222,17 +222,17 @@ nav a {
 
 /* Glassmorphic Navbar Styles */
 .glass-nav {
-  background-color: rgba(255, 255, 255, 0.15); /* Light transparent background */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(78, 98, 245, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 .glass-nav.scrolled {
-  background-color: rgba(255, 255, 255, 0.25); /* Slightly more opaque when scrolled */
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  background-color: rgba(78, 98, 245, 0.85);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 /* Remove the specific background colors for black overlay */
@@ -246,11 +246,11 @@ nav a {
 
 /* Dropdown glassmorphism */
 .dropdown-glass {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   width: auto !important;
   min-width: 200px;
   max-width: 250px;
@@ -346,8 +346,9 @@ nav a {
 
 /* Mobile Menu Styles */
 #mobile-menu {
-  transition: opacity 0.3s ease;
-  opacity: 0;
+  background-color: rgba(78, 98, 245, 0.95);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 #mobile-menu.visible {
