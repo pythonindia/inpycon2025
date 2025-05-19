@@ -1,0 +1,281 @@
+---
+title: Tickets
+description: PyCon India 2025 Tickets
+layout: base.njk
+---
+
+{% from "components/button.njk" import button %}
+{% from "components/card.njk" import card %}
+{% from "components/flat-card.njk" import flatCard %}
+
+<div class="w-full h-auto bg-pycon-blue -mb-24 px-[6%] flex flex-col md:flex-row">
+    <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+            Tickets
+        </div>
+        <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-10 text-justify">
+            <p>We offer multiple ticket options to cater to the diverse needs of our attendees. Whether you're a student, a professional, or someone who simply is passionate about Python and wants to support us, we have a ticket option for you.</p>
+            <p class="pt-4">There are different ticket types available for the conference, workshops, and developer sprints.</p>
+            <p class="pt-4">PyCon India is entirely a volunteer-run not-for-profit conference. Whatever revenue we get from Tickets and Sponsorships are spent on the conference itself. In this event, <span class="italic">everyone who can pay for their tickets, pays for the tickets</span> including volunteers. The average ticket pricing is a highly discounted one considering the per attendee cost of the event.</p>
+        </div>
+    </div>
+    <div class="lg:w-[30%] w-[80%] lg:mt-60 flex items-center justify-center mx-auto">
+        <img src="/img/assets/announce.svg" alt="Guide" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+        <img src="/img/assets/shapes-r.svg" alt="Guide" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+    </div>
+</div>
+
+<div class="absolute top-2/5 right-4 md:block">
+    <img src="/img/assets/star-lime-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
+</div>
+
+<div class="absolute md:top-3/4 pt-52 md:right-20 right-12 md:block">
+    <img src="/img/assets/star-pink-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
+</div>
+
+<div class="main-container pt-16 md:pt-48 bg-[#FFFFFF] w-full h-auto px-[6%]">
+    <div class="pb-40 md:pb-60 lg:pb-[20%] w-full text-justify lg:w-[70%]">
+        <div class="mt-24 md:-mt-32 lg:-mt-20 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Ticket Types</p>
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <div class="overflow-x-auto">
+                    <table class="w-full bg-white border-collapse border border-gray-300 rounded-lg shadow-md">
+                        <thead class="bg-pycon-blue text-white uppercase">
+                            <tr>
+                                <th class="px-4 py-3 text-left">Type</th>
+                                <th class="px-4 py-3 text-left">Entitlements</th>
+                                <th class="px-4 py-3 text-right">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-100 border-b border-gray-300">
+                                <td class="px-4 py-3 font-medium">Super Early Bird Conference</td>
+                                <td class="px-4 py-3">Access to the Conference Days, i.e. 13th and 14th</td>
+                                <td class="px-4 py-3 text-right">₹1099</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100 border-b border-gray-300">
+                                <td class="px-4 py-3 font-medium">Early Bird Conference</td>
+                                <td class="px-4 py-3">Access to the Conference Days, i.e. 13th and 14th</td>
+                                <td class="px-4 py-3 text-right">₹1649</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100 border-b border-gray-300">
+                                <td class="px-4 py-3 font-medium">Regular Conference</td>
+                                <td class="px-4 py-3">Access to the Conference Days, i.e. 13th and 14th</td>
+                                <td class="px-4 py-3 text-right">₹2199</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100 border-b border-gray-300">
+                                <td class="px-4 py-3 font-medium">Late Bird Conference</td>
+                                <td class="px-4 py-3">Access to the Conference Days, i.e. 13th and 14th</td>
+                                <td class="px-4 py-3 text-right">₹3299</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100 border-b border-gray-300">
+                                <td class="px-4 py-3 font-medium">Super Late Bird Conference</td>
+                                <td class="px-4 py-3">Access to the Conference Days, i.e. 13th and 14th</td>
+                                <td class="px-4 py-3 text-right">₹4399</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100 border-b border-gray-300">
+                                <td class="px-4 py-3 font-medium">Workshop</td>
+                                <td class="px-4 py-3">Access to the Workshop Day on 12th</td>
+                                <td class="px-4 py-3 text-right">₹1199</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100 border-b border-gray-300">
+                                <td class="px-4 py-3 font-medium">Combo</td>
+                                <td class="px-4 py-3">Access to the Workshop Day on 12th and Conference Days, i.e. 13th and 14th</td>
+                                <td class="px-4 py-3 text-right">₹2999</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100 border-b border-gray-300">
+                                <td class="px-4 py-3 font-medium">Student</td>
+                                <td class="px-4 py-3">Access to the Conference Days, i.e. 13th and 14th</td>
+                                <td class="px-4 py-3 text-right">₹1099</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="px-4 py-3 font-medium">Contributor</td>
+                                <td class="px-4 py-3">Access to the Conference Days, i.e. 13th and 14th</td>
+                                <td class="px-4 py-3 text-right">₹5999</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>What's Included</p>
+            </div>
+            <div class="pt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    {% call flatCard(bg="lime") -%}
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-4">Conference Days - 13th and 14th</h3>
+                            <ul class="list-none space-y-3">
+                                <li class="flex">
+                                    <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Keynotes</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Talks</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Lightning Talks</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Posters</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Open Spaces</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Sponsor Booth Crawl</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Breakfast, Lunch, High Tea and All Day Coffee/Tea</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Lot's of networking opportunities</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Conference T-Shirt</span>
+                                </li>
+                            </ul>
+                        </div>
+                    {%- endcall %}
+                </div>
+                <div>
+                    {% call flatCard(bg="purple") -%}
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-4">Workshop Day - 12th</h3>
+                            <ul class="list-none space-y-3">
+                                <li class="flex">
+                                    <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>One Morning Workshop</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>One Afternoon Workshop</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Breakfast, Lunch, High Tea and All Day Coffee/Tea</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Lot's of networking opportunities</span>
+                                </li>
+                            </ul>
+                        </div>
+                    {%- endcall %}
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Special Notes</p>
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <ul class="list-none space-y-4">
+                    <li class="flex">
+                        <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>Workshop Ticket holders will not get conference goodies.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>Student tickets must show a valid proof of attending a full-time educational institution while registering on the conference day. Failing to do so will need you buy ticket at Super Late bird cost at the venue.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>The Contributor Ticket pricing is closer to the actual cost of attendance of an attendee.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>Not all ticket types are open yet. We will gradually open all ticket types once the previous segment sells out.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>The ticket prices above are excluding GST and platform fees.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>Developer Sprint tickets will open later and closer to the conference. One must hold a conference ticket or a workshop ticket or a combo ticket to access the Developer Sprints.</span>
+                    </li>
+                </ul>
+                <div class="flex justify-center pt-8">
+                    {{ button(text="Buy Tickets !!", url="https://konfhub.com/pyconindia2025", lime_bg=true) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Cancellation Policy</p>
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <p>In the unfortunate event where people cannot attend the Conference they can cancel their ticket by sending an email to <span class="font-mono">tickets [at] in [dot] pycon [dot] org</span>. Cancellation is subject to Terms and Conditions mentioned below. Ticketing team will process the cancellation and the amount will be refunded to the original payment method. Cancellations requests will be accepted till <span class="underline font-bold">31st August 2025, 23:59 IST</span>.</p>
+                
+                <ul class="list-none space-y-4 pt-6">
+                    <li class="flex">
+                        <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>Due to compliance reasons we won't be able to process cancellations for participants claiming GST in their purchases. They can transfer their ticket to someone once Transfer window opens.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>Cancellation will incur a small cancellation fee equivalent to the platform fees.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Transfer Policy</p>
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <p>In case you already know someone whom you want to Transfer your ticket you can put a Transfer request by sending an email to <span class="font-mono">tickets [at] in [dot] pycon [dot] org</span>. Please note that you need to take care of collecting the ticket price from the person whom you are transferring the ticket. PyCon India team is not responsible for managing the transfer of the ticket price. We only facilitate the ticket transfer. Keep the person in CC whom you want to transfer your ticket and mention the following details of the person to whom ticket is to be transferred.</p>
+                
+                <ul class="list-none space-y-4 pt-6">
+                    <li class="flex">
+                        <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>Name</span>
+                    </li>
+                    <li class="flex">
+                        <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>Email</span>
+                    </li>
+                    <li class="flex">
+                        <img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>T-Shirt Size</span>
+                    </li>
+                </ul>
+                
+                <p class="pt-6">They can update rest of the details on their own once the ticket is transferred.</p>
+                
+                <p class="pt-6">Our Ticketing Team will take care of the transfer. Transfer requests will be accepted till <span class="underline font-bold">31st August 2025, 23:59 IST</span>. We can't guarantee any transfers beyond that date.</p>
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Code of Conduct</p>
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <ul class="list-none space-y-4 pt-4">
+                    <li class="flex">
+                        <img src="/img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>All attendees must adhere to the <a href="/coc" class="underline text-pycon-blue">PyCon India Code of Conduct</a>, ensuring a welcoming and inclusive environment for everyone.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
