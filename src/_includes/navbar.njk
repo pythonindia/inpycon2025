@@ -20,7 +20,8 @@
           {
             "name": "Sponsors",
             "link": "#sponsors",
-            "hasSubmenu": false
+            "hasSubmenu": false,
+            "isExternal": false
           },
           {
             "name": "CoC",
@@ -75,7 +76,8 @@
                 </div>
               </div>
             {% else %}
-              <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' %}{{ item.link }}{% else %}{{ '/' + item.link | url }}{% endif %}"
+              {# TODO: item.name != 'Sponsors' is a hack till we get the sponsors page up#}
+              <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' and item.name != 'Sponsors' %}{{ item.link }}{% else %}{{ '/' + item.link | url }}{% endif %}"
                  {% if item.isExternal %}target="_blank" rel="noopener noreferrer"{% endif %}
                  class="flex items-center gap-1 py-2 px-3 text-white hover:text-[#D7FF7B] text-base font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 no-underline nav-link">
                 {{ item.name }}
