@@ -21,7 +21,7 @@
         {% for i in range(0, 6) %}
           <div class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6 h-[100px] bg-white border border-black">
             <a href="{{ partners[i].link }}" target="_blank" rel="noopener noreferrer">
-              <img src="{{ partners[i].image }}" alt={{ partners[i].name }} class="border-black w-full h-full object-contain">
+              <img src="{{ env.baseUrl }}{{ partners[i].image }}" alt={{ partners[i].name }} class="border-black w-full h-full object-contain">
             </a>
           </div>
         {% endfor %}
@@ -35,7 +35,7 @@
       {% for i in range(6, 12) %}
         <div class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6 h-[100px] bg-white border border-black">
             <a href="{{ partners[i].link }}" target="_blank" rel="noopener noreferrer">
-              <img src="{{ partners[i].image }}" alt={{ partners[i].name }} class="border-black w-full h-full object-contain">
+              <img src="{{ env.baseUrl }}{{ partners[i].image }}" alt={{ partners[i].name }} class="border-black w-full h-full object-contain">
             </a>
        </div>
       {% endfor %}

@@ -2,61 +2,61 @@
   {
       "name": "BangPypers",
       "link": "https://bangalore.pythonindia.org/",
-      "image": "/img/partners/bangpypers.png"
+      "image": "img/partners/bangpypers.png"
     },
     {
       "name": "HydPy",
       "link": "https://www.hydpy.org/",
-      "image": "/img/partners/hydpy.png"
+      "image": "img/partners/hydpy.png"
     },
     {
       "name": "PythonPune",
       "link": "https://pythonpune.in/",
-      "image": "/img/partners/PythonPune_banner.png"
+      "image": "img/partners/PythonPune_banner.png"
     },
     {
       "name": "PyLadies India",
       "link": "https://x.com/pyladiesi",
-      "image": "/img/partners/pyladies.jpg"
+      "image": "img/partners/pyladies.jpg"
     },
     {
       "name": "ChennaiPy",
       "link": "https://chennaipy.org",
-      "image": "/img/partners/chennaipy.png"
+      "image": "img/partners/chennaipy.png"
     },
     {
       "name": "PyDelhi",
       "link": "https://pydelhi.org/",
-      "image": "/img/partners/pydelhi.jpeg"
+      "image": "img/partners/pydelhi.jpeg"
     },
     {
       "name": "MUMPY",
       "link": "https://mumbai.pythonindia.org/",
-      "image": "/img/partners/logo_mumpy.png"
+      "image": "img/partners/logo_mumpy.png"
     },
     {
       "name": "Djangogirls Bangalore",
       "link": "https://x.com/DjangoGirlsBLR",
-      "image": "/img/partners/djangogirlsblr.png"
+      "image": "img/partners/djangogirlsblr.png"
     },
     {
       "name": "PyLadies Bengaluru",
       "link": "https://x.com/pyladiesblr",
-      "image": "/img/partners/pyladiesblr.jpg"
+      "image": "img/partners/pyladiesblr.jpg"
     },
     {
       "name": "PyLadies Chennai",
       "link": "https://x.com/pyladieschennai",
-      "image": "/img/partners/pyladieschennai.jpg"
+      "image": "img/partners/pyladieschennai.jpg"
     },
     {
       "name": "PyLadies Hyderabad",
       "link": "https://x.com/pyladieshyd",
-      "image": "/img/partners/pyladieshyd.jpg"
+      "image": "img/partners/pyladieshyd.jpg"
     },
     {
       "name": "BelPy",
       "link": "https://belpy.in",
-      "image": "/img/partners/belpy.png"
+      "image": "img/partners/belpy.png"
     }
 ]
