@@ -136,7 +136,7 @@ layout: base.njk
         </div>
     </div>
     <div class="lg:w-[30%] w-[80%] flex items-center justify-center lg:mr-[2%] mx-auto">
-        <img src="/img/assets/guide.svg" alt="Guide" class="w-full transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+        <img src="{{ env.baseUrl }}img/assets/guide.svg" alt="Guide" class="w-full transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
     </div>
 </div>
 
@@ -156,16 +156,16 @@ layout: base.njk
 
     <div class="relative md:block hidden">
         <div class="flex justify-end pr-[4%] lg:pr-40">
-            <img src="/img/assets/circle-pink.svg" alt="Circle" class="lg:w-6 w-[4%]">
+            <img src="{{ env.baseUrl }}img/assets/circle-pink.svg" alt="Circle" class="lg:w-6 w-[4%]">
         </div>
         <div class="flex justify-end pr-[12%] pt-4 lg:pr-60">
-            <img src="/img/assets/star-lime-vector.svg" alt="Groovy Star" class="lg:w-16 w-[10%]">
+            <img src="{{ env.baseUrl }}img/assets/star-lime-vector.svg" alt="Groovy Star" class="lg:w-16 w-[10%]">
         </div>
         <div class="flex justify-end pr-[2%] lg:pr-20">
-            <img src="/img/assets/circle-purple.svg" alt="Circle" class="lg:w-10 w-[4%]">
+            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Circle" class="lg:w-10 w-[4%]">
         </div>
         <div class="flex justify-end pr-[8%] pt-[4%] lg:pr-40 lg:mt-10">
-            <img src="/img/assets/star-purple-vector.svg" alt="Groovy Star" class="lg:w-20 w-[12%]">
+            <img src="{{ env.baseUrl }}img/assets/star-purple-vector.svg" alt="Groovy Star" class="lg:w-20 w-[12%]">
         </div>
     </div>
     <div class="pb-60 lg:pb-[20%] w-full text-justify lg:w-[70%]">
@@ -179,7 +179,7 @@ layout: base.njk
 
                 {% for info in report_info %}
                     <div class="pt-4">
-                        <p class="font-bold flex items-center"><span><img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>{{ info.detail }}:</p>
+                        <p class="font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>{{ info.detail }}:</p>
                         <p class="pt-1 text-md">{{ info.description }}</p>
                     </div>
                 {% endfor %}
@@ -216,13 +216,13 @@ layout: base.njk
                 <p class="pb-4">The Code of Conduct Working Group will review the incident, consider all the information provided, and determine the appropriate response. Possible responses may include but are not limited to:</p>
 
                 <div class="pt-4">
-                    <p class="font-bold flex items-center"><span><img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>No Violation Found:</p>
+                    <p class="font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>No Violation Found:</p>
                     <p class="pt-1 text-md">If the incident does not violate the <a href="/coc/guidelines" target="_blank" rel="noopener noreferrer" class="underline">Code Of Conduct</a>.</p>
                 </div>
                 
                 {% for info in resolution_info %}
                     <div class="pt-4">
-                        <p class="font-bold flex items-center"><span><img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>{{ info.detail }}:</p>
+                        <p class="font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>{{ info.detail }}:</p>
                         <p class="pt-1 text-md">{{ info.description }}</p>
                     </div>
                 {% endfor %}
@@ -256,11 +256,11 @@ layout: base.njk
                 <p class="pb-4">Thank you for helping us maintain a respectful and inclusive atmosphere at PyCon India 2025. By reporting incidents, you contribute to the collective effort to make our conference a safe and welcoming experience for all attendees.</p>
                 <p class="pb-4">This guide has been inspired by:</p>
                 <p class="flex items-center">
-                    <span><img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>
+                    <span><img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>
                     <a href="https://policies.python.org/us.pycon.org/code-of-conduct/Procedures-for-Reporting-Incidents/" target="_blank" rel="noopener noreferrer" class="underline">PyCon US 2024 - Procedures for Reporting Incidents</a>
                 </p>
                 <p class="flex items-center">
-                    <span><img src="/img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>
+                    <span><img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>
                     <a href="https://www.djangoproject.com/conduct/reporting/" target="_blank" rel="noopener noreferrer" class="underline">Django Code of Conduct - Reporting Guide</a>
                 </p>
             </div>

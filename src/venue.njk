@@ -17,11 +17,11 @@ layout: base.njk
         </div>
 
         <div class="absolute top-2/5 right-4 md:block">
-            <img src="/img/assets/star-lime-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
+            <img src="{{ env.baseUrl }}img/assets/star-lime-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
         </div>
 
         <div class="absolute md:top-3/4 pt-52 md:right-20 right-12 md:block">
-            <img src="/img/assets/star-pink-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
+            <img src="{{ env.baseUrl }}img/assets/star-pink-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
         </div>
 
         <div class="flex flex-col lg:flex-row lg:space-x-8 lg:justify-between">
@@ -34,7 +34,7 @@ layout: base.njk
             </div>
             <div class="w-[90%] lg:w-[70%] xl:w-[52%] pt-24 pr-4 mx-auto lg:ml-auto">
                 {% call card(bg="lime") -%}
-                    <img src="/img/nimhans-convention-center.jpeg" alt="Nimhans Convention Center" class="w-full h-full object-cover">
+                    <img src="{{ env.baseUrl }}img/nimhans-convention-center.jpeg" alt="Nimhans Convention Center" class="w-full h-full object-cover">
                 {%- endcall %}
             </div>
         </div>
@@ -52,7 +52,7 @@ layout: base.njk
         <div class="pt-32 relative flex flex-col md:flex-row">
             <div class="flex-grow">
                 <div class="flex-shrink-0">
-                    <img src="/img/assets/train.svg" alt="Train" class="h-10 ml-0 md:h-16 lg:h-28 mx-auto md:mx-0">
+                    <img src="{{ env.baseUrl }}img/assets/train.svg" alt="Train" class="h-10 ml-0 md:h-16 lg:h-28 mx-auto md:mx-0">
                 </div>
                 <div class="w-[80%] lg:w-[60%] xl:w-[50%] ml-auto xl:mr-[12%] -mt-20 lg:-mt-40">
                     {% call card(bg="lime") -%}
@@ -83,7 +83,7 @@ layout: base.njk
                     {%- endcall %}
                 </div>
                 <div class="mx-auto pl-40 flex items-center justify-center -mt-20 lg:-mt-40 z-10 relative" style="pointer-events: none;">
-                    <img src="/img/assets/bus.svg" alt="Bus" class="h-40 lg:h-56">
+                    <img src="{{ env.baseUrl }}img/assets/bus.svg" alt="Bus" class="h-40 lg:h-56">
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@ layout: base.njk
         </div>
 
         <div class="hidden md:block pt-40 xl:pt-32 w-full justify-center pl-12 md:pl-4 xl:pl-36">
-            <img src="/img/assets/auto.svg" alt="Auto" class="h-24 md:h-44">
+            <img src="{{ env.baseUrl }}img/assets/auto.svg" alt="Auto" class="h-24 md:h-44">
         </div>
     </div>
 </div>
