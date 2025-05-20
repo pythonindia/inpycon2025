@@ -217,7 +217,7 @@ layout: base.njk
 
                 <div class="pt-4">
                     <p class="font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 mr-2"></span>No Violation Found:</p>
-                    <p class="pt-1 text-md">If the incident does not violate the <a href="/coc/guidelines" target="_blank" rel="noopener noreferrer" class="underline">Code Of Conduct</a>.</p>
+                    <p class="pt-1 text-md">If the incident does not violate the <a href="{{ env.baseUrl }}coc/guidelines" target="_blank" rel="noopener noreferrer" class="underline">Code Of Conduct</a>.</p>
                 </div>
                 
                 {% for info in resolution_info %}
