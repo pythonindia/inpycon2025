@@ -1,9 +1,10 @@
 {% macro navbar(isHomePage = false) %}
+{% set baseUrl = "/2025/" if env.baseUrl === "/2025/" else "/" %}
 <nav class="w-full flex justify-center glass-nav {% if isHomePage %}bg-transparent opacity-0 -translate-y-full{% else %}bg-pycon-blue/70{% endif %} z-50 fixed top-0 transition-all duration-500" id="main-navbar">
   <div class="w-full max-w-5xl mx-auto px-6 hidden md:block py-3">
     <div class="relative flex justify-center items-center h-12 px-6">
-      <a href="{{ env.baseUrl }}/" class="absolute left-0">
-        <img src="{{ env.baseUrl }}/img/logo.png" alt="PyCon India 2025" class="h-10 w-auto">
+      <a href="{{ baseUrl }}" class="absolute left-0">
+        <img src="{{ baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-10 w-auto">
       </a>
      <ul class="flex items-center justify-center w-full gap-8 relative">
         {% set menuItems = [
@@ -64,7 +65,7 @@
                   <div class="w-full flex flex-col">     
                     {% for subitem in item.submenu %}
                     <div class="w-full p-4 bg-white/90 hover:bg-pycon-lime border-b border-black/10 flex justify-between items-center transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg last:border-b-0">       
-                      <a href="{{ env.baseUrl }}/{{ subitem.link }}" class="text-gray-800 hover:text-[#4662ff] text-sm font-medium font-['Inter'] leading-tight no-underline dropdown-item block w-full">
+                      <a href="{{ baseUrl }}{{ subitem.link }}" class="text-gray-800 hover:text-[#4662ff] text-sm font-medium font-['Inter'] leading-tight no-underline dropdown-item block w-full">
                         {{ subitem.name }}
                       </a>       
                       <div class="size-5 relative overflow-hidden">         
@@ -77,7 +78,7 @@
               </div>
             {% else %}
               {# TODO: item.name != 'Sponsors' is a hack till we get the sponsors page up#}
-              <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' and item.name != 'Sponsors' %}{{ env.baseUrl }}/{{ item.link }}{% else %}{{ env.baseUrl }}/{{ item.link }}{% endif %}"
+              <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' and item.name != 'Sponsors' %}{{ item.link }}{% else %}{{ baseUrl }}{{ item.link }}{% endif %}"
                  {% if item.isExternal %}target="_blank" rel="noopener noreferrer"{% endif %}
                  class="flex items-center gap-1 py-2 px-3 text-white hover:text-[#D7FF7B] text-base font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 no-underline nav-link">
                 {{ item.name }}
@@ -87,7 +88,7 @@
         {% endfor %}
       </ul>
       <div class="absolute right-0">
-        <a href="{{ '/tickets' | url }}" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline nav-button">
+        <a href="{{ baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline nav-button">
           Get Tickets
         </a>
       </div>
@@ -95,8 +96,8 @@
   </div>
 
   <div class="flex justify-between items-center px-4 py-3 w-full md:hidden">
-    <a href="{{ env.baseUrl }}/" class="flex items-center z-20">
-      <img src="{{ env.baseUrl }}/img/logo.png" alt="PyCon India 2025" class="h-8 w-auto">
+    <a href="{{ baseUrl }}" class="flex items-center z-20">
+      <img src="{{ baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-8 w-auto">
     </a>
     
     <input type="checkbox" id="mobile-menu-checkbox" class="hidden">
@@ -111,8 +112,8 @@
 
 <div id="mobile-menu" class="fixed inset-0 bg-pycon-blue/95 backdrop-blur-md z-[1000] hidden overflow-auto">
   <div class="text-center pt-6 pb-4">
-    <a href="{{ env.baseUrl | url }}" class="inline-block">
-      <img src="{{ env.baseUrl + 'img/logo.png' | url }}" alt="PyCon India 2025" class="h-12 w-auto">
+    <a href="{{ baseUrl }}" class="inline-block">
+      <img src="{{ baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-12 w-auto">
     </a>
   </div>
 
@@ -129,7 +130,7 @@
     <div class="flex flex-col space-y-4">
       {% for item in menuItems %}
         {% if not item.hasSubmenu %}
-          <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' %}{{ item.link }}{% else %}{{ env.baseUrl }}/{{  item.link | url }}{% endif %}"
+          <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' %}{{ item.link }}{% else %}{{ baseUrl }}{{ item.link }}{% endif %}"
              {% if item.isExternal %}target="_blank" rel="noopener noreferrer"{% endif %}
              class="p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white/20 flex justify-between items-center transition-all duration-200 text-white text-base font-medium no-underline">
             {{ item.name }}
@@ -154,7 +155,7 @@
             <div class="hidden mt-2 mobile-submenu">
               <div class="bg-pycon-lime/90 backdrop-blur-sm border border-black/10 rounded-lg p-3 flex flex-col gap-2">
                 {% for subitem in item.submenu %}
-                  <a href="{{ env.baseUrl }}/{{  subitem.link | url }}" class="p-2 text-gray-800 text-sm font-medium hover:text-[#4E62F5] transition-colors duration-200 no-underline">
+                  <a href="{{ baseUrl }}{{ subitem.link }}" class="p-2 text-gray-800 text-sm font-medium hover:text-[#4E62F5] transition-colors duration-200 no-underline">
                     {{ subitem.name }}
                   </a>
                 {% endfor %}
@@ -165,7 +166,7 @@
       {% endfor %}
 
       <div class="mt-6">
-        <a href="{{ '/tickets' | url }}" class="flex justify-center items-center bg-pycon-lime text-black font-medium rounded-lg p-4 text-center w-full no-underline text-base transition-all duration-200 hover:bg-pycon-lime/80">
+        <a href="{{ baseUrl }}tickets" class="flex justify-center items-center bg-pycon-lime text-black font-medium rounded-lg p-4 text-center w-full no-underline text-base transition-all duration-200 hover:bg-pycon-lime/80">
           Get Tickets
         </a>
       </div>
