@@ -60,7 +60,7 @@ layout: base.njk
                             <p class="font-bold text-xl md:text-2xl">Via Namma Metro</p>
                             <p class="pt-4 font-normal text-sm md:text-xl">From Green Line: Disembark at South End Circle or Lalbagh metro station. From the station, you can take a short taxi/auto ride to reach NIMHANS Convention Centre.</p>
                             <p class="pt-4 font-normal text-sm md:text-xl">For a list of stations on the Bengaluru Metro Green line, you can refer to <a href="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true" target="_blank" rel="noopener noreferrer" class="underline">Wikipedia</a>.</p>
-                            <div class="pt-6 md:pt-10">{{ button(text="Green Line", url="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true", lime_bg=true) }}</div>
+                            <div class="pt-6 md:pt-10">{{ button(text="Green Line", url="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true", lime_bg=true, env=env) }}</div>
                         </div>
                     {%- endcall %}
                 </div>
@@ -78,7 +78,7 @@ layout: base.njk
                             
                             <p class="pt-4 font-normal text-sm md:text-xl">We're excited to welcome you to PyCon India 2024 and hope you have a fantastic experience in Bengaluru! If you have any further inquiries or need assistance, feel free to contact us at <a href="mailto:contact@in.pycon.org" target="_blank" rel="noopener noreferrer" class="underline">contact@in.pycon.org</a>.</p>
                             
-                            <div class="pt-6 md:pt-10 z-30">{{ button(text="Bus Timetable", url="https://kia.bengawalk.com/", lime_bg=true) }}</div>
+                            <div class="pt-6 md:pt-10 z-30">{{ button(text="Bus Timetable", url="https://kia.bengawalk.com/", lime_bg=true, env=env) }}</div>
                         </div>
                     {%- endcall %}
                 </div>
