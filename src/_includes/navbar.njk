@@ -129,7 +129,8 @@
     <div class="flex flex-col space-y-4">
       {% for item in menuItems %}
         {% if not item.hasSubmenu %}
-          <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' %}{{ item.link }}{% else %}{{ env.baseUrl }}{{ item.link }}{% endif %}"
+            {# TODO: item.name != 'Sponsors' is a hack till we get the sponsors page up#}
+            <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' and item.name != 'Sponsors' %}{{ item.link }}{% else %}{{ env.baseUrl }}{{ item.link }}{% endif %}"
              {% if item.isExternal %}target="_blank" rel="noopener noreferrer"{% endif %}
              class="p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white/20 flex justify-between items-center transition-all duration-200 text-white text-base font-medium no-underline">
             {{ item.name }}
