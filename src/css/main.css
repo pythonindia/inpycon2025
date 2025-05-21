@@ -420,3 +420,7 @@ body:not(.is-home-page) main {
 .animate-fadeOut.is-home-page {
   z-index: 10000;
 }
+
+.bg-lavender {
+  background-color: #F0EEFF;
+}
