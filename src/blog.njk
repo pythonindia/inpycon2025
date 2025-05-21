@@ -1,0 +1,112 @@
+---
+title: Blog
+description: PyCon India 2025 Blog
+layout: base.njk
+---
+
+{% from "components/flat-card.njk" import flatCard %}
+
+
+<div class="w-full h-auto bg-pycon-blue px-[6%] flex flex-col md:flex-row pb-40 relative">
+    <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+            Our Blogs
+        </div>
+    </div>
+    <div class="lg:w-[30%] w-[80%] lg:mt-40 flex items-center justify-center mx-auto">
+        <img src="/img/assets/aircraft.svg" alt="Guide" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+        <img src="/img/assets/planet.svg" alt="Guide" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+    </div>
+</div>
+
+
+<div class="main-container bg-[#FFFFFF] w-full h-auto px-[6%] pb-52 md:pb-40 relative">
+    <div class="flex flex-wrap -mt-24 -mx-4">
+        <!-- Column 1 -->
+        <div class="w-full lg:w-1/3 px-4 flex flex-col gap-8">
+        {% for blog in collections.blogs %}
+            {% if loop.index0 % 3 == 0 %}
+                {% set bg_color = 'purple' if loop.index0 // 3 % 2 == 0 else 'lime' %}
+                {% call flatCard(bg=bg_color) -%}
+                    <div class="p-4">
+                        <a href="{{ blog.url }}" class="block no-underline hover:underline">
+                            <div class="text-2xl font-semibold">{{ blog.data.title }}</div>
+                        </a>
+                        <div class="pt-8 text-gray-700">
+                            <p class="text-justify">
+                                {{ blog.data.description }}
+                            </p>
+                            <p class="flex items-baseline gap-2">
+                                <i class="fa-regular fa-calendar text-xl text-[#475569]"></i>
+                                {{ blog.data.date }}
+                            </p>
+                            <p class="flex items-baseline gap-2 mt-2">
+                                <i class="fa-regular fa-user text-xl text-[#475569]"></i>
+                                {{ blog.data.author }}
+                            </p>
+                        </div>
+                    </div>
+                {%- endcall %}
+            {% endif %}
+        {% endfor %}
+        </div>
+
+        <!-- Column 2 -->
+        <div class="w-full pt-8 lg:pt-16 lg:w-1/3 px-4 flex flex-col gap-8">
+        {% for blog in collections.blogs %}
+            {% if loop.index0 % 3 == 1 %}
+                {% set bg_color = 'purple' if loop.index0 // 3 % 2 == 1 else 'lime' %}
+                {% call flatCard(bg=bg_color) -%}
+                    <div class="p-4">
+                        <a href="{{ blog.url }}" class="block no-underline hover:underline">
+                            <div class="text-2xl font-semibold">{{ blog.data.title }}</div>
+                        </a>
+                        <div class="pt-8 text-gray-700">
+                            <p class="text-justify">
+                                {{ blog.data.description }}
+                            </p>
+                            <p class="flex items-baseline gap-2">
+                                <i class="fa-regular fa-calendar text-xl text-[#475569]"></i>
+                                {{ blog.data.date }}
+                            </p>
+                            <p class="flex items-baseline gap-2 mt-2">
+                                <i class="fa-regular fa-user text-xl text-[#475569]"></i>
+                                {{ blog.data.author }}
+                            </p>
+                        </div>
+                    </div>
+                {%- endcall %}
+            {% endif %}
+        {% endfor %}
+        </div>
+
+        <!-- Column 3 -->
+        <div class="w-full pt-8 lg:pt-0 lg:w-1/3 px-4 flex flex-col gap-8">
+        {% for blog in collections.blogs %}
+            {% if loop.index0 % 3 == 2 %}
+                {% set bg_color = 'purple' if loop.index0 // 3 % 2 == 0 else 'lime' %}
+                {% call flatCard(bg=bg_color) -%}
+                    <div class="p-4">
+                        <a href="{{ blog.url }}" class="block no-underline hover:underline">
+                            <div class="text-2xl font-semibold">{{ blog.data.title }}</div>
+                        </a>
+                        <div class="pt-8 text-gray-700">
+                            <p class="text-justify">
+                                {{ blog.data.description }}
+                            </p>
+                            <p class="flex items-baseline gap-2">
+                                <i class="fa-regular fa-calendar text-xl text-[#475569]"></i>
+                                {{ blog.data.date }}
+                            </p>
+                            <p class="flex items-baseline gap-2 mt-2">
+                                <i class="fa-regular fa-user text-xl text-[#475569]"></i>
+                                {{ blog.data.author }}
+                            </p>
+                        </div>
+                    </div>
+                {%- endcall %}
+            {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+</div>

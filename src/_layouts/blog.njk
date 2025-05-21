@@ -1,0 +1,34 @@
+---
+layout: base.njk
+---
+
+{% from "components/card.njk" import card %}
+
+<div class=" bg-pycon-blue w-full flex justify-between items-center">
+    <div class="pt-40 lg:pl-20 w-[90%] lg:w-[50%] -mb-20 font-normal text-2xl md:text-4xl text-[#000000] text-center z-20 flex lg:mx-0 mx-auto">
+        {% call card(bg="purple") -%}
+            <div class="bg-pycon-lime">
+                <div class="px-12 pt-12 pb-8 space-grotesk-regular z-20">
+                    {{ title }}
+                </div>
+                <div class="w-full pb-4 px-10">
+                    <hr class="border-t-2 border-black" />
+                    <div class="flex justify-between text-2xl pt-4 text-gray-600 font-light">
+                        <span class="">{{ author }}</span>
+                        <span class="">{{ date }}</span>
+                    </div>
+                </div>
+            </div>
+        {%- endcall %}
+    </div>
+    
+    <div class="hidden lg:flex w-[20%] ml-4 justify-center items-center mr-40 mt-40">
+        <img src="/img/assets/planet.svg" alt="Planet" class="w-full transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;"/>
+        <img src="/img/assets/star-lime-vector.svg" alt="Planet" class="w-1/5 pt-52 transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;"/>
+        <img src="/img/assets/star-pink-vector.svg" alt="Planet" class="w-2/5 transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;"/>
+    </div>
+</div>
+
+<div class="blog-container bg-[#FFFFFF] w-[100%] lg:w-[70%] h-auto px-[6%]">
+    {{ content | safe }}
+</div>
