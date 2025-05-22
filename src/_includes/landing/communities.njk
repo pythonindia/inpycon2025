@@ -1,64 +1,49 @@
 {% from "components/button.njk" import button %}
-<section class="participating-communities relative bg-blue-600 px-4 md:px-8 lg:px-16 overflow-hidden -mt-0" id="communities">
-  <div class="container mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8">
-      <div class="flex flex-col gap-9">
-        <h2 class="text-4xl text-white font-extrabold font-['Black_Han_Sans','sans-serif']">Participating Communities</h2>
-        <p class="text-white text-xl font-['Acid_Grotesk','sans-serif'] leading-relaxed">
-          Join PyCon India's Community Partner Program and support the vibrant Python community in India. Become a partner and contribute to the growth of Python enthusiasts.
-        </p>
 
-        <div class="w-fit">
-          {{ button(text="Become a Volunteer", url="https://docs.google.com/forms/d/e/1FAIpQLSdX2LEom11BbWDiLUiQp1rmeNX9l7J8bfszGidsRDoExy0D5A/viewform", lime_bg=true, env = env) }}
+<section class="bg-blue-600 text-white relative px-4 sm:px-20 md:px-40 pt-10" id="communities">
+    <div class="mx-auto py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-10">
+            <div>
+                <h2 class="text-4xl font-extrabold mb-4">Participating Communities</h2>
+                <p class="text-white text-base mb-6">
+                    Join PyCon India's Community Partner Program and support the vibrant Python community in India. Become a partner and contribute to the growth of Python enthusiasts.
+                </p>
+                {{ button(text="Become a Volunteer", url="https://docs.google.com/forms/d/e/1FAIpQLSdX2LEom11BbWDiLUiQp1rmeNX9l7J8bfszGidsRDoExy0D5A/viewform", lime_bg=true, env = env) }}
+            </div>
+            <div class="hidden md:flex justify-end -mt-32">
+                <div class="w-96 h-96 bg-contain bg-center bg-no-repeat transition-all duration-300 animate-bounce-slow" style="background-image: url('{{ env.baseUrl }}img/assets/bulb-illustration.svg');"></div>
+            </div>
         </div>
-      </div>
-      <div class="hidden lg:block relative h-[420px]">
-        <div class="absolute inset-0 bg-contain bg-center bg-no-repeat transition-all duration-300 animate-bounce-slow" style="background-image: url('/img/assets/bulb-illustration.svg');"></div>
-      </div>
     </div>
-    <div class="mt-10">
-      <div class="flex flex-wrap w-full">
-        {% for i in range(0, 6) %}
-          <div class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6 h-[100px] bg-white border border-black">
-            <a href="{{ partners[i].link }}" target="_blank" rel="noopener noreferrer">
-              <img src="{{ env.baseUrl }}{{ partners[i].image }}" alt={{ partners[i].name }} class="border-black w-full h-full object-contain">
-            </a>
-          </div>
-        {% endfor %}
-      </div>
+    
+    <div class="md:hidden flex justify-center pb-10">
+        <div class="bg-contain bg-center bg-no-repeat transition-all duration-300 animate-float w-48 h-48" style="background-image: url('{{ env.baseUrl }}img/assets/bulb-illustration.svg');"></div>
     </div>
-  </div>
+    <div>
+        <div class="mx-auto">
+            <div class="flex flex-wrap w-full">
+                {% for i in range(0, 6) %}
+                    <div class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6 h-[100px] bg-white border border-black">
+                        <a href="{{ partners[i].link }}" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ env.baseUrl }}{{ partners[i].image }}" alt={{ partners[i].name }} class="border-black w-full h-full object-contain">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </section>
-<section class="bg-lavender px-4 md:px-8 lg:px-16">
-  <div class="container mx-auto">
-    <div class="flex flex-wrap w-full">
-      {% for i in range(6, 12) %}
-        <div class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6 h-[100px] bg-white border border-black">
-            <a href="{{ partners[i].link }}" target="_blank" rel="noopener noreferrer">
-              <img src="{{ env.baseUrl }}{{ partners[i].image }}" alt={{ partners[i].name }} class="border-black w-full h-full object-contain">
-            </a>
-       </div>
-      {% endfor %}
+<!-- TODO: Remove padding once twitter wall is added -->
+<section class="bg-lavender px-4 sm:px-20 md:px-40 pb-56">
+    <div class="mx-auto">
+        <div class="flex flex-wrap w-full">
+            {% for i in range(6, 12) %}
+                <div class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6 h-[100px] bg-white border border-black">
+                    <a href="{{ partners[i].link }}" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ env.baseUrl }}{{ partners[i].image }}" alt={{ partners[i].name }} class="border-black w-full h-full object-contain">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-  </div>
-</section>
-<section class="bg-lavender px-4 md:px-8 lg:px-16">
-  <div class="container mx-auto">
-    <div class="flex flex-wrap w-full">
-      {% for i in range(0, 6) %}
-        <div class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6 h-[100px] bg-lavender">
-       </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-<section class="bg-lavender px-4 md:px-8 lg:px-16">
-  <div class="container mx-auto">
-    <div class="flex flex-wrap w-full">
-      {% for i in range(0, 6) %}
-        <div class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6 h-[100px] bg-lavender">
-       </div>
-      {% endfor %}
-    </div>
-  </div>
 </section>
