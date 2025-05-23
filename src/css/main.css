@@ -142,6 +142,18 @@ body {
   animation: bounce-slow 3s infinite;
 }
 
+.animate-bounce-fast {
+  animation: bounce 2s infinite;
+}
+
+.animate-bounce-slower {
+  animation: bounce-slow 3.5s infinite;
+}
+
+.animate-bounce-slowest {
+  animation: bounce-slow 5s infinite;
+}
+
 /* Hamburger menu styles */
 .hamburger {
   cursor: pointer;
@@ -427,4 +439,163 @@ body:not(.is-home-page) main {
 
 .bg-lavender {
   background-color: #F0EEFF;
+}
+
+.window-container .face {
+  position: absolute;
+  border: 1.5px solid black;
+}
+
+.window-container .face.top {
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+}
+
+.window-container .face.left {
+  border-right-width: 1.5px;
+  border-top-width: 1px;
+  border-left-width: 1.5px;
+}
+
+.window-container .face.front {
+  border-top-width: 0px;
+  border-left-width: 0px;
+  overflow: hidden;
+}
+
+/* Window title bar */
+.window-titlebar {
+  background-color: #CD89FF;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid black;
+  flex-shrink: 0;
+}
+
+.window-titlebar-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.window-titlebar-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #D7FF7B;
+  border-radius: 50%;
+  border: 1.5px solid black;
+}
+
+/* Window content area */
+.window-content {
+  padding: 20px;
+}
+
+/* ===  core geometry  ========================================= */
+.window-container{
+  position:relative;
+  width : calc( (var(--w) + var(--d)) * 1px );
+  height: calc( (var(--h) + var(--d)) * 1px );
+}
+
+/* faces share a lot ⇒ utility class */
+.face{
+  position:absolute;
+  display:block;
+}
+
+/* ---- top panel ---- */
+.face.top{
+  width : calc(var(--w) * 1px);
+  height: calc(var(--d) * 1px);
+  background: var(--top-bg);
+  transform: skewX(45deg)
+             translateX(calc(var(--d) / 2 * 1px))
+             translateY(calc(var(--d) / -2 * 1px));
+  border: 1.5px solid black;
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+}
+
+/* ---- left panel ---- */
+.face.left{
+  width : calc(var(--d) * 1px);
+  height: calc(var(--h) * 1px);
+  background: var(--left-bg);
+  transform: skewY(45deg)
+             translateY(calc(var(--d) / 2 * 1px))
+             translateX(calc(var(--d) / -2 * 1px));
+  border: 1.5px solid black;
+  border-right-width: 1.5px;
+  border-top-width: 1px;
+  border-left-width: 1.5px;
+}
+
+/* ---- front panel ---- */
+.face.front{
+  width : calc(var(--w) * 1px);
+  height: calc(var(--h) * 1px);
+  background: var(--front-bg);
+  transform: translateX(calc(var(--d) / 2 * 1px))
+             translateY(calc(var(--d) / 2 * 1px));
+  overflow:hidden; /* keeps content inside */
+  border: 1.5px solid black;
+  border-top-width: 0px;
+  border-left-width: 0px;
+}
+
+/* A. Allow height to be auto for content flow */
+.window-container.window-auto-height {
+  height: auto;
+  min-height: calc((var(--h) + var(--d)) * 1px);
+}
+
+.window-container.window-auto-height .face.left {
+  height: 100%;
+}
+
+.window-container.window-auto-height .face.front {
+  height: auto;
+  min-height: calc(var(--h) * 1px);
+}
+
+/* B. Responsive scaling for mobile */
+@media (max-width: 768px) {
+  .window-container {
+    --scale: min(1, calc(90vw / ((var(--w) + var(--d)) * 1px)));
+    transform: scale(var(--scale));
+    transform-origin: top left;
+    margin-bottom: calc((1 - var(--scale)) * -100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .window-container {
+    --w: 350;  /* Smaller default width for mobile */
+    --h: auto; /* Allow height to adjust */
+    --d: 20;   /* Smaller depth */
+  }
+  
+  /* Adjust font sizes in window content for mobile */
+  .window-content {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .window-content .font-semibold {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .window-container {
+    --w: 300;  /* Even smaller for very small screens */
+    --d: 15;
+  }
+  
+  .window-content {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
 }
