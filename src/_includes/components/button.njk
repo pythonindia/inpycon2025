@@ -1,4 +1,4 @@
-{% macro button(text, url, lime_bg=false, env = env) %}
+{% macro button(text, url, lime_bg=false, env = env, disabled=false) %}
     {% if lime_bg %}
         {% set bg_class = "bg-pycon-lime hover:bg-pycon-lime/90" %}
         {% set text_class = "text-black" %}
@@ -7,7 +7,12 @@
         {% set text_class = "text-pycon-lime" %}
     {% endif %}
 
-    <a href="{{ url }}" class="group no-underline inline-flex items-center gap-2 px-4 py-2 {{ bg_class }} rounded-full border border-black hover:-translate-y-0.5 hover:shadow-md transition-all duration-300 focus:outline-2 focus:outline-offset-2">
+    <a
+        href="{{ url if not disabled else '#' }}"
+        class="group no-underline inline-flex items-center gap-2 px-4 py-2 {{ bg_class }} rounded-full border border-black hover:-translate-y-0.5 hover:shadow-md transition-all duration-300 focus:outline-2 focus:outline-offset-2
+               {% if disabled %}opacity-50 cursor-not-allowed pointer-events-none hover:!translate-y-0 hover:!shadow-none{% endif %} {# Key changes for disabled state #}
+        "
+    >
         <span class="font-['Acid_Grotesk'] text-lg {{ text_class }} leading-relaxed whitespace-nowrap group-hover:-translate-x-1 transition-transform duration-200">
             {{ text }}
         </span>
