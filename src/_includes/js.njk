@@ -73,6 +73,7 @@
     // Add active class to current nav item based on URL
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('nav a');
+    const navLabels = document.querySelectorAll('nav label.nav-link');
     
     navLinks.forEach(link => {
       const linkPath = link.getAttribute('href');
@@ -80,6 +81,18 @@
          (linkPath !== '/' && currentPath.startsWith(linkPath)))) {
         link.classList.add('active');
       }
+    });
+    
+    navLabels.forEach(label => {
+      const parent = label.closest('li');
+      const submenuLinks = parent.querySelectorAll('.dropdown-glass a');
+      submenuLinks.forEach(submenuLink => {
+        const submenuPath = submenuLink.getAttribute('href');
+        if (submenuPath && (submenuPath === currentPath || 
+           (submenuPath !== '/' && currentPath.startsWith(submenuPath)))) {
+          label.classList.add('active');
+        }
+      });
     });
     
     // Mobile menu functionality
