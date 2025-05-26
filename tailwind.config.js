@@ -251,6 +251,8 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
+      heading: ['"Black Han Sans"', 'sans-serif'],
+      body: ['"Hanken Grotesk"', 'sans-serif'],
       sans: [
         'ui-sans-serif',
         'system-ui',
