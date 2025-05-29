@@ -2,9 +2,9 @@
 <nav class="w-full flex justify-center {% if isHomePage %}bg-black{% else %}bg-pycon-blue{% endif %} z-50 fixed top-0 left-0 right-0 transition-all duration-500" id="main-navbar">
   <div class="w-full max-w-5xl mx-auto px-6 hidden md:block py-3">
     <div class="relative flex justify-center items-center h-12 px-6">
-      <a href="{{ env.baseUrl }}" class="absolute left-0">
+      {# <a href="{{ env.baseUrl }}" class="absolute left-0">
         <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-10 w-auto">
-      </a>
+      </a> #}
      <ul class="flex items-center justify-center w-full gap-8 relative mb-0">
         {% set menuItems = [
           {
@@ -85,11 +85,11 @@
           </li>
         {% endfor %}
       </ul>
-      <div class="absolute right-0">
+      {# <div class="absolute right-0">
         <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline nav-button">
           Get Tickets
         </a>
-      </div>
+      </div> #}
     </div>
   </div>
 
