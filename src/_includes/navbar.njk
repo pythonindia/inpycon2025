@@ -1,5 +1,5 @@
 {% macro navbar(isHomePage = false, env = env) %}
-<nav class="w-full flex justify-center glass-nav {% if isHomePage %}bg-transparent opacity-0 -translate-y-full{% else %}bg-pycon-blue/70{% endif %} z-50 fixed top-0 transition-all duration-500" id="main-navbar">
+<nav class="w-full flex justify-center {% if isHomePage %}bg-black{% else %}bg-pycon-blue{% endif %} z-50 fixed top-0 left-0 right-0 transition-all duration-500" id="main-navbar">
   <div class="w-full max-w-5xl mx-auto px-6 hidden md:block py-3">
     <div class="relative flex justify-center items-center h-12 px-6">
       <a href="{{ env.baseUrl }}" class="absolute left-0">
