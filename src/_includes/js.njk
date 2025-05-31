@@ -28,27 +28,6 @@
           btt.classList.remove('block');
         }
       }
-      
-      // Handle navbar appearance on scroll
-      if (navbar) {
-        if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
-          
-          // For homepage, make navbar visible after scrolling
-          if (isHomePage) {
-            navbar.classList.remove('opacity-0', '-translate-y-full');
-            navbar.classList.add('opacity-100', 'translate-y-0', 'bg-pycon-blue/70');
-          }
-        } else {
-          navbar.classList.remove('scrolled');
-          
-          // For homepage, hide navbar when at the top
-          if (isHomePage) {
-            navbar.classList.add('opacity-0', '-translate-y-full');
-            navbar.classList.remove('opacity-100', 'translate-y-0', 'bg-pycon-blue/70');
-          }
-        }
-      }
     };
     
     window.addEventListener('scroll', handleScroll);
