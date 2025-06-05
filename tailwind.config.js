@@ -82,6 +82,7 @@ module.exports = {
       'wiggle': 'wiggle 1s ease-in-out infinite',
       'slideUp': 'slideUp 2s ease-in-out forwards 2s',
       'pulse': 'pulse 2s ease-in-out infinite',
+      'fadeIn': 'fadeIn 0.6s ease-out forwards',
     },
     backdropBlur: (theme) => theme('blur'),
     backdropBrightness: (theme) => theme('brightness'),
@@ -280,6 +281,7 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      'acid': ['Acid Grotesk', 'sans-serif']
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -500,8 +502,12 @@ module.exports = {
         },
       },
       float: {
-        '0%, 100%': { transform: 'translateY(0px)' },
-        '50%': { transform: 'translateY(-10px)' },
+        '0%, 100%': { 
+          transform: 'translateY(0px)' 
+        },
+        '50%': { 
+          transform: 'translateY(-10px)' 
+        }
       },
       'bounce-slow': {
         '0%, 100%': { transform: 'translateY(0)' },
@@ -519,6 +525,16 @@ module.exports = {
           transform: 'translateY(-100%)',
           visibility: 'hidden',
         },
+      },
+      fadeIn: {
+        '0%': {
+          opacity: '0',
+          transform: 'translateY(20px)',
+        },
+        '100%': {
+          opacity: '1',
+          transform: 'translateY(0)',
+        }
       },
     },
     letterSpacing: {
@@ -758,6 +774,14 @@ module.exports = {
       500: '500ms',
       700: '700ms',
       1000: '1000ms',
+      '100': '0.1s',
+      '200': '0.2s',
+      '300': '0.3s',
+      '400': '0.4s',
+      '500': '0.5s',
+      '600': '0.6s',
+      '700': '0.7s',
+      '800': '0.8s',
     },
     transitionDuration: {
       DEFAULT: '150ms',
@@ -847,6 +871,9 @@ module.exports = {
       30: '30',
       40: '40',
       50: '50',
+      '-1': '-1',
+      '-2': '-2',
+      '-10': '-10',
     },
     extend: {
       spacing: {
