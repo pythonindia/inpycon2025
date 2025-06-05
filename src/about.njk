@@ -3,130 +3,6 @@ title: About the Team - PyCon India 2025
 description: PyCon India is a volunteer driven conference. Like every year, we need enthusiastic and driven volunteer drive to make PyCon India successful.
 layout: base.njk
 ---
-
-{% set teamMembers = [
-    {
-        name: "Kumar Anirudh",
-        role: "Chair",
-        imagelink: "",
-        socials: {
-            insta: "https://instagram.com/",
-            linkedin: "https://linkedin.com/in/",
-            web: "https://example.com",
-            github: "https://github.com/",
-            twitter: "https://twitter.com/"
-        }
-    },
-    {
-        name: "Kumar Anirudh",
-        role: "Chair",
-        imagelink: "",
-        socials: {
-            insta: "https://instagram.com/",
-            linkedin: "https://linkedin.com/in/",
-            web: "https://example.com",
-            github: "https://github.com/",
-            twitter: "https://twitter.com/"
-        }
-    },
-    {
-        name: "Kumar Anirudh",
-        role: "Chair",
-        imagelink: "",
-        socials: {
-            insta: "https://instagram.com/",
-            linkedin: "https://linkedin.com/in/",
-            web: "https://example.com",
-            github: "https://github.com/",
-            twitter: "https://twitter.com/"
-        }
-    },
-    {
-        name: "Kumar Anirudh",
-        role: "Chair",
-        imagelink: "",
-        socials: {
-            insta: "https://instagram.com/",
-            linkedin: "https://linkedin.com/in/",
-            web: "https://example.com",
-            github: "https://github.com/",
-            twitter: "https://twitter.com/"
-        }
-    },
-    {
-        name: "Kumar Anirudh",
-        role: "Chair",
-        imagelink: "",
-        socials: {
-            insta: "https://instagram.com/",
-            linkedin: "https://linkedin.com/in/",
-            web: "https://example.com",
-            github: "https://github.com/",
-            twitter: "https://twitter.com/"
-        }
-    },
-    {
-        name: "Kumar Anirudh",
-        role: "Chair",
-        imagelink: "",
-        socials: {
-            insta: "https://instagram.com/",
-            linkedin: "https://linkedin.com/in/",
-            web: "https://example.com",
-            github: "https://github.com/",
-            twitter: "https://twitter.com/"
-        }
-    },
-    {
-        name: "Kumar Anirudh",
-        role: "Chair",
-        imagelink: "",
-        socials: {
-            insta: "https://instagram.com/",
-            linkedin: "https://linkedin.com/in/",
-            web: "https://example.com",
-            github: "https://github.com/",
-            twitter: "https://twitter.com/"
-        }
-    },
-    {
-        name: "Kumar Anirudh",
-        role: "Chair",
-        imagelink: "",
-        socials: {
-            insta: "https://instagram.com/",
-            linkedin: "https://linkedin.com/in/",
-            web: "https://example.com",
-            github: "https://github.com/",
-            twitter: "https://twitter.com/"
-        }
-    },
-    {
-        name: "Kumar Anirudh",
-        role: "Chair",
-        imagelink: "",
-        socials: {
-            insta: "https://instagram.com/",
-            linkedin: "https://linkedin.com/in/",
-            web: "https://example.com",
-            github: "https://github.com/",
-            twitter: "https://twitter.com/"
-        }
-    },
-    {
-        name: "Kumar Anirudh",
-        role: "Chair",
-        imagelink: "",
-        socials: {
-            insta: "https://instagram.com/",
-            linkedin: "https://linkedin.com/in/",
-            web: "https://example.com",
-            github: "https://github.com/",
-            twitter: "https://twitter.com/"
-        }
-    }
-] %}
-
 <header>
     {% set activePage = 'about' %} 
 </header>
@@ -183,7 +59,7 @@ layout: base.njk
         
         <!-- Team Grid -->
         <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-8">
-            {% for member in teamMembers %}
+            {% for member in teamMembers.teamMembers %}
             <div class="team-card-3d w-full">
                 <div class="team-card-content w-full flex flex-col justify-start items-start">
                     <!-- Image Container -->
