@@ -7,6 +7,14 @@
       </a>
      <ul class="flex items-center justify-center w-full gap-8 relative mb-0">
         {% set menuItems = [
+            {
+            "name": "About",
+            "hasSubmenu": true,
+            "submenu": [
+              {"name": "About Team", "link": "about"},
+              {"name": "FAQ", "link": "faq"}
+            ]
+          },
           {
             "name": "CFP",
             "link": "cfp",
@@ -86,7 +94,7 @@
         {% endfor %}
       </ul>
       <div class="absolute right-0">
-        <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline nav-button">
+                <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline nav-button">
           Get Tickets
         </a>
       </div>
@@ -175,8 +183,8 @@
         {% endif %}
       {% endfor %}
 
-      <div class="mt-6">
-        <a href="{{ env.baseUrl }}tickets" class="flex justify-center items-center bg-pycon-lime text-black font-medium rounded-lg p-4 text-center w-full no-underline text-base transition-all duration-200 hover:bg-pycon-lime/80">
+      <div class="mt-6 flex justify-center items-center">
+        <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline nav-button">
           Get Tickets
         </a>
       </div>
