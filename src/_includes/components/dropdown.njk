@@ -1,0 +1,29 @@
+{% macro renderDropdown(question) %}
+<div class="space-y-4">
+    <div class="bg-white shadow-lg rounded-md overflow-hidden">
+        <button 
+            class="w-full text-left p-4 font-semibold text-lg flex justify-between items-center relative overflow-hidden group hover:bg-[#8385F2] hover:text-white focus:outline-none transition-colors duration-300"
+            onclick="
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('svg');
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+                
+                if (!answer.classList.contains('hidden')) {
+                    this.classList.add('bg-[#8385F2]', 'text-white');
+                } else {
+                    this.classList.remove('bg-[#8385F2]', 'text-white');
+                }
+            "
+        >
+            <span class="relative z-10">{{ question }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition-transform duration-300 relative z-10 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+        <div class="hidden p-2 text-black border-t text-justify border-gray-200">
+            {{ caller() }}
+        </div>
+    </div>
+</div>
+{% endmacro %}

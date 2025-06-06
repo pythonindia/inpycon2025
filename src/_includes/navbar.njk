@@ -8,6 +8,13 @@
      <ul class="flex items-center justify-center w-full gap-8 relative mb-0">
         {% set menuItems = [
           {
+            "name": "About",
+            "hasSubmenu": true,
+            "submenu": [
+              {"name": "FAQ's", "link": "about/faqs"}
+            ]
+          },
+          {
             "name": "CFP",
             "link": "cfp",
             "hasSubmenu": false
@@ -99,11 +106,8 @@
     </a>
     
     <input type="checkbox" id="mobile-menu-checkbox" class="hidden">
-    <label for="mobile-menu-checkbox" class="cursor-pointer z-50 bg-white/20 hover:bg-white/30 p-2 rounded-full transition-all duration-300 inline-flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white block" id="hamburger-icon">
-        <line x1="4" y1="8" x2="20" y2="8"></line>
-        <line x1="4" y1="16" x2="20" y2="16"></line>
-      </svg>
+    <label for="mobile-menu-checkbox" class="cursor-pointer z-50 hover:bg-white/30 p-2 rounded-full transition-all duration-300 inline-flex items-center justify-center">
+      <img src="{{ env.baseUrl }}img/assets/navbar-icon.svg" alt="Navbar">
     </label>
   </div>
 </nav>
