@@ -95,9 +95,7 @@
         {% endfor %}
       </ul>
       <div class="absolute right-0">
-      <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline nav-button">
-      Get Tickets
-        </a>
+        {{ button(text="Get Tickets", url="/tickets", lime_bg=true, env=env) }}
       </div>
     </div>
   </div>
@@ -185,9 +183,7 @@
       {% endfor %}
 
       <div class="mt-6 flex justify-center items-center">
-        <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline nav-button">
-          Get Tickets
-        </a>
+        {{ button(text="Get Tickets", url="/tickets", lime_bg=true, env=env) }}
       </div>
     </div>
 
