@@ -1,11 +1,12 @@
 {% macro navbar(isHomePage = false, env = env) %}
 <nav class="w-full flex justify-center {% if isHomePage %}bg-black{% else %}bg-pycon-blue{% endif %} z-50 fixed top-0 left-0 right-0 transition-all duration-500" id="main-navbar">
-  <div class="w-full max-w-5xl mx-auto px-6 hidden md:block py-3">
-    <div class="relative flex justify-center items-center h-12 px-6">
+  <!-- Desktop & Tablet Navbar (768px and up) Optimized -->
+  <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 hidden md:block py-2 lg:py-3">
+    <div class="relative flex justify-center items-center h-12 px-2 lg:px-6">
       <a href="{{ env.baseUrl }}" class="absolute left-0">
-        <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-10 w-auto">
+        <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-8 lg:h-10 w-auto">
       </a>
-     <ul class="flex items-center justify-center w-full gap-8 relative mb-0">
+     <ul class="flex items-center justify-center w-full gap-3 md:gap-4 lg:gap-6 xl:gap-8 relative mb-0">
         {% set menuItems = [
             {
             "name": "About",
@@ -58,9 +59,9 @@
           <li class="relative">
             {% if item.hasSubmenu %}
               <label for="desktop-menu-radio-{{ loop.index }}" 
-                     class="flex items-center gap-1 py-2 px-3 text-white hover:text-[#D7FF7B] text-base font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 cursor-pointer nav-link">
+                     class="flex items-center gap-1 py-2 px-2 md:px-3 text-white hover:text-[#D7FF7B] text-sm md:text-base font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 cursor-pointer nav-link whitespace-nowrap">
                 {{ item.name }}
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" class="ml-1 fill-current text-gray-400 transition-transform duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" class="ml-1 fill-current text-gray-400 transition-transform duration-200 flex-shrink-0">
                   <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                 </svg>
               </label>
@@ -68,15 +69,15 @@
               <label for="desktop-menu-close-all" class="fixed inset-0 bg-transparent z-0 hidden"></label>
               
               <div class="absolute left-0 top-full mt-1 w-auto invisible opacity-0 transition-all duration-200 z-10 transform origin-top scale-95 dropdown-glass rounded-lg shadow-lg">
-                <div class="w-full rounded-lg border border-white/10">   
+                <div class="w-full min-w-[200px] rounded-lg border border-white/10">   
                   <div class="w-full flex flex-col">     
                     {% for subitem in item.submenu %}
-                    <div class="w-full p-4 bg-white/90 hover:bg-pycon-lime border-b border-black/10 flex justify-between items-center transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg last:border-b-0">       
-                      <a href="{{ env.baseUrl }}{{ subitem.link }}" class="text-gray-800 hover:text-[#4662ff] text-sm font-medium font-['Inter'] leading-tight no-underline dropdown-item block w-full">
+                    <div class="w-full p-3 lg:p-4 bg-white/90 hover:bg-pycon-lime border-b border-black/10 flex justify-between items-center transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg last:border-b-0">       
+                      <a href="{{ env.baseUrl }}{{ subitem.link }}" class="text-gray-800 hover:text-[#4662ff] text-xs md:text-sm font-medium font-['Inter'] leading-tight no-underline dropdown-item block w-full">
                         {{ subitem.name }}
                       </a>       
-                      <div class="size-5 relative overflow-hidden">         
-                        <div class="bg-gray-400 hover:bg-pycon-blue w-[5.49px] h-[9.31px] left-[7.50px] top-[5.35px] absolute transition-colors duration-150"></div>       
+                      <div class="size-4 lg:size-5 relative overflow-hidden flex-shrink-0">         
+                        <div class="bg-gray-400 hover:bg-pycon-blue w-[4px] lg:w-[5.49px] h-[7px] lg:h-[9.31px] left-[6px] lg:left-[7.50px] top-[4px] lg:top-[5.35px] absolute transition-colors duration-150"></div>       
                       </div>     
                     </div>
                     {% endfor %}
@@ -86,7 +87,7 @@
             {% else %}
               <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' %}{{ item.link }}{% else %}{{ env.baseUrl }}{{ item.link }}{% endif %}"
                  {% if item.isExternal %}target="_blank" rel="noopener noreferrer"{% endif %}
-                 class="flex items-center gap-1 py-2 px-3 text-white hover:text-[#D7FF7B] text-base font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 no-underline nav-link">
+                 class="flex items-center gap-1 py-2 px-2 md:px-3 text-white hover:text-[#D7FF7B] text-sm md:text-base font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 no-underline nav-link whitespace-nowrap">
                 {{ item.name }}
               </a>
             {% endif %}
@@ -94,13 +95,14 @@
         {% endfor %}
       </ul>
       <div class="absolute right-0">
-                <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline nav-button">
+        <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-xs md:text-sm py-2 px-3 md:px-4 rounded-full transition-all duration-200 no-underline nav-button whitespace-nowrap">
           Get Tickets
         </a>
       </div>
     </div>
   </div>
 
+  <!-- Mobile Navbar (below 768px) -->
   <div class="flex justify-between items-center px-4 py-3 w-full md:hidden">
     <a href="{{ env.baseUrl }}" class="flex items-center z-20">
       <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-8 w-auto">
@@ -128,6 +130,7 @@
   </div>
 </nav>
 
+<!-- Mobile Menu (unchanged) -->
 <div id="mobile-menu" class="fixed inset-0 bg-pycon-blue/95 backdrop-blur-md z-[1000] hidden overflow-auto">
   <div class="text-center pt-6 pb-4">
     <a href="{{ env.baseUrl }}" class="inline-block">
@@ -182,9 +185,8 @@
           </div>
         {% endif %}
       {% endfor %}
-
-      <div class="mt-6 flex justify-center items-center">
-        <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline nav-button">
+      <div class="mt-6">
+        <a href="{{ env.baseUrl }}tickets" class="flex justify-center items-center bg-pycon-lime text-black font-medium rounded-lg p-4 text-center w-full no-underline text-base transition-all duration-200 hover:bg-pycon-lime/80">
           Get Tickets
         </a>
       </div>

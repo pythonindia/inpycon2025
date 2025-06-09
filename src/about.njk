@@ -8,25 +8,25 @@ layout: base.njk
 </header>
 
 <div class="min-h-0 bg-pycon-blue">
-    <div class="container mx-auto px-8 py-16">
-        <div class="flex flex-col lg:flex-row items-center justify-between min-h-[70vh] gap-8">
+    <div class="container mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 pt-20 sm:pt-24 md:pt-28 lg:pt-16">
+        <div class="flex flex-col lg:flex-row items-center justify-between min-h-[60vh] md:min-h-[70vh] gap-6 md:gap-8">
             <!-- Left Content Section -->
             <div class="flex-1 max-w-2xl text-center lg:text-left">
-                <h1 class="text-4xl md:text-3xl lg:text-4xl font-bold text-white mb-6 lg:mb-8 leading-tight">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 lg:mb-8 leading-tight">
                     The Origin Story
                 </h1>
                 
-                <h2 class="text-lg md:text-xl lg:text-2xl text-blue-100 mb-4 lg:mb-6 font-medium">
+                <h2 class="text-lg sm:text-xl md:text-2xl lg:text-2xl text-blue-100 mb-4 md:mb-6 font-medium">
                     About PyCon India 2025
                 </h2>
                 
-                <p class="text-base md:text-lg text-blue-50 leading-relaxed max-w-lg mx-auto lg:mx-0 mb-8">
+                <p class="text-base sm:text-lg md:text-xl lg:text-lg text-blue-50 leading-relaxed max-w-lg mx-auto lg:mx-0 mb-6 md:mb-8">
                     PyCon India is a volunteer driven conference. Like every year, we need enthusiastic and driven volunteer drive to make PyCon India successful.
                 </p>
                 
-                <!-- Image for mobile - shown below content -->
-                <div class="flex lg:hidden justify-center items-center mt-8">
-                    <div class="max-w-sm w-full">
+                <!-- Image for mobile/tablet - shown below content -->
+                <div class="flex lg:hidden justify-center items-center mt-6 md:mt-8">
+                    <div class="max-w-xs sm:max-w-sm md:max-w-md w-full">
                         <img 
                             src="/img/assets/about-team.svg" 
                             alt="Team collaboration illustration" 
@@ -36,9 +36,9 @@ layout: base.njk
                 </div>
             </div>
             
-            <!-- Right Image Section - hidden on mobile -->
+            <!-- Right Image Section - hidden on mobile/tablet -->
             <div class="hidden lg:flex flex-2 justify-center items-center">
-                <div class="max-w-sm md:max-w-md w-full">
+                <div class="max-w-sm xl:max-w-md w-full">
                     <img 
                         src="/img/assets/about-team.svg" 
                         alt="Team collaboration illustration Part" 
@@ -51,73 +51,85 @@ layout: base.njk
 </div>
 
 <!-- Team Section -->
-<div class="min-h-screen bg-gray-50 py-16 mb-16">
-    <div class="container mx-auto px-8">
-        <div class="flex flex-col justify-start items-start gap-3.5 mb-16">
-            <h1 class="text-4xl md:text-3xl lg:text-4xl font-bold text-black leading-tight">The Team</h1>
+<div class="min-h-screen bg-gray-50 py-12 sm:py-16 md:py-20 mb-20 sm:mb-24 md:mb-32">
+    <div class="container mx-auto px-4 sm:px-6 md:px-8">
+        <div class="flex flex-col justify-start items-start gap-3.5 mb-12 sm:mb-16 md:mb-20">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold text-black leading-tight">The Team</h1>
         </div>
         
         <!-- Team Grid -->
-        <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-8">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-8">
             {% for member in teamMembers.teamMembers %}
-            <div class="team-card-3d w-full">
-                <div class="team-card-content w-full flex flex-col justify-start items-start">
+            <div class="team-card group w-full max-w-[160px] sm:max-w-[180px] md:max-w-[200px] lg:max-w-none mx-auto 
+                        relative transition-all duration-300 ease-out hover:-translate-y-2 hover:z-10">
+                <div class="team-card-content w-full flex flex-col justify-start items-start transition-all duration-300 ease-out">
                     <!-- Image Container -->
-                    <div class="w-full h-32 sm:h-36 lg:h-[147px] bg-[#8385f2] overflow-hidden relative">
+                    <div class="w-full h-28 sm:h-32 md:h-36 lg:h-[147px] bg-[#8385f2] overflow-hidden relative
+                                group-hover:bg-[#d7ff7b] group-hover:border group-hover:border-black transition-all duration-300">
                         {% if member.imagelink %}
                         <img src="{{ member.imagelink }}" 
                              alt="{{ member.name }}" 
-                             class="w-full h-full object-cover team-image" 
+                             class="w-full h-full object-cover transition-all duration-300 grayscale group-hover:grayscale-0" 
                              loading="lazy"
                              onerror="this.style.display='none'">
                         {% endif %}
                     </div>
             
-                    <div class="w-full flex flex-col justify-start items-start gap-2 lg:gap-3 pt-3">
+                    <div class="w-full flex flex-col justify-start items-start gap-2 md:gap-3 pt-3">
                         <!-- Name -->
-                        <div class="w-full text-black text-sm sm:text-base lg:text-2xl font-normal acid-grotesk leading-tight lg:leading-7">
+                        <div class="w-full text-black text-sm sm:text-base md:text-lg lg:text-2xl font-normal acid-grotesk leading-tight lg:leading-7">
                             {{ member.name }}
                         </div>
                         
                         <!-- Role -->
-                        <div class="w-full text-slate-400 text-xs sm:text-sm lg:text-base font-normal acid-grotesk leading-tight lg:leading-7">
+                        <div class="w-full text-slate-400 text-xs sm:text-sm md:text-base lg:text-base font-normal acid-grotesk leading-tight lg:leading-7">
                             {{ member.role }}
                         </div>
                         
                         <!-- Social Icons -->
-                        <div class="w-full flex justify-start items-center gap-2 lg:gap-4 flex-wrap">
+                        <div class="w-full flex justify-start items-center gap-2 md:gap-3 lg:gap-4 flex-wrap">
                             {% if member.socials.insta %}
                             <a href="{{ member.socials.insta }}" target="_blank" rel="noopener noreferrer"
-                               class="social-icon-3d p-1 rounded-full border border-slate-400 flex justify-center items-center flex-shrink-0">
-                                <img class="w-3 h-3 lg:w-4 lg:h-4 text-slate-400" src="/img/assets/socials/insta.svg" alt="Instagram Icon" />
+                               class="p-1 rounded-full border border-slate-400 flex justify-center items-center flex-shrink-0
+                                      transition-all duration-200 ease-out hover:bg-[#d7ff7b] hover:border-[#d7ff7b] hover:scale-110
+                                      bg-transparent">
+                                <img class="w-3 h-3 md:w-4 md:h-4 lg:w-4 lg:h-4 text-slate-400" src="/img/assets/socials/insta.svg" alt="Instagram Icon" />
                             </a>
                             {% endif %}
 
                             {% if member.socials.linkedin %}
                             <a href="{{ member.socials.linkedin }}" target="_blank" rel="noopener noreferrer"
-                               class="social-icon-3d p-1 rounded-full border border-slate-400 flex justify-center items-center flex-shrink-0">
-                                <img class="w-3 h-3 lg:w-4 lg:h-4 text-slate-400" src="/img/assets/socials/linkedin.svg" alt="LinkedIn Icon" />
+                               class="p-1 rounded-full border border-slate-400 flex justify-center items-center flex-shrink-0
+                                      transition-all duration-200 ease-out hover:bg-[#d7ff7b] hover:border-[#d7ff7b] hover:scale-110
+                                      bg-transparent">
+                                <img class="w-3 h-3 md:w-4 md:h-4 lg:w-4 lg:h-4 text-slate-400" src="/img/assets/socials/linkedin.svg" alt="LinkedIn Icon" />
                             </a>
                             {% endif %}
 
                             {% if member.socials.web %}
                             <a href="{{ member.socials.web }}" target="_blank" rel="noopener noreferrer"
-                               class="social-icon-3d p-1 rounded-full border border-slate-400 flex justify-center items-center flex-shrink-0">
-                                <img class="w-3 h-3 lg:w-4 lg:h-4 text-slate-400" src="/img/assets/socials/web.svg" alt="Website Icon" />
+                               class="p-1 rounded-full border border-slate-400 flex justify-center items-center flex-shrink-0
+                                      transition-all duration-200 ease-out hover:bg-[#d7ff7b] hover:border-[#d7ff7b] hover:scale-110
+                                      bg-transparent">
+                                <img class="w-3 h-3 md:w-4 md:h-4 lg:w-4 lg:h-4 text-slate-400" src="/img/assets/socials/web.svg" alt="Website Icon" />
                             </a>
                             {% endif %}
 
                             {% if member.socials.github %}
                             <a href="{{ member.socials.github }}" target="_blank" rel="noopener noreferrer"
-                               class="social-icon-3d p-1 rounded-full border border-slate-400 flex justify-center items-center flex-shrink-0">
-                                <img class="w-3 h-3 lg:w-4 lg:h-4 text-slate-400" src="/img/assets/socials/github.svg" alt="GitHub Icon" />
+                               class="p-1 rounded-full border border-slate-400 flex justify-center items-center flex-shrink-0
+                                      transition-all duration-200 ease-out hover:bg-[#d7ff7b] hover:border-[#d7ff7b] hover:scale-110
+                                      bg-transparent">
+                                <img class="w-3 h-3 md:w-4 md:h-4 lg:w-4 lg:h-4 text-slate-400" src="/img/assets/socials/github.svg" alt="GitHub Icon" />
                             </a>
                             {% endif %}
 
                             {% if member.socials.twitter %}
                             <a href="{{ member.socials.twitter }}" target="_blank" rel="noopener noreferrer"
-                               class="social-icon-3d p-1 rounded-full border border-slate-400 flex justify-center items-center flex-shrink-0">
-                                <img class="w-3 h-3 lg:w-4 lg:h-4 text-slate-400" src="/img/assets/socials/twitter.svg" alt="Twitter Icon" />
+                               class="p-1 rounded-full border border-slate-400 flex justify-center items-center flex-shrink-0
+                                      transition-all duration-200 ease-out hover:bg-[#d7ff7b] hover:border-[#d7ff7b] hover:scale-110
+                                      bg-transparent">
+                                <img class="w-3 h-3 md:w-4 md:h-4 lg:w-4 lg:h-4 text-slate-400" src="/img/assets/socials/twitter.svg" alt="Twitter Icon" />
                             </a>
                             {% endif %}
                         </div>

@@ -688,37 +688,3 @@ body:not(.is-home-page) main {
 .social-icon-3d:hover svg {
     color: black !important;
 }
-
-/* Responsive grid adjustments */
-@media (max-width: 1024px) {
-    .team-card-3d {
-        width: 100%;
-        max-width: 192px;
-        margin: 0 auto;
-    }
-    
-    .team-card-content {
-        width: 100% !important;
-        max-width: 192px;
-    }
-    
-    .team-card-content > div:first-child {
-        width: 100% !important;
-        max-width: 192px;
-    }
-}
-
-@media (max-width: 640px) {
-    .team-card-3d {
-        max-width: 160px;
-    }
-    
-    .team-card-content {
-        max-width: 160px;
-    }
-    
-    .team-card-content > div:first-child {
-        max-width: 160px;
-        height: 120px;
-    }
-}
