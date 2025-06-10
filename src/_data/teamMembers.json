@@ -36,7 +36,7 @@
     },
     {
       "name": "Pratik Anurag",
-      "role": "Logistics/ CoC/ Volunteer Management",
+      "role": "Logistics WG Lead",
       "imagelink": "https://avatars.githubusercontent.com/u/57359354?v=4",
       "socials": {
         "insta": "https://www.instagram.com/garunakitarp/",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Ashish Kumar Mishra",
-      "role": "Volunteer Management",
+      "role": "Volunteers Management WG Lead",
       "imagelink": "https://in.pycon.org/2024/image/team/ashish_mishra.jpeg",
       "socials": {
         "insta": "",
@@ -57,14 +57,65 @@
       }
     },
     {
+      "name": "Rayan Das",
+      "role": "Ticket WG Lead",
+      "imagelink": "https://in.pycon.org/2024/image/team/rayan_das.png",
+      "socials": {
+        "insta": "https://instagram.com/raydeeam",
+        "linkedin": "https://www.linkedin.com/in/rayandas",
+        "twitter": "https://x.com/raydeeam"
+      }
+    },
+    {
       "name": "Farhaan Bukhsh",
-      "role": "Website & Technology WG Lead",
+      "role": "Technology WG Lead",
       "imagelink": "https://avatars.githubusercontent.com/u/7670449?s=400&u=bf6eb65bdf25c98310e3711ca1d8b58a84ae47d6&v=4",
       "socials": {
         "linkedin": "https://www.linkedin.com/in/farhaanbukhsh/",
         "web": "https://farhaan.me/",
         "github": "http://github.com/farhaanbukhsh",
         "twitter": "https://x.com/fhackdroid"
+      }
+    },
+    {
+      "name": "Shabnam",
+      "role": "Design & CoC WG Lead",
+      "imagelink": "https://avatars.githubusercontent.com/u/9293037?v=4",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/shabnam1/",
+        "twitter": "https://x.com/iishabbyii"
+      }
+    },
+    {
+      "name": "Surbhi Kathuria",
+      "role": "Communication WG Lead",
+      "imagelink": "/img/team/Surbhi.jpg",
+      "socials": {
+        "insta": "https://www.instagram.com/surbhik09/?next=%2F&hl=en",
+        "linkedin": "https://www.linkedin.com/in/surbhikathuria09",
+        "github": "https://github.com/SurbhiK-09/"
+      }
+    },
+    {
+      "name": "Dhanush Kandhan",
+      "role": "Technology",
+      "imagelink": "https://dhanu.pages.dev/me.jpg",
+      "socials": {
+        "insta": "https://instagram.com/itsmedhanushk_",
+        "linkedin": "https://www.linkedin.com/in/dhanushkandhan/",
+        "web": "https://dhanu.pages.dev/",
+        "github": "https://github.com/dhanushk-offl",
+        "twitter": "https://x.com/akadhanu"
+      }
+    },
+    {
+      "name": "Arthi Murali ",
+      "role": "Communication WG",
+      "imagelink": "https://in.pycon.org/2024/image/team/arthi.jpg",
+      "socials": {
+        "insta": "https://www.instagram.com/arthi_ishita",
+        "linkedin": "https://www.linkedin.com/in/meetarthi/",
+        "twitter": "https://x.com/meetarthi/"
       }
     },
     {
@@ -76,68 +127,6 @@
         "linkedin": "https://www.linkedin.com/in/arockiaraj-rayappan/",
         "github": "https://github.com/",
         "twitter": "https://x.com/arockiaraj1994"
-      }
-    },
-    {
-      "name": "Rayan Das",
-      "role": "Ticketing & Registration",
-      "imagelink": "https://in.pycon.org/2024/image/team/rayan_das.png",
-      "socials": {
-        "insta": "https://instagram.com/raydeeam",
-        "linkedin": "https://www.linkedin.com/in/rayandas",
-        "twitter": "https://x.com/raydeeam"
-      }
-    },
-    {
-      "name": "Abishek Mishra",
-      "role": "Sponsorship",
-      "imagelink": "https://raw.githubusercontent.com/abhishekmishragithub/Jekyll-site/master/assets/img/abhishek_mishra_001_adv-fotor.png",
-      "socials": {
-        "insta": "https://instagram.com/stalwartcoder",
-        "linkedin": "https://linkedin.com/in/stalwartcoder",
-        "web": "https://abhishekmishra.dev/about",
-        "twitter": "https://x.com/stalwartcoder"
-      }
-    },
-    {
-      "name": "Dhanush Kandhan",
-      "role": "Website & Technology",
-      "imagelink": "https://dhanu.pages.dev/me.jpg",
-      "socials": {
-        "insta": "https://instagram.com/itsmedhanushk_",
-        "linkedin": "https://www.linkedin.com/in/dhanushkandhan/",
-        "web": "https://dhanu.pages.dev/",
-        "github": "https://github.com/dhanushk-offl",
-        "twitter": "https://x.com/akadhanu"
-      }
-    },
-    {
-      "name": "Shabnam",
-      "role": "Design/CoC",
-      "imagelink": "https://avatars.githubusercontent.com/u/9293037?v=4",
-      "socials": {
-        "linkedin": "https://www.linkedin.com/in/shabnam1/",
-        "twitter": "https://x.com/iishabbyii"
-      }
-    },
-    {
-      "name": "Arthi Murali ",
-      "role": "Content & Communication",
-      "imagelink": "https://in.pycon.org/2024/image/team/arthi.jpg",
-      "socials": {
-        "insta": "https://www.instagram.com/arthi_ishita",
-        "linkedin": "https://www.linkedin.com/in/meetarthi/",
-        "twitter": "https://x.com/meetarthi/"
-      }
-    },
-    {
-      "name": "Surbhi Kathuria",
-      "role": "Content & Communication",
-      "imagelink": "/img/team/Surbhi.jpg",
-      "socials": {
-        "insta": "https://www.instagram.com/surbhik09/?next=%2F&hl=en",
-        "linkedin": "https://www.linkedin.com/in/surbhikathuria09",
-        "github": "https://github.com/SurbhiK-09/"
       }
     },
     {
