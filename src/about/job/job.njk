@@ -1,0 +1,137 @@
+---
+title: Job Board - Pycon India 2025
+description: PyCon India 2025 Job Board
+layout: base.njk
+---
+
+{% from "components/flat-card.njk" import flatCard %}
+{% from "components/button.njk" import button %}
+{% set job_postings = jobData %}
+
+<div class="w-full h-auto bg-pycon-blue px-[6%] pb-32 flex flex-col md:flex-row">
+    <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
+        <div class="black-han-sans-regular font-normal text-4xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+            Job Board
+        </div>
+        <div class="pt-10 font-light text-lg md:text-2xl md:text-center text-white text-center lg:text-left">
+            <p class="mb-0">Submit your job posting <a href="https://docs.google.com/forms/d/e/1FAIpQLSce8d2wOm976llzPUlF3NXzfx4K7zPamnxHSGWup1HDKMA-3g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="underline">here</a></p>
+            <p>Check out the <a href="{{ env.baseUrl }}about/job/guidelines/" class="underline">rules and guidelines</a> </p>
+        </div>
+    </div>
+    <div class="lg:w-[30%] w-[80%] lg:mt-40 flex items-center justify-center mx-auto">
+        <img src="/img/assets/abstract-obj.svg" alt="Guide" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+        <img src="/img/assets/star-lime-vector.svg" alt="Guide" class="w-[10%] lg:w-[10%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+    </div>
+</div>
+
+
+<div class="job-container bg-lavender w-full h-auto -pt-20 px-[6%] pb-72 md:pb-40 relative">
+    <div class="flex flex-wrap -mt-24 -mx-4">
+        <!-- Column 1 -->
+        <div class="w-full lg:w-1/3 px-4 flex flex-col gap-8">
+        {% for job_post in job_postings %}
+            {% if loop.index0 % 3 == 0 %}
+                {% set bg_color = 'purple' if loop.index0 // 3 % 2 == 0 else 'lime' %}
+                {% call flatCard(bg=bg_color) -%}
+                    <div class="p-4">
+                        <div class="text-3xl font-semibold">{{ job_post.title }}</div>
+                        <div class="pt-4">
+                            <span class="text-2xl">
+                                <a href="{{ job_post.company_website }}" class="underline">
+                                    {{ job_post.company }}
+                                </a>
+                            </span>
+                            <p class="pt-8 flex items-center gap-x-2 mb-0">
+                                <i class="fa-solid fa-briefcase text-xl text-[#475569]"></i>
+                                <span>{{ job_post.job_type }}</span>
+                                <i class="fa-solid fa-location-dot text-xl text-[#475569]"></i>
+                                <span>{{ job_post.location }}</span>
+                            </p>
+                        </div>
+                        <div class="pt-2 text-gray-700">
+                            <p class="text-justify">
+                                {{ job_post.description }}
+                            </p>
+                        </div>
+                        <div class="pt-4">
+                            {{ button(text="Apply", url=job_post.link_to_apply, lime_bg=(bg_color == "purple"), env=env) }}
+                        </div>
+                    </div>
+                {%- endcall %}
+            {% endif %}
+        {% endfor %}
+        </div>
+
+        <!-- Column 2 -->
+        <div class="w-full pt-8 lg:pt-16 lg:w-1/3 px-4 flex flex-col gap-8">
+        {% for job_post in job_postings %}
+            {% if loop.index0 % 3 == 1 %}
+                {% set bg_color = 'purple' if loop.index0 // 3 % 2 == 1 else 'lime' %}
+                {% call flatCard(bg=bg_color) -%}
+                    <div class="p-4">
+                        <div class="text-3xl font-semibold">{{ job_post.title }}</div>
+                        <div class="pt-4">
+                            <span class="text-2xl">
+                                <a href="{{ job_post.company_website }}" class="underline">
+                                    {{ job_post.company }}
+                                </a>
+                            </span>
+                            <p class="pt-8 flex items-center gap-x-2 mb-0">
+                                <i class="fa-solid fa-briefcase text-xl text-[#475569]"></i>
+                                <span>{{ job_post.job_type }}</span>
+                                <i class="fa-solid fa-location-dot text-xl text-[#475569]"></i>
+                                <span>{{ job_post.location }}</span>
+                            </p>
+                        </div>
+                        <div class="pt-2 text-gray-700">
+                            <p class="text-justify">
+                                {{ job_post.description }}
+                            </p>
+                        </div>
+                        <div class="pt-4">
+                            {{ button(text="Apply", url=job_post.link_to_apply, lime_bg=(bg_color == "purple"), env=env) }}
+                        </div>
+                    </div>
+                {%- endcall %}
+            {% endif %}
+        {% endfor %}
+        </div>
+
+        <!-- Column 3 -->
+        <div class="w-full pt-8 lg:pt-0 lg:w-1/3 px-4 flex flex-col gap-8">
+        {% for job_post in job_postings %}
+            {% if loop.index0 % 3 == 2 %}
+                {% set bg_color = 'purple' if loop.index0 // 3 % 2 == 0 else 'lime' %}
+                {% call flatCard(bg=bg_color) -%}
+                    <div class="p-4">
+                        <div class="text-3xl font-semibold">{{ job_post.title }}</div>
+                        <div class="pt-4">
+                            <span class="text-2xl">
+                                <a href="{{ job_post.company_website }}" class="underline">
+                                    {{ job_post.company }}
+                                </a>
+                            </span>
+                            <p class="pt-8 flex items-center gap-x-2 mb-0">
+                                <i class="fa-solid fa-briefcase text-xl text-[#475569]"></i>
+                                <span>{{ job_post.job_type }}</span>
+                                <i class="fa-solid fa-location-dot text-xl text-[#475569]"></i>
+                                <span>{{ job_post.location }}</span>
+                            </p>
+                        </div>
+                        <div class="pt-2 text-gray-700">
+                            <p class="text-justify">
+                                {{ job_post.description }}
+                            </p>
+                        </div>
+                        <div class="pt-4">
+                            {{ button(text="Apply", url=job_post.link_to_apply, lime_bg=(bg_color == "purple"), env=env) }}
+                        </div>
+                    </div>
+                {%- endcall %}
+            {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script></script>
