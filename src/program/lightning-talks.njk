@@ -1,0 +1,191 @@
+---
+title: Lightning Talks
+description: PyCon India 2025 Lightning Talks 
+layout: base.njk
+---
+
+{% from "components/flat-card.njk" import flatCard %}
+
+<div class="w-full h-auto bg-pycon-blue -mb-24 px-[6%] flex flex-col md:flex-row">
+    <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+            What's a Lightning Talk?
+        </div>
+        <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-10 text-justify">
+            <p>Lightning talks are short presentations, limited to 5 minutes, on any topic that might interest the Python community. It doesn't have to be something you've created, feel free to share something you've learned or a technique you think others will find useful.</p>
+        </div>
+        <div class="text-md lg:text-lg text-[#FFFFFF] lg:pr-10 text-justify">
+            <ul class="list-none pt-4 space-y-4">
+                <li class="flex">
+                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                    <span>Is there something at work that everyone asks for your help with? Talk about that!</span>
+                </li>
+                <li class="flex">
+                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                    <span>Did you recently learn something that made a difference for you? Talk about that!</span>
+                </li>
+                <li class="flex">
+                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                    <span>Is there a topic you've always wanted to understand better? Talk about that!</span>
+                </li>
+            </ul>
+            <p>Slides are optional but encouraged!</p>
+        </div>
+    </div>
+    <div class="lg:w-[30%] w-[80%] lg:mt-60 flex items-center justify-center mx-auto">
+        <img src="{{ env.baseUrl }}img/assets/tetris.svg" alt="Tetris" class="w-[20%] lg:w-[20%] transition-transform duration-100" style="animation: floating 4s ease-in-out infinite;">
+        <img src="{{ env.baseUrl }}img/assets/bulb.svg" alt="Bulb" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+        <img src="{{ env.baseUrl }}img/assets/star-purple-vector.svg" alt="Star" class="w-[10%] lg:w-[10%] transition-transform duration-100" style="animation: floating 6s ease-in-out infinite;">
+    </div>
+</div>
+
+
+<div class="main-container pt-16 md:pt-48 bg-lavender w-full h-auto px-[6%]">
+    <div class="pb-16 w-full text-justify lg:w-[70%]">
+        <div class="mt-24 md:-mt-32 lg:-mt-20 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Things people say when they think they can't do a lightning talk</p>
+            </div>
+            <div class="">
+                <div class="flex flex-col lg:flex-row items-center lg:items-start pt-16">
+                    <div class="lg:w-2/3 w-full flex-shrink-0">
+                    {% call flatCard(bg="") -%}
+                        <div class="flex justify-between align-middle p-2 bg-[#CD89FF] -m-4">
+                            <div class="font-semibold">"Everyone already knows THING_X"</div>
+                            <div class="window-titlebar-dots">
+                                <div class="w-3 h-3 bg-[#D7FF7B] rounded-full border-2 border-black"></div>
+                                <div class="w-3 h-3 bg-[#D7FF7B] rounded-full border-2 border-black"></div>
+                                <div class="w-3 h-3 bg-[#D7FF7B] rounded-full border-2 border-black"></div>
+                            </div>
+                        </div>
+                        <div class="pt-6">
+                            <ul class="list-none pt-4 space-y-2">
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>No, they don't.</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>They believe they are knowledgeable, but you possess a deeper comprehension of the subject matter.</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Even if they do, it's interesting to hear someone else's take on it.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    {%- endcall %}
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start pt-16">
+                    <div class="lg:w-2/3 w-full flex-shrink-0">
+                    {% call flatCard(bg="") -%}
+                        <div class="flex justify-between align-middle p-2 bg-[#4E62F5] -m-4">
+                            <div class="font-semibold">"I'm not an expert at anything"</div>
+                            <div class="window-titlebar-dots">
+                                <div class="w-3 h-3 bg-[#FF2A77] rounded-full border-2 border-black"></div>
+                                <div class="w-3 h-3 bg-[#FF2A77] rounded-full border-2 border-black"></div>
+                                <div class="w-3 h-3 bg-[#FF2A77] rounded-full border-2 border-black"></div>
+                            </div>
+                        </div>
+                        <div class="pt-6">
+                            <ul class="list-none pt-4 space-y-2">
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-blue.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>You know more than you think you do.</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-blue.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>You don't have to be an expert, you just have to be interested enough to talk for 5 minutes.</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-blue.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>You can do a 1-minute lightning talk if you want.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    {%- endcall %}
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center lg:items-start pt-16">
+                    <div class="lg:w-2/3 w-full flex-shrink-0">
+                    {% call flatCard(bg="") -%}
+                        <div class="flex justify-between align-middle p-2 bg-[#D7FF7B] -m-4">
+                            <div class="font-semibold">"It's scary talking in front of people"</div>
+                            <div class="window-titlebar-dots">
+                                <div class="w-3 h-3 bg-[#CD89FF] rounded-full border-2 border-black"></div>
+                                <div class="w-3 h-3 bg-[#CD89FF] rounded-full border-2 border-black"></div>
+                                <div class="w-3 h-3 bg-[#CD89FF] rounded-full border-2 border-black"></div>
+                            </div>
+                        </div>
+                        <div class="pt-6">
+                            <ul class="list-none pt-4 space-y-2">
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Yes, but you will feel really accomplished when you've done it.</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Folks at PyCon are super-friendly and are always welcoming of new speakers.</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>It is understandable that public speaking can induce nervousness in individuals, including those who may appear confident.</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span><a href="https://www.youtube.com/watch?v=Aio0whC1iYg#t=25m58s" target="_blank">You can give a lightning talk without talking!</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    {%- endcall %}
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start pt-16">
+                    <div class="lg:w-2/3 w-full flex-shrink-0">
+                    {% call flatCard(bg="") -%}
+                        <div class="flex justify-between align-middle p-2 bg-[#FF2A77] -m-4">
+                            <div class="font-semibold">"I have an idea but it's no good"</div>
+                            <div class="window-titlebar-dots">
+                                <div class="w-3 h-3 bg-[#4E62F5] rounded-full border-2 border-black"></div>
+                                <div class="w-3 h-3 bg-[#4E62F5] rounded-full border-2 border-black"></div>
+                                <div class="w-3 h-3 bg-[#4E62F5] rounded-full border-2 border-black"></div>
+                            </div>
+                        </div>
+                        <div class="pt-6">
+                            <ul class="list-none pt-4 space-y-2">
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-pink.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>It's a better idea than you think.</span>
+                                </li>
+                                <li class="flex">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-pink.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                    <span>Are there really any bad ideas for lightning talks? :)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    {%- endcall %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pt-16 bg-lavender w-full h-auto px-[6%]">
+    <div class="pb-72 md:pb-60 lg:pb-[20%] w-full text-justify lg:w-[70%]">
+        <div class="text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Lightning Talks at PyCon India 2025</p>
+            </div>
+            <div class="pt-8">
+                <p>Please refer to the schedule for Lightning Talk slots. Registration will open on the day of the conference, and we will share a Google Form for submitting Lightning Talk proposals. Slots will be assigned on a first-come, first-served basis due to limited availability. You will be notified if your talk is selected.</p>
+                <p>This has been inspired by:</p>
+                <p><a href="https://us.pycon.org/2025/events/lightning-talks/" target="_blank">PyCon US 2025 - Lightning Talks</a></p>
+            </div>
+        </div>
+    </div>
+</div>
