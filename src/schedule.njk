@@ -38,27 +38,62 @@ layout: base.njk
         <div id="{{ day.id }}" class="schedule-content {% if loop.first %}block{% else %}hidden{% endif %} pt-24 text-center">
             <div>
                 <div class="pb-16">
-                    <div class="w-full border border-black">
-                        <div class="bg-pycon-lime px-4 py-2 border-b border-black flex justify-between">
+                    <div class="w-full">
+                        <div class="bg-pycon-lime px-4 py-2 mb-2 flex justify-between">
                             <p class="text-xl mb-0">{{ day.description }}</p>
                             <p class="text-xl mb-0">{{ day.title }}</p>
                         </div>
 
+                        {% set colors = ["bg-[#CD89FF]", "bg-[#1FFFB4]", "bg-[#E745A0]", "bg-[#1FFFB4]"] %}
+                        {% set trackColors = ["bg-[#D0DCFF]", "bg-[#FFD1F9]", "bg-[#FFEB99]", "bg-[#D7FF7B]"] %}
+                        {% set colorIndex = 0 %}
+
                         {% for sch in day.schedule %}
-                        <div class="flex w-full border-b border-black">
+                        <div class="flex flex-wrap gap-0 py-0 md:py-2 md:gap-2">
                             {% for track in sch.tracks %}
-                            <div class="flex-1 p-4 bg-green-200 border-r border-black">
+                            {% if track.link %}
+                            <a href="{{ track.link }}" 
+                                class="w-full md:flex-1 p-4 border border-black 
+                                {% if sch.tracks|length == 1 %}
+                                    {{ colors[colorIndex] }}
+                                {% else %}
+                                    bg-white
+                                {% endif %}
+                                transform hover:-translate-y-1 transition duration-500 ease-in-out hover:bg-pycon-lime cursor-pointer no-underline text-inherit">
+                            {% else %}
+                            <div class="w-full md:flex-1 p-4 border border-black 
+                                {% if sch.tracks|length == 1 %}
+                                    {{ colors[colorIndex] }}
+                                {% else %}
+                                    bg-white
+                                {% endif %}
+                                transform hover:-translate-y-1 transition duration-500 ease-in-out">
+                            {% endif %}
+                                {% if sch.tracks|length > 1 %}
+                                <p class="p-2"><span class="p-2 rounded-md {{ trackColors[loop.index0] }}">{{ day.trackLabels[loop.index0] }}</span></p>
+                                {% endif %}
+                                {% if track.type == "keynote" %}
+                                <p class="p-2"><span class="p-2 rounded-md bg-[#9683e3]">Keynote</span></p>
+                                {% endif %}
                                 <p class="mb-0">{{ sch.start_time }} - {{ sch.end_time }}</p>
-                                <p class="font-semibold">{{ track.title }}</p>
+                                <p class="font-semibold mb-0">{{ track.title }}</p>
+                                <p class="font-light mb-0 pt-2 text-pycon-blue pb-2">{{ track.speaker }}</p>
+                            {% if track.link %}
+                            </a>
+                            {% else %}
                             </div>
+                            {% endif %}
+                            {% set colorIndex = (colorIndex + 1) % colors|length %}
                             {% endfor %}
                         </div>
+
                         {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
         {% endfor %}
+
     </div>
 </div>
 
