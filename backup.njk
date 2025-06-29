@@ -1,0 +1,137 @@
+---
+title: Schedule
+description: PyCon India 2025 Schedule 
+layout: base.njk
+---
+
+{% from "components/flat-card.njk" import flatCard %}
+
+<div class="w-full h-auto bg-pycon-blue -mb-24 px-[6%] pb-72">
+    <div class="pt-32 pb-8 md:pb-32 w-full">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl text-[#FFFFFF] text-center">
+            Schedule
+        </div>
+        <!-- Dynamically display Schedule Grid -->
+        <div class="pt-20 grid gap-0 md:gap-6" style="grid-template-columns: repeat({{ schedule|length }}, minmax(0, 1fr));">
+            {% for day in schedule %}
+            <div class="cursor-pointer schedule-card" data-schedule="{{ day.id }}">
+                {% call flatCard(bg="") -%}
+                    <div class="flex justify-between align-middle p-2 bg-[#CD89FF] -m-4">
+                        <div class="window-titlebar-dots">
+                            <div class="w-3 h-3 bg-[#D7FF7B] rounded-full border-2 border-black"></div>
+                            <div class="w-3 h-3 bg-[#D7FF7B] rounded-full border-2 border-black"></div>
+                            <div class="w-3 h-3 bg-[#D7FF7B] rounded-full border-2 border-black"></div>
+                        </div>
+                    </div>
+                    <div class="card-grid pt-8 bg-[#FFFFFF] text-xs md:text-xl -mx-4 -mb-8 mt-4 hover:bg-pycon-lime">
+                        <p class="text-center mb-0.5">{{ day.description }}</p>
+                        <p class="text-center mb-0.5 font-semibold">{{ day.title }}</p>
+                        <p class="text-center font-thin text-[#4662FF] pb-4">{{ day.day|upper }}</p>
+                    </div>
+                {%- endcall %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Dynamically display Schedule Content -->
+        {% for day in schedule %}
+        <div id="{{ day.id }}" class="schedule-content {% if loop.first %}block{% else %}hidden{% endif %} pt-24 text-center">
+            <div>
+                <div class="pb-16">
+                    <div class="w-full border border-black">
+                        <div class="bg-pycon-lime px-4 py-2 border-b border-black flex justify-between">
+                            <p class="text-xl mb-0">{{ day.description }}</p>
+                            <p class="text-xl mb-0">{{ day.title }}</p>
+                        </div>
+
+                        {% for sch in day.schedule %}
+                        <div class="flex w-full border-b border-black">
+                            {% for track in sch.tracks %}
+                            <div class="flex-1 p-4 bg-green-200 border-r border-black">
+                                <p class="mb-0">{{ sch.start_time }} - {{ sch.end_time }}</p>
+                                <p class="font-semibold">{{ track.title }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.schedule-card');
+    const contents = document.querySelectorAll('.schedule-content');
+    let selectedCard = null; // Keep track of the selected card
+
+    // Function to reset all card backgrounds
+    const resetCardBackgrounds = () => {
+        cards.forEach(card => {
+            const highlightDiv = card.querySelector('.card-grid');
+            highlightDiv.classList.remove('pycon-bg-lime');
+            highlightDiv.style.backgroundColor = '#FFFFFF'; // Default white background
+        });
+    };
+
+    // Function to hide all schedules
+    const hideAllSchedules = () => {
+        contents.forEach(content => content.classList.add('hidden'));
+    };
+
+    // Initial state: Highlight the first card and show the first schedule
+    if (cards.length > 0 && contents.length > 0) {
+        selectedCard = cards[0];
+        const firstContentId = selectedCard.getAttribute('data-schedule');
+
+        // Highlight the first card
+        const firstHighlightDiv = selectedCard.querySelector('.card-grid');
+        firstHighlightDiv.classList.add('pycon-bg-lime');
+        firstHighlightDiv.style.backgroundColor = '#CDFF89'; // Lime background
+
+        // Show the first schedule
+        document.getElementById(firstContentId).classList.remove('hidden');
+    }
+
+    // Add event listeners to all cards
+    cards.forEach(card => {
+        const highlightDiv = card.querySelector('.card-grid');
+
+        card.addEventListener('click', () => {
+            // Reset previous selection
+            resetCardBackgrounds();
+            hideAllSchedules();
+
+            // Highlight the clicked card
+            highlightDiv.classList.add('pycon-bg-lime');
+            highlightDiv.style.backgroundColor = '#CDFF89'; // Lime background
+
+            // Show the corresponding schedule
+            const scheduleId = card.getAttribute('data-schedule');
+            document.getElementById(scheduleId).classList.remove('hidden');
+
+            // Update the selected card
+            selectedCard = card;
+        });
+
+        // Handle hover for unselected cards
+        card.addEventListener('mouseenter', () => {
+            if (card !== selectedCard) {
+                highlightDiv.style.backgroundColor = '#CDFF89'; // Hover lime background
+            }
+        });
+
+        card.addEventListener('mouseleave', () => {
+            if (card !== selectedCard) {
+                highlightDiv.style.backgroundColor = '#FFFFFF'; // Default white background
+            }
+        });
+    });
+});
+
+
+</script>

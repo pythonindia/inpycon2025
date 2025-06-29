@@ -1,0 +1,1469 @@
+{
+	"$schema": "https://c3voc.de/schedule/schema.json",
+	"generator": {
+		"name": "pretalx",
+		"version": "2025.2.0.dev0"
+	},
+	"schedule": {
+		"url": "https://example.com/democon/schedule/",
+		"version": "v1.9",
+		"base_url": "https://pretalx.com",
+		"conference": {
+			"acronym": "democon",
+			"title": "DemoCon",
+			"start": "2025-06-27",
+			"end": "2025-06-29",
+			"daysCount": 3,
+			"timeslot_duration": "00:05",
+			"time_zone_name": "Europe/London",
+			"colors": {
+				"primary": "#6c70cf"
+			},
+			"rooms": [
+				{
+					"name": "Magenta Room",
+					"slug": "131-magenta-room",
+					"guid": "b61e7836-9355-5208-b287-693b3705fb7e",
+					"description": "Please head over to Building Pink, where you can find the Magenta Room to the left of the main entrance.",
+					"capacity": null
+				},
+				{
+					"name": "Khaki Room",
+					"slug": "130-khaki-room",
+					"guid": "5a870750-02a7-5a92-9bba-44aac1b3036a",
+					"description": null,
+					"capacity": null
+				}
+			],
+			"tracks": [
+				{
+					"name": "Realigned & co",
+					"slug": "89-realigned-co",
+					"color": "#3B01AA"
+				},
+				{
+					"name": "Front-line",
+					"slug": "90-front-line",
+					"color": "#912E9E"
+				}
+			],
+			"days": [
+				{
+					"index": 1,
+					"date": "2025-06-27",
+					"day_start": "2025-06-27T04:00:00+01:00",
+					"day_end": "2025-06-28T03:59:00+01:00",
+					"rooms": {
+						"Magenta Room": [
+							{
+								"guid": "2ca385d0-d98f-5dd5-8743-f6243bfff965",
+								"code": "KWBQCV",
+								"id": 2919,
+								"logo": null,
+								"date": "2025-06-27T09:30:00+01:00",
+								"start": "09:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2919-proactive-asymmetric-architecture",
+								"url": "https://example.com/democon/talk/KWBQCV/",
+								"title": "Proactive asymmetric architecture",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Seize innovative bandwidth!",
+								"description": "Accept plant far fast drop serve. Home decide goal shoulder military.\r\nDown hour perform personal whether. History beyond hotel up phone read go.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "3A8YHL",
+										"name": "Alexander Morrow PhD",
+										"avatar": null,
+										"biography": "Dog win have part just future. Draw hard which reach institution wrong.\r\nDeep without we almost about them concern event. Spring early truth international door worker like.\r\n\r\nOffice yeah agreement food find option. Generation money music challenge statement opportunity. Computer ever impact seat.\r\n\r\n- #️⃣ foo",
+										"public_name": "Alexander Morrow PhD",
+										"guid": "2ba2cc84-0a06-54eb-a0b5-75afdc58d591",
+										"url": "https://example.com/democon/speaker/3A8YHL/"
+									},
+									{
+										"code": "KPXMSS",
+										"name": "Jessica Hudson",
+										"avatar": null,
+										"biography": "There finally your relationship season. Receive only main.\nSeason machine contain mouth degree.\nLate central effort. Mind bank eight within do during adult however.\n\nDog high middle decade final involve. Process open head while executive season send.\nLaugh ability science network people blue. Plant market base knowledge.",
+										"public_name": "Jessica Hudson",
+										"guid": "2d728fb6-d8a8-5f02-986d-0e98ef89a9a2",
+										"url": "https://example.com/democon/speaker/KPXMSS/"
+									},
+									{
+										"code": "NCGMSE",
+										"name": "Tobias Kunze",
+										"avatar": "https://pretalx.com/media/avatars/NCGMSE_iMmsNHO.jpg",
+										"biography": "Hi, I'm Tobias. Contact me for any pretalx questions!",
+										"public_name": "Tobias Kunze",
+										"guid": "dde5a251-aa15-5092-9990-0d0b198606df",
+										"url": "https://example.com/democon/speaker/NCGMSE/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/KWBQCV/feedback/",
+								"origin_url": "https://example.com/democon/talk/KWBQCV/",
+								"attachments": []
+							},
+							{
+								"guid": "2073e55f-01a2-533f-8a2d-7694782e3531",
+								"code": "RC3CXU",
+								"id": 2901,
+								"logo": "https://pretalx.com/media/democon/submissions/RC3CXU/1091_634e_tLQOKLJ.jpeg",
+								"date": "2025-06-27T10:00:00+01:00",
+								"start": "10:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2901-open-source-executive-info-mediaries",
+								"url": "https://example.com/democon/talk/RC3CXU/",
+								"title": "Open-source executive info-mediaries",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "# test\r\n\r\nIncentivize turn-key schemas!",
+								"description": "# test\r\n\r\nPay can song police reach someone. Whose behind event third think up. Avoid bill fund.\r\nEvery notice successful choose forget last. Record commercial operation environmental meet wind business win.",
+								"recording_license": "",
+								"do_not_record": true,
+								"persons": [
+									{
+										"code": "LSCX3H",
+										"name": "Thomas Grimes",
+										"avatar": null,
+										"biography": "Right do still skin coach threat. Yeah institution ball race majority.\nTravel center parent teach role ball several. Help rather decade instead man. I money front method.\n\nCandidate almost spring improve campaign series prove. Interview enter social drop necessary floor somebody.\nFocus ok it popular value fact once. As show effort be where.",
+										"public_name": "Thomas Grimes",
+										"guid": "c511f8f1-8594-598b-8e06-f2b822782759",
+										"url": "https://example.com/democon/speaker/LSCX3H/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/RC3CXU/feedback/",
+								"origin_url": "https://example.com/democon/talk/RC3CXU/",
+								"attachments": [
+									{
+										"title": "test",
+										"url": "/media/democon/submissions/RC3CXU/resources/test_Il61fML.js",
+										"type": "related"
+									}
+								]
+							},
+							{
+								"guid": "64eaa9d3-2b4d-5828-9cda-adc89323cd34",
+								"code": "ZXHLFB",
+								"id": 2905,
+								"logo": "https://pretalx.com/media/democon/submissions/ZXHLFB/14596746220_df15373eee_o_N7VCrmm.jpg",
+								"date": "2025-06-27T10:30:00+01:00",
+								"start": "10:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2905-integrated-asymmetric-neural-net-test",
+								"url": "https://example.com/democon/talk/ZXHLFB/",
+								"title": "Integrated asymmetric neural-net TEST",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Synthesize one-to-one partnerships! Integrate wireless infrastructures!\r\n\r\nsecond para\r\n\r\nthird para",
+								"description": "Between summer environmental the. Thought ever heavy value lose.\r\nStation beat realize development smile feeling. Easy travel total. Window evening ability radio.\r\n\r\nsecond para  google.com\r\n\r\nthird para",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "JWEMXZ",
+										"name": "Robert Campbell",
+										"avatar": null,
+										"biography": "Cultural rather radio want price. Issue free tonight answer early enjoy close.\nExperience who join cost career. Stock machine performance campaign five small. Poor edge five travel final.\n\nSport line quality develop. Again onto stay impact.\nShort avoid than choose foot off. Them drug activity capital create run public herself.",
+										"public_name": "Robert Campbell",
+										"guid": "4ead7c98-d1b0-5251-b6dd-64e389901fb0",
+										"url": "https://example.com/democon/speaker/JWEMXZ/"
+									},
+									{
+										"code": "CVVBPA",
+										"name": "Clinton Vazquez",
+										"avatar": null,
+										"biography": "Million use almost parent. North shoulder plant send us bar report. Thing four finally subject situation part.\nImage decide exist close rise tell. Indeed keep artist author top purpose.\n\nPut onto people travel. Finally good lay lay idea.\nEven ago resource even exactly wait beyond. Reality thought change smile particular condition partner several.",
+										"public_name": "Clinton Vazquez",
+										"guid": "0015d73b-9ae0-52fb-9eed-7ba18c4222c3",
+										"url": "https://example.com/democon/speaker/CVVBPA/"
+									}
+								],
+								"links": [
+									{
+										"title": "test",
+										"url": "https://rixx.de",
+										"type": "related"
+									}
+								],
+								"feedback_url": "https://example.com/democon/talk/ZXHLFB/feedback/",
+								"origin_url": "https://example.com/democon/talk/ZXHLFB/",
+								"attachments": [
+									{
+										"title": "test 2",
+										"url": "/media/democon/submissions/ZXHLFB/resources/Screenshot_from_2024-05-07_13-11-36_cqDVroM.png",
+										"type": "related"
+									}
+								]
+							},
+							{
+								"guid": "84023ced-18ae-5a6c-9bd4-8df1bef35792",
+								"code": "ZCD3KK",
+								"id": 2915,
+								"logo": null,
+								"date": "2025-06-27T11:00:00+01:00",
+								"start": "11:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2915-proactive-bifurcated-structure",
+								"url": "https://example.com/democon/talk/ZCD3KK/",
+								"title": "Proactive bifurcated structure",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Grow efficient systems!",
+								"description": "Month hit guess avoid. Majority particularly pull maintain arm.\nInside offer chance state fact kitchen raise. Recognize fund life indeed become billion.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "A9DYPU",
+										"name": "Anna Ross",
+										"avatar": null,
+										"biography": "Purpose she it respond if what. Collection today arm physical move. Accept water drug manage raise television.\n\nStreet tax pick almost scientist significant change. Teach right life. Statement stand service maybe other only.",
+										"public_name": "Anna Ross",
+										"guid": "0bdf8ca9-a846-5b1f-95ee-045d6815bc35",
+										"url": "https://example.com/democon/speaker/A9DYPU/"
+									},
+									{
+										"code": "NSHHJD",
+										"name": "Gary Waters",
+										"avatar": null,
+										"biography": "Since at inside recognize road compare notice. Parent subject training group development treatment. Without himself already college.\n\nTry understand we small. Require lose gun often relate.\nEffort baby cold should mind experience. Thousand remain research we full. Approach rule provide age eye have.",
+										"public_name": "Gary Waters",
+										"guid": "feb68bbc-b1f9-5715-8f10-f991ae975cc9",
+										"url": "https://example.com/democon/speaker/NSHHJD/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/ZCD3KK/feedback/",
+								"origin_url": "https://example.com/democon/talk/ZCD3KK/",
+								"attachments": []
+							},
+							{
+								"guid": "ac95a8e4-88c1-591f-b88c-17b2b4586c55",
+								"code": "FVTTEV",
+								"id": 2938,
+								"logo": null,
+								"date": "2025-06-27T12:30:00+01:00",
+								"start": "12:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2938-user-friendly-foreground-interface",
+								"url": "https://example.com/democon/talk/FVTTEV/",
+								"title": "User-friendly foreground interface",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Disintermediate next-generation supply-chains!",
+								"description": "Investment ago health teach final lose. Spring bed condition head evening contain. Yard who and end bill. Hope sense significant responsibility.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "RSJPZE",
+										"name": "Tracey Farmer",
+										"avatar": null,
+										"biography": "Why discussion citizen seven community of almost. Develop firm house recent call community. Decide reach so. Community rather personal none area series.\nManage sea ago certain reveal leave.\n\nPersonal question decide one politics. Human year bed difficult wonder represent central. Risk near bag PM important win.",
+										"public_name": "Tracey Farmer",
+										"guid": "0d6d1397-a6c9-5197-8b9d-6d2b8a68b213",
+										"url": "https://example.com/democon/speaker/RSJPZE/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/FVTTEV/feedback/",
+								"origin_url": "https://example.com/democon/talk/FVTTEV/",
+								"attachments": []
+							},
+							{
+								"guid": "c495f6dc-2b41-5211-acc1-bbaee5f510f5",
+								"code": "EZUTX7",
+								"id": 2940,
+								"logo": null,
+								"date": "2025-06-27T13:00:00+01:00",
+								"start": "13:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2940-decentralized-system-worthy-leverage",
+								"url": "https://example.com/democon/talk/EZUTX7/",
+								"title": "Decentralized system-worthy leverage",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Seize innovative systems!",
+								"description": "Industry pick feel majority large stage purpose. Avoid paper leader seek.\r\nStart nice easy history live at style. See performance recently Democrat arm wide.",
+								"recording_license": "",
+								"do_not_record": true,
+								"persons": [
+									{
+										"code": "BAEQBY",
+										"name": "Claudia Landry",
+										"avatar": null,
+										"biography": "Finally third add cause chair stuff into. Task small soon similar indicate evidence. Us modern this event know beautiful.\n\nChurch according throughout garden sure entire. Trade after agent wait break. Live especially Mr crime stay world.",
+										"public_name": "Claudia Landry",
+										"guid": "fa8b5da2-a443-50ef-962e-d9d730ceb209",
+										"url": "https://example.com/democon/speaker/BAEQBY/"
+									},
+									{
+										"code": "UDV3HG",
+										"name": "Dr. Steve Harris MD",
+										"avatar": null,
+										"biography": "Smile painting white us activity popular. For individual without main newspaper. Eight senior often.\n\nRegion home bank from national. Against second able senior government will into. Key economy front.\nStructure late safe pass risk relationship. Concern there rule gas.",
+										"public_name": "Dr. Steve Harris MD",
+										"guid": "7a307434-efb9-56cb-ba0b-d3b99c2726ad",
+										"url": "https://example.com/democon/speaker/UDV3HG/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/EZUTX7/feedback/",
+								"origin_url": "https://example.com/democon/talk/EZUTX7/",
+								"attachments": []
+							},
+							{
+								"guid": "9fceff72-8dc9-5ccb-b178-f9a16322f092",
+								"code": "JKY3YJ",
+								"id": 2942,
+								"logo": null,
+								"date": "2025-06-27T13:30:00+01:00",
+								"start": "13:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2942-vision-oriented-tangible-installation",
+								"url": "https://example.com/democon/talk/JKY3YJ/",
+								"title": "Vision-oriented tangible installation",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Engage 24/7 content!",
+								"description": "Individual contain business treatment little. May join direction minute.\nBetween song answer mother day small sound bag. Receive data development tell win reduce nearly.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "KWRXSU",
+										"name": "Maria Smith",
+										"avatar": null,
+										"biography": "Health stage area travel this conference find. Box partner choice believe always thought anything whose. Show middle one.\n\nChild bit focus your. Skill collection public idea yet style often.\nDiscuss hundred hand model modern whole describe. Religious send claim money garden.",
+										"public_name": "Maria Smith",
+										"guid": "efb7bfe2-3bc3-5b2b-9df1-1654a5f608bd",
+										"url": "https://example.com/democon/speaker/KWRXSU/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/JKY3YJ/feedback/",
+								"origin_url": "https://example.com/democon/talk/JKY3YJ/",
+								"attachments": []
+							},
+							{
+								"guid": "60a9b051-e640-5416-8426-1579cc8089ea",
+								"code": "KLJMEY",
+								"id": 2947,
+								"logo": null,
+								"date": "2025-06-27T15:00:00+01:00",
+								"start": "15:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2947-centralized-grid-enabled-help-desk",
+								"url": "https://example.com/democon/talk/KLJMEY/",
+								"title": "Centralized grid-enabled help-desk",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Visualize frictionless convergence!",
+								"description": "Discussion perform safe option agency benefit. Support instead product high.\nNotice three her management agency. Head seek myself think yard call. Grow black which build ability other.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "NSHHJD",
+										"name": "Gary Waters",
+										"avatar": null,
+										"biography": "Since at inside recognize road compare notice. Parent subject training group development treatment. Without himself already college.\n\nTry understand we small. Require lose gun often relate.\nEffort baby cold should mind experience. Thousand remain research we full. Approach rule provide age eye have.",
+										"public_name": "Gary Waters",
+										"guid": "feb68bbc-b1f9-5715-8f10-f991ae975cc9",
+										"url": "https://example.com/democon/speaker/NSHHJD/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/KLJMEY/feedback/",
+								"origin_url": "https://example.com/democon/talk/KLJMEY/",
+								"attachments": []
+							},
+							{
+								"guid": "0add4a48-640e-5854-8b7d-a37c2d2752e3",
+								"code": "37EJDU",
+								"id": 2950,
+								"logo": null,
+								"date": "2025-06-27T15:30:00+01:00",
+								"start": "15:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2950-realigned-5thgeneration-forecast",
+								"url": "https://example.com/democon/talk/37EJDU/",
+								"title": "Realigned 5thgeneration forecast",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Optimize integrated info-mediaries!",
+								"description": "Ground education represent word nothing with sport.\nElection very event five cost. Kid site best nor we.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "R99MXP",
+										"name": "Chloe Wilson",
+										"avatar": null,
+										"biography": "Focus someone perhaps subject field remember significant decade.\r\nInterview less eight. Two another true girl state. Responsibility citizen financial this.\r\n\r\nVote campaign we whether throw what. Lot together culture main newspaper information.\r\nAppear easy change happen. Blue so surface simple early. Approach beyond sort social item sign audience.",
+										"public_name": "Chloe Wilson",
+										"guid": "497e6722-9b5c-549b-b3cf-e9618f5d329d",
+										"url": "https://example.com/democon/speaker/R99MXP/"
+									},
+									{
+										"code": "GEEMPA",
+										"name": "Daniel Herrera",
+										"avatar": null,
+										"biography": "Foot miss bank really television gas. Process live attention explain green. World consumer somebody small radio health between trip. All smile quality out run deal.\n\nArgue word consumer star scientist production owner. Left particular consumer world. Find yes budget quite.\nWestern including agency power. Management kid black month.",
+										"public_name": "Daniel Herrera",
+										"guid": "1001e4b9-8a4e-5fc0-b50b-37104080fa46",
+										"url": "https://example.com/democon/speaker/GEEMPA/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/37EJDU/feedback/",
+								"origin_url": "https://example.com/democon/talk/37EJDU/",
+								"attachments": []
+							},
+							{
+								"guid": "b47452db-527b-5b77-8ee0-7317c05634a0",
+								"code": "ADTJDC",
+								"id": 2957,
+								"logo": null,
+								"date": "2025-06-27T16:00:00+01:00",
+								"start": "16:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2957-object-based-bandwidth-monitored-support",
+								"url": "https://example.com/democon/talk/ADTJDC/",
+								"title": "Object-based bandwidth-monitored support",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Workshop",
+								"language": "en",
+								"abstract": "Empower proactive e-business!",
+								"description": "Body western three blood probably community. Any member yard personal western she skin become. Down next us major.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "9AH3UH",
+										"name": "Carolyn Jordan",
+										"avatar": null,
+										"biography": "Drop close reach weight explain that country. Picture everyone half civil.\nThrough specific bill candidate nation explain leader within. Message arrive begin cost inside.\n\nInclude practice production partner. Letter food piece old food consider serve.\nOr standard occur couple cut. Out spend yet ball glass few figure. Attorney high go outside describe magazine.",
+										"public_name": "Carolyn Jordan",
+										"guid": "356caa09-2054-589d-a3be-0fb9a2ed49d6",
+										"url": "https://example.com/democon/speaker/9AH3UH/"
+									},
+									{
+										"code": "QHCKFH",
+										"name": "Samantha King",
+										"avatar": null,
+										"biography": "Left person fact seven skill old. Which half three hospital name where. Eight her boy democratic word.\nField nature suggest guy. Ask will current. People discuss marriage think but art.\n\nComputer north cup drop already. Kind interest soldier. Customer resource put two size today fear.\nWind reduce sell join maybe education play seek.",
+										"public_name": "Samantha King",
+										"guid": "2b98e816-a6e5-528f-aa1b-1a631b3d54dd",
+										"url": "https://example.com/democon/speaker/QHCKFH/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/ADTJDC/feedback/",
+								"origin_url": "https://example.com/democon/talk/ADTJDC/",
+								"attachments": []
+							}
+						],
+						"Khaki Room": [
+							{
+								"guid": "de4bca3b-84b9-5af9-800c-5435670ccaca",
+								"code": "HS9RTN",
+								"id": 2945,
+								"logo": null,
+								"date": "2025-06-27T10:00:00+01:00",
+								"start": "10:00",
+								"duration": "01:30",
+								"room": "Khaki Room",
+								"slug": "democon-2945-expanded-dedicated-hardware",
+								"url": "https://example.com/democon/talk/HS9RTN/",
+								"title": "Expanded dedicated hardware",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Workshop",
+								"language": "en",
+								"abstract": "Scale wireless interfaces!",
+								"description": "Stop suffer argue party. Prepare paper see war leave worker improve. Language experience these skin can line.\nPublic level price agree thing before look. Trouble mouth woman green above traditional.",
+								"recording_license": "",
+								"do_not_record": true,
+								"persons": [
+									{
+										"code": "KGRQRP",
+										"name": "Fred Olson",
+										"avatar": null,
+										"biography": "Strong might let how. Sort board up particularly always night. Age notice give member least not film. Room owner responsibility dog significant seat beat.\n\nHome it together list message record. Yes history agency knowledge eight.\nMe indicate central imagine animal. North back bar instead really floor.",
+										"public_name": "Fred Olson",
+										"guid": "69b4a5ce-bc36-59f4-8cd4-3ab6bb5e9a77",
+										"url": "https://example.com/democon/speaker/KGRQRP/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/HS9RTN/feedback/",
+								"origin_url": "https://example.com/democon/talk/HS9RTN/",
+								"attachments": []
+							},
+							{
+								"guid": "20ea5ab8-a371-5f24-bf67-ad90cc1a0ebc",
+								"code": "FHDKCY",
+								"id": 2903,
+								"logo": null,
+								"date": "2025-06-27T12:30:00+01:00",
+								"start": "12:30",
+								"duration": "01:30",
+								"room": "Khaki Room",
+								"slug": "democon-2903-fundamental-web-enabled-application",
+								"url": "https://example.com/democon/talk/FHDKCY/",
+								"title": "Fundamental web-enabled application",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Workshop",
+								"language": "en",
+								"abstract": "Integrate wireless infrastructures! [pretalx.com](https://pretalx.com)\r\n\r\npretalx.com\r\n\r\nunivention-summit.com\r\n\r\nhttps://www.univention-summit.de/",
+								"description": "Relate media democratic woman situation consumer consider. Environment method camera both. Child finish cover quite nation.\r\nFollow cup man your arrive clearly front. Pull over ability reveal.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "UDV3HG",
+										"name": "Dr. Steve Harris MD",
+										"avatar": null,
+										"biography": "Smile painting white us activity popular. For individual without main newspaper. Eight senior often.\n\nRegion home bank from national. Against second able senior government will into. Key economy front.\nStructure late safe pass risk relationship. Concern there rule gas.",
+										"public_name": "Dr. Steve Harris MD",
+										"guid": "7a307434-efb9-56cb-ba0b-d3b99c2726ad",
+										"url": "https://example.com/democon/speaker/UDV3HG/"
+									},
+									{
+										"code": "XUVVC7",
+										"name": "Desiree Bradshaw",
+										"avatar": null,
+										"biography": "During still final. Least catch against or from stop. Benefit woman real sort rule.\nTime believe through. Stock quality easy federal including. Cell argue air.\n\nBox feel at could big job. Blue important read class.\nTime eight member agent include husband.\nNo good generation sense. Admit someone concern perform glass professor partner.",
+										"public_name": "Desiree Bradshaw",
+										"guid": "702dad51-f1fe-5308-9467-283cc6baf0bc",
+										"url": "https://example.com/democon/speaker/XUVVC7/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/FHDKCY/feedback/",
+								"origin_url": "https://example.com/democon/talk/FHDKCY/",
+								"attachments": []
+							},
+							{
+								"guid": "8c483645-7a2c-50b8-b05e-395a58dad9fb",
+								"code": "CYWFKE",
+								"id": 2952,
+								"logo": null,
+								"date": "2025-06-27T15:00:00+01:00",
+								"start": "15:00",
+								"duration": "01:30",
+								"room": "Khaki Room",
+								"slug": "democon-2952-innovative-background-focus-group",
+								"url": "https://example.com/democon/talk/CYWFKE/",
+								"title": "Innovative background focus group",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Workshop",
+								"language": "en",
+								"abstract": "Morph viral interfaces!",
+								"description": "Than left her include practice find. Bill many indicate per take resource material. Front though perform home wrong.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "QXHHJT",
+										"name": "Amy Peterson",
+										"avatar": null,
+										"biography": "Southern as probably million they sort. Sell effect reason class word put. Second challenge next.\n\nThink officer let effort air sense available. Message even research service son Mr. Drive far nothing ground discussion can executive.",
+										"public_name": "Amy Peterson",
+										"guid": "c7325cfa-c68f-5b7d-b0f7-5219b343b50c",
+										"url": "https://example.com/democon/speaker/QXHHJT/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/CYWFKE/feedback/",
+								"origin_url": "https://example.com/democon/talk/CYWFKE/",
+								"attachments": []
+							}
+						]
+					}
+				},
+				{
+					"index": 2,
+					"date": "2025-06-28",
+					"day_start": "2025-06-28T04:00:00+01:00",
+					"day_end": "2025-06-29T03:59:00+01:00",
+					"rooms": {
+						"Magenta Room": [
+							{
+								"guid": "27d572de-b141-527b-89ef-abe56e739457",
+								"code": "SBZVHR",
+								"id": 2958,
+								"logo": null,
+								"date": "2025-06-28T10:00:00+01:00",
+								"start": "10:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2958-mandatory-transitional-complexity",
+								"url": "https://example.com/democon/talk/SBZVHR/",
+								"title": "Mandatory transitional complexity",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Evolve one-to-one e-markets!",
+								"description": "Practice under clearly happen side key school. View everybody industry everybody. Everyone make though thank hear.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "Q8UFFQ",
+										"name": "Nicole Allen",
+										"avatar": null,
+										"biography": "Effect while eight for soldier state. Other ahead outside true.\nDevelopment hold again so can why.\nMost specific young per fine so. Word trial fish development education.\n\nCheck husband study reflect possible. Draw serve whole contain. Listen would you hundred fear happen truth.\nJust major attention up despite. Picture rise population stop race investment ground four.",
+										"public_name": "Nicole Allen",
+										"guid": "56597030-7597-5c26-8111-e89ae5200134",
+										"url": "https://example.com/democon/speaker/Q8UFFQ/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/SBZVHR/feedback/",
+								"origin_url": "https://example.com/democon/talk/SBZVHR/",
+								"attachments": []
+							},
+							{
+								"guid": "8263788f-02e4-5e4f-a9b2-b19ec92d7301",
+								"code": "M8L3SR",
+								"id": 2959,
+								"logo": null,
+								"date": "2025-06-28T10:30:00+01:00",
+								"start": "10:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2959-pre-emptive-eco-centric-archive",
+								"url": "https://example.com/democon/talk/M8L3SR/",
+								"title": "Pre-emptive eco-centric archive",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Empower strategic schemas!",
+								"description": "Step crime area wear language. Natural such discussion trade report. Glass necessary try set still. Recent baby follow ground free just.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "Q8UFFQ",
+										"name": "Nicole Allen",
+										"avatar": null,
+										"biography": "Effect while eight for soldier state. Other ahead outside true.\nDevelopment hold again so can why.\nMost specific young per fine so. Word trial fish development education.\n\nCheck husband study reflect possible. Draw serve whole contain. Listen would you hundred fear happen truth.\nJust major attention up despite. Picture rise population stop race investment ground four.",
+										"public_name": "Nicole Allen",
+										"guid": "56597030-7597-5c26-8111-e89ae5200134",
+										"url": "https://example.com/democon/speaker/Q8UFFQ/"
+									},
+									{
+										"code": "NGKGQX",
+										"name": "Gary Spencer",
+										"avatar": null,
+										"biography": "Bring a purpose life check. Much campaign offer coach face.\nNote ball exist short whatever upon statement actually. Billion security politics much nice.\n\nSuggest art news design quite then. Well beyond public why others finally boy style. Support attack kid reach style.\nPopulation specific all gas herself. Debate outside suddenly indeed national.",
+										"public_name": "Gary Spencer",
+										"guid": "4f10a51c-64c4-5dbd-b714-e828a5728f5b",
+										"url": "https://example.com/democon/speaker/NGKGQX/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/M8L3SR/feedback/",
+								"origin_url": "https://example.com/democon/talk/M8L3SR/",
+								"attachments": []
+							},
+							{
+								"guid": "23f7fda0-b451-503b-be29-42849fecacf3",
+								"code": "MUUAFL",
+								"id": 2961,
+								"logo": null,
+								"date": "2025-06-28T11:00:00+01:00",
+								"start": "11:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2961-extended-clear-thinking-open-architecture",
+								"url": "https://example.com/democon/talk/MUUAFL/",
+								"title": "Extended clear-thinking open architecture",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Enhance front-end relationships!",
+								"description": "Set production while person region contain environment. Door wait receive day into wonder.\nDrug suggest huge still any past. Identify our think order. Else reality reflect imagine loss hour more.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "9RCVGH",
+										"name": "Jeremy Crawford",
+										"avatar": null,
+										"biography": "Soldier music represent under everyone poor. Forget drive bag win them. Science speech group left thing these boy.\n\nService system break me ask rich all. Give far morning reach bar.\nHome person move memory late remember campaign report. Something imagine site until hear. Pattern return protect method history.",
+										"public_name": "Jeremy Crawford",
+										"guid": "2c1cb517-f862-51a3-80f6-7caa604b3750",
+										"url": "https://example.com/democon/speaker/9RCVGH/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/MUUAFL/feedback/",
+								"origin_url": "https://example.com/democon/talk/MUUAFL/",
+								"attachments": []
+							},
+							{
+								"guid": "626456f7-2e57-50f2-bb37-89191e7f4c55",
+								"code": "ZFHSJS",
+								"id": 2963,
+								"logo": null,
+								"date": "2025-06-28T12:30:00+01:00",
+								"start": "12:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2963-re-contextualized-leadingedge-emulation",
+								"url": "https://example.com/democon/talk/ZFHSJS/",
+								"title": "Re-contextualized leadingedge emulation",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Visualize cutting-edge supply-chains!",
+								"description": "Three project newspaper detail when. Professional receive learn could effect. Tv country TV subject everybody per. Local interview professional new whole likely.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "GEEMPA",
+										"name": "Daniel Herrera",
+										"avatar": null,
+										"biography": "Foot miss bank really television gas. Process live attention explain green. World consumer somebody small radio health between trip. All smile quality out run deal.\n\nArgue word consumer star scientist production owner. Left particular consumer world. Find yes budget quite.\nWestern including agency power. Management kid black month.",
+										"public_name": "Daniel Herrera",
+										"guid": "1001e4b9-8a4e-5fc0-b50b-37104080fa46",
+										"url": "https://example.com/democon/speaker/GEEMPA/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/ZFHSJS/feedback/",
+								"origin_url": "https://example.com/democon/talk/ZFHSJS/",
+								"attachments": [
+									{
+										"title": "lo",
+										"url": "/media/democon/submissions/ZFHSJS/resources/lo_jS0BFOZ.html",
+										"type": "related"
+									},
+									{
+										"title": "asdffsd",
+										"url": "/media/democon/submissions/ZFHSJS/resources/test_Sd1hpbT.html",
+										"type": "related"
+									}
+								]
+							},
+							{
+								"guid": "1c2a3835-4f24-5028-9a8c-372399140fa7",
+								"code": "8SELAF",
+								"id": 2933,
+								"logo": null,
+								"date": "2025-06-28T13:00:00+01:00",
+								"start": "13:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2933-open-architected-interactive-circuit",
+								"url": "https://example.com/democon/talk/8SELAF/",
+								"title": "Open-architected interactive circuit",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Architect magnetic bandwidth!",
+								"description": "Yard yard too thought. Could organization business more. Culture hit year thank standard level indeed street.\nMeet land people forget.",
+								"recording_license": "",
+								"do_not_record": true,
+								"persons": [
+									{
+										"code": "C9DNGF",
+										"name": "Kyle Rosales",
+										"avatar": null,
+										"biography": "Heavy animal girl white account. Million certainly wind fine similar.\nTough trouble good Congress whose.\nDark although none. Finish land feel after few tough. Blue control there table.\n\nAsk list past ever while than newspaper. Shoulder finish side style no. From travel participant think home college.\nSuddenly look miss about as perhaps.",
+										"public_name": "Kyle Rosales",
+										"guid": "7102126f-5ceb-5271-b47a-f9f2f9624c1b",
+										"url": "https://example.com/democon/speaker/C9DNGF/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/8SELAF/feedback/",
+								"origin_url": "https://example.com/democon/talk/8SELAF/",
+								"attachments": []
+							},
+							{
+								"guid": "1e887879-c30a-5b17-936a-ea9a1275099c",
+								"code": "TV3EAW",
+								"id": 2948,
+								"logo": null,
+								"date": "2025-06-28T13:30:00+01:00",
+								"start": "13:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2948-re-engineered-grid-enabled-functionalities",
+								"url": "https://example.com/democon/talk/TV3EAW/",
+								"title": "Re-engineered grid-enabled functionalities",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Unleash global e-commerce!",
+								"description": "Though miss fine which generation. Stand left choose. Rock training Republican during majority.\nVarious among stay system seem effort build. Piece position more organization audience relate tend.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "NGKGQX",
+										"name": "Gary Spencer",
+										"avatar": null,
+										"biography": "Bring a purpose life check. Much campaign offer coach face.\nNote ball exist short whatever upon statement actually. Billion security politics much nice.\n\nSuggest art news design quite then. Well beyond public why others finally boy style. Support attack kid reach style.\nPopulation specific all gas herself. Debate outside suddenly indeed national.",
+										"public_name": "Gary Spencer",
+										"guid": "4f10a51c-64c4-5dbd-b714-e828a5728f5b",
+										"url": "https://example.com/democon/speaker/NGKGQX/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/TV3EAW/feedback/",
+								"origin_url": "https://example.com/democon/talk/TV3EAW/",
+								"attachments": []
+							},
+							{
+								"guid": "e6d46f7e-f89c-5506-b728-708cd6a1b310",
+								"code": "BQGF3R",
+								"id": 2949,
+								"logo": null,
+								"date": "2025-06-28T15:00:00+01:00",
+								"start": "15:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2949-polarized-transitional-middleware",
+								"url": "https://example.com/democon/talk/BQGF3R/",
+								"title": "Polarized transitional middleware",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Evolve enterprise eyeballs!",
+								"description": "Guy policy opportunity section purpose. Region image professor tree improve produce. Person task while scene plant herself.\nPopulation no total travel wife. Off speak pay side agreement.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "AZ8MJW",
+										"name": "Joshua Miller",
+										"avatar": null,
+										"biography": "Win fish window will catch bank less. Run nice which far property. Because alone sister.\n\nOrder structure need. Film second next evening. Nation avoid system glass enjoy leg front get.\nVarious note particularly artist.",
+										"public_name": "Joshua Miller",
+										"guid": "80d48c07-7ea1-5481-a867-4066aa6ccec1",
+										"url": "https://example.com/democon/speaker/AZ8MJW/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/BQGF3R/feedback/",
+								"origin_url": "https://example.com/democon/talk/BQGF3R/",
+								"attachments": []
+							},
+							{
+								"guid": "5624f305-c7e0-55cb-adff-81ff6bd9ba5b",
+								"code": "MC9NKX",
+								"id": 2962,
+								"logo": null,
+								"date": "2025-06-28T15:30:00+01:00",
+								"start": "15:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2962-fully-configurable-intangible-benchmark",
+								"url": "https://example.com/democon/talk/MC9NKX/",
+								"title": "Fully-configurable intangible benchmark",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Expedite scalable bandwidth!",
+								"description": "Must camera commercial likely safe admit. Technology rule movement answer quite. House including available sure check cultural.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "KQWYUN",
+										"name": "Bailey Mcfarland",
+										"avatar": null,
+										"biography": "Already upon ground to glass note daughter. Without government kid coach bed room community. Join professional outside suffer table.\nCompany consumer service include. Series happy read short if.\n\nData respond head surface. Dark ask job article.\nAmong small sure like safe fly. The down moment sometimes system agreement marriage. Party hair whom wind ten always near.",
+										"public_name": "Bailey Mcfarland",
+										"guid": "a84f0a93-e46f-5d53-960b-3f26cd50ae60",
+										"url": "https://example.com/democon/speaker/KQWYUN/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/MC9NKX/feedback/",
+								"origin_url": "https://example.com/democon/talk/MC9NKX/",
+								"attachments": []
+							},
+							{
+								"guid": "79d8f389-9531-56df-8d85-b690af4429e4",
+								"code": "V3EHKK",
+								"id": 2902,
+								"logo": null,
+								"date": "2025-06-28T16:00:00+01:00",
+								"start": "16:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2902-ergonomic-client-driven-projection",
+								"url": "https://example.com/democon/talk/V3EHKK/",
+								"title": "Ergonomic client-driven projection",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Aggregate granular interfaces!",
+								"description": "Remain trial event green and case. Simply media thousand response follow. Born rule concern research seem toward too.\nSchool remember big. Rest field color she including. After able only drop.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "TEBWXX",
+										"name": "Benjamin Young",
+										"avatar": null,
+										"biography": "Inside recognize control edge cell Mrs. Avoid person law summer product pull president.\nBoth ground leader return night. Senior important service resource member occur your.\n\nBaby image issue machine international purpose. Amount girl career real. Less under generation everybody finish.\nWithin anything surface more back about hit. Occur also turn buy trade just art.",
+										"public_name": "Benjamin Young",
+										"guid": "812c7c8f-41a2-507d-88f3-68412cdf8bba",
+										"url": "https://example.com/democon/speaker/TEBWXX/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/V3EHKK/feedback/",
+								"origin_url": "https://example.com/democon/talk/V3EHKK/",
+								"attachments": []
+							}
+						],
+						"Khaki Room": [
+							{
+								"guid": "f9f4406b-a6fc-5b37-b642-44e98da2255a",
+								"code": "ZP3A7H",
+								"id": 2904,
+								"logo": null,
+								"date": "2025-06-28T12:30:00+01:00",
+								"start": "12:30",
+								"duration": "01:30",
+								"room": "Khaki Room",
+								"slug": "democon-2904-optional-systemic-workforce",
+								"url": "https://example.com/democon/talk/ZP3A7H/",
+								"title": "Optional systemic workforce",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Workshop",
+								"language": "en",
+								"abstract": "Syndicate strategic e-business!",
+								"description": "Allow bad final board. Behavior subject instead walk feeling director executive.\nWhom deep happy certain. Product market sing candidate. Program sit significant important.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "ALRRVJ",
+										"name": "Katrina Moore",
+										"avatar": null,
+										"biography": "Tonight understand paper develop theory spring half. Almost sit big summer concern citizen.\n\nGet race bag character. Race TV until factor.\nRegion become number. Security play number what meeting stuff different. Civil reflect whatever actually send year.",
+										"public_name": "Katrina Moore",
+										"guid": "cc015d56-b119-569d-95a6-24cc5420f4ea",
+										"url": "https://example.com/democon/speaker/ALRRVJ/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/ZP3A7H/feedback/",
+								"origin_url": "https://example.com/democon/talk/ZP3A7H/",
+								"attachments": []
+							},
+							{
+								"guid": "2cc72a8d-eb1e-5102-8245-7024fb5a37cc",
+								"code": "XJQRPP",
+								"id": 2906,
+								"logo": null,
+								"date": "2025-06-28T15:00:00+01:00",
+								"start": "15:00",
+								"duration": "01:30",
+								"room": "Khaki Room",
+								"slug": "democon-2906-reduced-client-server-policy",
+								"url": "https://example.com/democon/talk/XJQRPP/",
+								"title": "Reduced client-server policy",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Workshop",
+								"language": "en",
+								"abstract": "Facilitate impactful e-business!",
+								"description": "Blood cause go or.\nEach attack ever sometimes create discussion. Stage who move suffer drug hot.\nCold million notice movie. Hour role another first.",
+								"recording_license": "",
+								"do_not_record": true,
+								"persons": [
+									{
+										"code": "AYPMEN",
+										"name": "Matthew Reeves",
+										"avatar": null,
+										"biography": "Threat test difference small away. North fall serve. Here office week job hot. Structure tax impact assume home apply number.\nCup week help available what. Far whom bring capital key for traditional.\n\nIndeed paper finish. Term he control cost energy. Car move way full president although ahead.\nSome card budget. Book recently direction.",
+										"public_name": "Matthew Reeves",
+										"guid": "97205872-bc3f-56c3-bf29-43076f242d9f",
+										"url": "https://example.com/democon/speaker/AYPMEN/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/XJQRPP/feedback/",
+								"origin_url": "https://example.com/democon/talk/XJQRPP/",
+								"attachments": []
+							}
+						]
+					}
+				},
+				{
+					"index": 3,
+					"date": "2025-06-29",
+					"day_start": "2025-06-29T04:00:00+01:00",
+					"day_end": "2025-06-30T03:59:00+01:00",
+					"rooms": {
+						"Magenta Room": [
+							{
+								"guid": "9de4d1cc-d1e3-5724-a3c4-39a1d5566b13",
+								"code": "SVRVLL",
+								"id": 2907,
+								"logo": null,
+								"date": "2025-06-29T10:00:00+01:00",
+								"start": "10:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2907-distributed-eco-centric-success",
+								"url": "https://example.com/democon/talk/SVRVLL/",
+								"title": "Distributed eco-centric success",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Enhance robust e-services!",
+								"description": "International usually again third south mention. Head rest manage organization door ground with.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "MDQBVV",
+										"name": "Samuel Stout",
+										"avatar": null,
+										"biography": "Better hospital sing window language company history. Month above she hair catch form.\nStay price start top blood improve herself radio.\n\nInstitution class pressure who yourself write. Citizen reveal inside condition she or among space.",
+										"public_name": "Samuel Stout",
+										"guid": "3b78f2cf-550f-5762-8ebe-7889ae878e69",
+										"url": "https://example.com/democon/speaker/MDQBVV/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/SVRVLL/feedback/",
+								"origin_url": "https://example.com/democon/talk/SVRVLL/",
+								"attachments": []
+							},
+							{
+								"guid": "c264393c-0942-5b7a-a185-6b5921444245",
+								"code": "FRBXWP",
+								"id": 2908,
+								"logo": null,
+								"date": "2025-06-29T10:30:00+01:00",
+								"start": "10:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2908-profound-bi-directional-productivity",
+								"url": "https://example.com/democon/talk/FRBXWP/",
+								"title": "Profound bi-directional productivity",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Empower enterprise e-commerce!",
+								"description": "If production growth. I brother safe really factor. Reflect enjoy although modern.",
+								"recording_license": "",
+								"do_not_record": true,
+								"persons": [
+									{
+										"code": "HNP7QE",
+										"name": "Nicole Howe",
+										"avatar": null,
+										"biography": "Picture near natural opportunity president. Serious box reach their.\nReal since cover record. Next study live today. Information close budget fall put upon.\n\nAgainst including position view word. Lay establish firm not sport sing set east. Even trial material sound lot bar.",
+										"public_name": "Nicole Howe",
+										"guid": "43a831b0-9b4b-546e-8a5a-55990f39046e",
+										"url": "https://example.com/democon/speaker/HNP7QE/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/FRBXWP/feedback/",
+								"origin_url": "https://example.com/democon/talk/FRBXWP/",
+								"attachments": []
+							},
+							{
+								"guid": "26b2056a-6e60-5569-bc66-c2920f52889a",
+								"code": "Z7RVVF",
+								"id": 2909,
+								"logo": null,
+								"date": "2025-06-29T11:00:00+01:00",
+								"start": "11:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2909-reverse-engineered-well-modulated-system-engine",
+								"url": "https://example.com/democon/talk/Z7RVVF/",
+								"title": "Reverse-engineered well-modulated system engine",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Facilitate scalable users!",
+								"description": "Must couple piece.\nWind clear face allow. Thousand check young environmental detail. Unit for without market part.\nThink use which issue property partner. Game administration tend notice should.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "Q9MBZB",
+										"name": "Jamie Thompson",
+										"avatar": null,
+										"biography": "Son set seat order tax. Eye civil fight game. Remain office never speak note relate music. Win soldier plant tell far practice.\n\nStaff stand player community fish finish teach decade.\nTrue dream see cost. Business statement before challenge best staff product.",
+										"public_name": "Jamie Thompson",
+										"guid": "15c8b820-3402-5825-a960-d2e465ada471",
+										"url": "https://example.com/democon/speaker/Q9MBZB/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/Z7RVVF/feedback/",
+								"origin_url": "https://example.com/democon/talk/Z7RVVF/",
+								"attachments": []
+							},
+							{
+								"guid": "a23bb8a4-7201-5c33-83e6-0dfbf93d5934",
+								"code": "EL8UCE",
+								"id": 2910,
+								"logo": null,
+								"date": "2025-06-29T12:30:00+01:00",
+								"start": "12:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2910-enterprise-wide-secondary-frame",
+								"url": "https://example.com/democon/talk/EL8UCE/",
+								"title": "Enterprise-wide secondary frame",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Synergize next-generation e-markets!",
+								"description": "Owner employee training Mrs pick. Machine language church family history whether really. Grow understand investment I find.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "ZJXHXZ",
+										"name": "Kevin Hardin",
+										"avatar": null,
+										"biography": "Cup president play rich trouble near oil. Start four attorney fear town instead deep.\nBed between plan eye have own. Agree past modern. Forget single difference ground start.\n\nVarious become respond avoid bad skin it region. Issue property truth word person.\nSouth office garden give seven. Blood fast go class brother day. Box which their partner.",
+										"public_name": "Kevin Hardin",
+										"guid": "0c527f61-fbb7-5b03-a42e-db3bfaf3738e",
+										"url": "https://example.com/democon/speaker/ZJXHXZ/"
+									},
+									{
+										"code": "YPFBBP",
+										"name": "Danielle Rich",
+										"avatar": null,
+										"biography": "Decide there between specific Democrat. Pull soldier politics clearly. Usually whatever exactly.\n\nIn reflect office dark test matter.\nMuch day improve tough participant compare teacher. Arm message hundred.",
+										"public_name": "Danielle Rich",
+										"guid": "07137b76-92ff-518c-bb1a-ffccf8d6043d",
+										"url": "https://example.com/democon/speaker/YPFBBP/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/EL8UCE/feedback/",
+								"origin_url": "https://example.com/democon/talk/EL8UCE/",
+								"attachments": []
+							},
+							{
+								"guid": "71656818-802c-5216-a8aa-bf97b8db31eb",
+								"code": "3C7RCP",
+								"id": 2911,
+								"logo": null,
+								"date": "2025-06-29T13:00:00+01:00",
+								"start": "13:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2911-optimized-full-range-migration",
+								"url": "https://example.com/democon/talk/3C7RCP/",
+								"title": "Optimized full-range migration",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Engage value-added paradigms!",
+								"description": "Prevent hundred must know property describe. Cell none help technology inside. Whatever research color TV. Responsibility result more ready.\nTeam save financial near TV space. Entire trade thing.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "N9Y89N",
+										"name": "Stacy Mathis",
+										"avatar": null,
+										"biography": "Join theory imagine space trip term bit. Success citizen check game military general discuss explain. Feel affect recognize wife happen successful.\n\nEverything can debate give. Myself military response its miss human.\nCup involve big where through local chance. Next oil ok military foreign trade.",
+										"public_name": "Stacy Mathis",
+										"guid": "f717109c-1b0f-584e-8457-2ba7a12007d9",
+										"url": "https://example.com/democon/speaker/N9Y89N/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/3C7RCP/feedback/",
+								"origin_url": "https://example.com/democon/talk/3C7RCP/",
+								"attachments": []
+							},
+							{
+								"guid": "5edd8d9c-f7a5-5ea1-a769-794d890c41bc",
+								"code": "YGFWDL",
+								"id": 2914,
+								"logo": null,
+								"date": "2025-06-29T14:05:00+01:00",
+								"start": "14:05",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2914-networked-background-protocol",
+								"url": "https://example.com/democon/talk/YGFWDL/",
+								"title": "Networked background protocol",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Deploy b2b users!",
+								"description": "Make popular serious others agency we will. Pattern Republican parent heart behavior.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "RYQEBV",
+										"name": "Charles Meyer",
+										"avatar": null,
+										"biography": "Walk message represent smile between her enter. Certainly south decade.\nHappen effort leg draw ground house form. Live public accept happen they. Keep century industry subject treat.\n\nThose place that century. Population she look Mr station point their local.\nLine too sister seven how science fish nearly.",
+										"public_name": "Charles Meyer",
+										"guid": "f4426385-47fb-5adf-b535-9641aa908ca1",
+										"url": "https://example.com/democon/speaker/RYQEBV/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/YGFWDL/feedback/",
+								"origin_url": "https://example.com/democon/talk/YGFWDL/",
+								"attachments": []
+							},
+							{
+								"guid": "f801b62b-9f33-574a-aeeb-bdfa4d42e14d",
+								"code": "QGUSGS",
+								"id": 2917,
+								"logo": null,
+								"date": "2025-06-29T15:00:00+01:00",
+								"start": "15:00",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2917-multi-tiered-motivating-capability",
+								"url": "https://example.com/democon/talk/QGUSGS/",
+								"title": "Multi-tiered motivating capability",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Synthesize cross-platform eyeballs!",
+								"description": "Half understand take. Special sometimes participant reveal still treat.\nNew capital imagine. Food assume deal both because leave end new.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "SVVA8S",
+										"name": "Roberto Huff",
+										"avatar": null,
+										"biography": "Account consumer on candidate. Stop develop meet until.\nConcern product project benefit religious too out. Up best threat beat answer sister herself high. How surface feeling find.\n\nMouth crime five among ask serious. Series or score bank.\nHerself coach him song health degree thousand. Back hear why at nothing.",
+										"public_name": "Roberto Huff",
+										"guid": "c92af72d-5a39-53ed-840e-6f4c6a12de27",
+										"url": "https://example.com/democon/speaker/SVVA8S/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/QGUSGS/feedback/",
+								"origin_url": "https://example.com/democon/talk/QGUSGS/",
+								"attachments": []
+							},
+							{
+								"guid": "11733953-c1c3-5056-8843-b52a66b8a388",
+								"code": "Q8W9FT",
+								"id": 2918,
+								"logo": null,
+								"date": "2025-06-29T15:30:00+01:00",
+								"start": "15:30",
+								"duration": "00:30",
+								"room": "Magenta Room",
+								"slug": "democon-2918-horizontal-exuding-budgetary-management",
+								"url": "https://example.com/democon/talk/Q8W9FT/",
+								"title": "Horizontal exuding budgetary management",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Talk",
+								"language": "en",
+								"abstract": "Integrate real-time initiatives!",
+								"description": "Decade matter two room. Set hit community five save room political.\nWhom suggest meet only history. Itself care language recognize material lot house.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "AMDXFM",
+										"name": "Richard Tucker",
+										"avatar": null,
+										"biography": "Wind try five such. Discussion suggest once.\nLittle heart culture spring per policy people. Sometimes in million similar red poor allow. Court give drive raise clearly lawyer.\n\nAccept save statement financial. Check structure bit win might edge. Manage the continue several.\nCultural but suggest there wide front. Education Congress off television look.",
+										"public_name": "Richard Tucker",
+										"guid": "711afd22-3768-59b8-a138-1ec049b71b4a",
+										"url": "https://example.com/democon/speaker/AMDXFM/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/Q8W9FT/feedback/",
+								"origin_url": "https://example.com/democon/talk/Q8W9FT/",
+								"attachments": []
+							}
+						],
+						"Khaki Room": [
+							{
+								"guid": "8e3ed4dc-a627-503c-b178-6574b08e84f5",
+								"code": "GHDULK",
+								"id": 2921,
+								"logo": null,
+								"date": "2025-06-29T10:00:00+01:00",
+								"start": "10:00",
+								"duration": "01:30",
+								"room": "Khaki Room",
+								"slug": "democon-2921-robust-intangible-framework",
+								"url": "https://example.com/democon/talk/GHDULK/",
+								"title": "Robust intangible framework",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Workshop",
+								"language": "en",
+								"abstract": "Repurpose scalable partnerships!",
+								"description": "Author market then pass carry spring. Position right first factor goal him season evening.\nHope finally miss record require. Sure travel first certain. Sing vote be.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "J8DZQB",
+										"name": "Danielle Kirk",
+										"avatar": null,
+										"biography": "Design huge I onto world generation. Check town yourself sense.\nAffect wrong happen organization. Green treat successful condition expert debate describe.\n\nAnyone defense set too recent many determine. Game economic both impact goal. Compare have the factor section teacher.",
+										"public_name": "Danielle Kirk",
+										"guid": "fd416986-a45d-5ac4-a33a-01289cd826b7",
+										"url": "https://example.com/democon/speaker/J8DZQB/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/GHDULK/feedback/",
+								"origin_url": "https://example.com/democon/talk/GHDULK/",
+								"attachments": []
+							},
+							{
+								"guid": "93234614-c0dc-5ef4-8b8d-68159b8fad0b",
+								"code": "BYEKC3",
+								"id": 2924,
+								"logo": null,
+								"date": "2025-06-29T12:30:00+01:00",
+								"start": "12:30",
+								"duration": "01:30",
+								"room": "Khaki Room",
+								"slug": "democon-2924-managed-high-level-open-system",
+								"url": "https://example.com/democon/talk/BYEKC3/",
+								"title": "Managed high-level open system",
+								"subtitle": "",
+								"track": "Realigned & co",
+								"type": "Workshop",
+								"language": "en",
+								"abstract": "Morph frictionless e-markets!",
+								"description": "Soon capital around simple build everybody as agree. Short different many price traditional increase physical.\nBag health reality ten hope.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "Q8UFFQ",
+										"name": "Nicole Allen",
+										"avatar": null,
+										"biography": "Effect while eight for soldier state. Other ahead outside true.\nDevelopment hold again so can why.\nMost specific young per fine so. Word trial fish development education.\n\nCheck husband study reflect possible. Draw serve whole contain. Listen would you hundred fear happen truth.\nJust major attention up despite. Picture rise population stop race investment ground four.",
+										"public_name": "Nicole Allen",
+										"guid": "56597030-7597-5c26-8111-e89ae5200134",
+										"url": "https://example.com/democon/speaker/Q8UFFQ/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/BYEKC3/feedback/",
+								"origin_url": "https://example.com/democon/talk/BYEKC3/",
+								"attachments": []
+							},
+							{
+								"guid": "7597ff5d-72ce-5362-8486-05e4efd4f3b5",
+								"code": "EJ9PXJ",
+								"id": 2929,
+								"logo": null,
+								"date": "2025-06-29T15:00:00+01:00",
+								"start": "15:00",
+								"duration": "01:30",
+								"room": "Khaki Room",
+								"slug": "democon-2929-integrated-value-added-projection",
+								"url": "https://example.com/democon/talk/EJ9PXJ/",
+								"title": "Integrated value-added projection",
+								"subtitle": "",
+								"track": "Front-line",
+								"type": "Workshop",
+								"language": "en",
+								"abstract": "Facilitate innovative platforms!",
+								"description": "Three give thought boy. Total sound ten gun throw.\nCard surface seek way move sell. Home approach happen good system treatment. Front behavior interest north.",
+								"recording_license": "",
+								"do_not_record": false,
+								"persons": [
+									{
+										"code": "KQWYUN",
+										"name": "Bailey Mcfarland",
+										"avatar": null,
+										"biography": "Already upon ground to glass note daughter. Without government kid coach bed room community. Join professional outside suffer table.\nCompany consumer service include. Series happy read short if.\n\nData respond head surface. Dark ask job article.\nAmong small sure like safe fly. The down moment sometimes system agreement marriage. Party hair whom wind ten always near.",
+										"public_name": "Bailey Mcfarland",
+										"guid": "a84f0a93-e46f-5d53-960b-3f26cd50ae60",
+										"url": "https://example.com/democon/speaker/KQWYUN/"
+									}
+								],
+								"links": [],
+								"feedback_url": "https://example.com/democon/talk/EJ9PXJ/feedback/",
+								"origin_url": "https://example.com/democon/talk/EJ9PXJ/",
+								"attachments": []
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+}
