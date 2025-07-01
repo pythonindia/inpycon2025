@@ -24,7 +24,10 @@ layout: base.njk
                         </div>
                     </div>
                     <div class="card-grid pt-8 bg-[#FFFFFF] text-xs md:text-xl -mx-4 -mb-8 mt-4 hover:bg-pycon-lime">
-                        <p class="text-center mb-0.5">{{ day.description }}</p>
+                        <p class="text-center mb-0.5">
+                            <span class="block sm:inline-block">{{ day.description.split(' ')[0] }}</span>
+                            <span class="inline-block">{{ day.description.split(' ').slice(1).join(' ') }}</span>
+                        </p>
                         <p class="text-center mb-0.5 font-semibold">{{ day.title }}</p>
                         <p class="text-center font-thin text-[#4662FF] pb-4">{{ day.day|upper }}</p>
                     </div>
@@ -44,7 +47,7 @@ layout: base.njk
                             <p class="text-xl mb-0">{{ day.title }}</p>
                         </div>
 
-                        {% set colors = ["bg-[#CD89FF]", "bg-[#1FFFB4]", "bg-[#E745A0]", "bg-[#1FFFB4]"] %}
+                        {% set colors = ["bg-[#D0DCFF]", "bg-[#FFD1F9]", "bg-[#FFEB99]", "bg-[#D1FFD1]"] %}
                         {% set trackColors = ["bg-[#D0DCFF]", "bg-[#FFD1F9]", "bg-[#FFEB99]", "bg-[#D7FF7B]"] %}
                         {% set colorIndex = 0 %}
 
@@ -93,7 +96,6 @@ layout: base.njk
             </div>
         </div>
         {% endfor %}
-
     </div>
 </div>
 
