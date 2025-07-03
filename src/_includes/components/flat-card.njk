@@ -1,8 +1,10 @@
 {% macro flatCard(bg="lime") %}
     {% if bg == "purple" %}
         {% set bg_class = "bg-pycon-purple" %}
-    {% else %}
+    {% elif bg == "lime" %}
         {% set bg_class = "bg-pycon-lime" %}
+    {% else %}
+        {% set bg_class = "" %}
     {% endif %}
 
     <div class="relative group w-full max-w-full border border-black {{ bg_class }} p-4">
