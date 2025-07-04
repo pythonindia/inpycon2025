@@ -14,7 +14,7 @@ layout: base.njk
             Call For Proposals
         </div>
         <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-10 text-justify">
-            <p>Join us for the 16th edition of PyCon India, the premier Python conference in India, scheduled for September 12-15, 2025, in Bengaluru. Whether you use Python professionally, as a hobby, or are simply passionate about Python and its community, we'd love to hear from you and invite you to submit proposals for Talks and Workshops.</p>
+            <p>Join us for the 16th edition of PyCon India, the premier Python conference in India, scheduled for September 12-15, 2025, in Bengaluru. Whether you use Python professionally, as a hobby, or are simply passionate about Python and its community, we'd love to invite you to submit proposals. The conference features several session types, including Workshops, Talks, DevSprints, Panel Discussion, and Poster Presentations.</p>
         </div>
     </div>
     <div class="lg:w-[30%] w-[80%] lg:mt-60 flex items-center justify-center mx-auto">
@@ -69,6 +69,26 @@ layout: base.njk
 
         <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
             <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Sessions</p>
+            </div>
+            <div class="pt-8">
+                <div class="pt-4">
+                    <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>Workshops and Talks (closed)</p>
+                </div>
+                <div class="pt-4">
+                    <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>Panel Discussions (open)</p>
+                </div>
+                <div class="pt-4">
+                    <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>Poster Presentations (To be announced)</p>
+                </div>
+                <div class="pt-4">
+                    <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>DevSprints (To be announced)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
                 <p>Venues</p>
             </div>
             <div class="pt-12 text-[#000000] lg:pr-10">
@@ -97,15 +117,11 @@ layout: base.njk
                 <ul class="list-none space-y-4">
                     <li class="flex">
                         <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span>Submit your proposal for a Talk or Workshop at PyCon India 2025.</span>
+                        <span>Submissions of proposals are now OPEN.</span>
                     </li>
                     <li class="flex">
                         <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
                         <span>We welcome speakers from diverse backgrounds to share their knowledge and insights.</span>
-                    </li>
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span>Choose a category – Talk (30 min) or Workshop (3 hours).</span>
                     </li>
                     <li class="flex">
                         <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
@@ -125,74 +141,37 @@ layout: base.njk
             </div>
         </div>
 
-        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
+        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light" id="submission-guidelines">
             <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
-                <p>Session Types</p>
+                <p>Submission Guidelines</p>
             </div>
-            <div class="pt-8">
-                <div class="pt-8">
-                    <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>Talks</p>
-                    <div class="pt-4 text-md">
-                        <ul class="list-none pl-6 space-y-3">
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Technical Talks are 30-minute sessions (25 min talk + 5 min Q&A)</span>
-                            </li>
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Cover any Python-related topic and share valuable insights</span>
-                            </li>
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Share real-world experiences, new ideas, and best practices in Python</span>
-                            </li>
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Discuss challenges, solutions, and contributions to the Python ecosystem</span>
-                            </li>
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Provide practical knowledge, innovative approaches, or industry trends</span>
-                            </li>
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Refer to the submission categories for more details</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="pt-16">
-                    <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>Workshops</p>
-                    <div class="pt-4 text-md">
-                        <ul class="list-none pl-6 space-y-3">
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Workshops are 3-hour hands-on sessions for interactive learning</span>
-                            </li>
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Focus on practical implementation and guide participants through real-world applications</span>
-                            </li>
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Include live coding, exercises, and problem-solving to enhance learning</span>
-                            </li>
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Cover tools, frameworks, best practices, or advanced techniques in Python</span>
-                            </li>
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Encourage collaboration, experimentation, and active participation</span>
-                            </li>
-                            <li class="flex">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                <span>Refer to the submission categories for more details</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <ul class="list-none space-y-4">
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Originality:</span> Proposals must be original and not previously presented at PyCon India.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Diversity:</span> We encourage submissions from individuals of all backgrounds, including those from underrepresented groups in technology.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Multiple Submissions:</span> Speakers may submit multiple proposals; however, each proposal should be distinct.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Language:</span> All proposals must be submitted in English.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Reference:</span> Review the <a href="https://in.pycon.org/cfp/2024/proposals/" class="underline text-pycon-blue">proposals from last year</a> for inspiration and guidance.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Promotion:</span> No promotion of company or hiring pitches are acceptable.</span>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -359,71 +338,6 @@ layout: base.njk
                         {%- endcall %}
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
-            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
-                <p>Submission Guidelines</p>
-            </div>
-            <div class="pt-12 text-[#000000] lg:pr-10">
-                <ul class="list-none space-y-4">
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Originality:</span> Proposals must be original and not previously presented at PyCon India.</span>
-                    </li>
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Diversity:</span> We encourage submissions from individuals of all backgrounds, including those from underrepresented groups in technology.</span>
-                    </li>
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Multiple Submissions:</span> Speakers may submit multiple proposals; however, each proposal should be distinct.</span>
-                    </li>
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Language:</span> All proposals must be submitted in English.</span>
-                    </li>
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Reference:</span> Review the <a href="https://in.pycon.org/cfp/2024/proposals/" class="underline text-pycon-blue">proposals from last year</a> for inspiration and guidance.</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
-            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
-                <p>Review Process</p>
-            </div>
-            <div class="pt-12 text-[#000000] lg:pr-10">
-                <ul class="list-none space-y-4">
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Initial Screening:</span> Proposals will be reviewed for completeness and adherence to guidelines.</span>
-                    </li>
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Internal Review:</span> A panel of experts will evaluate proposals based on relevance, clarity, and impact.</span>
-                    </li>
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">External Review:</span> Selected proposals will undergo further evaluation by external reviewers.</span>
-                    </li>
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Final Selection:</span> Shortlisted speakers will be invited for rehearsal sessions before finalizing the schedule.</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
-            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
-                <p>Rehearsals</p>
-            </div>
-            <div class="pt-12 text-[#000000] lg:pr-10">
-                <p>Shortlisted speakers are expected to participate in rehearsal sessions via teleconferencing. This process ensures that talks are well-prepared and fit within the allotted time.</p>
             </div>
         </div>
 

@@ -53,25 +53,51 @@
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('nav a');
     const navLabels = document.querySelectorAll('nav label.nav-link');
-    
+    let normalizedCurrentPath = currentPath.replace(/\/$/, '') || '/';
     navLinks.forEach(link => {
       const linkPath = link.getAttribute('href');
-      if (linkPath && (linkPath === currentPath || 
-         (linkPath !== '/' && currentPath.startsWith(linkPath)))) {
-        link.classList.add('active');
+      if (linkPath) {
+        let normalizedLinkPath = linkPath.replace(/\/$/, '') || '/';
+        if (normalizedCurrentPath === '/' || normalizedCurrentPath === '') {
+          if (normalizedLinkPath === '/' || normalizedLinkPath === '') {
+            link.classList.add('active');
+          }
+        } else {
+          if (normalizedLinkPath === normalizedCurrentPath || 
+             (normalizedLinkPath !== '/' && normalizedCurrentPath.startsWith(normalizedLinkPath + '/'))) {
+            link.classList.add('active');
+          }
+        }
       }
     });
     
     navLabels.forEach(label => {
       const parent = label.closest('li');
       const submenuLinks = parent.querySelectorAll('.dropdown-glass a');
+      let hasActiveSubmenu = false;
       submenuLinks.forEach(submenuLink => {
         const submenuPath = submenuLink.getAttribute('href');
-        if (submenuPath && (submenuPath === currentPath || 
-           (submenuPath !== '/' && currentPath.startsWith(submenuPath)))) {
-          label.classList.add('active');
+        if (submenuPath) {
+          let normalizedSubmenuPath = submenuPath.replace(/\/$/, '') || '/';
+          console.log('Checking submenu path:', normalizedSubmenuPath, 'against current:', normalizedCurrentPath);
+          if (normalizedCurrentPath === '/' || normalizedCurrentPath === '') {
+            return;
+          }
+          const isExactMatch = normalizedSubmenuPath === normalizedCurrentPath;
+          const isPathMatch = normalizedSubmenuPath !== '/' && 
+                             normalizedSubmenuPath !== '' && 
+                             normalizedCurrentPath.startsWith(normalizedSubmenuPath + '/');
+          
+          if (isExactMatch || isPathMatch) {
+            hasActiveSubmenu = true;
+            console.log('Found active submenu:', normalizedSubmenuPath);
+          }
         }
       });
+      if (hasActiveSubmenu) {
+        label.classList.add('active');
+        console.log('Activating dropdown label:', label.textContent.trim());
+      }
     });
     
     // Mobile menu functionality
