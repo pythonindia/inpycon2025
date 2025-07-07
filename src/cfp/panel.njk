@@ -1,0 +1,133 @@
+---
+title: Call For Proposals for Panel Discussions
+description: Panel Discussions at PyCon India 2025
+layout: base.njk
+---
+
+{% from "components/button.njk" import button %}
+{% from "components/card.njk" import card %}
+{% from "components/flat-card.njk" import flatCard %}
+
+<div class="w-full h-auto bg-pycon-blue -mb-24 px-[6%] flex flex-col md:flex-row">
+    <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+            Panel Discussions
+        </div>
+        <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-10 text-justify">
+            <p>PyCon India 2025 invites panel discussion proposals that promote engaging, diverse, and insightful conversations across various aspects of Python and its ecosystem. A panel discussion is a moderated conversation among a small group of experts discussing a specific topic in front of an audience. It allows diverse perspectives and audience engagement.</p>
+        </div>
+    </div>
+    <div class="lg:w-[30%] w-[80%] lg:mt-60 flex items-center justify-center mx-auto">
+        <img src="{{ env.baseUrl }}img/assets/laptop.svg" alt="Guide" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+        <img src="{{ env.baseUrl }}img/assets/filter-coffee.svg" alt="Guide" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+    </div>
+</div>
+
+<div class="absolute top-2/5 right-4 md:block">
+    <img src="{{ env.baseUrl }}img/assets/star-lime-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
+</div>
+
+<div class="absolute md:top-3/4 pt-52 md:right-20 right-12 md:block">
+    <img src="{{ env.baseUrl }}img/assets/star-pink-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
+</div>
+
+<div class="main-container pt-16 md:pt-48 bg-lavender w-full h-auto px-[6%]">
+    <div class="pb-40 md:pb-60 lg:pb-[20%] w-full text-justify lg:w-[70%]">
+        <div class="mt-24 md:-mt-32 lg:-mt-20 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Important Dates</p>
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <ul class="list-none space-y-4">
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Submission Open:</span> 11 July 2025</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Submission Deadline:</span> 10 August 2025</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Schedule Announcement:</span> 13 August 2025</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Panel discussions:</span> 13-14 September 2025</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex justify-center pt-8">
+                {{ button(text="Submit a Proposal (Coming Soon)", url="https://cfp.in.pycon.org/2025/cfp", lime_bg=true, env = env, disabled=true) }}
+            </div>
+            {# <div class="text-center mt-4 text-red-600 font-semibold">
+                <p>Proposals are closed. Thank you for your submissions!</p>
+            </div> #}
+        </div>
+
+        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Submission Guidelines</p>
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <ul class="list-none space-y-4">
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>Panel must have 3 to 5 participants, including a moderator.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>To ensure diversity, all panelists should not identify with the same gender.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>Discussions must be interactive in nature rather than a series of individual talks.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>No slides or presentations allowed during the Panel discussion.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>No TBD or placeholder names - all panelists must be confirmed at the time of submission.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>All panelists from the same organization are not allowed.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>All the panelists must have proven experience with the discussion topic.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span>Time limit: 30 minutes, including audience Q&A.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Selection Process</p>
+            </div>
+            <div class="pt-12 text-[#000000] lg:pr-10">
+                <ul class="list-none space-y-4">
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Shortlisting:</span> Proposals will be reviewed by the review committee for completeness and adherence to guidelines.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Review:</span> After getting shortlisted, you need to submit the questions that are going to be discussed during panel discussion.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span><span class="font-semibold">Orientation call:</span> Familiarize panel members with the format of Panel Discussions at PyCon India.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
