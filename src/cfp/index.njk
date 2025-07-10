@@ -79,7 +79,7 @@ layout: base.njk
         </div>
 
         <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
-            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+            <div id="sessions" class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
                 <p>Sessions</p>
             </div>
             <div class="pt-8">
@@ -94,7 +94,7 @@ layout: base.njk
                   </li>
                   <li class="flex">
                       <img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                      <span class="font-semibold"><a href="#">Poster Presentations</a> (To be announced)</span>
+                      <span class="font-semibold"><a href="{{ env.baseUrl }}cfp/poster">Poster Presentations</a> (open)</span>
                   </li>
                   <li class="flex">
                       <img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
@@ -150,11 +150,13 @@ layout: base.njk
                     </li>
                 </ul>
                 <div class="flex justify-center pt-8">
-                    {{ button(text="Submit a Proposal", url="https://cfp.in.pycon.org/2025/cfp", lime_bg=true, env = env, disabled=true) }}
+                    {{ button(text="Submit a Proposal", url="https://cfp.in.pycon.org/2025/cfp", lime_bg=true, env = env) }}
                 </div>
+                 {#
                  <div class="text-center mt-4 text-red-600 font-semibold">
-                    <p>Proposals are closed. Thank you for your submissions!</p>
-                </div>
+                   <p>Proposals are closed. Thank you for your submissions!</p>
+                 </div>
+                 #}
             </div>
         </div>
 
