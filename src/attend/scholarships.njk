@@ -1,0 +1,257 @@
+---
+title: Scholarships - PyCon India 2025
+description: PyCon India 2025 Scholarships - Need-based financial assistance for attendees
+layout: base.njk
+---
+
+{% from "components/button.njk" import button %}
+{% from "components/card.njk" import card %}
+{% from "components/flat-card.njk" import flatCard %}
+
+<div class="w-full h-auto bg-pycon-blue px-[6%] -mb-16 md:mb-0 flex flex-col md:flex-row">
+    <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+            Scholarships
+        </div>
+        <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-10 text-justify">
+            <p>PyCon India 2025 Scholarships is a need-based scholarship for speakers, students, or attendees to attend PyCon India.</p>
+            <p class="pt-4">Scholarships will be provided after reviewing the needs of the attendees and the impact generated. A panel of reviewers will assess each request and approve the grants. Applicant information will be kept confidential.</p>
+        </div>
+    </div>
+    <div class="lg:w-[30%] w-[80%] lg:mt-30 flex items-center justify-center mx-auto">
+        <img src="{{ env.baseUrl }}img/assets/guide.svg" alt="Scholarship Guide" class="w-[80%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+    </div>
+</div>
+
+<div class="main-container pt-16 md:pt-12 bg-lavender w-full h-auto px-[6%]">
+    <div class="text-md lg:text-xl pt-12 text-black lg:pr-10 text-justify font-light">
+        <div class="mb-12">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                <p>Scholarship Details</p>
+            </div>
+            <p class="text-lg mb-6">
+                The PyCon India 2025 Scholarship has the following components. Applicants can apply for and receive multiple components.
+            </p>
+            
+            <div class="space-y-6 mb-8">
+                <div>
+                    <p class="text-2xl font-bold flex items-center"><span class="bg-pycon-blue text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 font-bold text-sm flex-shrink-0">1</span>Conference Ticket</p>
+                    <div class="pt-4 text-md">
+                        <ul class="list-none pl-12 space-y-3">
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>Full access to the conference days 13th and 14th September only.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="text-2xl font-bold flex items-center"><span class="bg-pycon-blue text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 font-bold text-sm flex-shrink-0">2</span>Travel Grant</p>
+                    <div class="pt-4 text-md">
+                        <ul class="list-none pl-12 space-y-3">
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>A fixed reimbursement equivalent to a round-trip 3 AC train fare between Bengaluru and your location, irrespective of your chosen transportation method.</span>
+                            </li>
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>Taxi/bus/metro/ride shares to and from the airport/train station/bus station.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="text-2xl font-bold flex items-center"><span class="bg-pycon-blue text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 font-bold text-sm flex-shrink-0">3</span>Accommodation Support</p>
+                    <div class="pt-4 text-md">
+                        <ul class="list-none pl-12 space-y-3">
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>Hotel accommodation amount equivalent to 2 nights</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <p class="text-lg">
+                    <strong>Maximum amount admissible:</strong> <span class="text-pycon-blue font-bold">INR 10,000</span>
+                </p>
+            </div>
+            
+            <div class="mt-6">
+                <div class="flex flex-col sm:flex-row gap-4 items-start">
+                    {{ button(text="Apply for Scholarship", url="https://forms.gle/Gkzau2SDeKyRNu4c9", lime_bg=true, env = env) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-24">
+            <div>
+                {% call flatCard(bg="purple") -%}
+                    <div class="flex items-center mb-4">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Deadline Icon" class="w-6 h-6 mr-3">
+                        <h3 class="text-xl md:text-3xl">Deadline</h3>
+                    </div>
+                    <p class="text-2xl text-black">The deadline to apply for the scholarship is <strong>8th August, 23:59 IST</strong>.</p>
+                {%- endcall %}
+            </div>
+
+            <div>
+                {% call flatCard(bg="purple") -%}
+                    <div class="flex items-center mb-4">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Notification Icon" class="w-6 h-6 mr-3">
+                        <h3 class="text-xl md:text-3xl">Notification</h3>
+                    </div>
+                    <p class="text-2xl text-black">The selected applicants will be informed by <strong>12th August, 23:59 IST</strong>.</p>
+                {%- endcall %}
+            </div>
+        </div>
+
+        <div class="mb-24">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left mb-8">
+                <p>Reimbursement Policy</p>
+            </div>
+            
+            <div class="space-y-4">
+                <ul class="list-none space-y-3">
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span class="text-md">Attendance is required to receive reimbursement. If our ticketing platform does not show you as 'checked-in', you will need to provide proof of attendance.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span class="text-md">Reimbursement will be up to the amount specified in your acceptance email.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span class="text-md">The mode of payment for the grants will be either bank transfer or UPI and will be approved on providing actual invoices.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mt-6">
+                <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>Policy Violations Include:</p>
+                <div class="pt-4 text-md">
+                    <ul class="list-none pl-8 space-y-3">
+                        <li class="flex">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                            <span>Submitting receipts for reimbursement if you did not attend.</span>
+                        </li>
+                        <li class="flex">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                            <span>Applying with multiple or alias emails.</span>
+                        </li>
+                        <li class="flex">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                            <span>Submitting falsified or fake receipts violates the code of conduct and may result in a ban from future events.</span>
+                        </li>
+                        <li class="flex">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                            <span>Any other abuse of the system.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-32">
+         <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left mb-8">
+                <p>Eligible Receipts for Reimbursement</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div>
+                    <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>Receipts</p>
+                    <div class="pt-4 text-md">
+                        <ul class="list-none pl-8 space-y-3">
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>A scan or photo of the actual receipt/invoice/bill is required.</span>
+                            </li>
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>Receipts must clearly show the date and amount (and name, if possible).</span>
+                            </li>
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>Book refundable travel. Receipts will not be reimbursed if you are unable to attend the event and have booked non-refundable travel.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>Accommodation Charges</p>
+                    <div class="pt-4 text-md">
+                        <ul class="list-none pl-8 space-y-3">
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>A maximum of 2 nights is covered.</span>
+                            </li>
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>We will not reimburse any services other than the stay, like hotel WiFi, in-room services, beverages etc.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>Ground Transportation Charges</p>
+                    <div class="pt-4 text-md">
+                        <ul class="list-none pl-8 space-y-3">
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>Bus, metro, taxi, and ride shares to/from the airport, train, or bus station (a total of 4 trips) are eligible for reimbursement.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>Miscellaneous Expenses</p>
+                    <div class="pt-4 text-md">
+                        <ul class="list-none pl-8 space-y-3">
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>Any expenses outside the categories mentioned above, such as add-ons, seat upgrades, meals, etc., will not be reimbursed.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12 mt-16">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left mb-8">
+                <p>Process for Reimbursement</p>
+            </div>
+            
+            <div class="space-y-6">
+                <ul class="list-none space-y-3">
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span class="text-md">You will receive an email with instructions for submitting your expense report after the event.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span class="text-md">The expense report and receipts must be submitted within the timeline provided in the post-event email. If not received within this timeline, reimbursement cannot be processed.</span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span class="text-md">You will receive the amount post-approval of your report. The maximum amount that can be reimbursed is the one mentioned in your scholarship approval email.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mb-24">
+            <p class="text-sm text-gray-600 italic">
+                Some parts of this page are based on <a href="https://events.linuxfoundation.org/travel-fund-policies/#welcome" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:underline">LF Travel Fund Policies</a>.
+            </p>
+        </div>
+    </div>
+</div>
