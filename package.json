@@ -5,8 +5,8 @@
   "scripts": {
     "serve": "cross-env ELEVENTY_ENV=dev eleventy --serve",
     "build:css": "tailwindcss -i ./src/css/main.css -o ./dist/css/styles.css --watch",
-    "deploy": "eleventy",
-    "deploy-dev": "ELEVENTY_ENV=dev eleventy"
+    "deploy": "make deploy",
+    "deploy-dev": "make deploy-dev"
   },
   "author": "ttntm",
   "license": "MIT",
