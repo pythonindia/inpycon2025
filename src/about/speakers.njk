@@ -1,0 +1,92 @@
+---
+title: Speakers - PyCon India 2025
+description: PyCon India 2025 Speakers
+layout: base.njk
+---
+
+<div class="w-full h-auto px-[6%] -mb-16 md:mb-0 flex flex-col md:flex-row">
+    <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+            Speakers
+        </div>
+    </div>
+    <div class="lg:w-[30%] w-[80%] lg:mt-40 items-center justify-center mx-auto hidden lg:block">
+        <img src="{{ env.baseUrl }}img/assets/tetris-stars.svg" alt="Guide" class="w-[80%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+    </div>
+</div>
+
+
+<div class="main-container pt-24 pb-72 lg:pb-40 md:pt-16 w-full text-black h-auto px-[6%]">
+    <div class="">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 ">
+        {% for person in speakers %}
+        <div class="flex flex-col items-start pb-4">
+            <!-- Responsive Image with 4:3 ratio -->
+            <div class="w-full h-32 md:h-48 border border-black relative bg-pycon-purple">
+                <div class="absolute inset-0">
+                    {% if person.imageLink %}
+                    <img src="{{ person.imageLink }}" alt="{{ person.name }}"
+                        class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:translate-x-4 hover:-translate-y-4 hover:shadow-2xl" />
+                    {% else %}
+                    <div class="w-full h-full bg-pycon-blue transition-transform duration-500 ease-in-out hover:translate-x-4 hover:-translate-y-4 hover:shadow-2xl">
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+
+            <!-- Name -->
+            <p class="mt-4 mb-1 text-xl font-light text-center">{{ person.name }}</p>
+
+            <!-- Socials -->
+            <div class="flex justify-center items-left gap-1 md:gap-4 flex-wrap">
+                {% if person.socials.linkedin %}
+                <a href="{{ person.socials.linkedin }}" target="_blank" aria-label="LinkedIn" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <i class="fab fa-linkedin text-sm md:text-xl"></i>
+                </a>
+                {% endif %}
+                {% if person.socials.web %}
+                <a href="{{ person.socials.web }}" target="_blank" aria-label="Website" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <i class="fa fa-globe text-sm md:text-xl"></i>
+                </a>
+                {% endif %}
+                {% if person.socials.twitter %}
+                <a href="{{ person.socials.twitter }}" target="_blank" aria-label="Twitter" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <i class="fab fa-x-twitter text-sm md:text-xl"></i>
+                </a>
+                {% endif %}
+                {% if person.socials.github %}
+                <a href="{{ person.socials.github }}" target="_blank" aria-label="GitHub" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <i class="fab fa-github text-sm md:text-xl"></i>
+                </a>
+                {% endif %}
+                {% if person.socials.youtube %}
+                <a href="{{ person.socials.youtube }}" target="_blank" aria-label="YouTube" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <i class="fab fa-youtube text-sm md:text-xl"></i>
+                </a>
+                {% endif %}
+                {% if person.socials.insta %}
+                <a href="{{ person.socials.insta }}" target="_blank" aria-label="Instagram" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <i class="fab fa-instagram text-sm md:text-xl"></i>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</div>
+
+
+
+<style>
+  .pop-up-right {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .pop-up-right:hover {
+    transform: translateY(-10px) translateX(10px) scale(1.05);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+</style>
