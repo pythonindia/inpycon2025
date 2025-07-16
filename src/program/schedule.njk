@@ -1,0 +1,270 @@
+---
+title: Schedule
+description: PyCon India 2025 Schedule 
+layout: base.njk
+---
+
+{% from "components/flat-card.njk" import flatCard %}
+
+<div class="w-full h-auto bg-pycon-blue -mb-24 px-[6%] lg:pb-40 pb-72">
+    <div class="pt-32 pb-8 md:pb-4 w-full">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl text-[#FFFFFF] text-center">
+            Schedule
+        </div>
+
+        <!-- Fetch Valid days -->
+        {% set active_days = [] %}
+        {% for day in schedule.schedule.conference.days %}
+            {% if day.rooms | length > 0 %}
+                {% set active_days = active_days.concat([day]) %}
+            {% endif %}
+        {% endfor %}
+
+        <!-- Dynamically display Schedule Grid -->
+        <div class="pt-20 grid gap-0 md:gap-6" style="grid-template-columns: repeat({{ active_days | length }}, minmax(0, 1fr));">
+            {% for day in schedule.schedule.conference.days %}
+            {% if day.rooms | length > 0 %}
+            {% set dayInfo = day.date | dateInfo %}
+            <div class="cursor-pointer schedule-card" data-schedule="{{ day.index }}">
+                {% call flatCard(bg="") -%}
+                    <div class="flex justify-between align-middle p-2 bg-[#CD89FF] -m-4">
+                        <div class="window-titlebar-dots">
+                            <div class="w-3 h-3 bg-[#D7FF7B] rounded-full border-2 border-black"></div>
+                            <div class="w-3 h-3 bg-[#D7FF7B] rounded-full border-2 border-black"></div>
+                            <div class="w-3 h-3 bg-[#D7FF7B] rounded-full border-2 border-black"></div>
+                        </div>
+                    </div>
+                    <div class="card-grid pt-8 bg-[#FFFFFF] text-xs md:text-xl -mx-4 -mb-8 mt-4 hover:bg-pycon-lime">
+                        <p class="text-center mb-0.5">
+                            <span class="block sm:inline-block">{{ dayInfo.label.split(' ')[0] }}</span>
+                            <span class="inline-block">{{ dayInfo.label.split(' ').slice(1).join(' ') }}</span>
+                        </p>
+                        <p class="text-center mb-0.5 font-semibold">{{ dayInfo.monthDay }}</p>
+                        <p class="text-center font-medium text-[#4662FF] pb-4">{{ dayInfo.dayName|upper }}</p>
+                    </div>
+                {%- endcall %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- Dynamically display Schedule Content -->
+        {% for day in schedule.schedule.conference.days %}
+        {% if day.rooms | length > 0 %}
+        <div id="{{ day.index }}" class="schedule-content {% if loop.first %}block{% else %}hidden{% endif %} pt-24 text-center">
+            {% set dayInfo = day.date | dateInfo %}
+            <div>
+                <div class="pb-16">
+                    <div class="w-full">
+                        <div class="bg-pycon-lime px-4 py-2 border flex justify-between">
+                            <p class="text-md md:text-xl mb-0">{{ dayInfo.label }}</p>
+                            <p class="text-md md:text-xl mb-0">{{ dayInfo.monthDay }}</p>
+                        </div>
+
+                        {# Build fixed schedule array and assign color #}
+                        {% set fixed_schedule = [] %}
+                        {% for sch in scheduleFixed[day.index-1].schedule %}
+                            {% set fixed_schedule = fixed_schedule.concat([{
+                                'type': 'fixed',
+                                'start_time': sch.start_time,
+                                'end_time': sch.end_time,
+                                'title': sch.title,
+                                'bg_color': sch.color
+                            }]) %}
+                        {% endfor %}
+
+                        {# Build room events array #}
+                        {% set room_events = [] %}
+                        {% for room_name in ["Track 1", "Track 2", "Track 3"] %}
+                            {% set room_color = {
+                                "Track 1": "#D7FF7B",
+                                "Track 2": "#D0DCFF",
+                                "Track 3": "#FFD1F9"
+                            }[room_name] %}
+                            {% for event in day.rooms[room_name] %}
+                                {% set room_events = room_events.concat([{
+                                    'type': 'event',
+                                    'start_time': event.start,
+                                    'end_time': event.start | getEndTime(event.duration),
+                                    'room': room_name,
+                                    'track': event.track,
+                                    'title': event.title,
+                                    'url': event.url,
+                                    'persons': event.persons,
+                                    'bg_color': room_color
+                                }]) %}
+                            {% endfor %}
+                        {% endfor %}
+
+
+                        {# Merge fixed_schedule and room_events #}
+                        {% set combined_schedule = fixed_schedule.concat(room_events) %}
+
+                        {# Sort combined_schedule by start_time #}
+                        {% set combined_schedule = combined_schedule | sort(attribute='start_time') %}
+
+                        {% set current_events = [] %}
+                        {% for item in combined_schedule %}
+                            {% if item.type == 'fixed' %}
+                                {# Render any accumulated events before this fixed item #}
+                                {% if current_events.length > 0 %}
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 items-stretch">
+                                        {% for room_name in ["Track 1", "Track 2", "Track 3"] %}
+                                            <div>
+                                                {% for e in current_events %}
+                                                    {% if e.room == room_name %}
+                                                        <div class="flex flex-wrap gap-0 py-0">
+                                                            {% if e.url %}
+                                                                <a href="{{ e.url }}"
+                                                                class="w-full p-4 border border-black bg-white transform hover:-translate-y-1 transition duration-500 ease-in-out hover:bg-pycon-lime cursor-pointer no-underline text-inherit h-48 overflow-hidden">
+                                                            {% else %}
+                                                                <div class="w-full p-4 border border-black h-48 overflow-hidden">
+                                                            {% endif %}
+                                                                <div class="flex justify-between items-center text-sm mb-1">
+                                                                    <p class="font-medium text-black px-2 rounded-lg" style="background-color: {{ e.bg_color}}">
+                                                                        {{ e.room }}
+                                                                    </p>
+                                                                </div>
+                                                                <p class="mb-1 font-bold">{{ e.start_time }} - {{ e.end_time }}</p>
+                                                                <p class="mb-1 text-md line-clamp-2">
+                                                                    {{ e.title }}
+                                                                </p>
+                                                                <p class="font-semibold text-md text-pycon-blue">
+                                                                    {% for person in e.persons %}
+                                                                        {{ person.public_name }}{% if not loop.last %}, {% endif %}
+                                                                    {% endfor %}
+                                                                </p>
+                                                            {% if e.url %}
+                                                                </a>
+                                                            {% else %}
+                                                                </div>
+                                                            {% endif %}
+                                                        </div>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    {% set current_events = [] %}
+                                {% endif %}
+
+                                {# Render fixed item full width #}
+                                <div class="flex flex-wrap gap-0 py-0">
+                                    <div class="w-full p-4 border border-black bg-[#D0DCFF]" style="background-color: {{ item.bg_color }};">
+                                        {% if "Keynote" in item.title %}
+                                        <div class="text-left">
+                                            <p class="font-medium text-sm text-black px-2 mb-0 rounded-lg inline-block" style="background-color: #1FFFB4">
+                                                Keynote
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        <p class="mb-0 font-bold">{{ item.start_time }} - {{ item.end_time }}</p>
+                                        <p class="mb-0 text-lg">{{ item.title }}</p>
+                                    </div>
+                                </div>
+                            {% else %}
+                                {% set current_events = current_events.concat([item]) %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="hidden lg:block">
+    <div class="flex justify-between items-center w-full bg-pycon-blue pb-56 pl-20">
+    <div class="flex gap-4">
+        <img src="{{ env.baseUrl }}img/assets/tetris.svg" alt="Tetris"
+            class="w-[20%] transition-transform duration-100"
+            style="animation: floating 3s ease-in-out infinite;">
+
+        <img src="{{ env.baseUrl }}img/assets/calendar.svg" alt="Calendar"
+            class="w-[60%] transition-transform duration-100"
+            style="animation: floating 5s ease-in-out infinite;">
+    </div>
+
+    <div class="flex gap-4">
+        <img src="{{ env.baseUrl }}img/assets/star-lime-vector.svg" alt="Star"
+            class="w-[25%] transition-transform duration-100"
+            style="animation: floating 5s ease-in-out infinite;">
+
+        <img src="{{ env.baseUrl }}img/assets/tetris2.svg" alt="Tetris2"
+            class="w-[70%]">
+    </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.schedule-card');
+        const contents = document.querySelectorAll('.schedule-content');
+        let selectedCard = null;
+
+        // Function to reset all card backgrounds
+        const resetCardBackgrounds = () => {
+            cards.forEach(card => {
+                const highlightDiv = card.querySelector('.card-grid');
+                highlightDiv.classList.remove('pycon-bg-lime');
+                highlightDiv.style.backgroundColor = '#FFFFFF';
+            });
+        };
+
+        // Function to hide all schedules
+        const hideAllSchedules = () => {
+            contents.forEach(content => content.classList.add('hidden'));
+        };
+
+        // Initial state: Highlight the first card and show the first schedule
+        if (cards.length > 0 && contents.length > 0) {
+            selectedCard = cards[0];
+            const firstContentId = selectedCard.getAttribute('data-schedule');
+
+            // Highlight the first card
+            const firstHighlightDiv = selectedCard.querySelector('.card-grid');
+            firstHighlightDiv.classList.add('bg:pycon-bg-lime');
+            firstHighlightDiv.style.backgroundColor = '#CDFF89';
+
+            // Show the first schedule
+            document.getElementById(firstContentId).classList.remove('hidden');
+        }
+
+        // Add event listeners to all cards
+        cards.forEach(card => {
+            const highlightDiv = card.querySelector('.card-grid');
+
+            card.addEventListener('click', () => {
+                // Reset previous selection
+                resetCardBackgrounds();
+                hideAllSchedules();
+
+                // Highlight the clicked card
+                highlightDiv.classList.add('pycon-bg-lime');
+                highlightDiv.style.backgroundColor = '#CDFF89'; // Lime background
+
+                // Show the corresponding schedule
+                const scheduleId = card.getAttribute('data-schedule');
+                document.getElementById(scheduleId).classList.remove('hidden');
+
+                // Update the selected card
+                selectedCard = card;
+            });
+
+            // Handle hover for unselected cards
+            card.addEventListener('mouseenter', () => {
+                if (card !== selectedCard) {
+                    highlightDiv.style.backgroundColor = '#CDFF89'; // Hover lime background
+                }
+            });
+
+            card.addEventListener('mouseleave', () => {
+                if (card !== selectedCard) {
+                    highlightDiv.style.backgroundColor = '#FFFFFF'; // Default white background
+                }
+            });
+        });
+    });
+</script>
