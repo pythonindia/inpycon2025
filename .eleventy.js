@@ -69,7 +69,7 @@ module.exports = function (eleventyConfig) {
 
 		// Total minutes
 		let totalMinutes = sh * 60 + sm + dh * 60 + dm;
-        
+
 		// Calculate end hour and minutes
 		let endHour = Math.floor(totalMinutes / 60);
 		let endMinute = totalMinutes % 60;
@@ -118,6 +118,25 @@ module.exports = function (eleventyConfig) {
 		}
 		return content;
 	});
+
+	// add a sectionheader shortcode
+	eleventyConfig.addPairedShortcode("sectionheader", function (content) {
+		return `<div class="black-han-sans-regular font-normal text-2xl md:text-4xl md:text-center text-[#000000] text-center lg:text-left">
+					<p>${content}</p>
+				</div>`;
+	});
+
+	// add an aside shortcode
+	eleventyConfig.addPairedShortcode("aside", function (content) {
+		return `<blockquote class="p-4 my-4">
+					<p class="text-xl italic font-medium leading-relaxed">${content}</p>
+				</blockquote>`;
+	});
+
+	// TODO: Add more shortcodes as needed
+	//   - defaultlist
+	//	 - cards
+	// ...
 
 	return {
 		pathPrefix: isProd ? "inpycon2025" : "",
