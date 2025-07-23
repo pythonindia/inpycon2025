@@ -17,42 +17,38 @@
             </div>
             <!-- Desktop image -->
             <div class="hidden md:flex justify-end -mt-72">
-                <img 
-                    src="{{ env.baseUrl }}img/landing/sponsor-sec.svg" 
-                    alt="Mascot on Bicycle" 
+                <img
+                    src="{{ env.baseUrl }}img/landing/sponsor-sec.svg"
+                    alt="Mascot on Bicycle"
                     class="w-72 relative transition-all duration-300 animate-bounce-slow hover:animate-wiggle"
                 />
             </div>
         </div>
     </div>
-    {# <div class="max-w-7xl mx-auto px-2 sm:px-6 pb-10 grid gap-4 sm:gap-10 text-black">
-        {% set sponsors = {
-        "PLATINUM": 3,
-        "GOLD": 5,
-        "SILVER": 5,
-        "ASSOCIATE": 2
-        } %}
-        {% for tier, count in sponsors %}
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 pb-10 grid gap-4 sm:gap-10 text-black">
+        {% for tier in sponsors.tiers %}
             <div>
                 <div class="bg-white inline-block px-4 sm:px-8 py-2 font-bold text-base sm:text-lg shadow uppercase">
-                    {{ tier }}
+                    {{ tier.title }}
                 </div>
-                <div class="grid grid-cols-5 bg-transparent overflow-x-auto">
-                    {% for i in range(0, count) %}
+                <div class="grid grid-cols-4 bg-transparent overflow-x-auto">
+                    {% for company in tier.companies %}
                         <div class="h-16 sm:h-20 bg-white border border-gray-300 flex items-center justify-center min-w-24">
-                            <span class="text-xs font-medium text-gray-400">Logo {{ i + 1 }}</span>
+                            <a href="{{ company.link }}" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ env.baseUrl }}{{ company.logo }}" alt="{{ company.name }} - {{ company.description }}" class="h-full object-contain p-2">
+                            </a>
                         </div>
                     {% endfor %}
                 </div>
             </div>
         {% endfor %}
-    </div> #}
-    
+    </div>
+
     <!-- Mobile image -->
     <div class="md:hidden flex justify-center pb-10">
-        <img 
-            src="{{ env.baseUrl }}img/landing/sponsor-sec.svg" 
-            alt="Mascot on Bicycle" 
+        <img
+            src="{{ env.baseUrl }}img/landing/sponsor-sec.svg"
+            alt="Mascot on Bicycle"
             class="w-48 relative transition-all duration-300 animate-float"
         />
     </div>
