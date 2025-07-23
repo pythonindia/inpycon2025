@@ -15,7 +15,7 @@
               {"name": "Scholarships", "link": "attend/scholarships"},
               {"name": "Accessibility", "link": "attend/accessibility"},
               {"name": "Health and Safety", "link": "attend/health-and-safety"},
-              {"name": "FAQ's", "link": "about/faqs"}
+              {"name": "FAQ's", "link": "attend/faqs"}
             ]
           },
           {
@@ -57,41 +57,41 @@
             "isExternal": true
           }
         ] %}
-        
+
         <input type="radio" id="desktop-menu-close-all" name="desktop-menu-radio" class="sr-only hidden" checked>
         {% for item in menuItems %}
           {% if item.hasSubmenu %}
             <input type="radio" id="desktop-menu-radio-{{ loop.index }}" name="desktop-menu-radio" class="sr-only hidden">
           {% endif %}
         {% endfor %}
-        
+
         {% for item in menuItems %}
           <li class="relative">
             {% if item.hasSubmenu %}
-              <label for="desktop-menu-radio-{{ loop.index }}" 
+              <label for="desktop-menu-radio-{{ loop.index }}"
                      class="flex items-center gap-1 py-2 px-3 text-white hover:text-[#D7FF7B] text-base font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 cursor-pointer nav-link">
                 {{ item.name }}
                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" class="ml-1 fill-current text-gray-400 transition-transform duration-200">
                   <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                 </svg>
               </label>
-              
+
               <label for="desktop-menu-close-all" class="fixed inset-0 bg-transparent z-0 hidden"></label>
-              
+
               <div class="absolute left-0 top-full mt-1 w-auto invisible opacity-0 transition-all duration-200 z-10 transform origin-top scale-95 dropdown-glass rounded-lg shadow-lg">
-                <div class="w-full rounded-lg border border-white/10">   
-                  <div class="w-full flex flex-col">     
+                <div class="w-full rounded-lg border border-white/10">
+                  <div class="w-full flex flex-col">
                     {% for subitem in item.submenu %}
-                    <div class="w-full p-4 bg-white/90 hover:bg-pycon-lime border-b border-black/10 flex justify-between items-center transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg last:border-b-0">       
+                    <div class="w-full p-4 bg-white/90 hover:bg-pycon-lime border-b border-black/10 flex justify-between items-center transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg last:border-b-0">
                       <a href="{{ env.baseUrl }}{{ subitem.link }}" class="text-gray-800 hover:text-[#4662ff] text-sm font-medium font-['Inter'] leading-tight no-underline dropdown-item block w-full">
                         {{ subitem.name }}
-                      </a>       
-                      <div class="size-5 relative overflow-hidden">         
-                        <div class="bg-gray-400 hover:bg-pycon-blue w-[5.49px] h-[9.31px] left-[7.50px] top-[5.35px] absolute transition-colors duration-150"></div>       
-                      </div>     
+                      </a>
+                      <div class="size-5 relative overflow-hidden">
+                        <div class="bg-gray-400 hover:bg-pycon-blue w-[5.49px] h-[9.31px] left-[7.50px] top-[5.35px] absolute transition-colors duration-150"></div>
+                      </div>
                     </div>
                     {% endfor %}
-                  </div> 
+                  </div>
                 </div>
               </div>
             {% else %}
@@ -116,7 +116,7 @@
     <a href="{{ env.baseUrl }}" class="flex items-center z-20">
       <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-8 w-auto">
     </a>
-    
+
     <input type="checkbox" id="mobile-menu-checkbox" class="hidden">
     <label for="mobile-menu-checkbox" class="cursor-pointer z-50 hover:bg-white/30 p-2 rounded-full transition-all duration-300 inline-flex items-center justify-center">
       <svg width="24" height="22" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -154,7 +154,7 @@
       </svg>
     </button>
   </div>
-  
+
   <div class="container mx-auto px-4 py-4">
     <div class="flex flex-col space-y-4">
       {% for item in menuItems %}
