@@ -8,11 +8,40 @@ layout: base.njk
   }
 </style>
 
-<main id="{{ title }}" class="w-full flex flex-col justify-center items-center">
-  <div class="self-center w-full sm:w-2/3 xl:w-1/2 px-4 sm:px-0 pt-16">
-    <h1 class="font-bold uppercase tracking-widest text-gray-800 text-2xl mb-4">{{ title }}</h1>
-    <div class="font-light text-black text-lg">
-      {{ content | safe }}
+{% from "components/button.njk" import button %}
+{% from "components/card.njk" import card %}
+{% from "components/flat-card.njk" import flatCard %}
+
+<div class="w-full h-auto bg-pycon-blue -mb-24 px-[6%] flex flex-col md:flex-row">
+    <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+            {{ title }}
+        </div>
+        <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-10 text-justify">
+            <p>{{ description }}</p>
+        </div>
     </div>
-  </div>
-</main>
+    <div class="lg:w-[30%] w-[80%] lg:mt-60 flex items-center justify-center mx-auto">
+        <img src="{{ env.baseUrl }}img/assets/laptop.svg" alt="Guide" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+        <img src="{{ env.baseUrl }}img/assets/filter-coffee.svg" alt="Guide" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+    </div>
+</div>
+
+<div class="absolute top-2/5 right-4 md:block">
+    <img src="{{ env.baseUrl }}img/assets/star-lime-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
+</div>
+
+<div class="absolute md:top-3/4 pt-52 md:right-20 right-12 md:block">
+    <img src="{{ env.baseUrl }}img/assets/star-pink-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
+</div>
+
+
+<div class="main-container pt-16 md:pt-48 bg-lavender w-full h-auto px-[6%]">
+    <div class="pb-40 md:pb-60 lg:pb-[20%] w-full text-justify lg:w-[70%]">
+        <div class="mt-24 md:-mt-32 lg:-mt-20 text-md lg:text-xl font-light">
+            <div class="font-light text-black text-lg">
+              {{ content | safe }}
+            </div>
+        </div>
+    </div>
+</div>
