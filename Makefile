@@ -3,7 +3,7 @@
 SCHEDULE_MANIFEST=src/_data/schedule.json
 PRETALX_SCHEDULE=https://cfp.in.pycon.org/2025/schedule/export/schedule.json
 
-${SCHEDULE_MANIFEST}:
+${SCHEDULE_MANIFEST}: clean-schedule-info
 	curl -o ${SCHEDULE_MANIFEST} ${PRETALX_SCHEDULE}
 
 schedule-info: ${SCHEDULE_MANIFEST}

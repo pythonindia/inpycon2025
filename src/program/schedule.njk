@@ -12,18 +12,12 @@ layout: base.njk
             Schedule
         </div>
 
-        <!-- Fetch Valid days -->
-        {% set active_days = [] %}
-        {% for day in schedule.schedule.conference.days %}
-            {% if day.rooms | length > 0 %}
-                {% set active_days = active_days.concat([day]) %}
-            {% endif %}
-        {% endfor %}
+        <!-- Fetch Active days -->
+        {% set active_days = schedule.schedule.conference.days.slice(0,3) %}
 
         <!-- Dynamically display Schedule Grid -->
         <div class="pt-20 grid gap-0 md:gap-6" style="grid-template-columns: repeat({{ active_days | length }}, minmax(0, 1fr));">
-            {% for day in schedule.schedule.conference.days %}
-            {% if day.rooms | length > 0 %}
+            {% for day in active_days %}
             {% set dayInfo = day.date | dateInfo %}
             <div class="cursor-pointer schedule-card" data-schedule="{{ day.index }}">
                 {% call flatCard(bg="") -%}
@@ -44,133 +38,342 @@ layout: base.njk
                     </div>
                 {%- endcall %}
             </div>
-            {% endif %}
             {% endfor %}
         </div>
 
         <!-- Dynamically display Schedule Content -->
-        {% for day in schedule.schedule.conference.days %}
-        {% if day.rooms | length > 0 %}
+        {% for day in active_days %}
         <div id="{{ day.index }}" class="schedule-content {% if loop.first %}block{% else %}hidden{% endif %} pt-24 text-center">
             {% set dayInfo = day.date | dateInfo %}
             <div>
                 <div class="pb-16">
                     <div class="w-full">
-                        <div class="bg-pycon-lime px-4 py-2 border flex justify-between">
+                        <div class="bg-pycon-lime px-4 py-2 border border-black flex justify-between">
                             <p class="text-md md:text-xl mb-0">{{ dayInfo.label }}</p>
                             <p class="text-md md:text-xl mb-0">{{ dayInfo.monthDay }}</p>
                         </div>
 
-                        {# Build fixed schedule array and assign color #}
-                        {% set fixed_schedule = [] %}
-                        {% for sch in scheduleFixed[day.index-1].schedule %}
-                            {% set fixed_schedule = fixed_schedule.concat([{
-                                'type': 'fixed',
-                                'start_time': sch.start_time,
-                                'end_time': sch.end_time,
-                                'title': sch.title,
-                                'bg_color': sch.color
-                            }]) %}
-                        {% endfor %}
+                        {% if day.index == 1 %}
+                        <div class="workshop-day">
+                            <!-- Breakfast -->
+                            <div class="flex w-full">
+                                {# <div class="w-1/6 hidden md:flex items-center justify-center border text-xl font-bold border-black bg-white">
+                                    8:00
+                                </div> #}
 
-                        {# Build room events array #}
-                        {% set room_events = [] %}
-                        {% for room_name in ["Track 1", "Track 2", "Track 3"] %}
-                            {% set room_color = {
-                                "Track 1": "#D7FF7B",
-                                "Track 2": "#D0DCFF",
-                                "Track 3": "#FFD1F9"
-                            }[room_name] %}
-                            {% for event in day.rooms[room_name] %}
-                                {% set room_events = room_events.concat([{
-                                    'type': 'event',
-                                    'start_time': event.start,
-                                    'end_time': event.start | getEndTime(event.duration),
-                                    'room': room_name,
-                                    'track': event.track,
-                                    'title': event.title,
-                                    'url': event.url,
-                                    'persons': event.persons,
-                                    'bg_color': room_color
-                                }]) %}
-                            {% endfor %}
-                        {% endfor %}
+                                <div class="flex-1 w-full p-4 border border-black bg-[#CD89FF]">
+                                    <p class="mb-0 font-bold">8:00 - 10:00</p>
+                                    <p class="mb-0 text-lg">REGISTRATIONS / BREAKFAST</p>
+                                </div>
+                            </div>
 
+                            <!-- Morning Sessions -->
+                            <div class="flex w-full">
+                                {# <div class="w-1/6 hidden md:flex items-center justify-center border text-xl font-bold border-black bg-white">
+                                    10:00
+                                </div> #}
 
-                        {# Merge fixed_schedule and room_events #}
-                        {% set combined_schedule = fixed_schedule.concat(room_events) %}
+                                {# Convert day.rooms to sorted array of entries #}
+                                {% set room_entries = [] %}
+                                {% for key, value in day.rooms %}
+                                {% set _ = room_entries.push([key, value]) %}
+                                {% endfor %}
 
-                        {# Sort combined_schedule by start_time #}
-                        {% set combined_schedule = combined_schedule | sort(attribute='start_time') %}
+                                {# Chunk into 2, 3, 2 manually #}
+                                {% set row1 = room_entries.slice(0, 2) %}
+                                {% set row2 = room_entries.slice(2, 5) %}
+                                {% set row3 = room_entries.slice(5, 7) %}
+                                {% set rows = [row1, row2, row3] %}
 
-                        {% set current_events = [] %}
-                        {% for item in combined_schedule %}
-                            {% if item.type == 'fixed' %}
-                                {# Render any accumulated events before this fixed item #}
-                                {% if current_events.length > 0 %}
-                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 items-stretch">
-                                        {% for room_name in ["Track 1", "Track 2", "Track 3"] %}
-                                            <div>
-                                                {% for e in current_events %}
-                                                    {% if e.room == room_name %}
-                                                        <div class="flex flex-wrap gap-0 py-0">
-                                                            {% if e.url %}
-                                                                <a href="{{ e.url }}"
-                                                                class="w-full p-4 border border-black bg-white transform hover:-translate-y-1 transition duration-500 ease-in-out hover:bg-pycon-lime cursor-pointer no-underline text-inherit h-48 overflow-hidden">
-                                                            {% else %}
-                                                                <div class="w-full p-4 border border-black h-48 overflow-hidden">
-                                                            {% endif %}
-                                                                <div class="flex justify-between items-center text-sm mb-1">
-                                                                    <p class="font-medium text-black px-2 rounded-lg" style="background-color: {{ e.bg_color}}">
-                                                                        {{ e.room }}
-                                                                    </p>
-                                                                </div>
-                                                                <p class="mb-1 font-bold">{{ e.start_time }} - {{ e.end_time }}</p>
-                                                                <p class="mb-1 text-md line-clamp-2">
-                                                                    {{ e.title }}
-                                                                </p>
-                                                                <p class="font-semibold text-md text-pycon-blue">
-                                                                    {% for person in e.persons %}
-                                                                        {{ person.public_name }}{% if not loop.last %}, {% endif %}
-                                                                    {% endfor %}
-                                                                </p>
-                                                            {% if e.url %}
-                                                                </a>
-                                                            {% else %}
-                                                                </div>
-                                                            {% endif %}
-                                                        </div>
-                                                    {% endif %}
+                                <div class="flex-1 w-full flex flex-col">
+                                {% for row in rows %}
+                                    <div class="grid grid-cols-1 md:grid-cols-{{ row.length }}">
+                                    {% for item in row %}
+                                        {% set room_name = item[0] %}
+                                        {% set events = item[1] %}
+                                        {% if events[0] %}
+                                        {% set event = events[0] %}
+                                        {% set bg_color = roomColors[room_name] %}
+                                        <div class="flex flex-wrap gap-0 py-0">
+                                            {% if event.url %}
+                                            <a href="{{ event.url }}"
+                                                class="w-full p-4 bg-white border border-black transform hover:-translate-y-1 transition duration-500 ease-in-out hover:bg-pycon-lime cursor-pointer no-underline text-inherit h-48 overflow-hidden">
+                                            {% else %}
+                                            <div class="w-full p-4 h-48 overflow-hidden border border-black">
+                                            {% endif %}
+                                                <div class="flex justify-between items-center text-sm mb-1">
+                                                <p class="font-medium text-black px-2 rounded-lg" style="background-color: {{ bg_color }}">
+                                                    {{ event.room }}
+                                                </p>
+                                                </div>
+                                                <p class="mb-1 font-bold">{{ event.start }} - {{ event.start | getEndTime(event.duration) }}</p>
+                                                <p class="mb-1 text-md line-clamp-2">
+                                                {{ event.title }}
+                                                </p>
+                                                <p class="font-semibold text-md text-pycon-blue">
+                                                {% for person in event.persons %}
+                                                    {{ person.public_name }}{% if not loop.last %}, {% endif %}
                                                 {% endfor %}
+                                                </p>
+                                            {% if event.url %}
+                                            </a>
+                                            {% else %}
                                             </div>
-                                        {% endfor %}
-                                    </div>
-                                    {% set current_events = [] %}
-                                {% endif %}
-
-                                {# Render fixed item full width #}
-                                <div class="flex flex-wrap gap-0 py-0">
-                                    <div class="w-full p-4 border border-black bg-[#D0DCFF]" style="background-color: {{ item.bg_color }};">
-                                        {% if "Keynote" in item.title %}
-                                        <div class="text-left">
-                                            <p class="font-medium text-sm text-black px-2 mb-0 rounded-lg inline-block" style="background-color: #1FFFB4">
-                                                Keynote
-                                            </p>
+                                            {% endif %}
                                         </div>
                                         {% endif %}
-                                        <p class="mb-0 font-bold">{{ item.start_time }} - {{ item.end_time }}</p>
-                                        <p class="mb-0 text-lg">{{ item.title }}</p>
+                                    {% endfor %}
                                     </div>
+                                {% endfor %}
                                 </div>
-                            {% else %}
-                                {% set current_events = current_events.concat([item]) %}
-                            {% endif %}
-                        {% endfor %}
+                            </div>
+
+                            <!-- Lunch -->
+                            <div class="flex w-full">
+                                {# <div class="w-1/6 hidden md:flex items-center justify-center border text-xl font-bold border-black bg-white">
+                                    13:00
+                                </div> #}
+
+                                <div class="flex-1 w-full p-4 border border-black bg-[#CD89FF]">
+                                    <p class="mb-0 font-bold">13:00 - 14:00</p>
+                                    <p class="mb-0 text-lg">LUNCH</p>
+                                </div>
+                            </div>
+
+                            <!-- Afternoon Sessions -->
+                            <div class="flex w-full">
+                                {# <div class="w-1/6 hidden md:flex items-center justify-center border text-xl font-bold border-black bg-white">
+                                    14:00
+                                </div> #}
+
+                                <!-- Second div with remaining width -->
+                                {# Convert day.rooms to array of entries #}
+                                {% set room_entries = [] %}
+                                {% for key, value in day.rooms %}
+                                {% set _ = room_entries.push([key, value]) %}
+                                {% endfor %}
+
+                                {# Chunk into 2, 3, 2 manually #}
+                                {% set row1 = room_entries.slice(0, 2) %}
+                                {% set row2 = room_entries.slice(2, 5) %}
+                                {% set row3 = room_entries.slice(5, 7) %}
+                                {% set rows = [row1, row2, row3] %}
+
+                                <div class="flex-1 w-full flex flex-col">
+                                {% for row in rows %}
+                                    <div class="grid grid-cols-1 md:grid-cols-{{ row.length }}">
+                                    {% for item in row %}
+                                        {% set room_name = item[0] %}
+                                        {% set events = item[1] %}
+                                        {% if events[1] %}
+                                        {% set event = events[1] %}
+                                        {% set bg_color = roomColors[room_name] %}
+                                        <div class="flex flex-wrap gap-0 py-0">
+                                            {% if event.url %}
+                                            <a href="{{ event.url }}"
+                                                class="w-full p-4 bg-white border border-black transform hover:-translate-y-1 transition duration-500 ease-in-out hover:bg-pycon-lime cursor-pointer no-underline text-inherit h-48 overflow-hidden">
+                                            {% else %}
+                                            <div class="w-full p-4 h-48 overflow-hidden border border-black">
+                                            {% endif %}
+                                                <div class="flex justify-between items-center text-sm mb-1">
+                                                <p class="font-medium text-black px-2 rounded-lg" style="background-color: {{ bg_color }}">
+                                                    {{ event.room }}
+                                                </p>
+                                                </div>
+                                                <p class="mb-1 font-bold">{{ event.start }} - {{ event.start | getEndTime(event.duration) }}</p>
+                                                <p class="mb-1 text-md line-clamp-2">
+                                                {{ event.title }}
+                                                </p>
+                                                <p class="font-semibold text-md text-pycon-blue">
+                                                {% for person in event.persons %}
+                                                    {{ person.public_name }}{% if not loop.last %}, {% endif %}
+                                                {% endfor %}
+                                                </p>
+                                            {% if event.url %}
+                                            </a>
+                                            {% else %}
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </div>
+                                {% endfor %}
+                                </div>
+                            </div>
+
+                            <!-- End of Day -->
+                            <div class="flex w-full">
+                                {# <div class="w-1/6 hidden md:flex items-center justify-center border text-xl font-bold border-black bg-white">
+                                    17:00
+                                </div> #}
+
+                                <div class="flex-1 w-full p-8 border border-black bg-[#8896FA]">
+                                    <p class="mb-0 text-lg">END OF WORKSHOP DAY!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% elif day.index == 4 %}
+                        <p class="text-2xl font-bold text-gray-700">Devsprint Schedule - Coming Soon!</p>
+                        
+                        {% else %}
+                        <div>
+                            {# Build fixed schedule array and assign color #}
+                            {% set fixed_schedule = [] %}
+                            {% for sch in scheduleFixed[day.index-1].schedule %}
+                                {% set fixed_schedule = fixed_schedule.concat([{
+                                    'type': 'fixed',
+                                    'start_time': sch.start_time,
+                                    'end_time': sch.end_time,
+                                    'title': sch.title,
+                                    'bg_color': sch.color
+                                }]) %}
+                            {% endfor %}
+
+                            {# Build room events array #}
+                            {% set room_events = [] %}
+                            {% for room_name, _ in day.rooms %}
+                                {% set room_color = roomColors[room_name] %}
+                                {% for event in day.rooms[room_name] %}
+                                    {% set room_events = room_events.concat([{
+                                        'type': 'event',
+                                        'start_time': event.start,
+                                        'end_time': event.start | getEndTime(event.duration),
+                                        'room': room_name,
+                                        'track': event.track,
+                                        'title': event.title,
+                                        'url': event.url,
+                                        'persons': event.persons,
+                                        'bg_color': room_color
+                                    }]) %}
+                                {% endfor %}
+                            {% endfor %}
+
+                            {# Merge fixed_schedule and room_events #}
+                            {% set combined_schedule = fixed_schedule.concat(room_events) %}
+
+                            {# Sort combined_schedule by start_time #}
+                            {% set combined_schedule = combined_schedule | sort(attribute='start_time') %}
+
+                            <!-- Mobile (small devices): full-width stacked rendering -->
+                            <div class="block md:hidden w-full">
+                                {% for item in combined_schedule %}
+                                    {% if item.type == 'fixed' %}
+                                        <div class="w-full p-4 border border-black" style="background-color: {{ item.bg_color }};">
+                                            {% if "Keynote" in item.title %}
+                                            <div class="text-left">
+                                                <p class="font-medium text-sm text-black px-2 mb-0 rounded-lg inline-block" style="background-color: #1FFFB4">
+                                                    Keynote
+                                                </p>
+                                            </div>
+                                            {% endif %}
+                                            <p class="mb-0 font-bold">{{ item.start_time }} - {{ item.end_time }}</p>
+                                            <p class="mb-0 text-lg">{{ item.title|upper }}</p>
+                                        </div>
+                                    {% else %}
+                                        {% if item.url %}
+                                            <a href="{{ item.url }}"
+                                            class="w-full p-4 border bg-white border-black h-48 overflow-hidden no-underline text-inherit block">
+                                        {% else %}
+                                            <div class="w-full p-4 border border-black h-48 overflow-hidden"
+                                                style="background-color: {{ item.bg_color }};">
+                                        {% endif %}
+                                            <div class="flex justify-between items-center text-sm mb-1">
+                                                <p class="font-medium text-black px-2 rounded-lg" style="background-color: {{ item.bg_color }}">
+                                                    {{ item.room }}
+                                                </p>
+                                            </div>
+                                            <p class="mb-1 font-bold">{{ item.start_time }} - {{ item.end_time }}</p>
+                                            <p class="mb-1 text-md line-clamp-2">{{ item.title }}</p>
+                                            <p class="font-semibold text-md text-pycon-blue">
+                                                {% for person in item.persons %}
+                                                    {{ person.public_name }}{% if not loop.last %}, {% endif %}
+                                                {% endfor %}
+                                            </p>
+                                        {% if item.url %}
+                                            </a>
+                                        {% else %}
+                                            </div>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+
+                            <!-- Desktop (md+): 3-column layout with grouped tracks -->
+                            <div class="hidden md:block">
+                                {% set current_events = [] %}
+                                {% for item in combined_schedule %}
+                                    {% if item.type == 'fixed' %}
+                                        {% if current_events.length > 0 %}
+                                            <div class="flex w-full">
+                                                <!-- Right grid block -->
+                                                <div class="flex-1 w-full grid grid-cols-1 md:grid-cols-3">
+                                                    {% for room_name, _ in day.rooms %}
+                                                        <div>
+                                                            {% for event in current_events %}
+                                                                {% if event.room == room_name %}
+                                                                    <div class="flex flex-wrap gap-0 py-0">
+                                                                        {% if event.url %}
+                                                                            <a href="{{ event.url }}"
+                                                                            class="w-full p-4 border border-black bg-white transform hover:-translate-y-1 transition duration-500 ease-in-out hover:bg-pycon-lime cursor-pointer no-underline text-inherit h-48 overflow-hidden">
+                                                                        {% else %}
+                                                                            <div class="w-full p-4 border border-black h-48 overflow-hidden">
+                                                                        {% endif %}
+                                                                            <div class="flex justify-between items-center text-sm mb-1">
+                                                                                <p class="font-medium text-black px-2 rounded-lg" style="background-color: {{ event.bg_color }}">
+                                                                                    {{ event.room }}
+                                                                                </p>
+                                                                            </div>
+                                                                            <p class="mb-1 font-bold">{{ event.start_time }} - {{ event.end_time }}</p>
+                                                                            <p class="mb-1 text-md line-clamp-2">
+                                                                                {{ event.title }}
+                                                                            </p>
+                                                                            <p class="font-semibold text-md text-pycon-blue">
+                                                                                {% for person in event.persons %}
+                                                                                    {{ person.public_name }}{% if not loop.last %}, {% endif %}
+                                                                                {% endfor %}
+                                                                            </p>
+                                                                        {% if event.url %}
+                                                                            </a>
+                                                                        {% else %}
+                                                                            </div>
+                                                                        {% endif %}
+                                                                    </div>
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                            {% set current_events = [] %}
+                                        {% endif %}
+
+                                        <div class="flex w-full">
+                                            <div class="flex-1 w-full p-4 border border-black bg-[#D0DCFF]" style="background-color: {{ item.bg_color }};">
+                                                {% if "Keynote" in item.title %}
+                                                <div class="text-left">
+                                                    <p class="font-medium text-sm text-black px-2 mb-0 rounded-lg inline-block" style="background-color: #1FFFB4">
+                                                        Keynote
+                                                    </p>
+                                                </div>
+                                                {% endif %}
+                                                <p class="mb-0 font-bold">{{ item.start_time }} - {{ item.end_time }}</p>
+                                                <p class="mb-0 text-lg">{{ item.title|upper }}</p>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        {% set current_events = current_events.concat([item]) %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
 </div>
