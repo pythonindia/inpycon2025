@@ -33,7 +33,7 @@
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 bg-transparent">
                     {% for company in tier.companies %}
-                        <div class="aspect-[3/2] bg-white border border-gray-300 flex items-center justify-center p-4">
+                        <div class="h-20 sm:h-24 md:h-28 bg-white border border-gray-300 flex items-center justify-center p-3">
                             <a href="{{ company.link }}" target="_blank" rel="noopener noreferrer" class="w-full h-full flex items-center justify-center">
                                 <img src="{{ env.baseUrl }}{{ company.logo }}" alt="{{ company.name }} - {{ company.description }}" class="max-w-full max-h-full object-contain">
                             </a>
