@@ -62,6 +62,16 @@
         "isExternal": false
     },
     {
+        "name": "About",
+        "hasSubmenu": true,
+        "submenu": [
+            {
+                "name": "Contact Us",
+                "link": "about/contact-us"
+            }
+        ]
+    },
+    {
         "name": "Code of Conduct",
         "hasSubmenu": true,
         "submenu": [
