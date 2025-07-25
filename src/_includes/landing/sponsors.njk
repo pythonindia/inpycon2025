@@ -31,11 +31,11 @@
                 <div class="bg-white inline-block px-4 sm:px-8 py-2 font-bold text-base sm:text-lg shadow uppercase">
                     {{ tier.title }}
                 </div>
-                <div class="grid grid-cols-4 bg-transparent overflow-x-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 bg-transparent">
                     {% for company in tier.companies %}
-                        <div class="h-16 sm:h-20 bg-white border border-gray-300 flex items-center justify-center min-w-24">
-                            <a href="{{ company.link }}" target="_blank" rel="noopener noreferrer">
-                                <img src="{{ env.baseUrl }}{{ company.logo }}" alt="{{ company.name }} - {{ company.description }}" class="h-full object-contain p-2">
+                        <div class="aspect-[3/2] bg-white border border-gray-300 flex items-center justify-center p-4">
+                            <a href="{{ company.link }}" target="_blank" rel="noopener noreferrer" class="w-full h-full flex items-center justify-center">
+                                <img src="{{ env.baseUrl }}{{ company.logo }}" alt="{{ company.name }} - {{ company.description }}" class="max-w-full max-h-full object-contain">
                             </a>
                         </div>
                     {% endfor %}
