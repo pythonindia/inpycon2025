@@ -1,225 +1,183 @@
-{% macro navbar(isHomePage = false, env = env) %}
+{% macro navbar(isHomePage = false, env = env, menuItems=[]) %}
 <nav class="w-full flex justify-center {% if isHomePage %}bg-black{% else %}bg-pycon-blue{% endif %} z-50 fixed top-0 left-0 right-0 transition-all duration-500" id="main-navbar">
-  <div class="w-full max-w-5xl mx-auto px-6 hidden md:block py-3">
-    <div class="relative flex justify-center items-center h-12 px-6">
-      <a href="{{ env.baseUrl }}" class="absolute left-0">
-        <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-10 w-auto">
-      </a>
-     <ul class="flex items-center justify-center w-full gap-1 lg:gap-4 relative mb-0">
-        {% set menuItems = [
-          {
-            "name": "Attend",
-            "hasSubmenu": true,
-            "submenu": [
-              {"name": "Venue", "link": "venue"},
-              {"name": "Scholarships", "link": "attend/scholarships"},
-              {"name": "Accessibility", "link": "attend/accessibility"},
-              {"name": "Health and Safety", "link": "attend/health-and-safety"},
-              {"name": "FAQ's", "link": "attend/faqs"}
-            ]
-          },
-          {
-            "name": "Schedule",
-            "link": "program/schedule",
-            "hasSubmenu": false,
-            "isExternal": false
-          },
-          {
-            "name": "Program",
-            "hasSubmenu": true,
-            "submenu": [
-              {"name": "Schedule", "link": "program/schedule"},
-              {"name": "CFP Overview", "link": "cfp"},
-              {"name": "Talks and Workshops", "link": "cfp/talks"},
-              {"name": "Panel Discussions", "link": "cfp/panel"},
-              {"name": "Poster Presentations", "link": "cfp/poster"},
-              {"name": "Lightning Talks", "link": "program/lightning-talks"}
-            ]
-          },
-          {
-            "name": "Sponsors",
-            "link": "sponsors",
-            "hasSubmenu": false,
-            "isExternal": false
-          },
-          {
-            "name": "Code of Conduct",
-            "hasSubmenu": true,
-            "submenu": [
-              {"name": "Code of Conduct Policy", "link": "coc/policy"},
-              {"name": "Reporting Guide", "link": "coc/reporting"}
-            ]
-          },
-          {
-            "name": "Blog",
-            "link": "https://in.pycon.org/blog/",
-            "hasSubmenu": false,
-            "isExternal": true
-          }
-        ] %}
+    <div class="w-full mx-auto px-6 hidden lg:block py-3">
+        <div class="relative flex justify-center items-center h-12 px-6">
+            <ul class="flex items-center justify-center w-full gap-8 relative mb-0">
+                <li class="relative mr-5">
+                    <a href="{{ env.baseUrl }}" class="flex items-center text-white hover:text-[#D7FF7B] text-base font-normal leading-tight transition-colors duration-200 no-underline">
+                        <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-10 w-auto object-contain max-w-[160px] min-w-[40px]">
+                    </a>
+                </li>
+            
+                <input type="radio" id="desktop-menu-close-all" name="desktop-menu-radio" class="sr-only hidden" checked>
+                {% for item in menuItems %}
+                    {% if item.hasSubmenu %}
+                        <input type="radio" id="desktop-menu-radio-{{ loop.index + 1 }}" name="desktop-menu-radio" class="sr-only hidden">
+                    {% endif %}
+                {% endfor %}
+            
+                {% for item in menuItems %}
+                <li class="relative">
+                    {% if item.hasSubmenu %}
+                    <label for="desktop-menu-radio-{{ loop.index + 1 }}" class="flex whitespace-nowrap items-center gap-1 py-2 px-3 text-white hover:text-[#D7FF7B] text-base font-normal leading-tight transition-colors duration-200 cursor-pointer nav-link">
+                        {{ item.name }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" class="ml-1 fill-current text-gray-400 transition-transform duration-200">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </label>
+                
+                    <label for="desktop-menu-close-all" class="fixed inset-0 bg-transparent z-0 hidden"></label>
+                
+                    <div class="absolute left-0 top-full mt-1 w-auto invisible opacity-0 transition-all duration-200 z-10 transform origin-top scale-95 dropdown-glass rounded-lg shadow-lg">
+                        <div class="w-full rounded-lg border border-white/10">   
+                            <div class="w-full flex flex-col">     
+                                {% for subitem in item.submenu %}
+                                <a href="{{ env.baseUrl }}{{ subitem.link }}" class="block no-underline group">
+                                    <div class="w-full p-4 bg-white/90 hover:bg-pycon-lime border-b border-black/10 flex justify-between items-center transition-colors duration-150
+                                        {% if loop.first %} rounded-t-lg {% endif %}
+                                        {% if loop.last %} rounded-b-lg border-b-0 {% endif %}">
+                                        <span class="text-gray-800 group-hover:text-[#4662ff] text-sm font-medium font-['Inter'] leading-tight">
+                                        {{ subitem.name }}
+                                        </span>
+                                        <div class="size-5 relative overflow-hidden">
+                                        <div class="bg-gray-400 group-hover:bg-pycon-blue w-[5.49px] h-[9.31px] left-[7.50px] top-[5.35px] absolute transition-colors duration-150"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                                {% endfor %}
 
-        <input type="radio" id="desktop-menu-close-all" name="desktop-menu-radio" class="sr-only hidden" checked>
-        {% for item in menuItems %}
-          {% if item.hasSubmenu %}
-            <input type="radio" id="desktop-menu-radio-{{ loop.index }}" name="desktop-menu-radio" class="sr-only hidden">
-          {% endif %}
-        {% endfor %}
-
-        {% for item in menuItems %}
-          <li class="relative">
-            {% if item.hasSubmenu %}
-              <label for="desktop-menu-radio-{{ loop.index }}"
-                     class="flex items-center gap-1 py-2 px-2 text-white hover:text-[#D7FF7B] text-base font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 cursor-pointer nav-link">
-                {{ item.name }}
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" class="ml-1 fill-current text-gray-400 transition-transform duration-200">
-                  <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                </svg>
-              </label>
-
-              <label for="desktop-menu-close-all" class="fixed inset-0 bg-transparent z-0 hidden"></label>
-
-              <div class="absolute left-0 top-full mt-1 w-auto invisible opacity-0 transition-all duration-200 z-10 transform origin-top scale-95 dropdown-glass rounded-lg shadow-lg">
-                <div class="w-full rounded-lg border border-white/10">
-                  <div class="w-full flex flex-col">
-                    {% for subitem in item.submenu %}
-                    <div class="w-full p-4 bg-white/90 hover:bg-pycon-lime border-b border-black/10 flex justify-between items-center transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg last:border-b-0">
-                      <a href="{{ env.baseUrl }}{{ subitem.link }}" class="text-gray-800 hover:text-[#4662ff] text-sm font-medium font-['Inter'] leading-tight no-underline dropdown-item block w-full">
-                        {{ subitem.name }}
-                      </a>
-                      <div class="size-5 relative overflow-hidden">
-                        <div class="bg-gray-400 hover:bg-pycon-blue w-[5.49px] h-[9.31px] left-[7.50px] top-[5.35px] absolute transition-colors duration-150"></div>
-                      </div>
+                            </div> 
+                        </div>
                     </div>
-                    {% endfor %}
-                  </div>
-                </div>
-              </div>
-            {% else %}
-              <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' %}{{ item.link }}{% else %}{{ env.baseUrl }}{{ item.link }}{% endif %}"
-                 {% if item.isExternal %}target="_blank" rel="noopener noreferrer"{% endif %}
-                 class="flex items-center gap-1 py-2 px-2 text-white hover:text-[#D7FF7B] text-base font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 no-underline nav-link">
-                {{ item.name }}
-              </a>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-      <div class="absolute right-0">
-        <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline nav-button">
-          <span class="hidden lg:inline">Get Tickets</span><span class="inline-flex items-center gap-1 lg:hidden">Get<svg fill="#4e61f5" height="14" width="14" viewBox="0 0 14.85 14.85" xmlns="http://www.w3.org/2000/svg" class="inline-block"><path d="M14.522 8.884a1.17 1.17 0 0 1 -0.653 -0.621 1.17 1.17 0 0 1 -0.023 -0.901c0.043 -0.112 0.045 -0.235 0.007 -0.348                        -0.288 0.127 -0.489 0.415 -0.489 0.749 0 0.48 -0.39 0.87 -0.87 0.87h-2.767a0.5 0.5 0 0 1 -0.027 0.096c-0.078 0.204 -0.272                        0.329 -0.478 0.329 -0.061 0 -0.123 -0.011 -0.184 -0.034 -0.174 -0.067 -0.29 -0.219 -0.32 -0.39H2.357c-0.48 0 -0.87 -0.39                        -0.87 -0.87 0 -0.452 -0.367 -0.819 -0.819 -0.819a0.865 0.865 0 0 1 -0.392 -0.094L0.034 7.48c-0.102 0.264 0.03 0.56 0.294                        0.662 0.606 0.233 0.909 0.916 0.676 1.522 -0.101 0.264 0.03 0.56 0.294 0.662l9.46 3.638c0.06 0.023 0.123 0.034 0.184                        0.034 0.206 0 0.4 -0.125 0.478 -0.328 0.174 -0.452 0.616 -0.755 1.099 -0.755 0.144 0 0.286 0.027 0.422 0.079a0.512 0.512                        0 0 0 0.662 -0.294l1.213 -3.153c0.102 -0.264 -0.03 -0.56 -0.294 -0.662zm-5.814 2.425a0.513 0.513 0 0 1 -0.478 0.329 0.52                        0.52 0 0 1 -0.184 -0.034c-0.264 -0.101 -0.395 -0.398 -0.294 -0.661 0.101 -0.264 0.398 -0.396 0.661 -0.294 0.264 0.102                        0.396 0.398 0.294 0.661zm0.496 -1.29a0.512 0.512 0 0 1 -0.478 0.329c-0.061 0 -0.123 -0.011 -0.184 -0.034 -0.264 -0.101                        -0.396 -0.398 -0.294 -0.661 0.101 -0.264 0.397 -0.396 0.661 -0.294 0.264 0.101 0.395 0.398 0.294 0.661zm2.641 0.193a0.512                        0.512 0 0 1 -0.478 0.328c-0.061 0 -0.123 -0.011 -0.184 -0.034l-0.788 -0.303c-0.264 -0.102 -0.396 -0.398 -0.294 -0.662                        0.102 -0.264 0.398 -0.395 0.662 -0.294l0.788 0.303c0.264 0.101 0.396 0.398 0.294 0.662z"/><path d="M0.668 6.228c0.847 0 1.536 0.689 1.536 1.536a0.154 0.154 0 0 0 0.154 0.154h10.135a0.154 0.154 0 0 0 0.154 -0.154c0                      -0.847 0.689 -1.536 1.536 -1.536a0.154 0.154 0 0 0 0.154 -0.154v-3.378a0.154 0.154 0 0 0 -0.154 -0.154c-0.847 0 -1.536                      -0.689 -1.536 -1.536a0.154 0.154 0 0 0 -0.154 -0.154H2.357a0.154 0.154 0 0 0 -0.154 0.154c0 0.847 -0.689 1.536 -1.536                      1.536a0.154 0.154 0 0 0 -0.154 0.154v3.378a0.153 0.153 0 0 0 0.153 0.154zM10.803 3.873h0.845c0.283 0 0.512 0.229 0.512                      0.512s-0.229 0.512 -0.512 0.512H10.803c-0.283 0 -0.512 -0.229 -0.512 -0.512s0.229 -0.512 0.512 -0.512zm-1.689                      -2.724c0.283 0 0.512 0.229 0.512 0.512s-0.229 0.512 -0.512 0.512c-0.283 0 -0.512 -0.229 -0.512 -0.512 0 -0.283 0.229                      -0.512 0.512 -0.512zm0 1.382c0.283 0 0.512 0.229 0.512 0.512s-0.229 0.512 -0.512 0.512c-0.283 0 -0.512 -0.229 -0.512                      -0.512 0 -0.283 0.229 -0.512 0.512 -0.512zm0 1.382c0.283 0 0.512 0.229 0.512 0.512s-0.229 0.512 -0.512 0.512c-0.283 0                      -0.512 -0.229 -0.512 -0.512 0 -0.283 0.229 -0.512 0.512 -0.512zm0 1.382c0.283 0 0.512 0.229 0.512 0.512s-0.229 0.512                      -0.512 0.512c-0.283 0 -0.512 -0.229 -0.512 -0.512 0 -0.283 0.229 -0.512 0.512 -0.512zm0 1.382c0.283 0 0.512 0.229 0.512                      0.512s-0.229 0.512 -0.512 0.512c-0.283 0 -0.512 -0.229 -0.512 -0.512 0 -0.283 0.229 -0.512 0.512 -0.512z"/></svg></span>
-        </a>
-      </div>
+                    {% else %}
+                    <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' %}{{ item.link }}{% else %}{{ env.baseUrl }}{{ item.link }}{% endif %}"
+                        {% if item.isExternal %}target="_blank" rel="noopener noreferrer"{% endif %}
+                        class="flex items-center gap-1 py-2 px-3 text-white hover:text-[#D7FF7B] text-base font-normal font-['Acid_Grotesk'] leading-tight transition-colors duration-200 no-underline nav-link">
+                        {{ item.name }}
+                    </a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+
+                <li class="relative ml-5">
+                    <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline whitespace-nowrap">
+                        Get Tickets
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 
-  <div class="flex justify-between items-center px-4 py-3 w-full md:hidden">
-    <a href="{{ env.baseUrl }}" class="flex items-center z-20">
-      <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-8 w-auto">
-    </a>
-
-    <input type="checkbox" id="mobile-menu-checkbox" class="hidden">
-    <label for="mobile-menu-checkbox" class="cursor-pointer z-50 hover:bg-white/30 p-2 rounded-full transition-all duration-300 inline-flex items-center justify-center">
-      <svg width="24" height="22" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_223_10553)">
-          <path d="M11.0351 0.0117188H0.0117188V11.0351H11.0351V0.0117188Z" fill="#F6EBFF" stroke="black" stroke-width="0.0232085" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M13.3602 1.96484H2.33691V12.9882H13.3602V1.96484Z" fill="#D7FF7B" stroke="black" stroke-width="0.062458" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M0.0117188 0.0117188L2.33721 1.96518H13.3608L11.0351 0.0117188H0.0117188Z" fill="white" stroke="black" stroke-width="0.062458" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M0.0117188 0.0117188L2.33721 1.96518V12.9885L0.0117188 11.0351V0.0117188Z" fill="white" stroke="black" stroke-width="0.062458" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="4" y="4" width="8" height="0.5" rx="0.25" fill="#4E62F5"/>
-          <rect x="4" y="7" width="8" height="0.5" rx="0.25" fill="#4E62F5"/>
-          <rect x="4" y="10" width="8" height="0.5" rx="0.25" fill="#4E62F5"/>
-        </g>
-        <defs>
-          <clipPath id="clip0_223_10553">
-            <rect width="13.3723" height="13" fill="white"/>
-          </clipPath>
-        </defs>
-      </svg>
-    </label>
-  </div>
+    <div class="flex justify-between items-center px-4 py-3 pb-4 w-full lg:hidden">
+        <a href="{{ env.baseUrl }}" class="flex items-center z-20">
+        <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-8 w-auto">
+        </a>
+    
+        <input type="checkbox" id="mobile-menu-checkbox" class="hidden">
+        <label for="mobile-menu-checkbox" class="cursor-pointer z-50 hover:bg-white/30 rounded-full transition-all duration-300 inline-flex items-center justify-center">
+            <svg width="30" height="30" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_223_10553)">
+                <path d="M11.0351 0.0117188H0.0117188V11.0351H11.0351V0.0117188Z" fill="#F6EBFF" stroke="black" stroke-width="0.0232085" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.3602 1.96484H2.33691V12.9882H13.3602V1.96484Z" fill="#D7FF7B" stroke="black" stroke-width="0.062458" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M0.0117188 0.0117188L2.33721 1.96518H13.3608L11.0351 0.0117188H0.0117188Z" fill="white" stroke="black" stroke-width="0.062458" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M0.0117188 0.0117188L2.33721 1.96518V12.9885L0.0117188 11.0351V0.0117188Z" fill="white" stroke="black" stroke-width="0.062458" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="4" y="4" width="8" height="0.5" rx="0.25" fill="#4E62F5"/>
+                <rect x="4" y="7" width="8" height="0.5" rx="0.25" fill="#4E62F5"/>
+                <rect x="4" y="10" width="8" height="0.5" rx="0.25" fill="#4E62F5"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_223_10553">
+                    <rect width="13.3723" height="13" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>
+        </label>
+    </div>
 </nav>
 
 <div id="mobile-menu" class="fixed inset-0 bg-pycon-blue/95 backdrop-blur-md z-[1000] hidden overflow-auto">
-  <div class="text-center pt-6 pb-4">
-    <a href="{{ env.baseUrl }}" class="inline-block">
-      <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-12 w-auto">
-    </a>
-  </div>
+    <div class="text-center pt-6 pb-4">
+        <a href="{{ env.baseUrl }}" class="inline-block">
+            <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India 2025" class="h-12 w-auto">
+        </a>
+    </div>
 
-  <div class="absolute top-4 right-4">
-    <button id="mobile-close-btn" class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
-  </div>
-
-  <div class="container mx-auto px-4 py-4">
-    <div class="flex flex-col space-y-4">
-      {% for item in menuItems %}
-        {% if not item.hasSubmenu %}
-            <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' %}{{ item.link }}{% else %}{{ env.baseUrl }}{{ item.link }}{% endif %}"
-             {% if item.isExternal %}target="_blank" rel="noopener noreferrer"{% endif %}
-             class="p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white/20 flex justify-between items-center transition-all duration-200 text-white text-base font-medium no-underline">
-            {{ item.name }}
-            {% if item.isExternal %}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
+    <div class="absolute top-4 right-4">
+        <button id="mobile-close-btn" class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
-            {% endif %}
-          </a>
-        {% else %}
-          <div class="mobile-menu-item">
-            <input type="checkbox" id="submenu-checkbox-{{ loop.index }}" class="hidden mobile-submenu-checkbox">
-            <label for="submenu-checkbox-{{ loop.index }}" class="p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white/20 flex justify-between items-center cursor-pointer transition-all duration-200">
-              <span class="text-white text-base font-medium">{{ item.name }}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white mobile-submenu-icon transition-transform duration-300">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </label>
+        </button>
+    </div>
+  
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col space-y-4">
+        {% for item in menuItems %}
+            {% if not item.hasSubmenu %}
+                <a href="{% if item.isExternal %}{{ item.link }}{% elif item.link and item.link[0] == '#' %}{{ item.link }}{% else %}{{ env.baseUrl }}{{ item.link }}{% endif %}"
+                {% if item.isExternal %}target="_blank" rel="noopener noreferrer"{% endif %}
+                class="p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white/20 flex justify-between items-center transition-all duration-200 text-white text-base font-medium no-underline">
+                {{ item.name }}
+                    {% if item.isExternal %}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    {% endif %}
+                </a>
+            {% else %}
+            <div class="mobile-menu-item">
+                <input type="checkbox" id="submenu-checkbox-{{ loop.index }}" class="hidden mobile-submenu-checkbox">
+                <label for="submenu-checkbox-{{ loop.index }}" class="p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white/20 flex justify-between items-center cursor-pointer transition-all duration-200">
+                <span class="text-white text-base font-medium">{{ item.name }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white mobile-submenu-icon transition-transform duration-300">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                </label>
 
-            <div class="hidden mt-2 mobile-submenu">
-              <div class="bg-pycon-lime/90 backdrop-blur-sm border border-black/10 rounded-lg p-3 flex flex-col gap-2">
-                {% for subitem in item.submenu %}
-                  <a href="{{ env.baseUrl }}{{ subitem.link }}" class="p-2 text-gray-800 text-sm font-medium hover:text-[#4E62F5] transition-colors duration-200 no-underline">
-                    {{ subitem.name }}
-                  </a>
-                {% endfor %}
-              </div>
+                <div class="hidden mt-2 mobile-submenu">
+                    <div class="bg-white backdrop-blur-sm border border-black/10 rounded-lg flex flex-col">
+                        {% for subitem in item.submenu %}
+                        <a href="{{ env.baseUrl }}{{ subitem.link }}"
+                            class="p-4 text-gray-800 text-sm font-medium hover:text-[#4E62F5] transition-colors duration-200 no-underline
+                            {% if not loop.first %}border-t{% endif %}
+                            {% if not loop.first and not loop.last %}border-gray-300{% endif %}">
+                                {{ subitem.name }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
-          </div>
-        {% endif %}
-      {% endfor %}
+            {% endif %}
+        {% endfor %}
+            <div class="mt-6">
+                <a href="{{ env.baseUrl }}tickets" class="flex justify-center items-center bg-pycon-lime text-black font-medium rounded-lg p-4 text-center w-full no-underline text-base transition-all duration-200 hover:bg-pycon-lime/80">
+                Get Tickets
+                </a>
+            </div>
+        </div>
 
-      <div class="mt-6">
-        <a href="{{ env.baseUrl }}tickets" class="flex justify-center items-center bg-pycon-lime text-black font-medium rounded-lg p-4 text-center w-full no-underline text-base transition-all duration-200 hover:bg-pycon-lime/80">
-          Get Tickets
-        </a>
-      </div>
+        <div class="mt-12 pt-6 border-t border-white/20">
+            <div class="flex justify-center gap-6 mb-4">
+                <a href="https://www.linkedin.com/company/pyconindia/" target="_blank" rel="noopener" class="text-white hover:text-pycon-lime">
+                <i class="fab fa-linkedin text-3xl"></i>
+                </a>
+                <a href="https://x.com/pyconindia" target="_blank" rel="noopener" class="text-white hover:text-pycon-lime">
+                <i class="fab fa-x-twitter text-3xl"></i>
+                </a>
+                <a href="https://www.instagram.com/inpycon/" target="_blank" rel="noopener" class="text-white hover:text-pycon-lime">
+                <i class="fab fa-instagram text-3xl"></i>
+                </a>
+                <a href="https://fosstodon.org/@pyconindia" target="_blank" rel="noopener" class="text-white hover:text-pycon-lime">
+                <i class="fab fa-mastodon text-3xl"></i>
+                </a>
+            </div>
+            <div class="text-white/80 text-xs text-center">
+                © 2025 PyCon India. All rights reserved.
+            </div>
+        </div>
     </div>
-
-    <div class="mt-12 pt-6 border-t border-white/20">
-      <div class="flex justify-center gap-6 mb-4">
-        <a href="https://www.linkedin.com/company/pyconindia/" target="_blank" rel="noopener" class="text-white hover:text-pycon-lime">
-          <i class="fab fa-linkedin text-3xl"></i>
-        </a>
-        <a href="https://x.com/pyconindia" target="_blank" rel="noopener" class="text-white hover:text-pycon-lime">
-          <i class="fab fa-x-twitter text-3xl"></i>
-        </a>
-        <a href="https://www.instagram.com/inpycon/" target="_blank" rel="noopener" class="text-white hover:text-pycon-lime">
-          <i class="fab fa-instagram text-3xl"></i>
-        </a>
-        <a href="https://fosstodon.org/@pyconindia" target="_blank" rel="noopener" class="text-white hover:text-pycon-lime">
-          <i class="fab fa-mastodon text-3xl"></i>
-        </a>
-      </div>
-      <div class="text-white/80 text-xs text-center">
-        © 2025 PyCon India. All rights reserved.
-      </div>
-    </div>
-  </div>
 </div>
 {% endmacro %}

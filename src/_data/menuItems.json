@@ -1,0 +1,84 @@
+[
+    {
+        "name": "Attend",
+        "hasSubmenu": true,
+        "submenu": [
+            {
+                "name": "Venue",
+                "link": "venue"
+            },
+            {
+                "name": "Scholarships",
+                "link": "attend/scholarships"
+            },
+            {
+                "name": "Accessibility",
+                "link": "attend/accessibility"
+            },
+            {
+                "name": "Health and Safety",
+                "link": "attend/health-and-safety"
+            },
+            {
+                "name": "FAQ's",
+                "link": "attend/faqs"
+            }
+        ]
+    },
+    {
+        "name": "Program",
+        "hasSubmenu": true,
+        "submenu": [
+            {
+                "name": "Schedule",
+                "link": "program/schedule"
+            },
+            {
+                "name": "CFP Overview",
+                "link": "cfp"
+            },
+            {
+                "name": "Talks and Workshops",
+                "link": "cfp/talks"
+            },
+            {
+                "name": "Panel Discussions",
+                "link": "cfp/panel"
+            },
+            {
+                "name": "Poster Presentations",
+                "link": "cfp/poster"
+            },
+            {
+                "name": "Lightning Talks",
+                "link": "program/lightning-talks"
+            }
+        ]
+    },
+    {
+        "name": "Sponsors",
+        "link": "sponsors",
+        "hasSubmenu": false,
+        "isExternal": false
+    },
+    {
+        "name": "Code of Conduct",
+        "hasSubmenu": true,
+        "submenu": [
+            {
+                "name": "Code of Conduct Policy",
+                "link": "coc/policy"
+            },
+            {
+                "name": "Reporting Guide",
+                "link": "coc/reporting"
+            }
+        ]
+    },
+    {
+        "name": "Blog",
+        "link": "https://in.pycon.org/blog/",
+        "hasSubmenu": false,
+        "isExternal": true
+    }
+]
