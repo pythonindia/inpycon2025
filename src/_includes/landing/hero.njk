@@ -20,11 +20,11 @@
         PyCon India 2025 is the premier conference for Python enthusiasts and professionals, offering an unparalleled
         opportunity to dive deep into the world of Python and explore its limitless potential. Stay tuned for updates!
     </p>
-    <div>
+    {# <div>
         {{ button(text="Get Tickets", url=env.baseUrl + "tickets", lime_bg=true)}}
-    </div>
+    </div> #}
     <div class="flex flex-wrap gap-4">
+        {{ button(text="Get Tickets", url=env.baseUrl + "tickets", lime_bg=true)}}
         {{ button(text="View Schedule", url=env.baseUrl + "program/schedule", lime_bg=true)}}
-        {# {{ button(text="Dev Sprint", url="#") }} #}
     </div>
 </div>
