@@ -4,7 +4,7 @@ description: PyCon India 2025 Venue at Nimhans Convention Center
 layout: base.njk
 ---
 {% from "components/button.njk" import button %}
-{% from "components/card.njk" import card %}
+{% from "components/venueCard.njk" import venueCard %}
 
 <header>
     {% set activePage = 'venue' %} 
@@ -33,9 +33,7 @@ layout: base.njk
                 <div class="pt-8">{{ button(text="Find Direction", url="https://maps.app.goo.gl/jwUM4FYX6G35YkYe7?g_st=com.google.maps.preview.copy", lime_bg=true, env = env) }}</div>
             </div>
             <div class="w-[90%] lg:w-[70%] xl:w-[52%] pt-24 pr-4 mx-auto lg:ml-auto">
-                {% call card(bg="lime") -%}
-                    <img src="{{ env.baseUrl }}img/nimhans-convention-center.jpeg" alt="Nimhans Convention Center" class="w-full h-full object-cover">
-                {%- endcall %}
+                {{ venueCard(bg="lime", venueData=venue.location, env=env) }}
             </div>
         </div>
 
@@ -55,14 +53,7 @@ layout: base.njk
                     <img src="{{ env.baseUrl }}img/assets/train.svg" alt="Train" class="h-10 ml-0 md:h-16 lg:h-28 mx-auto md:mx-0">
                 </div>
                 <div class="w-[80%] lg:w-[60%] xl:w-[50%] ml-auto xl:mr-[12%] -mt-20 lg:-mt-40">
-                    {% call card(bg="lime") -%}
-                        <div class="p-8 md:p-16 space-grotesk-regular">
-                            <p class="font-bold text-xl md:text-2xl">Via Namma Metro</p>
-                            <p class="pt-4 font-normal text-sm md:text-xl">From Green Line: Disembark at South End Circle or Lalbagh metro station. From the station, you can take a short taxi/auto ride to reach NIMHANS Convention Centre.</p>
-                            <p class="pt-4 font-normal text-sm md:text-xl">For a list of stations on the Bengaluru Metro Green line, you can refer to <a href="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true" target="_blank" rel="noopener noreferrer" class="underline">Wikipedia</a>.</p>
-                            <div class="pt-6 md:pt-10">{{ button(text="Green Line", url="https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true", lime_bg=true, env=env) }}</div>
-                        </div>
-                    {%- endcall %}
+                    {{ venueCard(bg="lime", venueData=venue.metro, env=env) }}
                 </div>
             </div>
         </div>
@@ -70,17 +61,7 @@ layout: base.njk
         <div class="pt-24 relative flex flex-col md:flex-row">
             <div class="flex-grow">
                 <div class="w-[80%] lg:w-[60%] xl:w-[60%] flex-shrink-0">
-                    {% call card(bg="purple") -%}
-                        <div class="p-8 md:p-16 space-grotesk-regular z-20">
-                            <p class="font-bold text-xl md:text-2xl">Via Bus</p>
-                            <p class="pt-4 font-normal text-sm md:text-xl">KIA-5D, get off at Jayanagar bus stand and NIMHANS is a few blocks away.</p>
-                            <p class="pt-4 font-normal text-sm md:text-xl">KIA-7 to Kormangala Water Tank which is 8 mins away from NIMHANS.</p>
-                            
-                            <p class="pt-4 font-normal text-sm md:text-xl">We're excited to welcome you to PyCon India 2025 and hope you have a fantastic experience in Bengaluru! If you have any further inquiries or need assistance, feel free to contact us at <a href="mailto:contact@in.pycon.org" target="_blank" rel="noopener noreferrer" class="underline">contact@in.pycon.org</a>.</p>
-                            
-                            <div class="pt-6 md:pt-10 z-30">{{ button(text="Bus Timetable", url="https://kia.bengawalk.com/", lime_bg=true, env=env) }}</div>
-                        </div>
-                    {%- endcall %}
+                    {{ venueCard(bg="purple", venueData=venue.bus, env=env) }}
                 </div>
                 <div class="mx-auto pl-40 flex items-center justify-center -mt-20 lg:-mt-40 z-10 relative" style="pointer-events: none;">
                     <img src="{{ env.baseUrl }}img/assets/bus.svg" alt="Bus" class="h-40 lg:h-56">
