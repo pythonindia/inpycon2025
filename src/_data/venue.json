@@ -1,0 +1,39 @@
+{
+  "metro": {
+    "title": "Via Namma Metro",
+    "paragraphs": [
+      "From Green Line: Disembark at South End Circle or Lalbagh metro station. From the station, you can take a short taxi/auto ride to reach NIMHANS Convention Centre.",
+      "For a list of stations on the Bengaluru Metro Green line, you can refer to <a href=\"https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">Wikipedia</a>."
+    ],
+    "button": {
+      "text":"Green Line",
+      "url": "https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true"
+    },
+    "backgroundImage": {
+      "url": null,
+      "alt": null
+    }
+  },
+  "bus": {
+    "title": "Via Bus",
+    "paragraphs": [
+      "KIA-5D, get off at Jayanagar bus stand and NIMHANS is a few blocks away.",
+      "KIA-7 to Kormangala Water Tank which is 8 mins away from NIMHANS.",
+      "We're excited to welcome you to PyCon India 2025 and hope you have a fantastic experience in Bengaluru! If you have any further inquiries or need assistance, feel free to contact us at <a href=\"mailto:contact@in.pycon.org\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">contact@in.pycon.org</a>."
+    ],
+    "button": {
+      "text":"Bus Timetable",
+      "url": "https://kia.bengawalk.com/"
+    },
+    "backgroundImage": {
+      "url": null,
+      "alt": null
+    }
+  },
+  "location": {
+    "backgroundImage": {
+      "url": "img/nimhans-convention-center.jpeg",
+      "alt": "Nimhans Convention Center"
+    }
+  }
+}
