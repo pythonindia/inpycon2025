@@ -1,82 +1,128 @@
 ---
 title: Community Booth Program
 description: |
-    PyCon India 2025 invites community groups to apply for a community booth, an excellent opportunity to engage with the vibrant Python community in India. A community booth allows you to showcase your work, connect with like-minded developers, and grow your network. It’s a great way to share your story, promote your initiatives, and inspire more contributors to join your cause.
-layout: page.njk
+    PyCon India 2025 invites community groups to apply for a community booth, an excellent opportunity to engage with the dynamic  Python enthusiasts   across India. A community booth helps to showcase your work, connect with like-minded folks, and grow your network. It’s a great way to share your story, promote your initiatives, and inspire more contributors to join your cause.
+layout: base.njk
 ---
+
 {% from "components/button.njk" import button %}
+{% from "components/flat-card.njk" import flatCard %}
 
+<div class="main-container pt-16 md:pt-12 bg-lavender w-full h-auto px-[6%]">
+    <div class="text-md lg:text-xl pt-12 text-black lg:pr-10 text-justify font-light">
+        <div class="mb-12">
+            <div class="space-y-6 mb-8">
+                <div>
+                    <p class="text-2xl font-bold flex items-center">
+                        <span class="bg-pycon-blue text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 font-bold text-sm flex-shrink-0">
+                            1
+                        </span>
+                        Guidelines
+                    </p>
+                    <div class="pt-4 text-md">
+                        <ul class="list-none pl-12 space-y-3">
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>Full access to the conference days 13th and 14th September only.</span>
+                            </li>
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>Make sure at least one person is always available at the booth.</span>
+                            </li>
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span>Follow the PyCon Code of Conduct.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="text-2xl font-bold flex items-center">
+                        <span class="bg-pycon-blue text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 font-bold text-sm flex-shrink-0">2</span>
+                        Note</p>
+                    <div class="pt-4 text-md">
+                        <ul class="list-none pl-12 space-y-3">
+                            <li class="flex">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                                <span> <span class="font-bold">Commercial Entities:</span> We’d love for you to consider <a href="https://in.pycon.org/2025/sponsors/">Sponsoring PyCon</a> instead of applying for a community booth.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <div class="flex flex-col sm:flex-row gap-4 items-start">
+                    {{ button(text="Ready? Apply here!", url="https://forms.gle/k7DdDNNcgyyXb63x5", lime_bg=true, env = env) }}
+                </div>
+            </div>
+        </div>
 
-<h3> Who can apply for a community booth?</h3>
+        <div class="grid md:grid-cols-2 gap-8 mb-24">
+            <div>
+                {% call flatCard(bg="purple") -%}
+                    <div class="flex items-center mb-4">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Deadline Icon" class="w-6 h-6 mr-3">
+                        <h3 class="text-xl md:text-3xl">Deadline</h3>
+                    </div>
+                    <p class="text-2xl text-black">The deadline to apply for the community booth is <strong>23rd August, 23:59 IST</strong>.</p>
+                {%- endcall %}
+            </div>
 
-<div class="text-[#000000] lg:pr-10">
-    <ul class="list-none">
-        <li class="flex">
-            <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-            <span><span class="font-bold">Open-Source Organizations:</span> Projects that contribute to the tech community through the development of open-source libraries, frameworks, tools, or software.</span>
-        </li>
-        <li class="flex">
-            <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-            <span><span class="font-bold">Non-Profit Organizations:</span> Non-profit entities dedicated to promoting technology, and supporting developers.</span>
-        </li>
-        <li class="flex">
-            <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-            <span><span class="font-bold">Technology Communities and User Groups:</span> Local or regional Python user groups, developer communities, or tech-focused organizations that engage and support tech enthusiasts.</span>
-        </li>
-    </ul>
-</div>
+            <div>
+                {% call flatCard(bg="purple") -%}
+                    <div class="flex items-center mb-4">
+                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Notification Icon" class="w-6 h-6 mr-3">
+                        <h3 class="text-xl md:text-3xl">Selection Notification</h3>
+                    </div>
+                    <p class="text-2xl text-black">While there is deadline for submitting, we'll notify to selected community as soon as we can.</p>
+                {%- endcall %}
+            </div>
+        </div>
 
+        <div class="mb-24">
+            <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left mb-8">
+                <p>Who can apply for a community booth?</p>
+            </div>
+            
+            <div class="space-y-4">
+                <ul class="list-none space-y-3">
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span class="text-md">
+                            <b>Open-Source Organizations:</b> Projects that contribute to the tech community through the development of open-source libraries, frameworks, tools, or software.
+                        </span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span class="text-md">
+                            <b>Non-Profit Organizations:</b> Non-profit entities dedicated to promoting technology, and supporting developers.</span>
+                        </span>
+                    </li>
+                    <li class="flex">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                        <span class="text-md">
+                        <b>Technology Communities and User Groups:</b> Local or regional Python user groups, developer communities, or tech-focused organizations that engage and support tech enthusiasts.</span>
+                    </li>
+                </ul>
+            </div>
 
-<h3> Who may not qualify as a community partner? </h3>
-
-<div class="text-[#000000] lg:pr-10">
-    <ul class="list-none">
-        <li class="flex">
-            <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-            <span><span class="font-bold">Unrelated or Unfitting Groups:</span> These are entities that lack a distinct link or pertinence to the Python community, its growth, or its intended goals.</span>
-        </li>
-        <li class="flex">
-            <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-            <span><span class="font-bold">Disputed Bodies:</span> Entities that advocate hate speech, prejudice, or participate in activities that are at odds with the principles of inclusivity, diversity, and respect that the PyCon India community supports.</span>
-        </li>
-        <li class="flex">
-            <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-            <span><span class="font-bold">Commercial Entities:</span> We’d love for you to consider <a href="https://in.pycon.org/2025/sponsors/">Sponsoring PyCon</a> instead of applying for a community booth.</span>
-        </li>
-    </ul>
-</div>
-
-<h3>Guidelines</h3>
-
-<div class="text-[#000000] lg:pr-10">
-    <ul class="list-none">
-        <li class="flex">
-            <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-            <span>Please make sure participants for this program have tickets for the conference.</span>
-        </li>
-        <li class="flex">
-            <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-            <span>Please make sure at least one person is always available at the booth.</span>
-        </li>
-        <li class="flex">
-            <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-            <span>Follow the conference's Code of Conduct at all times.</span>
-        </li>
-    </ul>
-</div>
-
-<h3>Selection</h3>
-<div class="text-[#000000] lg:pr-10">
-    <ul class="list-none">
-        <li class="flex">
-            <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-            <span>
-    We’d love for you to apply for a community booth at PyCon India 2025! The organizing team will review all applications and make the final call, keeping in mind what best fits the vibe and goals of the Python community.
-            </span>
-        </li>
-    </ul>
-</div>
-
-<div class="flex justify-center lg:justify-start pt-8">
-    {{ button(text="Ready? Apply here!", url="https://docs.google.com/forms/d/1KMqjXyPgdiF7udfQtTWX5akrv5dCfQshHcsHObo-N4M/", lime_bg=true, env = env) }}
+            <div class="mt-6">
+                <p class="text-2xl font-bold flex items-center"><span><img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-5 mr-2"></span>Who may not qualify as a community partner?</p>
+                <div class="pt-4 text-md">
+                    <ul class="list-none pl-8 space-y-3">
+                        <li class="flex">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                            <span><b>Unrelated or Unfitting Groups:</b> These are entities that lack a distinct link or pertinence to the Python community, its growth, or its intended goals.</span>
+                        </li>
+                        <li class="flex">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                            <span><b>Disputed Bodies:</b> Entities that advocate hate speech, prejudice, or participate in activities that are at odds with the principles of inclusivity, diversity, and respect that the PyCon India community supports.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
