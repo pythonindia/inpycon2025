@@ -6,7 +6,7 @@
     {% else %}
         {% set resolved_front_bg = frontBg %}
     {% endif %}
-    
+
     {% if topBg == "" %}
         {% set resolved_top_bg = resolved_front_bg %}
     {% elseif topBg == "lime" %}
@@ -18,7 +18,7 @@
     {% else %}
         {% set resolved_top_bg = topBg %}
     {% endif %}
-    
+
     {% if leftBg == "" %}
         {% set resolved_left_bg = resolved_front_bg %}
     {% elseif leftBg == "lime" %}
@@ -31,10 +31,10 @@
         {% set resolved_left_bg = leftBg %}
     {% endif %}
 
-    <div class="window-container{% if autoHeight %} window-auto-height{% endif %}" 
-         style="--w:{{ width }}; --h:{{ height }}; --d:{{ depth }}; 
-                --front-bg:{{ resolved_front_bg }}; 
-                --top-bg:{{ resolved_top_bg }}; 
+    <div class="window-container{% if autoHeight %} window-auto-height{% endif %}"
+         style="--w:{{ width }}; --h:{{ height }}; --d:{{ depth }};
+                --front-bg:{{ resolved_front_bg }};
+                --top-bg:{{ resolved_top_bg }};
                 --left-bg:{{ resolved_left_bg }};">
         <!-- Top Panel -->
         <div class="face top"></div>
