@@ -479,6 +479,12 @@ body:not(.is-home-page) main {
   gap: 8px;
 }
 
+.window-titlebar-dots-reverse {
+  display: flex;
+  gap: 8px;
+  flex-direction: row-reverse;
+}
+
 .window-titlebar-dot {
   width: 12px;
   height: 12px;
