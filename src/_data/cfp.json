@@ -1,0 +1,63 @@
+[
+    {
+        "category": "Python Core & Performance",
+        "description": [
+            "Fundamental Python concepts like language runtime, AST, standard library, etc.",
+            "Deep dive into Python internals and memory management",
+            "Performance improvements using Cython, PyPy, etc."
+        ]
+    },
+    {
+        "category": "AI, ML & Data Science",
+        "description": [
+            "Generative AI, LLMs, multimodal AI, and reinforcement learning",
+            "ETL, Real-time analytics, and business intelligence",
+            "Applications of AI in automation, NLP, and computer vision"
+        ]
+    },
+    {
+        "category": "Python for Cloud, DevOps & Infrastructure",
+        "description": [
+            "Cloud native applications with AWS, GCP, and Azure",
+            "Kubernetes, Terraform, and Infrastructure as Code (IaC)",
+            "CI/CD automation and serverless computing"
+        ]
+    },
+    {
+        "category": "Web, Desktop & Full-Stack Development",
+        "description": [
+            "Building APIs & web applications using gRPC, FastAPI, Django, etc.",
+            "Desktop App Development – GUI frameworks like PyQt, Tkinter, etc."
+        ]
+    },
+    {
+        "category": "Python for Hardware, Edge Computing & IoT",
+        "description": [
+            "MicroPython, CircuitPython, and real-time embedded systems",
+            "Robotics, automation, and IoT applications"
+        ]
+    },
+    {
+        "category": "Python in Research & Education",
+        "description": [
+            "High-performance computing in physics, chemistry, and climate modeling",
+            "Python in medical research and educational applications"
+        ]
+    },
+    {
+        "category": "Community",
+        "description": [
+            "Cultural aspects & societal influence of Python",
+            "Ethical considerations in technology",
+            "Career growth, mentorship & developer well-being"
+        ]
+    },
+    {
+        "category": "Others",
+        "description": [
+            "Emerging tech – quantum computing, blockchain, etc.",
+            "Python's role in sustainability & green computing", 
+            "Python in FinTech & algorithmic trading and more"
+        ]
+    }
+]
