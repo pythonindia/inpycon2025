@@ -47,7 +47,7 @@ layout: base.njk
                     </li>
                     <li class="flex">
                         <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Schedule Announcement:</span> 13 August 2025</span>
+                        <span><span class="font-semibold">Speaker Notifications:</span> 13 August 2025</span>
                     </li>
                     <li class="flex">
                         <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
@@ -56,14 +56,12 @@ layout: base.njk
                 </ul>
             </div>
 
-            <div class="flex justify-center lg:justify-start pt-8">
-                {{ button(text="Submit a Proposal", url="https://cfp.in.pycon.org/2025/cfp", lime_bg=true, env = env) }}
+            <div class="flex justify-center pt-8">
+                {{ button(text="Submit a Proposal", url="https://cfp.in.pycon.org/2025/cfp", lime_bg=true, env = env, disabled = true) }}
             </div>
-            {#
             <div class="text-center mt-4 text-red-600 font-semibold">
               <p>Proposals are closed. Thank you for your submissions!</p>
             </div>
-            #}
         </div>
 
         <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
