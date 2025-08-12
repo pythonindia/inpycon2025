@@ -40,29 +40,6 @@ layout: base.njk
                 <ul class="list-none space-y-4">
                     <li class="flex">
                         <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Submission Open:</span> 20 February 2025</span>
-                    </li>
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Submission Deadline:</span> 18 May 2025</span>
-                    </li>
-                    <li>
-                      <span class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span class="font-semibold">Speaker Notifications:</span>&nbsp;7 July 2025
-                      </span>
-                      <ul class="ml-6">
-                        <li>
-                          <span>Notification emails are sent out in phases over a couple of days.</br>Workshop speaker notifications are delayed by a week.</span>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Schedule Announcement:</span> 10 July 2025</span>
-                    </li>
-                    <li class="flex">
-                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
                         <span><span class="font-semibold">Workshops:</span> 12 September 2025</span>
                     </li>
                     <li class="flex">
@@ -89,7 +66,7 @@ layout: base.njk
                   </li>
                   <li class="flex">
                       <img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                      <span class="font-semibold"><a href="{{ env.baseUrl }}cfp/panel">Panel Discussions</a> (open)</span>
+                      <span class="font-semibold"><a href="{{ env.baseUrl }}cfp/panel">Panel Discussions</a> (closed)</span>
                   </li>
                   <li class="flex">
                       <img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
@@ -111,7 +88,7 @@ layout: base.njk
                 <ul class="list-none space-y-4">
                     <li class="flex">
                         <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                        <span><span class="font-semibold">Workshops:</span> To be announced</span>
+                        <span><span class="font-semibold">Workshops:</span> St. Francis College, Bengaluru</span>
                     </li>
                     <li class="flex">
                         <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
@@ -148,11 +125,11 @@ layout: base.njk
                         <span>For any questions regarding the CFP process, please email <a href="mailto:cfp@in.pycon.org" class="underline text-pycon-blue">cfp@in.pycon.org</a></span>
                     </li>
                 </ul>
-                <div class="flex justify-center pt-8">
+                <div class="flex justify-center lg:justify-start pt-8">
                     {{ button(text="Submit a Proposal", url="https://cfp.in.pycon.org/2025/cfp", lime_bg=true, env = env) }}
                 </div>
                  {#
-                 <div class="text-center mt-4 text-red-600 font-semibold">
+                 <div class="text-center lg:text-left mt-4 text-red-600 font-semibold">
                    <p>Proposals are closed. Thank you for your submissions!</p>
                  </div>
                  #}
