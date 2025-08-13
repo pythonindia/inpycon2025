@@ -18,6 +18,17 @@
             ]
         },
         {
+            "title": "Gold",
+            "companies": [
+                {
+                    "name": "CodeRabbit",
+                    "url": "https://www.coderabbit.ai/",
+                    "logo": "img/sponsors/coderabbit.svg",
+                    "description": "CodeRabbit is an AI-powered code reviewer that brings senior-engineer expertise directly into your Git workflow. Trusted by over 100,000 open-source projects, it has reviewed more than 12 million PRs across 1 million repositories."
+                }
+            ]
+        },
+        {
             "title": "Silver",
             "companies": [
                 {
