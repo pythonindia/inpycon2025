@@ -92,6 +92,10 @@
             {
                 "name": "Contact Us",
                 "link": "about/contact-us"
+            },
+            {
+                "name": "About Bengaluru",
+                "link": "venue/about-bengaluru"
             }
         ]
     },
