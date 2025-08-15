@@ -55,7 +55,7 @@ module.exports = function (eleventyConfig) {
 				result = {
 					dayName: "Monday",
 					monthDay: "September 15th",
-					label: "DevSprint",
+					label: "Dev Sprint",
 				};
 				break;
 		}
