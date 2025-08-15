@@ -56,6 +56,10 @@
             {
                 "name": "Community Booths",
                 "link": "program/community-booths"
+            },
+            {
+                "name": "DevSprint",
+                "link": "program/dev-sprint"
             }
         ]
     },
