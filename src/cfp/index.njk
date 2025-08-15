@@ -6,6 +6,13 @@ layout: base.njk
 
 {% from "components/button.njk" import button %}
 {% from "components/flat-card.njk" import flatCard %}
+{% from "components/list.njk" import list %}
+{% from "components/listCard.njk" import listCard %}
+
+
+{% set callForProposals = cfp %}
+
+
 
 <div class="w-full h-auto bg-pycon-blue -mb-24 px-[6%] flex flex-col md:flex-row">
     <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
@@ -176,162 +183,18 @@ layout: base.njk
             </div>
             <div class="pt-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        {% call flatCard(bg="lime") -%}
-                            <div class="p-4">
-                                <p class="text-xl font-bold">Python Core & Performance</p>
-                                <ul class="list-none pt-4 space-y-2">
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Fundamental Python concepts like language runtime, AST, standard library, etc.</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Deep dive into Python internals and memory management</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Performance improvements using Cython, PyPy, etc.</span>
-                                    </li>
-                                </ul>
-                            </div>
+                    {% set bgLimeIndex = [0, 3, 4, 7, 8] %}
+                    {% for proposal in callForProposals %}
+                        {% if loop.index0 in bgLimeIndex %}
+                            {% set bgColor = "lime" %}
+                            {% set bulletColor = "purple" %}
+                        {% else %}
+                            {% set bgColor = "purple" %}
+                            {% set bulletColor = "lime" %}
+                        {% endif %}
+                        {% call listCard(title=proposal.category, items=proposal.description, bgColor=bgColor, bulletColor=bulletColor) -%}
                         {%- endcall %}
-                    </div>
-                    <div>
-                        {% call flatCard(bg="purple") -%}
-                            <div class="p-4">
-                                <p class="text-xl font-bold">AI, ML & Data Science</p>
-                                <ul class="list-none pt-4 space-y-2">
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Generative AI, LLMs, multimodal AI, and reinforcement learning</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>ETL, Real-time analytics, and business intelligence</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Applications of AI in automation, NLP, and computer vision</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        {%- endcall %}
-                    </div>
-                    <div>
-                        {% call flatCard(bg="purple") -%}
-                            <div class="p-4">
-                                <p class="text-xl font-bold">Python for Cloud, DevOps & Infrastructure</p>
-                                <ul class="list-none pt-4 space-y-2">
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Cloud native applications with AWS, GCP, and Azure</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Kubernetes, Terraform, and Infrastructure as Code (IaC)</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>CI/CD automation and serverless computing</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        {%- endcall %}
-                    </div>
-                    <div>
-                        {% call flatCard(bg="lime") -%}
-                            <div class="p-4">
-                                <p class="text-xl font-bold">Web, Desktop & Full-Stack Development</p>
-                                <ul class="list-none pt-4 space-y-2">
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Building APIs & web applications using gRPC, FastAPI, Django, etc.</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Desktop App Development – GUI frameworks like PyQt, Tkinter, etc.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        {%- endcall %}
-                    </div>
-                    <div>
-                        {% call flatCard(bg="lime") -%}
-                            <div class="p-4">
-                                <p class="text-xl font-bold">Python for Hardware, Edge Computing & IoT</p>
-                                <ul class="list-none pt-4 space-y-2">
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>MicroPython, CircuitPython, and real-time embedded systems</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Robotics, automation, and IoT applications</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        {%- endcall %}
-                    </div>
-                    <div>
-                        {% call flatCard(bg="purple") -%}
-                            <div class="p-4">
-                                <p class="text-xl font-bold">Python in Research & Education</p>
-                                <ul class="list-none pt-4 space-y-2">
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>High-performance computing in physics, chemistry, and climate modeling</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Python in medical research and educational applications</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        {%- endcall %}
-                    </div>
-                    <div>
-                        {% call flatCard(bg="purple") -%}
-                            <div class="p-4">
-                                <p class="text-xl font-bold">Community</p>
-                                <ul class="list-none pt-4 space-y-2">
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Cultural aspects & societal influence of Python</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Ethical considerations in technology</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Career growth, mentorship & developer well-being</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        {%- endcall %}
-                    </div>
-                    <div>
-                        {% call flatCard(bg="lime") -%}
-                            <div class="p-4">
-                                <p class="text-xl font-bold">Others</p>
-                                <ul class="list-none pt-4 space-y-2">
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Emerging tech – quantum computing, blockchain, etc.</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Python's role in sustainability & green computing</span>
-                                    </li>
-                                    <li class="flex">
-                                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                                        <span>Python in FinTech & algorithmic trading and more</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        {%- endcall %}
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

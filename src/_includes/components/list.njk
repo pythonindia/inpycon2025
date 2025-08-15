@@ -1,0 +1,16 @@
+{% macro list(items=[], bulletColor="lime") %}
+    {% if bulletColor == "purple" %}
+        {% set imgSrc = "../img/assets/circle-purple.svg" %}
+    {% else %}
+        {% set imgSrc = "../img/assets/circle-lime.svg" %}
+    {% endif %}
+
+    <ul class="list-none space-y-2">
+        {% for item in items %}
+            <li class="flex">
+                <img src={{imgSrc}} alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1 lg:mt-1.5">
+                <span>{{ item }}</span>
+            </li>  
+        {% endfor %}
+    </ul>
+{% endmacro %}
