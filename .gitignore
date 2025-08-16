@@ -108,3 +108,6 @@ dist
 
 # Mac
 .DS_Store
+
+# schedule.json
+src/_data/schedule.json

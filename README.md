@@ -24,7 +24,7 @@ This repository contains the source code for the PyCon India 2025 website, built
 
 3. Start the development server:
    ```sh
-   npm run serve
+   make deploy-dev-server
    ```
 
 4. Open your browser and visit `http://localhost:8080`
@@ -102,6 +102,27 @@ We use a component-based approach with Nunjucks templates:
 {% from "components/your-component.njk" import componentName %}
 {{ componentName("value1", "value2") }}
 ```
+
+#### Custom Icons for Page Layouts
+
+You can add icons to your page by specifying an `iconset` key in the frontmatter.
+
+Only one iconset is allowed per page. Each iconset maps to one or more images based on a predefined list in the layout.
+
+```markdown
+---
+title: Contact Us
+description: |
+    PyCon India 2025 is a purely volunteer community conference, driven by people passionate about Python.
+layout: page.njk
+iconset: question
+---
+```
+This will display the "Question Mark" icon near the top of the page.
+
+If you want to use a new combination of icons, you must:
+1. Add the new iconset and its image mapping to the [src/_data/icon_map.json](https://github.com/pythonindia/inpycon2025/blob/main/src/_data_/icon_map.json).
+2. Use the new key in your page frontmatter.
 
 ### 5. Styling Guidelines
 

@@ -1,0 +1,30 @@
+{% macro venueCard(bg="lime", venueData=null, env=null) %}
+    {% from "components/button.njk" import button %}
+    {% if bg == "purple" %}
+        {% set bg_class = "bg-pycon-purple group-hover:bg-pycon-lime" %}
+    {% else %}
+        {% set bg_class = "bg-pycon-lime group-hover:bg-pycon-purple" %}
+    {% endif %}
+
+    <div class="relative group w-full">
+        <!-- Background Div -->
+        <div class="absolute top-0 left-0 {{ bg_class }} w-full h-full border-black border-2 duration-300 group-hover:translate-y-[-2px] group-hover:translate-x-[-2px]">
+        </div>
+
+        <!-- Main Card -->
+        <div class="relative top-[12px] left-[12px] w-full bg-[#FFFFFF] border-black border-2 items-center justify-center duration-300 group-hover:translate-y-[4px] group-hover:translate-x-[4px]">
+          {% if venueData.backgroundImage and venueData.backgroundImage.url %}
+            <img src="{{ env.baseUrl }}{{ venueData.backgroundImage.url }}" alt="{{ venueData.backgroundImage.alt }}" class="w-full h-full object-cover">
+          {% endif %}
+          {% if venueData.title and venueData.paragraphs and venueData.button %}
+              <div class="p-8 md:p-16 space-grotesk-regular">
+                  <p class="font-bold text-xl md:text-2xl">{{ venueData["title"] }}</p>
+                  {% for para in venueData.paragraphs %}
+                    <p class="pt-4 font-normal text-sm md:text-xl">{{ para | safe }}</p>
+                  {% endfor %}
+                  <div class="pt-6 md:pt-10">{{ button(text=venueData.button.text, url=venueData.button.url, lime_bg=true, env=env) }}</div>
+              </div>
+          {% endif %}
+        </div>
+    </div>
+{% endmacro %}

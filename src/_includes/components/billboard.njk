@@ -1,0 +1,52 @@
+{% macro billboard(theme="", title="", body="") %}
+    {% if theme == "purple" %}
+        {% set titlebar_bg_color = "bg-[#CD89FF]" %}
+        {% set content_bg_color = "bg-[#F3E3FF]" %}
+        {% set title_text_color = "text-[#8E32D2]" %}
+        {% set subtitle_text_color = "text-[#000000A8]" %}
+    {% elif theme == "red" %}
+        {% set titlebar_bg_color = "bg-[#F073B4]" %}
+        {% set content_bg_color = "bg-[#FFE1F1]" %}
+        {% set title_text_color = "text-[#CD1F7A]" %}
+        {% set subtitle_text_color = "text-[#000000A8]" %}
+    {% elif theme == "blue" %}
+        {% set titlebar_bg_color = "bg-[#7291EB]" %}
+        {% set content_bg_color = "bg-[#E9EFFD]" %}
+        {% set title_text_color = "text-[#3D60FF]" %}
+        {% set subtitle_text_color = "text-[#000000A8]" %}
+    {% else %}
+        {% set titlebar_bg_color = "bg-[#8385F2]" %}
+        {% set content_bg_color = "bg-[#F0EEFF]" %}
+        {% set title_text_color = "text-[#7D83F9]" %}
+        {% set subtitle_text_color = "text-[#000000A8]" %}
+    {% endif %}
+
+    <div class="border border-black">
+        <div class="px-4 py-1 border-b border-black {{ titlebar_bg_color }}">
+            <!-- header -->
+            <div class="window-titlebar-dots-reverse">
+                <div class="w-2 h-2 bg-[#D7FF7B] rounded-full"></div>
+                <div class="w-2 h-2 bg-[#D7FF7B] rounded-full"></div>
+                <div class="w-2 h-2 bg-[#D7FF7B] rounded-full"></div>
+            </div>
+            <!--// header -->
+        </div>
+        <div class="p-5 {{ content_bg_color }}" style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <!-- title -->
+            {% if title != "" %}
+                {% if body == "" %}
+                    <p class="text-2xl font-bold text-center {{ title_text_color }}">{{ title }}</p>
+                {% else %}
+                    <p class="text-xl {{ title_text_color }}">{{ title }}</p>
+                {% endif %}
+            {% endif %}
+            <!-- // title -->
+
+            <!-- body -->
+            {% if body != "" %}
+                <p class="text-base {{ subtitle_text_color }} {{ text_align }}">{{ body }}</p>
+            {% endif %}
+            <!-- //body -->
+        </div>
+    </div>
+{% endmacro %}

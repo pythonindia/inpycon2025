@@ -1,0 +1,17 @@
+{
+    "announce": [{ "src": "img/assets/announce.svg", "alt": "Announcement" }],
+    "bulb": [{ "src": "img/assets/bulb.svg", "alt": "Lightbulb for ideas" }],
+    "calendar": [{ "src": "img/assets/calendar.svg", "alt": "Calendar" }],
+    "checklist": [{ "src": "img/assets/notepad.svg", "alt": "Checklist" }],
+    "childcare": [{ "src": "img/assets/child-care.svg", "alt": "Child playing with mother" }],
+    "coffee": [{ "src": "img/assets/filter-coffee.svg", "alt": "Filter Coffee" }],
+    "laptop": [{ "src": "img/assets/laptop.svg", "alt": "Laptop" }],
+    "question": [{ "src": "img/assets/question-mark.svg", "alt": "Question mark" }],
+    "spacecraft": [{ "src": "img/assets/spacecraft.svg", "alt": "Spacecraft" }],
+    "sponsors": [{ "src": "img/assets/sponsors.svg", "alt": "Partnership" }],
+    "team": [{ "src": "img/assets/team.svg", "alt": "Team members" }],
+    "laptop-coffee": [
+        { "src": "img/assets/laptop.svg", "alt": "Laptop" },
+        { "src": "img/assets/filter-coffee.svg", "alt": "Filter Coffee" }
+    ]
+}

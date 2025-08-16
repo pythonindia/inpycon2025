@@ -1,17 +1,15 @@
-{% from "components/cube.njk" import cube %}
-
-<section class="relative bg-lavender text-black w-full pb-12 px-4 md:px-40 lg:px-28 xl:px-40 lg:pb-40" id="keynotes">
+<section class="relative bg-lavender text-black w-full pb-12 px-4 md:px-8 lg:px-16 xl:px-28 lgx:px-40 lg:pb-40" id="keynotes">
     <div class="black-han-sans-regular text-center lg:text-left pt-28 pb-8 md:pt-24 font-normal text-4xl lg:text-5xl text-[#000000]">
         Keynote Speakers
     </div>
 
-    <div class="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap items-center justify-center lg:justify-start gap-8 md:gap-12 lg:gap-8 pt-10 lg:pl-2 xl:pl-12">
+    <div class="flex flex-col md:flex-row flex-wrap lgx:flex-nowrap items-center justify-center gap-8 md:gap-12 lg:gap-8 pt-10">
         <div class="flex-shrink-0">
             <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-6 md:motion-safe:hover:-translate-y-12 transition duration-700 ease-in-out">    
                 <div class="flex items-center justify-center w-full h-full">
                     <img src="{{ env.baseUrl }}img/speakers/katharinejarmul.png" 
                          alt="Katharine Jarmul" 
-                         class="w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-contain">
+                         class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain max-w-full max-h-full">
                 </div>
             </div>
         </div>
@@ -20,41 +18,27 @@
                 <div class="flex items-center justify-center w-full h-full">
                     <img src="{{ env.baseUrl }}img/speakers/dawnwages.png"
                          alt="Dawn Wages"
-                         class="w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-contain">
+                         class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain max-w-full max-h-full">
                 </div>
             </div>
         </div>
-        {# <div class="flex-shrink-0">
-            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:translate-y-6 md:motion-safe:hover:translate-y-12 transition duration-700 ease-in-out">
-                {% call cube(dimen=256, bg="lime") -%}
-                    <div class="flex items-center justify-center w-full h-full">
-                        <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India Logo" class="w-3/4 h-3/4 object-contain">
-                    </div>
-                {%- endcall %}
-                <p class="text-center mt-4 text-sm md:text-base">Announcing Soon!</p>
-            </div>
-        </div> #}
-
-        {# <div class="flex-shrink-0">
+        <div class="flex-shrink-0">
             <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-6 md:motion-safe:hover:-translate-y-12 transition duration-700 ease-in-out">
-                {% call cube(dimen=256, bg="purple") -%}
-                    <div class="flex items-center justify-center w-full h-full">
-                        <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India Logo" class="w-3/4 h-3/4 object-contain">
-                    </div>
-                {%- endcall %}
-                <p class="text-center mt-4 text-sm md:text-base">Announcing Soon!</p>
+                <div class="flex items-center justify-center w-full h-full">
+                    <img src="{{ env.baseUrl }}img/speakers/reuvenlerner.png" 
+                        alt="Reuven Lerner" 
+                        class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain max-w-full max-h-full">
+                </div>
             </div>
-        </div> #}
-
-        {# <div class="flex-shrink-0">
-            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:translate-y-6 md:motion-safe:hover:translate-y-12 transition duration-700 ease-in-out">
-                {% call cube(dimen=256, bg="lime") -%}
-                    <div class="flex items-center justify-center w-full h-full">
-                        <img src="{{ env.baseUrl }}img/logo.png" alt="PyCon India Logo" class="w-3/4 h-3/4 object-contain">
-                    </div>
-                {%- endcall %}
-                <p class="text-center mt-4 text-sm md:text-base">Announcing Soon!</p>
+        </div>
+        <div class="flex-shrink-0">
+            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-6 md:motion-safe:hover:-translate-y-12 transition duration-700 ease-in-out">
+                <div class="flex items-center justify-center w-full h-full">
+                    <img src="{{ env.baseUrl }}img/speakers/shakthikannan.png" 
+                        alt="Shakthi Kannan" 
+                        class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain max-w-full max-h-full">
+                </div>
             </div>
-        </div> #}
+        </div>
     </div>
 </section>
