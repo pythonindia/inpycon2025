@@ -22,13 +22,13 @@ async function fetchJobPostings(URL) {
         };
 
         const jobPostings = rows.map((row) => ({
-            title: row.c[1]?.v || "No title",
+            title: row.c[5]?.v || "No title",
             company: row.c[2]?.v || "Unknown",
-            company_website: ensureHttps(row.c[3]?.v) || "#",
-            job_type: row.c[4]?.v || "N/A",
-            location: row.c[5]?.v || "Unknown",
-            description: row.c[6]?.v || "No description available",
-            link_to_apply: ensureHttps(row.c[7]?.v) || "#",
+            company_website: ensureHttps(row.c[4]?.v) || "#",
+            job_type: row.c[6]?.v || "N/A",
+            location: row.c[8]?.v || "Unknown",
+            description: row.c[7]?.v || "No description available",
+            link_to_apply: ensureHttps(row.c[9]?.v) || "#",
         }))
         .filter((job_post) =>
             isValidUrl(job_post.company_website) &&
