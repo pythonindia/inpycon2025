@@ -61,7 +61,7 @@ layout: base.njk
             </div>
         </div>
 
-        <div class="mb-12">
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
             <div class="space-y-6 mb-8">
                 <div>
                     <div
@@ -84,11 +84,32 @@ layout: base.njk
                         <p class="flex items-start">
                             <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
                                 class="w-4 h-4 mr-2 mt-1">
+                            <span> <span class="font-semibold">Join the Sprint:</span> RSVP details coming soon
+                            </span>
+                        </p>
+                        <p class="flex items-start">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                class="w-4 h-4 mr-2 mt-1">
                             <span> <span class="font-semibold">Location:</span> Bengaluru, India
                             </span>
                         </p>
                     </div>
                 </div>
+            </div>
+
+            <div class="mt-8">
+                {% call flatCard(bg="lime") -%}
+                <div class="flex items-start mb-2">
+                    <span class="text-xl md:text-2xl font-semibold">Help us find a venue</span>
+                </div>
+                <p class="text-2xl text-black">
+                    We are currently exploring venue options for the Dev Sprint event. If you have any recommendations
+                    or leads, please reach out to us at
+                    <a href="mailto:contact@in.pycon.org" target="_blank" class="font-light text-2xl">
+                        contact@in.pycon.org
+                    </a>
+                </p>
+                {%- endcall %}
             </div>
         </div>
 
