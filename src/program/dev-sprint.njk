@@ -68,25 +68,48 @@ layout: base.njk
                         class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
                         <p>Schedule</p>
                     </div>
-                    <div class="pt-4 text-md">
-                        <p class="flex items-start">
-                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
-                                class="w-4 h-4 mr-2 mt-1">
-                            <span> <span class="font-semibold">Date:</span> 15 September 2025, 9:00 AM to 5:00 PM
-                            </span>
-                        </p>
-                        <p class="flex items-start">
-                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
-                                class="w-4 h-4 mr-2 mt-1">
-                            <span> <span class="font-semibold">Venue:</span> To be announced
-                            </span>
-                        </p>
-                        <p class="flex items-start">
-                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
-                                class="w-4 h-4 mr-2 mt-1">
-                            <span> <span class="font-semibold">Location:</span> Bengaluru, India
-                            </span>
-                        </p>
+                    <div class="grid md:grid-cols-2 gap-8 pt-4 text-md">
+                        <div>
+                            <p class="flex items-start">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                    class="w-4 h-4 mr-2 mt-1">
+                                <span> <span class="font-semibold">Date:</span> 15 September 2025, 9:00 AM to 5:00 PM
+                                </span>
+                            </p>
+                            <p class="flex items-start">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                    class="w-4 h-4 mr-2 mt-1">
+                                <span> <span class="font-semibold">Venue:</span> To be announced
+                                </span>
+                            </p>
+                            <p class="flex items-start">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                    class="w-4 h-4 mr-2 mt-1">
+                                <span> <span class="font-semibold">Join the Sprint:</span> RSVP details coming soon
+                                </span>
+                            </p>
+                            <p class="flex items-start">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                    class="w-4 h-4 mr-2 mt-1">
+                                <span> <span class="font-semibold">Location:</span> Bengaluru, India
+                                </span>
+                            </p>
+                        </div>
+                        <div class="-mt-4">
+                            {% call flatCard(bg="lime") -%}
+                            <div class="flex items-start mb-2">
+                                <span class="text-xl md:text-2xl font-semibold">Help us find a venue</span>
+                            </div>
+                            <p class="text-2xl text-black">
+                                We are currently exploring venue options for the Dev Sprint event. If you have any
+                                recommendations
+                                or leads, please reach out to us at
+                                <a href="mailto:contact@in.pycon.org" target="_blank" class="font-light text-2xl">
+                                    contact@in.pycon.org
+                                </a>
+                            </p>
+                            {%- endcall %}
+                        </div>
                     </div>
                 </div>
             </div>
