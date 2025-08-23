@@ -65,9 +65,17 @@
     },
     {
         "name": "Sponsors",
-        "link": "sponsors",
-        "hasSubmenu": false,
-        "isExternal": false
+        "hasSubmenu": true,
+        "submenu": [
+            {
+                "name": "Become a Sponsor",
+                "link": "sponsors"
+            },
+            {
+                "name": "Exhibitor Guide",
+                "link": "sponsors/exhibitor-guide"
+            }
+        ]
     },
     {
         "name": "About",
