@@ -1,0 +1,181 @@
+---
+title: Dev Sprint
+description: PyCon India 2025 Dev Sprint
+layout: base.njk
+---
+
+{% from "components/button.njk" import button %}
+{% from "components/flat-card.njk" import flatCard %}
+
+<div class="w-full h-auto bg-pycon-blue px-[6%] -mb-16 md:mb-0 flex flex-col md:flex-row">
+    <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
+        <div
+            class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+            Dev Sprint
+        </div>
+        <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-10 text-justify">
+            <p>PyCon India 2025 invites developers to participate in Dev Sprint from across the country (and beyond) to
+                celebrate the power of Python. For all open source enthusiasts, it doesn't matter if you're new to open
+                source or a seasoned maintainer, it's an excellent opportunity to identify your favorite Python projects
+                and contribute to them.</p>
+        </div>
+    </div>
+    <div class="lg:w-[30%] w-[80%] lg:mt-30 flex items-center justify-center mx-auto">
+        <img src="{{ env.baseUrl }}img/assets/team.svg" alt="Dev Sprint"
+            class="w-[80%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+    </div>
+</div>
+
+<div class="main-container pt-16 md:pt-12 bg-lavender w-full h-auto px-[6%]">
+    <div class="text-md lg:text-xl pt-12 text-black lg:pr-10 text-justify font-light">
+        <div class="mb-12">
+            <div class="space-y-6 mb-8">
+                <div>
+                    <div
+                        class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                        <p>What is Dev Sprint</p>
+                    </div>
+                    <div class="pt-4 text-md">
+                        <p class="flex items-start">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                class="w-4 h-4 mr-2 mt-1">
+                            <span>At Dev Sprint, mentors and contributors of Open Source Software (OSS) projects
+                                guide participants through the end-to-end process of OSS contribution.</span>
+                        </p>
+                        <p class="flex items-start">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                class="w-4 h-4 mr-2 mt-1">
+                            <span>You'll learn starting from scratch such as build environments setup, developing
+                                and testing code, to submitting bug patches. If you get stuck, don’t worry—mentors
+                                are on hand to help you troubleshoot and get back on track!</span>
+                        </p>
+                        <p class="flex items-start">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                class="w-4 h-4 mr-2 mt-1">
+                            <span>From past experiences, we have seen many people start contributing to OSS through
+                                Dev Sprint and later becoming regular contributors to various projects across the
+                                community.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <div class="space-y-6 mb-8">
+                <div>
+                    <div
+                        class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                        <p>Schedule</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 pt-4 text-md">
+                        <div>
+                            <p class="flex items-start">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                    class="w-4 h-4 mr-2 mt-1">
+                                <span> <span class="font-semibold">Date:</span> 15 September 2025, 9:00 AM to 5:00 PM
+                                </span>
+                            </p>
+                            <p class="flex items-start">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                    class="w-4 h-4 mr-2 mt-1">
+                                <span> <span class="font-semibold">Venue:</span> To be announced
+                                </span>
+                            </p>
+                            <p class="flex items-start">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                    class="w-4 h-4 mr-2 mt-1">
+                                <span> <span class="font-semibold">Join the Sprint:</span> RSVP details coming soon
+                                </span>
+                            </p>
+                            <p class="flex items-start">
+                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                    class="w-4 h-4 mr-2 mt-1">
+                                <span> <span class="font-semibold">Location:</span> Bengaluru, India
+                                </span>
+                            </p>
+                        </div>
+                        <div class="-mt-4">
+                            {% call flatCard(bg="lime") -%}
+                            <div class="flex items-start mb-2">
+                                <span class="text-xl md:text-2xl font-semibold">Help us find a venue</span>
+                            </div>
+                            <p class="text-2xl text-black">
+                                We are currently exploring venue options for the Dev Sprint event. If you have any
+                                recommendations
+                                or leads, please reach out to us at
+                                <a href="mailto:contact@in.pycon.org" target="_blank" class="font-light text-2xl">
+                                    contact@in.pycon.org
+                                </a>
+                            </p>
+                            {%- endcall %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <div class="space-y-6 mb-8">
+                <div>
+                    <div
+                        class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                        <p>Inviting Project Maintainers and Contributors</p>
+                    </div>
+                    <div class="pt-4 text-md">
+                        <p class="flex items-start">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                class="w-4 h-4 mr-2 mt-1">
+                            <span>If you are a contributor or maintainer of any open source project, we invite you
+                                to bring it to the Dev Sprint. It could be any interesting Python based open source
+                                project with a history of code commits.
+                            </span>
+                        </p>
+                        <p class="flex items-start">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                class="w-4 h-4 mr-2 mt-1">
+                            <span class>
+                                For reference, you can see a list of PyCon India 2024 Dev Sprint projects:
+                                <a href="https://in.pycon.org/cfp/devsprint-2024/proposals/" target="_blank"
+                                    class="text-purple-600 underline"> Dev Sprint 2024 proposals
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <div class="flex flex-col sm:flex-row gap-4 items-start">
+                        {{ button(text="Ready? Submit here!",
+                        url="https://cfp.in.pycon.org/2025/cfp?submission_type=5-dev-sprint-project",
+                        lime_bg=true, env =
+                        env) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-24">
+            <div>
+                {% call flatCard(bg="purple") -%}
+                <div class="flex items-center mb-4">
+                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Deadline Icon" class="w-6 h-6 mr-3">
+                    <h3 class="text-xl md:text-3xl">Deadline</h3>
+                </div>
+                <p class="text-2xl text-black">Submit your Dev Sprint projects by <strong>8th September,
+                        23:59 IST</strong> to join fellow contributors.</p>
+                {%- endcall %}
+            </div>
+
+            <div>
+                {% call flatCard(bg="purple") -%}
+                <div class="flex items-center mb-4">
+                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Notification Icon" class="w-6 h-6 mr-3">
+                    <h3 class="text-xl md:text-3xl">Selection Notification</h3>
+                </div>
+                <p class="text-2xl text-black">While a deadline exists, projects are reviewed on a rolling basis, with
+                    selected ones notified promptly.</p>
+                {%- endcall %}
+            </div>
+        </div>
+    </div>
+</div>

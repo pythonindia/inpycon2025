@@ -1,0 +1,14 @@
+{% from "components/flat-card.njk" import flatCard %}
+{% from "components/list.njk" import list %}
+
+{% macro listCard(title="", items=[], bgColor="", bulletColor="") %}
+    {% call flatCard(bg=bgColor) -%}
+        <div class="p-4">
+            {% if title %}
+                <p class="text-xl font-bold">{{ title }}</p>
+            {% endif %}
+            {% call list(bulletColor=bulletColor, items=items) -%}
+            {%- endcall %}
+        </div>
+    {%- endcall %}
+{% endmacro %}
