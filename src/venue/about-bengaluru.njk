@@ -1,0 +1,225 @@
+---
+title: Bengaluru
+description: |
+    Bengaluru is the capital and largest city of the southern Indian state of Karnataka. It is considered to be one of the fastest-growing global major metropolises.
+layout: page.njk
+iconset: bulb
+---
+
+{% from "components/flat-card.njk" import flatCard %}
+
+<div>
+    <div>
+        <h1 class="text-3xl text-left md:text-4xl mb-4">Getting to Bengaluru</h1>
+        <div class="flex pt-6 flex-col md:flex-row gap-4">
+            {% call flatCard(bg="purple") -%}
+                <p class="text-xl font-semibold mb-0">By Plane:</p>
+                <p class="text-xl font-medium">Kempegowda International Airport Bengaluru</p>
+                <p>If you're arriving by air, the Bengaluru International Airport serves as your gateway to Bengaluru. Various Indian airlines operate flights to this airport, including Air India, Air India Express, Indigo Airlines, Akasa Air, and SpiceJet.</p>
+            {%- endcall %}
+
+            {% call flatCard(bg="lime") -%}
+                <p class="text-xl font-semibold mb-0">By Train:</p>
+                <p class="text-xl font-medium">YPR Or KSR Bengaluru City Junction</p>
+                <p>For those opting for train travel, Indian Railways offer services to Bengaluru from different parts of India. Major railway stations include Yeshwanthpur Junction YPR or KSR Bengaluru City Junction. KSR City Junction is a significant hub for trains to South and North India.</p>
+            {%- endcall %}
+        </div>
+
+        <p class="mt-4">For more comprehensive travel information and options, please refer to the <a href="https://wikitravel.org/en/Bengaluru#Get_in">Bengaluru Wiki Page</a>.</p>
+    </div>
+    <div class="mt-20">
+        <h1 class="text-3xl text-left md:text-4xl mb-4">Accommodation</h1>
+
+        <p class="pt-6 font-semibold">Assistance for Attendees</p>
+        
+        <p>If you're attending the PyCon India 2025 conference and looking for accommodation options nearby, here are some places to consider. Please note that PyCon India has no affiliations or contracts with any of the properties mentioned below, and attendees are advised to do their own due diligence before booking.</p>
+
+        <ul class="list-none pt-4 space-y-4">
+            <li class="flex">
+                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                <span>Please check with the hotels either online or telephonically before booking, and check the reviews + ratings as per your preferences as well.</span>
+            </li>
+            <li class="flex">
+                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
+                <span>These properties are merely suggestions, and do not exhaust the list of close stays near the venue.</span>
+            </li>
+        </ul>
+
+        <div>
+            <table class="w-full pt-4 text-center border-collapse border bg-pycon-lime border-pycon-purple">
+                <thead>
+                    <tr>
+                        <th class="text-center p-2 border border-pycon-purple">Hotel Name</th>
+                        <th class="text-center p-2 border border-pycon-purple">Distance to NIMHANS</th>
+                        <th class="text-center p-2 border border-pycon-purple">Average Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="p-2 border border-pycon-purple">FabHotel CTC Gardenia Residency</td>
+                        <td class="p-2 border border-pycon-purple">3.8 Km</td>
+                        <td class="p-2 border border-pycon-purple">3.7</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 border border-pycon-purple">Itsy Hotels Palm Emirates</td>
+                        <td class="p-2 border border-pycon-purple">3.1 Km</td>
+                        <td class="p-2 border border-pycon-purple">3.7</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 border border-pycon-purple">Itsy Hotels Elmas Golden Key</td>
+                        <td class="p-2 border border-pycon-purple">4.9 Km</td>
+                        <td class="p-2 border border-pycon-purple">3.2</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 border border-pycon-purple">Treebo Akshaya Lalbagh Inn</td>
+                        <td class="p-2 border border-pycon-purple">2.8 Km</td>
+                        <td class="p-2 border border-pycon-purple">3.6</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 border border-pycon-purple">Hotel Nestelinn By Rivido</td>
+                        <td class="p-2 border border-pycon-purple">7 Km</td>
+                        <td class="p-2 border border-pycon-purple">3.6</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 border border-pycon-purple">OYO 4606 Hotel Maple Green Suites</td>
+                        <td class="p-2 border border-pycon-purple">5.8 Km</td>
+                        <td class="p-2 border border-pycon-purple">3.6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mt-20">
+        <h1 class="text-3xl text-left md:text-4xl mb-4">Places to must visit</h1>
+
+        <div>
+            <ul class="list-none pt-4 space-y-4">
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">Lalbagh Botanical Garden</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        Lalbagh is one of Bengaluru's major attractions. A sprawling garden situated in a 240 acres piece of land in the heart of the city, Lalbagh houses India’s largest collection of tropical plants and sub-tropical plants, including trees that are several centuries old. Exhibits like the Snow White and the seven dwarfs, and a topiary park, an expansive lake, a beautiful glasshouse modelled around the Crystal Palace in London adorn the park giving it a surrealistic atmosphere. A watchtower perched on top of a 3000 million years old rocky outcrop (which is a National Geological Monument), built by Kempegowda, the founder of Bengaluru also adorns the picturesque garden.
+                    </p>
+                </li>
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">Bannerughatta Biological Park</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        Bannerghatta Biological Park, also known as the Bannerghatta Zoo, is a zoological garden located in the city of Bengaluru. It was initially a small zoo and picnic corner within Bannerghatta National Park (BNP) which was started in 1974. The bifurcation of the Biological Park and the National Park took place in 2002. The Bannerghatta Biological Park covers a total area of 731.88 hectares and includes a zoo, safari park, butterfly park and rescue centre.
+                    </p>
+                </li>
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">Commercial Street</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        Commercial Street is a street in Bangalore, the state capital of Karnataka, India. One of the oldest and busiest shopping areas of the city, The street is famous for its trade in clothes, footwear, jewellery, electronics and food joints. Commercial Street lies in the heart of the city in the Central Business District area in Tasker Town, close to M G Road, another popular shopping area, and Russell Market in Shivajinagar.
+                    </p>
+                </li>
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">ISKCON Temple Bangalore</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        Sri Radha Krishna-Chandra Temple (Kannada: ಶ್ರೀ ರಾಧಾ ಕೃಷ್ಣ ಮಂದಿರ) is one of the largest Krishna-Hindu temples in the world. ISKCON Vaikuntha Hill in Bangalore is the destination for a visit to Lord Venkateshwara’s abode. This stone temple is constructed as per traditional Shilpa shastras (designs as mentioned in scriptures) in the Dravidian style of architecture.
+                    </p>
+                </li>
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">Bangalore Palace</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        Bangalore Palace is a 19th century royal palace located in Bangalore, Karnataka, India, built in an area that was owned by the Rev. John Garrett, the first principal of the Central High School in Bangalore, now famous as Central College. The palace was commissioned for the Maharaja of Mysore, Chamarajendra Wadiyar X, and currently belongs to the current head of the Wadiyar dynasty, Yaduveer Krishnadatta Chamaraja Wadiyar.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mt-20">
+        <h1 class="text-3xl text-left md:text-4xl mb-4">Places to eat (Recommendation)</h1>
+        
+        <div>
+            <ul class="list-none pt-4 space-y-4">
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">MTR - Mavalli Tiffin Rooms</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        Mavalli Tiffin Rooms, known more popularly as MTR, was established in 1924 and is one of Bangalore's oldest and most well known restaurants serve traditional South Indian food.
+                    </p>
+                </li>
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">Lakeview Milk Bar</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        Known for it's ice creams and cakes, this is a very old place located in the MG Road. Walking distance from MG Road metro station this place is open until late night around 1am. It's popular for its Faloodas and cake ice cream combos. You also do get snacks like sandwich, omelette etc.
+                    </p>
+                </li>
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">Thom's Bakery</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        Best bakery in the city been there for last 75years.
+                    </p>
+                </li>
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">Rameshwaram Cafe</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        One of the best venues in Bangalore to eat a typical South Indian breakfast. Crispy dosas, fluffy idlis, vadas, and uttapams are just a few delicacies.
+                    </p>
+                </li>
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">Meghana's Food</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        Good place to enjoy some Andhra food. They are specialised in some very good Andhra biriyani which is a must try.
+                    </p>
+                </li>
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">Amintiri</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        Amintiri, with its lovely Teal interiors and crockery, offers pasta, sandwiches, pancakes, French toasts, egg based dishes, coffee, tea, salad etc.
+                    </p>
+                </li>
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">The Hole in the Wall</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        Where every visit feels like a secret getaway! Hole In The Wall Café, Koramangala gives an intimate vibe with rustic decor and soft lighting.
+                    </p>
+                </li>
+                <li class="pb-2">
+                    <div class="flex items-start">
+                        <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1.5">
+                        <p class="text-xl font-semibold mb-0">Milano</p>
+                    </div>
+                    <p class="ml-6 pt-2">
+                        A wonderful ambience to chill out on a busy day. They offer a variety of delicious and mouth watering dishes be it icecream, pizza and a lot of dairy stuff.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
