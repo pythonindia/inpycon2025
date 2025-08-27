@@ -38,6 +38,17 @@
                     "description": "Bloomberg is building the world's most trusted information network for financial professionals. Its 9,000+ engineers are dedicated to advancing and building new systems for the Bloomberg Terminal to solve complex, real-world problems. They trust their teams to choose the right technologies for the job, and, at Bloomberg, the answer is often Python. The company employs an active community of 4,000+ Python developers who have their hands in everything from financial analytics and data science to contributing to open source technologies like Project Jupyter. Bloomberg is a Visionary Sponsor of the Python Software Foundation and sponsors many Python community events around the world."
                 }
             ]
+        },
+        {
+            "title": "Grant",
+            "companies": [
+                {
+                    "name": "Python Software Foundation",
+                    "url": "http://python.org",
+                    "logo": "img/sponsors/psf.png",
+                    "description": "The Python Software Foundation is the charitable organization behind the Python programming language."
+                }
+            ]
         }
     ]
 }
