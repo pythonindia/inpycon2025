@@ -80,10 +80,9 @@ layout: base.njk
                                 {% endfor %}
 
                                 {# Chunk into 2, 3, 2 manually #}
-                                {% set row1 = room_entries.slice(0, 2) %}
-                                {% set row2 = room_entries.slice(2, 5) %}
-                                {% set row3 = room_entries.slice(5, 7) %}
-                                {% set rows = [row1, row2, row3] %}
+                                {% set row1 = room_entries.slice(0, 3) %}
+                                {% set row2 = room_entries.slice(3, 6) %}
+                                {% set rows = [row1, row2] %}
 
                                 <div class="flex-1 w-full flex flex-col">
                                 {% for row in rows %}
@@ -112,7 +111,7 @@ layout: base.njk
                                                 </p>
                                                 <p class="font-semibold text-md text-pycon-blue">
                                                 {% for person in event.persons %}
-                                                    {{ person.public_name }}{% if not loop.last %}, {% endif %}
+                                                    {{ person.public_name | title }}{% if not loop.last %}, {% endif %}
                                                 {% endfor %}
                                                 </p>
                                             {% if event.url %}
@@ -154,10 +153,9 @@ layout: base.njk
                                 {% endfor %}
 
                                 {# Chunk into 2, 3, 2 manually #}
-                                {% set row1 = room_entries.slice(0, 2) %}
-                                {% set row2 = room_entries.slice(2, 5) %}
-                                {% set row3 = room_entries.slice(5, 7) %}
-                                {% set rows = [row1, row2, row3] %}
+                                {% set row1 = room_entries.slice(0, 3) %}
+                                {% set row2 = room_entries.slice(3, 6) %}
+                                {% set rows = [row1, row2] %}
 
                                 <div class="flex-1 w-full flex flex-col">
                                 {% for row in rows %}
@@ -186,7 +184,7 @@ layout: base.njk
                                                 </p>
                                                 <p class="font-semibold text-md text-pycon-blue">
                                                 {% for person in event.persons %}
-                                                    {{ person.public_name }}{% if not loop.last %}, {% endif %}
+                                                    {{ person.public_name | title }}{% if not loop.last %}, {% endif %}
                                                 {% endfor %}
                                                 </p>
                                             {% if event.url %}
@@ -288,7 +286,7 @@ layout: base.njk
                                             <p class="mb-1 text-md line-clamp-2">{{ item.title }}</p>
                                             <p class="font-semibold text-md text-pycon-blue">
                                                 {% for person in item.persons %}
-                                                    {{ person.public_name }}{% if not loop.last %}, {% endif %}
+                                                    {{ person.public_name | title }}{% if not loop.last %}, {% endif %}
                                                 {% endfor %}
                                             </p>
                                         {% if item.url %}
@@ -331,7 +329,7 @@ layout: base.njk
                                                                             </p>
                                                                             <p class="font-semibold text-md text-pycon-blue">
                                                                                 {% for person in event.persons %}
-                                                                                    {{ person.public_name }}{% if not loop.last %}, {% endif %}
+                                                                                    {{ person.public_name | title }}{% if not loop.last %}, {% endif %}
                                                                                 {% endfor %}
                                                                             </p>
                                                                         {% if event.url %}
