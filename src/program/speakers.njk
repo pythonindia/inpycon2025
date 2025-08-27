@@ -27,7 +27,11 @@ layout: base.njk
                 <div class="w-60 h-48 relative group">
                     <div class="absolute inset-0">
                         <div class="w-full h-full">
-                            {{ imgContainer(width=220, height=180, depth=12, frontBg="lavender", leftBg="purple", topBg="purple", url= person.imageLink) }}
+                            {% if person.imageLink %}
+                                {{ imgContainer(width=180, height=180, depth=12, frontBg="lavender", leftBg="purple", topBg="purple", url= person.imageLink) }}
+                            {% else %}
+                                {{ imgContainer(width=180, height=180, depth=12, frontBg="lavender", leftBg="purple", topBg="purple", url= "https://in.pycon.org/2024/image/ZadraSol.webp") }}
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -36,8 +40,9 @@ layout: base.njk
                 <p class="mt-2 ml-2 mr-4 mb-1 text-xl font-light text-left w-52">{{ person.name }}</p>
 
                 <!-- Title -->
-                <p class="mt-1 ml-2 mr-4 mb-1 text-xs font-light text-left w-52">{{person.title}} Change this</p>
-
+                {% if person.title %}
+                    <p class="mt-1 ml-2 mr-4 mb-1 text-xs font-light text-left w-52">{{person.title}}</p>
+                {% endif %}
                 <!-- Socials -->
                 <div class="flex ml-2 mr-4 justify-left items-start gap-1 md:gap-4 flex-wrap w-52">
                     {% if person.socials.linkedin %}
@@ -50,7 +55,7 @@ layout: base.njk
                         <i class="fa fa-globe text-md md:text-xl"></i>
                     </a>
                     {% endif %}
-                    {% if person.socials.twitter %}
+                    {% if person.socials.x %}
                     <a href="{{ person.socials.twitter }}" target="_blank" aria-label="Twitter" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
                         <i class="fab fa-x-twitter text-md md:text-xl"></i>
                     </a>
@@ -65,8 +70,8 @@ layout: base.njk
                         <i class="fab fa-youtube text-md md:text-xl"></i>
                     </a>
                     {% endif %}
-                    {% if person.socials.insta %}
-                    <a href="{{ person.socials.insta }}" target="_blank" aria-label="Instagram" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    {% if person.socials.instagram %}
+                    <a href="{{ person.socials.instagram }}" target="_blank" aria-label="Instagram" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
                         <i class="fab fa-instagram text-md md:text-xl"></i>
                     </a>
                     {% endif %}
