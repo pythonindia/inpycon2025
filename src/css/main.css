@@ -605,3 +605,21 @@ body:not(.is-home-page) main {
     font-size: 0.85rem;
   }
 }
+
+
+.window-container .face.top {
+  background: var(--top-bg);
+  transition: background 0.3s ease;
+}
+.window-container .face.left {
+  background: var(--left-bg);
+  transition: background 0.3s ease;
+}
+
+/* Hover opposite colors */
+.window-container:hover .face.top {
+  background: color-mix(in srgb, var(--top-bg), #D7FF7B 100%);
+}
+.window-container:hover .face.left {
+  background: color-mix(in srgb, var(--left-bg), #D7FF7B 100%);
+}
