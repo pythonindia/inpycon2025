@@ -20,6 +20,10 @@
                 "link": "attend/health-and-safety"
             },
             {
+                "name": "Job Board",
+                "link": "attend/jobs"
+            },
+            {
                 "name": "FAQ's",
                 "link": "attend/faqs"
             }
