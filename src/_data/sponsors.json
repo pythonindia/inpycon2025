@@ -14,6 +14,12 @@
                     "url": "https://algorand.co/algokit-workshops",
                     "logo": "img/sponsors/algorand-foundation.png",
                     "description": "Algorand's mission is to power a world where information has integrity and innovative ideas can scale. The Algorand Foundation champions this with a best-in-class developer environment, vital infrastructure support, comprehensive technical standards, and extensive resources across a rapidly growing ecosystem."
+                },
+                {
+                    "name": "Amazon Web Services (AWS)",
+                    "url": "https://aws.amazon.com/",
+                    "logo": "img/sponsors/aws.svg",
+                    "description": "Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud. Millions of developers—from startups to enterprises and the public sector—use AWS to prototype faster, reduce operational overhead, and innovate with AI, powered by foundational services across compute, storage, databases, and serverless"
                 }
             ]
         },
