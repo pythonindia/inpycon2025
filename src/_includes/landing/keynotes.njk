@@ -1,44 +1,38 @@
-<section class="relative bg-lavender text-black w-full pb-12 px-4 md:px-8 lg:px-16 xl:px-28 lgx:px-40 lg:pb-40" id="keynotes">
+{% set keynote_speakers = [
+    {
+        "name": "Katharine Jarmul",
+        "image": "img/speakers/katharinejarmul.png",
+        "alt": "Katharine Jarmul"
+    },
+    {
+        "name": "Dawn Wages",
+        "image": "img/speakers/dawnwages.png",
+        "alt": "Dawn Wages"
+    },
+    {
+        "name": "Reuven Lerner",
+        "image": "img/speakers/reuvenlerner.png",
+        "alt": "Reuven Lerner"
+    },
+    {
+        "name": "Shakthi Kannan",
+        "image": "img/speakers/shakthikannan.png",
+        "alt": "Shakthi Kannan"
+    }
+] %}
+
+<section class="relative bg-lavender text-black w-full pb-12 px-[6%] lg:pb-24" id="keynotes">
     <div class="black-han-sans-regular text-center lg:text-left pt-28 pb-8 md:pt-24 font-normal text-4xl lg:text-5xl text-[#000000]">
         Keynote Speakers
     </div>
 
-    <div class="flex flex-col md:flex-row flex-wrap lgx:flex-nowrap items-center justify-center gap-8 md:gap-12 lg:gap-8 pt-10">
-        <div class="flex-shrink-0">
-            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-6 md:motion-safe:hover:-translate-y-12 transition duration-700 ease-in-out">    
-                <div class="flex items-center justify-center w-full h-full">
-                    <img src="{{ env.baseUrl }}img/speakers/katharinejarmul.png" 
-                         alt="Katharine Jarmul" 
-                         class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain max-w-full max-h-full">
-                </div>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-0 justify-items-center w-full">
+        {% for speaker in keynote_speakers %}
+        <div class="group relative transition duration-700 ease-in-out motion-safe:transform motion-safe:hover:-translate-y-6 md:motion-safe:hover:-translate-y-12">
+            <img src="{{ env.baseUrl }}{{ speaker.image }}" 
+                 alt="{{ speaker.alt }}" 
+                 class="w-full max-w-xs aspect-square object-contain scale-75">
         </div>
-        <div class="flex-shrink-0">
-            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-6 md:motion-safe:hover:-translate-y-12 transition duration-700 ease-in-out">
-                <div class="flex items-center justify-center w-full h-full">
-                    <img src="{{ env.baseUrl }}img/speakers/dawnwages.png"
-                         alt="Dawn Wages"
-                         class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain max-w-full max-h-full">
-                </div>
-            </div>
-        </div>
-        <div class="flex-shrink-0">
-            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-6 md:motion-safe:hover:-translate-y-12 transition duration-700 ease-in-out">
-                <div class="flex items-center justify-center w-full h-full">
-                    <img src="{{ env.baseUrl }}img/speakers/reuvenlerner.png" 
-                        alt="Reuven Lerner" 
-                        class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain max-w-full max-h-full">
-                </div>
-            </div>
-        </div>
-        <div class="flex-shrink-0">
-            <div class="group relative motion-safe:transform motion-safe:translate-y-0 motion-safe:hover:-translate-y-6 md:motion-safe:hover:-translate-y-12 transition duration-700 ease-in-out">
-                <div class="flex items-center justify-center w-full h-full">
-                    <img src="{{ env.baseUrl }}img/speakers/shakthikannan.png" 
-                        alt="Shakthi Kannan" 
-                        class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain max-w-full max-h-full">
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
