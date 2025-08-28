@@ -12,12 +12,20 @@
                 "link": "attend/scholarships"
             },
             {
+                "name": "Child Care",
+                "link": "attend/child-care"
+            },
+            {
                 "name": "Accessibility",
                 "link": "attend/accessibility"
             },
             {
                 "name": "Health and Safety",
                 "link": "attend/health-and-safety"
+            },
+            {
+                "name": "Job Board",
+                "link": "attend/jobs"
             },
             {
                 "name": "FAQ's",
@@ -52,14 +60,30 @@
             {
                 "name": "Lightning Talks",
                 "link": "program/lightning-talks"
+            },
+            {
+                "name": "Community Booths",
+                "link": "program/community-booths"
+            },
+            {
+                "name": "Dev Sprint",
+                "link": "program/dev-sprint"
             }
         ]
     },
     {
         "name": "Sponsors",
-        "link": "sponsors",
-        "hasSubmenu": false,
-        "isExternal": false
+        "hasSubmenu": true,
+        "submenu": [
+            {
+                "name": "Become a Sponsor",
+                "link": "sponsors"
+            },
+            {
+                "name": "Exhibitor Guide",
+                "link": "sponsors/exhibitor-guide"
+            }
+        ]
     },
     {
         "name": "About",

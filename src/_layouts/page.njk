@@ -10,6 +10,9 @@ layout: base.njk
 
 {% from "components/button.njk" import button %}
 
+{% set icons = icon_map[iconset] or icon_map["laptop-coffee"] %}
+
+
 <div class="w-full h-auto bg-pycon-blue -mb-24 px-[6%] flex flex-col md:flex-row">
     <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
         <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
@@ -20,8 +23,14 @@ layout: base.njk
         </div>
     </div>
     <div class="lg:w-[30%] w-[80%] lg:mt-60 flex items-center justify-center mx-auto">
-        <img src="{{ env.baseUrl }}img/assets/laptop.svg" alt="Guide" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
-        <img src="{{ env.baseUrl }}img/assets/filter-coffee.svg" alt="Guide" class="w-[40%] lg:w-[60%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+        {% for icon in icons %}
+            <img 
+                src="{{ env.baseUrl ~ icon.src }}" 
+                alt="{{ icon.alt or icon.src | filenameToAlt }}" 
+                class="w-[40%] lg:w-[60%] transition-transform duration-100" 
+                style="animation: floating 2s ease-in-out infinite;"
+            >
+        {% endfor %}
     </div>
 </div>
 

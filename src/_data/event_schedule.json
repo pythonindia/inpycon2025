@@ -1,0 +1,20 @@
+{
+    "summary": {
+        "title": "12 Sep - 15 Sep"
+    },
+    "workshop": {
+        "title": "12 Sep - Workshop",
+        "body": "St. Francis College, Bengaluru",
+        "theme": "purple"
+    },
+    "conference": {
+        "title": "13-14 Sep - Conference",
+        "body": "NIMHANS Convention Centre, Bengaluru",
+        "theme": "red"
+    },
+    "devsprint": {
+        "title": "15 Sep - Dev Sprint",
+        "body": "To be announced",
+        "theme": "blue"
+    }
+}

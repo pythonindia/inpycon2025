@@ -18,7 +18,7 @@ We strongly recommend to take the latest vaccination boosters, and all attendees
 
 ## Masks during conference
 
-We highly recommend you to wear mask during the conference. This would help you to stay safe while attending the talks, workshops, and DevSprints. It's also recommended to wear them at the venue. Masks must be worn over the nose and mouth and must be made of a tight-knit, non-permeable material. N95 or equivalent masks such as KN95 or K95 are recommended.
+We highly recommend you to wear mask during the conference. This would help you to stay safe while attending the talks, workshops, and Dev Sprint. It's also recommended to wear them at the venue. Masks must be worn over the nose and mouth and must be made of a tight-knit, non-permeable material. N95 or equivalent masks such as KN95 or K95 are recommended.
 
 ## Rapid COVID-19 tests
 
