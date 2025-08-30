@@ -42,6 +42,10 @@
                 "link": "program/schedule"
             },
             {
+                "name": "Speakers",
+                "link": "program/speakers"
+            },
+            {
                 "name": "CFP Overview",
                 "link": "cfp"
             },
@@ -89,6 +93,10 @@
         "name": "About",
         "hasSubmenu": true,
         "submenu": [
+            {
+                "name": "Our Team",
+                "link": "about/team"
+            },
             {
                 "name": "Contact Us",
                 "link": "about/contact-us"
