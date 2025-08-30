@@ -20,6 +20,12 @@
                     "url": "https://aws.amazon.com/",
                     "logo": "img/sponsors/aws.svg",
                     "description": "Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud. Millions of developers—from startups to enterprises and the public sector—use AWS to prototype faster, reduce operational overhead, and innovate with AI, powered by foundational services across compute, storage, databases, and serverless"
+                },
+                {
+                    "name": "Composio",
+                    "url": "https://composio.dev/",
+                    "logo": "img/sponsors/composio.svg",
+                    "description": "Connect your AI agents to real-world with managed authentication and tools from Composio. The Composio's SDKs and hosted MCP servers enable you to build AI agents that can take real-world actions without you needing to write and manage complex authentication flows or tool formatting."
                 }
             ]
         },
