@@ -42,6 +42,10 @@
                 "link": "program/schedule"
             },
             {
+                "name": "Speakers",
+                "link": "program/speakers"
+            },
+            {
                 "name": "CFP Overview",
                 "link": "cfp"
             },

@@ -1,0 +1,526 @@
+[
+    {
+        "code": "B8YV9C",
+        "name": "Aakash Khandelwal",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/aakashkh284/",
+            "x": "https://x.com/aakashkh284",
+            "gravatarUrl": "https://gravatar.com/howdataworks"
+        },
+        "title": "Analytics Lead | Data & Strategy",
+        "imageLink": "https://gravatar.com/avatar/409fda79915dbba07c4a6b0cfda15083da10e1ebb179510559450b999c29baf4.png?size=512&default=initials"
+    },
+    {
+        "code": "EUGVVX",
+        "name": "Aarti Jha",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/aartijha22/",
+            "gravatarUrl": "https://gravatar.com/aartijha22"
+        },
+        "title": "Senior Data Scientist @ Red Hat | Data & AI",
+        "imageLink": "https://gravatar.com/avatar/702ebd1b234fa4faa482c3c52ea52ae82762db9301133dd40a0fc248d73856cf.png?size=512&default=initials"
+    },
+    {
+        "code": "SE8K9J",
+        "name": "Abhijit Roy",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/abhijit-roy-658571146/",
+            "gravatarUrl": "https://gravatar.com/knock2me78"
+        },
+        "title": "Software Maintenance Engineer",
+        "imageLink": "https://gravatar.com/avatar/21fb79408583a95a79cbf9bbace4ff17d8432c2e9d35d12bd4e18609cbebf85c.png?size=512&default=initials"
+    },
+    {
+        "code": "CVGYKQ",
+        "name": "Abhik Sarkar",
+        "socials": {}
+    },
+    {
+        "code": "HU9JVR",
+        "name": "Ajinkya P. Dahale",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/ajinkya-dahale/",
+            "gravatarUrl": "https://gravatar.com/soulspeedily93711bff63"
+        },
+        "title": "Software Engineer | FreeCAD | Osdag | FOSSEE | IITB",
+        "imageLink": "https://gravatar.com/avatar/2964b1f537c969546315fd408ac2558202e56087469d5def12f88ba0e3c06a53.png?size=512&default=initials"
+    },
+    {
+        "code": "YFZVVR",
+        "name": "Allen Y",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/allen-yesudasan/",
+            "gravatarUrl": "https://gravatar.com/alleny244"
+        },
+        "title": "Backend Engineer | Python & Kubernetes",
+        "imageLink": "https://gravatar.com/avatar/51b65063c9c187ed36fea28fed5074c92453459085abb7171ccd6933c4af6a15.png?size=512&default=initials"
+    },
+    {
+        "code": "78MVQZ",
+        "name": "Aman",
+        "socials": {}
+    },
+    {
+        "code": "F7PS78",
+        "name": "Anand S",
+        "socials": {}
+    },
+    {
+        "code": "QWJNMC",
+        "name": "Anant Gupta",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/guptaanant/",
+            "gravatarUrl": "https://gravatar.com/simplyanant"
+        },
+        "title": "Senior AI/ML Manager",
+        "imageLink": "https://gravatar.com/avatar/a5012478e1b88d230fe47cea374d08997a12200db98c5c91e93236c4b30461a2.png?size=512&default=initials"
+    },
+    {
+        "code": "MVMTPJ",
+        "name": "Aniket",
+        "socials": {}
+    },
+    {
+        "code": "HQYQVZ",
+        "name": "Anindita Sinha Banerjee",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/anindita-sinha-banerjee-41a99956/",
+            "gravatarUrl": "https://gravatar.com/whispershappily943bfaa979"
+        },
+        "title": "Data Scientist at Red Hat | AI Researcher",
+        "imageLink": "https://gravatar.com/avatar/987c90be623976d28fa9d8a8c12e79a66f7d1ee4309453e5675f87f13d99e244.png?size=512&default=initials"
+    },
+    {
+        "code": "L8MH3U",
+        "name": "Anivesh Pandey",
+        "socials": {}
+    },
+    {
+        "code": "FE9SPU",
+        "name": "Archit Singh",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/archit15singh/",
+            "x": "https://x.com/archit_singh15",
+            "instagram": "https://www.instagram.com/archit._.exe/",
+            "gravatarUrl": "https://gravatar.com/architsingh15"
+        },
+        "title": "Senior Software Engineer | Abnormal AI",
+        "imageLink": "https://gravatar.com/avatar/34428000f6d8ff0b73dfbb1f6aad2883217839899d3cf859f13fa5e9a7f61e1a.png?size=512&default=initials"
+    },
+    {
+        "code": "RRCJYF",
+        "name": "Ashish Shukla",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/ash2shukla/",
+            "gravatarUrl": "https://gravatar.com/ash2shukla"
+        },
+        "title": "Lead Software Engineer",
+        "imageLink": "https://gravatar.com/avatar/de4550a1eac3488beed0bcabe8d59c78d5d9b3b6d55b0546b1f7c28473130a68.png?size=512&default=initials"
+    },
+    {
+        "code": "WWMDLH",
+        "name": "Bhuvnesh Sharma",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/devilsautumn",
+            "x": "https://x.com/devilsautumn",
+            "gravatarUrl": "https://gravatar.com/typhoonpleasantlya81904e1a7"
+        },
+        "title": "Django core contributor | GSoC Org admin | Founder of Django India Community",
+        "imageLink": "https://gravatar.com/avatar/3b08b65d9aaeb606224200546a0fe959127f676519b3e69d02bbfd952a287dd3.png?size=512&default=initials"
+    },
+    {
+        "code": "GD7PSS",
+        "name": "Charan Teja C S",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/c-s-charan-teja/",
+            "gravatarUrl": "https://gravatar.com/cheerfullylegendary2e777cbe17"
+        },
+        "title": "AI/ML Engineer | OSI Digital",
+        "imageLink": "https://gravatar.com/avatar/2a037bd1f8c09cdbfea050fccb0582c1856bcbf7f1bfe7182d38d4aba6943a1b.png?size=512&default=initials"
+    },
+    {
+        "code": "PTNTXY",
+        "name": "Farhaan Bukhsh",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/farhaanbukhsh",
+            "x": "https://x.com/fhackdroid",
+            "instagram": "https://www.instagram.com/farhaanbukhsh",
+            "gravatarUrl": "https://gravatar.com/fardroid23"
+        },
+        "title": "Senior Software Engineer | OpenCraft | 🦀 | Open edX",
+        "imageLink": "https://gravatar.com/avatar/b681ddfaffa293b03c57e5f0ed90eb1e06a8f748f4dccdccef8cdd301c66c9ae.png?size=512&default=initials"
+    },
+    {
+        "code": "UAD7KN",
+        "name": "Gaurav Trivedi",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/gauravtrivedi88/",
+            "gravatarUrl": "https://gravatar.com/gauravtrivedi88"
+        },
+        "title": "Technical Writer | AI-Driven Docs Advocate",
+        "imageLink": "https://gravatar.com/avatar/97f18a456d56ec62538fa30f78611e99ba0d8872a0f9db70ba668f7050c91196.png?size=512&default=initials"
+    },
+    {
+        "code": "978RPU",
+        "name": "Heer Thakkar",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/heer-thakkar-161493300/",
+            "instagram": "https://www.instagram.com/spicysundae55?igsh=aXJ1aHh3eWc4NXo2",
+            "gravatarUrl": "https://gravatar.com/heerthakkar"
+        },
+        "title": "16 year old self taught Python Developer | Applied AI engineer",
+        "imageLink": "https://gravatar.com/avatar/e0ce26591cbd53bd78d1ea21155a66332164a740a60699944ca787349901d668.png?size=512&default=initials"
+    },
+    {
+        "code": "XXUZMQ",
+        "name": "Ivan Blinkov",
+        "socials": {
+            "linkedin": "https://linkedin.com/in/ivanblinkov",
+            "gravatarUrl": "https://gravatar.com/generouslynoisy99e2295c6e"
+        },
+        "title": "VP, Product and Open-Source | YDB",
+        "imageLink": "https://gravatar.com/avatar/768fc73e8addbf377f7799518d25bb51e64d92c11eef9bb039c09059a3f3caef.png?size=512&default=initials"
+    },
+    {
+        "code": "GZANZJ",
+        "name": "Jithu Sunny",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/jisuka/",
+            "x": "https://x.com/jithusunny",
+            "instagram": "https://www.instagram.com/_jisuka_/",
+            "gravatarUrl": "https://gravatar.com/jithusunny"
+        },
+        "title": "Associate Product Architect at KeyValue Software Systems",
+        "imageLink": "https://gravatar.com/avatar/ef1dfede560b2ee8de1fdbaea7cbae9e60e7ff8b7deb9af53cc42e9f24b192e9.png?size=512&default=initials"
+    },
+    {
+        "code": "CSBPMS",
+        "name": "Kumar Anirudha",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/kranirudha",
+            "x": "https://x.com/kranirudha",
+            "instagram": "https://instagram.com/anistark",
+            "gravatarUrl": "https://anirudha.dev/images/ani-24-pfp-0.png"
+        },
+        "title": "Product Architect and Tech Consultant"
+    },
+    {
+        "code": "3WDZRP",
+        "name": "Lakshya Gupta",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/lakshya-gupta-6163889b/",
+            "instagram": "https://www.instagram.com/import_lakshya_as_lg/",
+            "gravatarUrl": "https://gravatar.com/wondrousinquisitively988876311c"
+        },
+        "title": "Software Engineer | AI and Music Enthusiast",
+        "imageLink": "https://gravatar.com/avatar/caeb1ef12876203c1caaaf33a4ca8c8f214ff76b10acf35f549a541432322e35.png?size=512&default=initials"
+    },
+    {
+        "code": "JEGWEF",
+        "name": "Mahima Arora",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/mahimaarora25/",
+            "gravatarUrl": "https://gravatar.com/mahimaarora25"
+        },
+        "title": "Senior Data Scientist @ Red Hat | Data & AI",
+        "imageLink": "https://gravatar.com/avatar/323a952785b1e99ab27abbc3f3f0faba7bf3b4994700389d9c0f0aeb86b5535d.png?size=512&default=initials"
+    },
+    {
+        "code": "CNURCP",
+        "name": "Nitin Agarwal",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/agnitin/",
+            "gravatarUrl": "https://gravatar.com/mnitin3"
+        },
+        "title": "Principal Data Scientist | AI Leader | Mentor | Speaker",
+        "imageLink": "https://gravatar.com/avatar/daa3a519282a8f11f0d71c9a286341f8c2de64b78b359bbeb96a0e2a059cb69b.png?size=512&default=initials"
+    },
+    {
+        "code": "3NJXXL",
+        "name": "Param Rajani",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/param-rajani/",
+            "gravatarUrl": "https://gravatar.com/groovyvaliantly2861d190e3"
+        },
+        "title": "SDE 2 @ GoDaddy | Built Data Products @ Scale",
+        "imageLink": "https://gravatar.com/avatar/2a6ebdb537d078829651ac82a84c1b9eaed3ec23ba357c2983c031cdab771a04.png?size=512&default=initials"
+    },
+    {
+        "code": "3GFU8Z",
+        "name": "Poruri Sai Rahul",
+        "socials": {}
+    },
+    {
+        "code": "33BK7Y",
+        "name": "Pratik Kumar Panda",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/devppratik/",
+            "instagram": "https://www.instagram.com/devppratik/",
+            "gravatarUrl": "https://gravatar.com/scrumptiousalways782955c1b2"
+        },
+        "title": "SRE | K8s, Cloud & Open Source",
+        "imageLink": "https://gravatar.com/avatar/545c43968eb3e5591907ac11d59c5e6b7082300c850d7330ce54b612b0783806.png?size=512&default=initials"
+    },
+    {
+        "code": "7XZR8J",
+        "name": "Preethi Srinivasan",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/preethi-srinivasan-3a221915/",
+            "x": "https://x.com/sthreepi",
+            "gravatarUrl": "https://gravatar.com/sublimeprinceebe666a61e"
+        },
+        "title": "Machine Learning | Efficient Training at Scale",
+        "imageLink": "https://gravatar.com/avatar/6920d2650475b5efb66c6f65f4ac6a1be7e7ff1c8a8a9572f7167067337d02de.png?size=512&default=initials"
+    },
+    {
+        "code": "MD9GZQ",
+        "name": "Princekumar Dobariya",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/princekumar-dobariya-198637154/",
+            "gravatarUrl": "https://gravatar.com/princedobariya"
+        },
+        "title": "Software Engineer @ BBD Software  |  AI & Cloud Innovator",
+        "imageLink": "https://gravatar.com/avatar/05db31bc3b123c521008945aaab7b9f7c2bacf45c6fd715e1e6949c2011519aa.png?size=512&default=initials"
+    },
+    {
+        "code": "JDW3QF",
+        "name": "Puneet Khushwani",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/puneet-khushwani-01012726/",
+            "x": "https://x.com/pkhushwani",
+            "instagram": "https://www.instagram.com/puneet.khushwani/",
+            "gravatarUrl": "https://gravatar.com/too26b5838c378d"
+        },
+        "title": "Sr. Engineering Manager at GoDaddy",
+        "imageLink": "https://gravatar.com/avatar/37b77f31b5ab9ededbcff8090d61e04d7c009f1e0a4909b7688aaab04456caf0.png?size=512&default=initials"
+    },
+    {
+        "code": "XF338R",
+        "name": "Rajesh Sola",
+        "socials": {}
+    },
+    {
+        "code": "VSQQM3",
+        "name": "Rajul Jha",
+        "socials": {
+            "linkedin": "https://linkedin.com/in/rajuljha",
+            "x": "https://x.com/rajul_jha",
+            "instagram": "https://instagram.com/rjknightmare",
+            "gravatarUrl": "https://gravatar.com/rajuljha49"
+        },
+        "title": "Open Source Enthusiast | GSoC '24 and '25 at FOSSology",
+        "imageLink": "https://gravatar.com/avatar/d9c5bb4f3ca32e7070915b17392ee181250f0b0ed5450fd4bc6381738389ea22.png?size=512&default=initials"
+    },
+    {
+        "code": "HDBNNT",
+        "name": "Ravindra Jaju",
+        "socials": {}
+    },
+    {
+        "code": "K9WZBP",
+        "name": "Rengaraj D",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/rengaraj-d-1b804a16/",
+            "x": "https://x.com/sakthirengaraj",
+            "gravatarUrl": "https://gravatar.com/sakthirengaraj"
+        },
+        "title": "Senior Engineer at SES | Co-organizer of Chennaipy",
+        "imageLink": "https://gravatar.com/avatar/53610a1b6acb64452101e74d9702feede72a018da1d02e5ae84ec4a8db627038.png?size=512&default=initials"
+    },
+    {
+        "code": "KMYPEQ",
+        "name": "robin gupta",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/polymorphicrobin/",
+            "gravatarUrl": "https://gravatar.com/smilinrobin"
+        },
+        "title": "CEO @ TestZeus",
+        "imageLink": "https://gravatar.com/avatar/42df06d0062516c4b2a52e71bd18c9876fd592835297482f3960f7527f612141.png?size=512&default=initials"
+    },
+    {
+        "code": "7CLBEG",
+        "name": "Rohan Giriraj",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/rohan-giriraj",
+            "gravatarUrl": "https://gravatar.com/traversinginfinity"
+        },
+        "title": "Software Developer at Autodesk",
+        "imageLink": "https://gravatar.com/avatar/68dee4ee66f745e7a2ee63015685fca0998deaf563fe6b78cfcf187bfec3e043.png?size=512&default=initials"
+    },
+    {
+        "code": "LEC7AY",
+        "name": "Rohan Reddy Alleti",
+        "socials": {
+            "linkedin": "www.linkedin.com/in/rohanalleti",
+            "x": "https://x.com/RohanJnr45",
+            "instagram": "https://www.instagram.com/rohan_reddy_44_/",
+            "gravatarUrl": "https://gravatar.com/rohanjnr44"
+        },
+        "title": "Solution Consultant at Sahaj Software",
+        "imageLink": "https://gravatar.com/avatar/7ab07b2856736cc9a2b7ccef802143a0388260cfc00784f80e0436285c8bd162.png?size=512&default=initials"
+    },
+    {
+        "code": "AQNZ9G",
+        "name": "Rutvik Acharya",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/rutvikacharya/",
+            "gravatarUrl": "https://gravatar.com/rutvik25"
+        },
+        "title": "Principal Data Scientist at Atlassian",
+        "imageLink": "https://gravatar.com/avatar/c209b0ef1198f5abb4e9a092e2431957de8345824931c32e9bf6442ba47491aa.png?size=512&default=initials"
+    },
+    {
+        "code": "VDYJHY",
+        "name": "Saksham Aggarwal",
+        "socials": {
+            "linkedin": "https://linkedin.com/in/sakshamagg27",
+            "x": "https://x.com/sxmawl",
+            "instagram": "https://www.instagram.com/saksham.awl",
+            "gravatarUrl": "https://gravatar.com/sxmawl"
+        },
+        "title": "Co-founder, Iterate AI | CS@BITS Pilani",
+        "imageLink": "https://gravatar.com/avatar/a1be405b5fcd3806e86ab3a9ec15e16cbd7f558dbd9844f38a257f1608a382f6.png?size=512&default=initials"
+    },
+    {
+        "code": "GHKUY7",
+        "name": "Saradindu Sengupta",
+        "socials": {}
+    },
+    {
+        "code": "3HJ3PX",
+        "name": "Sasidhar Donaparthi",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/sasidonaparthi/",
+            "instagram": "https://www.instagram.com/sdonapar/",
+            "gravatarUrl": "https://gravatar.com/sasidhardonaparthi"
+        },
+        "title": "Data Scientist | Financial Services Firm",
+        "imageLink": "https://gravatar.com/avatar/14dd9093cca0584250593d9ce3da24ce0e7ad571c531a17faccd64fd9146c1c5.png?size=512&default=initials"
+    },
+    {
+        "code": "ENWLCU",
+        "name": "Shaleen Jain",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/shaleen-jain-4300b626/",
+            "x": "https://x.com/ShaleenAnuj",
+            "gravatarUrl": "https://gravatar.com/shaleenjain6491"
+        },
+        "title": "Algorithm Developer/ Solution Enthusiast",
+        "imageLink": "https://gravatar.com/avatar/3ee73dcf4384dbac1a4487759890a5d0a09fc5810144997650299a288588b2dc.png?size=512&default=initials"
+    },
+    {
+        "code": "HDPPVX",
+        "name": "Shrayas",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/shrayasr/",
+            "x": "https://x.com/shrayasr",
+            "gravatarUrl": "https://gravatar.com/shrayasr"
+        },
+        "title": "Head of Engineering at Logic Soft | Co-organizer of Chennaipy",
+        "imageLink": "https://gravatar.com/avatar/99d556bd35ffa35fea4a8e0f76893c4278c3c90cf7fee6b57a40eb83608fd25e.png?size=512&default=initials"
+    },
+    {
+        "code": "Y9FK9M",
+        "name": "shreya kommuri",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/shreyakb20/",
+            "gravatarUrl": "https://gravatar.com/swagf6614b76ae3"
+        },
+        "title": "AI Developer at Zikhara AI | ComfyUI Enthusiast",
+        "imageLink": "https://gravatar.com/avatar/0dc65405b2e703c7904d5258e925b3bc06671e31546989d014a99ad476b26c2b.png?size=512&default=initials"
+    },
+    {
+        "code": "ABUBPB",
+        "name": "Shruti Dhavalikar",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/shruti-dhavalikar-83514615a/",
+            "gravatarUrl": "https://Nothankyou!"
+        },
+        "title": "Data Scientist | Enriching business with AI"
+    },
+    {
+        "code": "F7UHHX",
+        "name": "Sibin Bhaskaran",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/sibinbh/",
+            "instagram": "https://www.instagram.com/syno08/",
+            "gravatarUrl": "https://gravatar.com/bearthoroughly79c4e828f5"
+        },
+        "title": "Solution Consultant at Sahaj Software | Learner",
+        "imageLink": "https://gravatar.com/avatar/a4a9c1a4a6fa6ce54f2fb927e03422ffd5cd745383c1f47514cf2cc3e1e8be49.png?size=512&default=initials"
+    },
+    {
+        "code": "9NMLQU",
+        "name": "Siddharta G",
+        "socials": {}
+    },
+    {
+        "code": "ZNVLP9",
+        "name": "siddhi kommuri",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/siddhi-kommuri/",
+            "x": "https://x.com/coeusk4",
+            "instagram": "https://www.instagram.com/leanjuice.log/",
+            "gravatarUrl": "https://gravatar.com/siddhikom"
+        },
+        "title": "AI developer | Zikhara AI",
+        "imageLink": "https://gravatar.com/avatar/b85f1e769459293b42447d106db8fe80383162327d8b3ace4ec4c4fbcce1c05d.png?size=512&default=initials"
+    },
+    {
+        "code": "FD3TGB",
+        "name": "Sneha Singh",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/iam-sneha-singh",
+            "instagram": "https://www.instagram.com/snehaas__",
+            "gravatarUrl": "https://gravatar.com/widgetgenerous9d3264d3f2"
+        },
+        "title": "Software Engg | Python & Cloud Enthusiast",
+        "imageLink": "https://gravatar.com/avatar/213a8c880ed9835d84f0387e4f9df3cfa4dd24b0b2f01fea728e552c99a4aa47.png?size=512&default=initials"
+    },
+    {
+        "code": "ZVWENU",
+        "name": "Srikanth Doddi",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/srikanthdoddi/",
+            "gravatarUrl": "https://gravatar.com/srikanthcloudarch"
+        },
+        "title": "Architect at OSI Digital",
+        "imageLink": "https://gravatar.com/avatar/2967f2053b7e02e12b765a3aeaf25fdec9bd177a56f8734c713f087de430f48e.png?size=512&default=initials"
+    },
+    {
+        "code": "VEUJHT",
+        "name": "Stefanie Molin",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/stefanie-molin/",
+            "x": "https://x.com/StefanieMolin",
+            "gravatarUrl": "https://gravatar.com/blazesupernaturally37b7b8017e"
+        },
+        "title": "Software Engineer | Author | Speaker",
+        "imageLink": "https://gravatar.com/avatar/fd986be280023b9a1a59cd05ff460fa9a39e70a941c994e673dfc814f8220b86.png?size=512&default=initials"
+    },
+    {
+        "code": "NZ39PX",
+        "name": "Urvashi Choubey",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/urvashi-choubey/",
+            "gravatarUrl": "https://gravatar.com/choubeyurvashi"
+        },
+        "title": "Cloud Engineer at FICO | Kubernetes Release Maintainer",
+        "imageLink": "https://gravatar.com/avatar/b732ca9c70369e1c38f20199b24f960c0d1460a955078a0108a6c4719ead28cd.png?size=512&default=initials"
+    },
+    {
+        "code": "QCGFCL",
+        "name": "Vikram Vaswani",
+        "socials": {}
+    },
+    {
+        "code": "HNKYMS",
+        "name": "Vivek Keshore",
+        "socials": {
+            "linkedin": "https://www.linkedin.com/in/vivek-keshore/",
+            "gravatarUrl": "https://gravatar.com/vivekkeshore"
+        },
+        "title": "Software Architect - Python & Open Source @ EPAM Systems",
+        "imageLink": "https://gravatar.com/avatar/4197ebd134322ce4129c4f23ff7d281f485b5ed5f94055cc1dd7ed19615dab34.png?size=512&default=initials"
+    }
+]

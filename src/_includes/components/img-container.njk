@@ -1,0 +1,48 @@
+{% macro imgContainer(width=200, height=200, depth=100, frontBg="lime", topBg="", leftBg="", autoHeight=false, url="", altText="") %}
+    {% if frontBg == "lime" %}
+        {% set resolved_front_bg = "#D7FF7B" %}
+    {% elseif frontBg == "lavender" %}
+        {% set resolved_front_bg = "#F0EEFF" %}
+    {% else %}
+        {% set resolved_front_bg = frontBg %}
+    {% endif %}
+
+    {% if topBg == "" %}
+        {% set resolved_top_bg = resolved_front_bg %}
+    {% elseif topBg == "lime" %}
+        {% set resolved_top_bg = "#D7FF7B" %}
+    {% elseif topBg == "lavender" %}
+        {% set resolved_top_bg = "#F0EEFF" %}
+    {% elseif topBg == "purple" %}
+        {% set resolved_top_bg = "#CD89FF" %}
+    {% else %}
+        {% set resolved_top_bg = topBg %}
+    {% endif %}
+
+    {% if leftBg == "" %}
+        {% set resolved_left_bg = resolved_front_bg %}
+    {% elseif leftBg == "lime" %}
+        {% set resolved_left_bg = "#D7FF7B" %}
+    {% elseif leftBg == "lavender" %}
+        {% set resolved_left_bg = "#F0EEFF" %}
+    {% elseif leftBg == "purple" %}
+        {% set resolved_left_bg = "#CD89FF" %}
+    {% else %}
+        {% set resolved_left_bg = leftBg %}
+    {% endif %}
+
+    <div class="window-container{% if autoHeight %} window-auto-height{% endif %}"
+         style="--w:{{ width }}; --h:{{ height }}; --d:{{ depth }};
+                --front-bg:{{ resolved_front_bg }};
+                --top-bg:{{ resolved_top_bg }};
+                --left-bg:{{ resolved_left_bg }};">
+        <!-- Top Panel -->
+        <div class="face top"></div>
+        <!-- Left Panel -->
+        <div class="face left"></div>
+        <!-- Front Face -->
+        <div class="face front">
+            <img src="{{ url }}" alt="{{ altText }}" class="w-full h-full object-cover" />
+        </div>
+    </div>
+{% endmacro %}
