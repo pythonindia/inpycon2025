@@ -58,13 +58,11 @@ layout: base.njk
             </div>
 
             <div class="flex justify-center lg:justify-start pt-8">
-                {{ button(text="Submit a Proposal", url="https://cfp.in.pycon.org/2025/cfp", lime_bg=true, env = env) }}
+                {{ button(text="Submit a Proposal", url="https://cfp.in.pycon.org/2025/cfp", lime_bg=true, env = env, disabled=true) }}
             </div>
-            {#
             <div class="text-center lg:text-left mt-4 text-red-600 font-semibold">
               <p>Proposals are closed. Thank you for your submissions!</p>
             </div>
-            #}
         </div>
 
         <div class="pt-12 lg:pt-32 text-md lg:text-xl font-light">
