@@ -6,45 +6,44 @@ layout: base.njk
 
 {% from "components/img-container.njk" import imgContainer %}
 
-<div class="w-full h-auto px-[6%] -mb-16 md:mb-0 flex flex-col md:flex-row">
+<div class="w-full h-auto bg-pycon-blue px-[6%] -mb-16 md:mb-0 flex flex-col md:flex-row">
     <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
-        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
             Speakers
         </div>
+        <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-10 text-justify">
+            <p>Meet the inspiring speakers who will share their knowledge, experiences, and insights at PyCon India 2025.</p>
+        </div>
     </div>
-    <div class="lg:w-[30%] w-[80%] lg:mt-40 items-center justify-center mx-auto hidden lg:block">
-        <img src="{{ env.baseUrl }}img/assets/tetris-stars.svg" alt="Guide" class="w-[80%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+    <div class="lg:w-[30%] w-[80%] lg:mt-32 flex items-center justify-center mx-auto">
+        <img src="{{ env.baseUrl }}img/assets/guide.svg" alt="Scholarship Guide" class="w-[80%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
     </div>
 </div>
 
 
-<div class="main-container pt-48 pb-72 lg:pb-40 md:pt-16 w-full text-black h-auto px-[6%]">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 ml-4">
+<div class="main-container bg-lavender pt-48 pb-72 lg:pb-40 md:pt-16 w-full text-black h-auto px-[6%]">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 gap-y-16 ml-4 pt-10">
         {% for person in speakers %}
-        <div class="lex flex-col items-center pb-4 transition-transform duration-300 hover:-translate-y-2">
-            <div class="md:items-start">
+        <div class="flex flex-col items-center pb-4 transition-transform duration-300 hover:-translate-y-2">
+            <div class="mx-auto">
                 <!-- Responsive Image with 4:3 ratio -->
-                <div class="w-60 h-48 relative group">
-                    <div class="absolute inset-0">
-                        <div class="w-full h-full">
-                            {% if person.imageLink %}
-                                {{ imgContainer(width=180, height=180, depth=12, frontBg="lavender", leftBg="purple", topBg="purple", url= person.imageLink) }}
-                            {% else %}
-                                {{ imgContainer(width=180, height=180, depth=12, frontBg="lavender", leftBg="purple", topBg="purple", url= "https://in.pycon.org/2024/image/ZadraSol.webp") }}
-                            {% endif %}
-                        </div>
+                <div class="w-60 h-auto relative group mx-auto">
+                    <div class="w-full h-full">
+                        {% set image_url = person.imageLink if person.imageLink else "https://in.pycon.org/2024/image/ZadraSol.webp" %}
+                        <a href="https://cfp.in.pycon.org/2025/speaker/{{ person.code }}/">
+                        {{ imgContainer(width=200, height=200, depth=12, frontBg="lavender", leftBg="purple", topBg="purple", url=image_url) }}
+                        </a>
                     </div>
                 </div>
 
                 <!-- Name -->
-                <p class="mt-2 ml-2 mr-4 mb-1 text-xl font-light text-left w-52">{{ person.name }}</p>
+                <p class="mt-2 mb-1 text-xl font-light w-52 pl-2 text-left">{{ person.name }}</p>
 
                 <!-- Title -->
-                {% if person.title %}
-                    <p class="mt-1 ml-2 mr-4 mb-1 text-xs font-light text-left w-52">{{person.title}}</p>
-                {% endif %}
+                <p class="mt-2 mb-1 text-xs font-light w-52 pl-2 text-left">{{person.title}}</p>
+
                 <!-- Socials -->
-                <div class="flex ml-2 mr-4 justify-left items-start gap-1 md:gap-4 flex-wrap w-52">
+                <div class="flex justify-start items-start gap-1 md:gap-4 flex-wrap w-52 pl-2 text-left">
                     {% if person.socials.linkedin %}
                     <a href="{{ person.socials.linkedin }}" target="_blank" aria-label="LinkedIn" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
                         <i class="fab fa-linkedin text-md md:text-xl"></i>
@@ -56,7 +55,7 @@ layout: base.njk
                     </a>
                     {% endif %}
                     {% if person.socials.x %}
-                    <a href="{{ person.socials.twitter }}" target="_blank" aria-label="Twitter" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <a href="{{ person.socials.x }}" target="_blank" aria-label="X" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
                         <i class="fab fa-x-twitter text-md md:text-xl"></i>
                     </a>
                     {% endif %}
