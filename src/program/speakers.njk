@@ -8,30 +8,36 @@ layout: base.njk
 
 <div class="w-full h-auto bg-pycon-blue px-[6%] -mb-16 md:mb-0 flex flex-col md:flex-row">
     <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
-        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+        <div
+            class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
             Speakers
         </div>
         <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-10 text-justify">
-            <p>Meet the inspiring speakers who will share their knowledge, experiences, and insights at PyCon India 2025.</p>
+            <p>Meet the inspiring speakers who will share their knowledge, experiences, and insights at PyCon India
+                2025.</p>
         </div>
     </div>
     <div class="lg:w-[30%] w-[80%] lg:mt-32 flex items-center justify-center mx-auto">
-        <img src="{{ env.baseUrl }}img/assets/guide.svg" alt="Scholarship Guide" class="w-[80%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+        <img src="{{ env.baseUrl }}img/assets/guide.svg" alt="Scholarship Guide"
+            class="w-[80%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
     </div>
 </div>
 
 
 <div class="main-container bg-lavender pt-48 pb-72 lg:pb-40 md:pt-16 w-full text-black h-auto px-[6%]">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 gap-y-16 ml-4 pt-10">
+    <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 gap-y-16 ml-4 pt-10">
         {% for person in speakers %}
         <div class="flex flex-col items-center pb-4 transition-transform duration-300 hover:-translate-y-2">
             <div class="mx-auto">
                 <!-- Responsive Image with 4:3 ratio -->
                 <div class="w-60 h-auto relative group mx-auto">
                     <div class="w-full h-full">
-                        {% set image_url = person.imageLink if person.imageLink else "https://in.pycon.org/2024/image/ZadraSol.webp" %}
+                        {% set image_url = person.imageLink if person.imageLink else
+                        "https://in.pycon.org/2024/image/ZadraSol.webp" %}
                         <a href="https://cfp.in.pycon.org/2025/speaker/{{ person.code }}/">
-                        {{ imgContainer(width=200, height=200, depth=12, frontBg="lavender", leftBg="purple", topBg="purple", url=image_url) }}
+                            {{ imgContainer(width=200, height=200, depth=12, frontBg="lavender", leftBg="purple",
+                            topBg="purple", url=image_url) }}
                         </a>
                     </div>
                 </div>
@@ -45,32 +51,38 @@ layout: base.njk
                 <!-- Socials -->
                 <div class="flex justify-start items-start gap-1 md:gap-4 flex-wrap w-52 pl-2 text-left">
                     {% if person.socials.linkedin %}
-                    <a href="{{ person.socials.linkedin }}" target="_blank" aria-label="LinkedIn" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <a href="{{ person.socials.linkedin }}" target="_blank" aria-label="LinkedIn"
+                        class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
                         <i class="fab fa-linkedin text-md md:text-xl"></i>
                     </a>
                     {% endif %}
                     {% if person.socials.web %}
-                    <a href="{{ person.socials.web }}" target="_blank" aria-label="Website" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <a href="{{ person.socials.web }}" target="_blank" aria-label="Website"
+                        class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
                         <i class="fa fa-globe text-md md:text-xl"></i>
                     </a>
                     {% endif %}
                     {% if person.socials.x %}
-                    <a href="{{ person.socials.x }}" target="_blank" aria-label="X" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <a href="{{ person.socials.x }}" target="_blank" aria-label="X"
+                        class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
                         <i class="fab fa-x-twitter text-md md:text-xl"></i>
                     </a>
                     {% endif %}
                     {% if person.socials.github %}
-                    <a href="{{ person.socials.github }}" target="_blank" aria-label="GitHub" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <a href="{{ person.socials.github }}" target="_blank" aria-label="GitHub"
+                        class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
                         <i class="fab fa-github text-md md:text-xl"></i>
                     </a>
                     {% endif %}
                     {% if person.socials.youtube %}
-                    <a href="{{ person.socials.youtube }}" target="_blank" aria-label="YouTube" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <a href="{{ person.socials.youtube }}" target="_blank" aria-label="YouTube"
+                        class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
                         <i class="fab fa-youtube text-md md:text-xl"></i>
                     </a>
                     {% endif %}
                     {% if person.socials.instagram %}
-                    <a href="{{ person.socials.instagram }}" target="_blank" aria-label="Instagram" class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
+                    <a href="{{ person.socials.instagram }}" target="_blank" aria-label="Instagram"
+                        class="p-1 rounded-full outline outline-1 outline-lime-300 flex justify-center items-center hover:scale-110 hover:text-[#4E62F5] transition-transform duration-200 no-underline">
                         <i class="fab fa-instagram text-md md:text-xl"></i>
                     </a>
                     {% endif %}
