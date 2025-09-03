@@ -4,6 +4,10 @@
         "hasSubmenu": true,
         "submenu": [
             {
+                "name": "Tickets",
+                "link": "attend/tickets"
+            },
+            {
                 "name": "Venue",
                 "link": "venue"
             },

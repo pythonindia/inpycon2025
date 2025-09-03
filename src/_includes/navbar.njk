@@ -1,3 +1,5 @@
+{% from "components/button.njk" import button %}
+
 {% macro navbar(isHomePage = false, env = env, menuItems=[]) %}
 <nav class="w-full flex justify-center {% if isHomePage %}bg-black{% else %}bg-pycon-blue{% endif %} z-50 fixed top-0 left-0 right-0 transition-all duration-500" id="main-navbar">
     <div class="w-full mx-auto px-6 hidden lg:block py-3">
@@ -59,10 +61,10 @@
                 </li>
                 {% endfor %}
 
-                <li class="relative ml-5">
-                    <a href="{{ env.baseUrl }}tickets" class="font-medium text-black bg-pycon-lime/90 hover:bg-pycon-lime text-sm py-2 px-4 rounded-full transition-all duration-200 no-underline whitespace-nowrap">
-                        Get Tickets
-                    </a>
+                <li class="relative">
+                    <div class="scale-75 text-left ml-2 -mx-4">
+                        {{ button(text="Schedule", url=env.baseUrl ~ "program/schedule", lime_bg=true, env=env) }}
+                    </div>
                 </li>
             </ul>
         </div>
@@ -153,8 +155,8 @@
             {% endif %}
         {% endfor %}
             <div class="mt-6">
-                <a href="{{ env.baseUrl }}tickets" class="flex justify-center items-center bg-pycon-lime text-black font-medium rounded-lg p-4 text-center w-full no-underline text-base transition-all duration-200 hover:bg-pycon-lime/80">
-                Get Tickets
+                <a href="{{ env.baseUrl }}program/schedule" class="flex justify-center items-center bg-pycon-lime text-black font-medium rounded-lg p-4 text-center w-full no-underline text-base transition-all duration-200 hover:bg-pycon-lime/80">
+                Schedule
                 </a>
             </div>
         </div>
