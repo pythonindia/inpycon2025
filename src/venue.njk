@@ -1,10 +1,11 @@
 ---
 title: Venue - PyCon India 2025
-description: PyCon India 2025 Venue at Nimhans Convention Center
+description: PyCon India 2025 Venues - Workshops, Conference, and Dev Sprint locations
 layout: base.njk
 ---
 {% from "components/button.njk" import button %}
 {% from "components/venueCard.njk" import venueCard %}
+{% from "components/flat-card.njk" import flatCard %}
 
 <header>
     {% set activePage = 'venue' %} 
@@ -12,8 +13,12 @@ layout: base.njk
 
 <div class="w-full h-auto -mb-20 bg-pycon-blue">
     <div class="pt-[200px] mx-[5%] md:mx-[145px]">
-        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
-            Nimhans Convention Center
+        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl text-[#FFFFFF] text-center">
+            PyCon India 2025 Venues
+        </div>
+        
+        <div class="space-grotesk-regular text-lg md:text-xl text-[#FFFFFF] text-center pt-4">
+            We recommend using Google Maps and the Namma BMTC app to get directions and bus routes.
         </div>
 
         <div class="absolute top-2/5 right-4 md:block">
@@ -24,16 +29,42 @@ layout: base.njk
             <img src="{{ env.baseUrl }}img/assets/star-pink-vector.svg" alt="Groovy star" class="md:w-16 md:h-16 w-10 h-10">
         </div>
 
-        <div class="flex flex-col lg:flex-row lg:space-x-8 lg:justify-between">
-            <div class="space-grotesk-regular font-medium text-xl lg:text-sm xl:text-2xl md:text-2xl pt-8 text-[#FFFFFF] text-center lg:text-left">
-                <p>Nimhans Convention Center,</p>
-                <p>Hosur Road, Lakkasandra,</p>
-                <p>Bengaluru - 560029</p>
-                <p>Landmark: Near Dairy Circle</p>
-                <div class="pt-8">{{ button(text="Find Direction", url="https://maps.app.goo.gl/jwUM4FYX6G35YkYe7?g_st=com.google.maps.preview.copy", lime_bg=true, env = env) }}</div>
+        <!-- Venue Selection Cards -->
+        <div class="pt-16 grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <!-- Workshop Venue -->
+            <div class="venue-card-wrapper" data-venue="workshop">
+                {% call flatCard(bg="purple") %}
+                    <div class="venue-card cursor-pointer p-4" data-venue="workshop">
+                        <div class="black-han-sans-regular text-2xl md:text-3xl text-center mb-3">Workshops</div>
+                        <div class="space-grotesk-regular text-base md:text-lg text-center mb-3">February 12th, 2025</div>
+                        <div class="space-grotesk-bold text-lg md:text-xl font-black text-center">St. Francis College</div>
+                        <div class="space-grotesk-regular text-sm md:text-base text-center">Koramangala, Bengaluru</div>
+                    </div>
+                {% endcall %}
             </div>
-            <div class="w-[90%] lg:w-[70%] xl:w-[52%] pt-24 pr-4 mx-auto lg:ml-auto">
-                {{ venueCard(bg="lime", venueData=venue.location, env=env) }}
+
+            <!-- Conference Venue -->
+            <div class="venue-card-wrapper selected" data-venue="conference">
+                {% call flatCard(bg="lime") %}
+                    <div class="venue-card cursor-pointer p-4 selected" data-venue="conference">
+                        <div class="black-han-sans-regular text-2xl md:text-3xl text-center mb-3">Conference</div>
+                        <div class="space-grotesk-regular text-base md:text-lg text-center mb-3">February 13-14th, 2025</div>
+                        <div class="space-grotesk-bold text-lg md:text-xl font-black text-center">Nimhans Convention Center</div>
+                        <div class="space-grotesk-regular text-sm md:text-base text-center">Lakkasandra, Bengaluru</div>
+                    </div>
+                {% endcall %}
+            </div>
+
+            <!-- Dev Sprint Venue -->
+            <div class="venue-card-wrapper" data-venue="devsprint">
+                {% call flatCard(bg="purple") %}
+                    <div class="venue-card cursor-pointer p-4" data-venue="devsprint">
+                        <div class="black-han-sans-regular text-2xl md:text-3xl text-center mb-3">Dev Sprint</div>
+                        <div class="space-grotesk-regular text-base md:text-lg text-center mb-3">February 15th, 2025</div>
+                        <div class="space-grotesk-bold text-lg md:text-xl font-black text-center">Scaler School of Technology</div>
+                        <div class="space-grotesk-regular text-sm md:text-base text-center">Electronic City, Bengaluru</div>
+                    </div>
+                {% endcall %}
             </div>
         </div>
 
@@ -42,38 +73,141 @@ layout: base.njk
 
 <div class="w-full bg-lavender">
     <div class="pt-[100px] mx-[5%] md:mx-[145px] md:pt-44">
-        <div class="black-han-sans-regular pt-32 lg:pt-20 xl:pt-32 md:pt-56 md:text-center font-normal text-3xl md:text-5xl text-[#000000] text-center lg:text-left">
-            <p>Getting to the</p>
-            <p>Conference Venue</p>
-        </div>
-
-        <div class="pt-32 relative flex flex-col md:flex-row">
-            <div class="flex-grow">
-                <div class="flex-shrink-0">
-                    <img src="{{ env.baseUrl }}img/assets/train.svg" alt="Train" class="h-10 ml-0 md:h-16 lg:h-28 mx-auto md:mx-0">
+        <!-- Selected Venue Details -->
+        <div id="venue-details">
+            <!-- Workshop Details -->
+            <div class="venue-details hidden" data-venue="workshop">
+                <div class="flex flex-col lg:flex-row lg:space-x-8 lg:justify-between mb-16">
+                    <div class="space-grotesk-regular font-medium text-xl lg:text-sm xl:text-2xl md:text-2xl text-[#000000] text-center lg:text-left">
+                        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl mb-4">St. Francis College</div>
+                        {% for line in venue.workshop.address %}
+                          <p>{{ line }}</p>
+                        {% endfor %}
+                        <div class="pt-8">{{ button(text="Find Direction", url="https://maps.app.goo.gl/zNbpKw76oAFBkxvx6", lime_bg=true, env = env) }}</div>
+                    </div>
+                    <div class="w-[90%] lg:w-[70%] xl:w-[52%] pt-24 pr-4 mx-auto lg:ml-auto">
+                        {{ venueCard(bg="lime", venueData=venue.workshop.location, env=env) }}
+                    </div>
                 </div>
-                <div class="w-[80%] lg:w-[60%] xl:w-[50%] ml-auto xl:mr-[12%] -mt-20 lg:-mt-40">
-                    {{ venueCard(bg="lime", venueData=venue.metro, env=env) }}
+
+                <div class="black-han-sans-regular pt-32 lg:pt-20 xl:pt-32 md:pt-56 md:text-center font-normal text-3xl md:text-5xl text-[#000000] text-center lg:text-left">
+                    <p>Getting to the</p>
+                    <p>Workshop Venue</p>
+                </div>
+
+                <div class="pt-32 relative flex flex-col md:flex-row">
+                    <div class="flex-grow">
+                        <div class="flex-shrink-0">
+                            <img src="{{ env.baseUrl }}img/assets/train.svg" alt="Train" class="h-10 ml-0 md:h-16 lg:h-28 mx-auto md:mx-0">
+                        </div>
+                        <div class="w-[80%] lg:w-[60%] xl:w-[50%] ml-auto xl:mr-[12%] -mt-20 lg:-mt-40">
+                            {{ venueCard(bg="lime", venueData=venue.workshop.metro, env=env) }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-24 relative flex flex-col md:flex-row">
+                    <div class="flex-grow">
+                        <div class="w-[80%] lg:w-[60%] xl:w-[60%] flex-shrink-0">
+                            {{ venueCard(bg="purple", venueData=venue.workshop.bus, env=env) }}
+                        </div>
+                        <div class="mx-auto pl-40 flex items-center justify-center -mt-20 lg:-mt-40 z-10 relative" style="pointer-events: none;">
+                            <img src="{{ env.baseUrl }}img/assets/bus.svg" alt="Bus" class="h-40 lg:h-56">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="pt-24 relative flex flex-col md:flex-row">
-            <div class="flex-grow">
-                <div class="w-[80%] lg:w-[60%] xl:w-[60%] flex-shrink-0">
-                    {{ venueCard(bg="purple", venueData=venue.bus, env=env) }}
+            <!-- Conference Details -->
+            <div class="venue-details" data-venue="conference">
+                <div class="flex flex-col lg:flex-row lg:space-x-8 lg:justify-between mb-16">
+                    <div class="space-grotesk-regular font-medium text-xl lg:text-sm xl:text-2xl md:text-2xl text-[#000000] text-center lg:text-left">
+                        {% for line in venue.conference.address %}
+                          <p class="{% if loop.first %}black-han-sans-regular font-normal text-3xl md:text-5xl mb-4{% endif %}">{{ line }}</p>
+                        {% endfor %}
+                        <div class="pt-8">{{ button(text="Find Direction", url="https://maps.app.goo.gl/jwUM4FYX6G35YkYe7?g_st=com.google.maps.preview.copy", lime_bg=true, env = env) }}</div>
+                    </div>
+                    <div class="w-[90%] lg:w-[70%] xl:w-[52%] pt-24 pr-4 mx-auto lg:ml-auto">
+                        {{ venueCard(bg="lime", venueData=venue.conference.location, env=env) }}
+                    </div>
                 </div>
-                <div class="mx-auto pl-40 flex items-center justify-center -mt-20 lg:-mt-40 z-10 relative" style="pointer-events: none;">
-                    <img src="{{ env.baseUrl }}img/assets/bus.svg" alt="Bus" class="h-40 lg:h-56">
+
+                <div class="black-han-sans-regular pt-32 lg:pt-20 xl:pt-32 md:pt-56 md:text-center font-normal text-3xl md:text-5xl text-[#000000] text-center lg:text-left">
+                    <p>Getting to the</p>
+                    <p>Conference Venue</p>
+                </div>
+
+                <div class="pt-32 relative flex flex-col md:flex-row">
+                    <div class="flex-grow">
+                        <div class="flex-shrink-0">
+                            <img src="{{ env.baseUrl }}img/assets/train.svg" alt="Train" class="h-10 ml-0 md:h-16 lg:h-28 mx-auto md:mx-0">
+                        </div>
+                        <div class="w-[80%] lg:w-[60%] xl:w-[50%] ml-auto xl:mr-[12%] -mt-20 lg:-mt-40">
+                            {{ venueCard(bg="lime", venueData=venue.conference.metro, env=env) }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-24 relative flex flex-col md:flex-row">
+                    <div class="flex-grow">
+                        <div class="w-[80%] lg:w-[60%] xl:w-[60%] flex-shrink-0">
+                            {{ venueCard(bg="purple", venueData=venue.conference.bus, env=env) }}
+                        </div>
+                        <div class="mx-auto pl-40 flex items-center justify-center -mt-20 lg:-mt-40 z-10 relative" style="pointer-events: none;">
+                            <img src="{{ env.baseUrl }}img/assets/bus.svg" alt="Bus" class="h-40 lg:h-56">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <!-- Dev Sprint Details -->
+            <div class="venue-details hidden" data-venue="devsprint">
+                <div class="flex flex-col lg:flex-row lg:space-x-8 lg:justify-between mb-16">
+                    <div class="space-grotesk-regular font-medium text-xl lg:text-sm xl:text-2xl md:text-2xl text-[#000000] text-center lg:text-left">
+                        <div class="black-han-sans-regular font-normal text-3xl md:text-5xl mb-4">Scaler Academy</div>
+                        {% for line in venue.devsprint.address %}
+                          <p>{{ line }}</p>
+                        {% endfor %}
+                        <div class="pt-8">{{ button(text="Find Direction", url="https://maps.app.goo.gl/6BVHERhdfxxzHejc6", lime_bg=true, env = env) }}</div>
+                    </div>
+                    <div class="w-[90%] lg:w-[70%] xl:w-[52%] pt-24 pr-4 mx-auto lg:ml-auto">
+                        {{ venueCard(bg="lime", venueData=venue.devsprint.location, env=env) }}
+                    </div>
+                </div>
 
-        <div class="pt-32 w-full lg:w-2/3 xl:w-1/2 text-justify pb-40">
-            <p class="p-4 font-normal text-lg md:text-xl space-grotesk-regular leading-8">
-                Located centrally in Bengaluru, the venue has 2 floors. The ground floor, has all the main tracks happening in 3 halls as per schedule. There is a booth area, community space and beverage stalls. The first floor has open spaces, poster sessions, Birds of a Feather, and more happening.
-            </p>
+                <div class="black-han-sans-regular pt-32 lg:pt-20 xl:pt-32 md:pt-56 md:text-center font-normal text-3xl md:text-5xl text-[#000000] text-center lg:text-left">
+                    <p>Getting to the</p>
+                    <p>Dev Sprint Venue</p>
+                </div>
+
+                <div class="pt-32 relative flex flex-col md:flex-row">
+                    <div class="flex-grow">
+                        <div class="flex-shrink-0">
+                            <img src="{{ env.baseUrl }}img/assets/train.svg" alt="Train" class="h-10 ml-0 md:h-16 lg:h-28 mx-auto md:mx-0">
+                        </div>
+                        <div class="w-[80%] lg:w-[60%] xl:w-[50%] ml-auto xl:mr-[12%] -mt-20 lg:-mt-40">
+                            {{ venueCard(bg="lime", venueData=venue.devsprint.metro, env=env) }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-24 relative flex flex-col md:flex-row">
+                    <div class="flex-grow">
+                        <div class="w-[80%] lg:w-[60%] xl:w-[60%] flex-shrink-0">
+                            {{ venueCard(bg="purple", venueData=venue.devsprint.bus, env=env) }}
+                        </div>
+                        <div class="mx-auto pl-40 flex items-center justify-center -mt-20 lg:-mt-40 z-10 relative" style="pointer-events: none;">
+                            <img src="{{ env.baseUrl }}img/assets/bus.svg" alt="Bus" class="h-40 lg:h-56">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="pt-16 pb-64 w-full lg:w-2/3 xl:w-1/2 text-justify">
+                    <p class="p-4 font-normal text-lg md:text-xl space-grotesk-regular leading-8">
+                        We're excited to welcome you to PyCon India 2025 and hope you have a fantastic experience in Bengaluru! If you have any further inquiries or need assistance, feel free to contact us at
+                        <a href="mailto:contact@in.pycon.org" target="_blank" rel="noopener noreferrer" class="underline">contact@in.pycon.org</a>.
+                    </p>
+            </div>
         </div>
 
         <div class="hidden md:block pt-40 xl:pt-32 w-full justify-center pl-12 md:pl-4 xl:pl-36">
@@ -81,3 +215,43 @@ layout: base.njk
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const venueCardWrappers = document.querySelectorAll('.venue-card-wrapper');
+    const venueCards = document.querySelectorAll('.venue-card');
+    const venueDetails = document.querySelectorAll('.venue-details');
+    
+    venueCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const selectedVenue = this.getAttribute('data-venue');
+            const wrapper = this.closest('.venue-card-wrapper');
+            
+            // Remove selected class from all wrappers and cards
+            venueCardWrappers.forEach(w => w.classList.remove('selected'));
+            venueCards.forEach(c => c.classList.remove('selected'));
+            
+            // Add selected class to clicked card and wrapper
+            wrapper.classList.add('selected');
+            this.classList.add('selected');
+            
+            // Hide all venue details
+            venueDetails.forEach(detail => detail.classList.add('hidden'));
+            // Show selected venue details
+            document.querySelector(`[data-venue="${selectedVenue}"].venue-details`).classList.remove('hidden');
+            
+            // Update card backgrounds based on selection
+            venueCardWrappers.forEach(wrapper => {
+                const flatCardBg = wrapper.querySelector('.bg-pycon-purple, .bg-pycon-lime');
+                if (wrapper.classList.contains('selected')) {
+                    // Selected card gets lime background
+                    flatCardBg.className = flatCardBg.className.replace(/bg-pycon-(purple|lime)/, 'bg-pycon-lime');
+                } else {
+                    // Unselected cards get purple background
+                    flatCardBg.className = flatCardBg.className.replace(/bg-pycon-(purple|lime)/, 'bg-pycon-purple');
+                }
+            });
+        });
+    });
+});
+</script>

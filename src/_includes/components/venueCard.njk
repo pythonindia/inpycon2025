@@ -16,13 +16,15 @@
           {% if venueData.backgroundImage and venueData.backgroundImage.url %}
             <img src="{{ env.baseUrl }}{{ venueData.backgroundImage.url }}" alt="{{ venueData.backgroundImage.alt }}" class="w-full h-full object-cover">
           {% endif %}
-          {% if venueData.title and venueData.paragraphs and venueData.button %}
+          {% if venueData.title and venueData.paragraphs %}
               <div class="p-8 md:p-16 space-grotesk-regular">
                   <p class="font-bold text-xl md:text-2xl">{{ venueData["title"] }}</p>
                   {% for para in venueData.paragraphs %}
                     <p class="pt-4 font-normal text-sm md:text-xl">{{ para | safe }}</p>
                   {% endfor %}
-                  <div class="pt-6 md:pt-10">{{ button(text=venueData.button.text, url=venueData.button.url, lime_bg=true, env=env) }}</div>
+                  {% if venueData.button %}
+                    <div class="pt-6 md:pt-10">{{ button(text=venueData.button.text, url=venueData.button.url, lime_bg=true, env=env) }}</div>
+                  {% endif %}
               </div>
           {% endif %}
         </div>
