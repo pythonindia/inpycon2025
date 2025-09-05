@@ -70,6 +70,17 @@
             ]
         },
         {
+            "title": "Associate",
+            "companies": [
+                {
+                    "name": "Lyric",
+                    "url": "https://lyric.tech/",
+                    "logo": "img/sponsors/lyric.svg",
+                    "description": "Lyric develops an enterprise AI platform for supply chains, utilized by Fortune 500 companies such as Coca-Cola and Estée Lauder. Their offerings include decision applications for forecasting, allocation, capacity, order promising, and what-if scenarios, as well as a composable platform that enables teams to build solutions using no-code methods or their own code."
+                }
+            ]
+        },
+        {
             "title": "Grant",
             "companies": [
                 {
