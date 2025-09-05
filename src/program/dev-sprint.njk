@@ -66,48 +66,53 @@ layout: base.njk
                 <div>
                     <div
                         class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
-                        <p>Schedule</p>
+                        <p>How to Participate</p>
                     </div>
-                    <div class="grid md:grid-cols-2 gap-8 pt-4 text-md">
-                        <div>
-                            <p class="flex items-start">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
-                                    class="w-4 h-4 mr-2 mt-1">
-                                <span> <span class="font-semibold">Date:</span> 15 September 2025, 9:00 AM to 5:00 PM
-                                </span>
-                            </p>
-                            <p class="flex items-start">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
-                                    class="w-4 h-4 mr-2 mt-1">
-                                <span> <span class="font-semibold">Venue:</span> To be announced
-                                </span>
-                            </p>
-                            <p class="flex items-start">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
-                                    class="w-4 h-4 mr-2 mt-1">
-                                <span> <span class="font-semibold">Join the Sprint:</span> RSVP details coming soon
-                                </span>
-                            </p>
-                            <p class="flex items-start">
-                                <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
-                                    class="w-4 h-4 mr-2 mt-1">
-                                <span> <span class="font-semibold">Location:</span> Bengaluru, India
-                                </span>
-                            </p>
-                        </div>
-                        <div class="-mt-4">
-                            {% call flatCard(bg="lime") -%}
-                            <div class="flex items-start mb-2">
-                                <span class="text-xl md:text-2xl font-semibold">Help us find a venue</span>
+                    <div class="grid md:grid-cols-2 gap-8 pt-6 text-base md:text-lg">
+                        <div class="flex">
+                            {% call flatCard(bg="lime", class="rounded-2xl shadow-md p-6 flex flex-col justify-between
+                            w-full") -%}
+                            <div>
+                                <div class="flex items-center mb-4">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Schedule Icon"
+                                        class="w-6 h-6 mr-3">
+                                    <h3 class="text-xl md:text-3xl">Schedule</h3>
+                                </div>
+                                <p class="text-2xl text-black mb-4">
+                                    <span class="font-semibold">Date:</span>
+                                    <span>15 September 2025, Monday</span>
+                                </p>
+                                <p class="text-2xl text-black mb-4">
+                                    <span class="font-semibold">Time:</span>
+                                    <span>9:00 AM - 5:00 PM</span>
+                                </p>
+                                <p class="text-2xl text-black">
+                                    <span class="font-semibold">Join the Sprint:</span>
+                                    <span>Instructions will be sent to all the conference attendees soon!</span>
+                                </p>
                             </div>
-                            <p class="text-2xl text-black">
-                                We are currently exploring venue options for the Dev Sprint event. If you have any
-                                recommendations
-                                or leads, please reach out to us at
-                                <a href="mailto:contact@in.pycon.org" target="_blank" class="font-light text-2xl">
-                                    contact@in.pycon.org
-                                </a>
-                            </p>
+                            {%- endcall %}
+                        </div>
+
+                        <div class="flex">
+                            {% call flatCard(bg="lime", class="rounded-2xl shadow-md p-6 flex flex-col justify-between
+                            w-full") -%}
+                            <div>
+                                <div class="flex items-center mb-4">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Venue Icon"
+                                        class="w-6 h-6 mr-3">
+                                    <h3 class="text-xl md:text-3xl">Venue</h3>
+                                </div>
+                                <p class="text-2xl font-semibold mb-2">Scaler School of Technology</p>
+                                <p class="text-2xl text-black leading-relaxed">
+                                    14, 3rd Cross, Parappana Agrahar, Electronics City Phase 1,<br>
+                                    Bengaluru, Karnataka 560100
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                {{ button(text="Find Directions", url="https://maps.app.goo.gl/6RuSSu5QaUdz1RZs9",
+                                lime_bg=false, env=env) }}
+                            </div>
                             {%- endcall %}
                         </div>
                     </div>
