@@ -13,7 +13,7 @@ layout: base.njk
         </div>
 
         <!-- Fetch Active days -->
-        {% set active_days = schedule.schedule.conference.days.slice(0,3) %}
+        {% set active_days = schedule.schedule.conference.days.slice(0,4) %}
 
         <!-- Dynamically display Schedule Grid -->
         <div class="pt-20 grid gap-0 md:gap-6" style="grid-template-columns: repeat({{ active_days | length }}, minmax(0, 1fr));">
@@ -33,7 +33,20 @@ layout: base.njk
                             <span class="block sm:inline-block">{{ dayInfo.label.split(' ')[0] }}</span>
                             <span class="inline-block">{{ dayInfo.label.split(' ').slice(1).join(' ') }}</span>
                         </p>
-                        <p class="text-center mb-0.5 font-semibold">{{ dayInfo.monthDay }}</p>
+                        {% set parts = dayInfo.monthDay.split(' ') %}
+                        {% set month_full = parts[0] %}
+                        {% set day_number = parts[1] %}
+
+                        {% if month_full.length > 4 %}
+                            {% set month_short = month_full | truncate(4, true, '') %}
+                        {% else %}
+                            {% set month_short = month_full %}
+                        {% endif %}
+
+                        <p class="text-center mb-0.5 font-semibold">
+                            <span class="hidden md:inline">{{ month_full }} {{ day_number }}</span>
+                            <span class="inline md:hidden">{{ month_short }} {{ day_number }}</span>
+                        </p>
                         <p class="text-center font-medium text-[#4662FF] pb-4">{{ dayInfo.dayName|upper }}</p>
                     </div>
                 {%- endcall %}
@@ -399,4 +412,6 @@ layout: base.njk
     </div>
 </div>
 
-<script src="{{ env.baseUrl ~ 'js/schedule.js'}}" defer></script>
+<script>const baseUrl = "{{ env.baseUrl }}";</script>
+<script src="{{ env.baseUrl ~ 'js/schedule.js' }}" defer></script>
+

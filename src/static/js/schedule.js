@@ -17,38 +17,61 @@ document.addEventListener('DOMContentLoaded', () => {
         contents.forEach(content => content.classList.add('hidden'));
     };
 
-    // Initial state: Highlight the first card and show the first schedule
-    if (cards.length > 0 && contents.length > 0) {
-        selectedCard = cards[0];
-        const firstContentId = selectedCard.getAttribute('data-schedule');
+    const highlight = (card) => {
+        const div = card.querySelector('.card-grid');
+        div.classList.add('pycon-bg-lime');
+        div.style.backgroundColor = '#CDFF89';
+    };
 
-        // Highlight the first card
-        const firstHighlightDiv = selectedCard.querySelector('.card-grid');
-        firstHighlightDiv.classList.add('bg:pycon-bg-lime');
-        firstHighlightDiv.style.backgroundColor = '#CDFF89';
+    const setInitialState = () => {
+        if (!cards.length || !contents.length) return;
+        resetCardBackgrounds();
+        hideAllSchedules();
 
-        // Show the first schedule
-        document.getElementById(firstContentId).classList.remove('hidden');
-    }
+        // Always show FIRST card + its content
+        const firstCard = cards[0];
+        const firstContentId = firstCard.getAttribute('data-schedule');
 
-    // Add event listeners to all cards
+        highlight(firstCard);
+        document.getElementById(firstContentId)?.classList.remove('hidden');
+        selectedCard = firstCard;
+    };
+
+    // Initial load
+    setInitialState();
+
+    // If coming back via back/forward cache, reload once to reset UI to first card
+    window.addEventListener('pageshow', (evt) => {
+        const nav = performance.getEntriesByType('navigation')[0];
+        const isBFCache = evt.persisted || (nav && nav.type === 'back_forward');
+
+        if (isBFCache && !sessionStorage.getItem('reloadedOnce')) {
+            sessionStorage.setItem('reloadedOnce', '1');
+            window.location.reload();
+        } else if (!isBFCache) {
+            // Normal load after hard reload; clear the flag
+            sessionStorage.removeItem('reloadedOnce');
+        }
+    });
+
+    // Click handlers
     cards.forEach(card => {
         const highlightDiv = card.querySelector('.card-grid');
 
         card.addEventListener('click', () => {
-            // Reset previous selection
+            const scheduleId = card.getAttribute('data-schedule');
+
+            // Redirect-only card
+            if (scheduleId === '4') {
+                window.location.href = `${baseUrl}program/dev-sprint`;
+                return;
+            }
+
             resetCardBackgrounds();
             hideAllSchedules();
 
-            // Highlight the clicked card
-            highlightDiv.classList.add('pycon-bg-lime');
-            highlightDiv.style.backgroundColor = '#CDFF89'; // Lime background
-
-            // Show the corresponding schedule
-            const scheduleId = card.getAttribute('data-schedule');
-            document.getElementById(scheduleId).classList.remove('hidden');
-
-            // Update the selected card
+            highlight(card);
+            document.getElementById(scheduleId)?.classList.remove('hidden');
             selectedCard = card;
         });
 
@@ -66,4 +89,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
