@@ -98,6 +98,10 @@
         "hasSubmenu": true,
         "submenu": [
             {
+                "name": "Our Team",
+                "link": "about/team"
+            },
+            {
                 "name": "Contact Us",
                 "link": "about/contact-us"
             },
