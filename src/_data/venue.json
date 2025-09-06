@@ -1,39 +1,118 @@
 {
-  "metro": {
-    "title": "Via Namma Metro",
-    "paragraphs": [
-      "From Green Line: Disembark at South End Circle or Lalbagh metro station. From the station, you can take a short taxi/auto ride to reach NIMHANS Convention Centre.",
-      "For a list of stations on the Bengaluru Metro Green line, you can refer to <a href=\"https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">Wikipedia</a>."
+  "workshop": {
+    "address": [
+      "8th Main Rd, 3rd Block, Koramangala 1A Block", 
+      "Koramangala 3 Block, Koramangala, Bengaluru",
+      "Karnataka 560034"
     ],
-    "button": {
-      "text":"Green Line",
-      "url": "https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true"
+    "metro": {
+      "title": "Via Namma Metro",
+      "paragraphs": [
+        "From Yellow Line: Disembark at Central Silk Board metro station. From the station, you can take a short taxi/auto ride. To get back to the metro station, you can also take the buses MF-5, 344-C, and 201.",
+        "For a list of stations on the Bengaluru Metro Yellow line, you can refer to <a href=\"https://en.wikipedia.org/wiki/Yellow_Line_(Namma_Metro)?oldformat=true\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">Wikipedia</a>."
+      ],
+      "button": {
+        "text":"Yellow Line",
+        "url": "https://en.wikipedia.org/wiki/Yellow_Line_(Namma_Metro)?oldformat=true"
+      },
+      "backgroundImage": {
+        "url": null,
+        "alt": null
+      }
     },
-    "backgroundImage": {
-      "url": null,
-      "alt": null
+    "bus": {
+      "title": "Via Bus",
+      "paragraphs": [
+        "Bus series 342 (342-A, 342-B, 342-C, 342-D, and so on): Disembark at St. Francis College bus stop.",
+        "342-F connect KBS/Majestic bus station, NIMHANS Convention Centre, St. Francis College and the ring road.",
+        "Note to those using the outer ring road: The service road while approaching Agara from Silk Board junction is closed due to metro construction. As a result, buses towards Silk Board and towards Koramangla (St. Francis College) stop at Agara junction under the flyover as usual. But ring road buses (500 series) from Silk Board stop before the flyover and take the flyover while the Koramangla bound buses (342 series) stop under the flyover."
+      ]
+    },
+    "location": {
+      "backgroundImage": {
+        "url": "img/st-francis-college.jpeg",
+        "alt": "St. Francis College"
+      }
     }
   },
-  "bus": {
-    "title": "Via Bus",
-    "paragraphs": [
-      "KIA-5D, get off at Jayanagar bus stand and NIMHANS is a few blocks away.",
-      "KIA-7 to Kormangala Water Tank which is 8 mins away from NIMHANS.",
-      "We're excited to welcome you to PyCon India 2025 and hope you have a fantastic experience in Bengaluru! If you have any further inquiries or need assistance, feel free to contact us at <a href=\"mailto:contact@in.pycon.org\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">contact@in.pycon.org</a>."
+  "conference": {
+    "address": [
+      "NIMHANS Convention Center",
+      "Hosur Road, Lakkasandra",
+      "Bengaluru - 560029",
+      "Landmark: Near Dairy Circle"
     ],
-    "button": {
-      "text":"Bus Timetable",
-      "url": "https://kia.bengawalk.com/"
+    "metro": {
+      "title": "Via Namma Metro",
+      "paragraphs": [
+        "From Green Line: Disembark at South End Circle or Lalbagh metro station. From the station, you can take a short taxi/auto ride to reach NIMHANS Convention Centre.",
+        "For a list of stations on the Bengaluru Metro Green line, you can refer to <a href=\"https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">Wikipedia</a>."
+      ],
+      "button": {
+        "text":"Green Line",
+        "url": "https://en.wikipedia.org/wiki/Green_Line_(Namma_Metro)?oldformat=true"
+      },
+      "backgroundImage": {
+        "url": null,
+        "alt": null
+      }
     },
-    "backgroundImage": {
-      "url": null,
-      "alt": null
+    "bus": {
+      "title": "Via Bus",
+      "paragraphs": [
+        "KIA-5D, get off at Jayanagar bus stand and NIMHANS is a few blocks away.",
+        "KIA-7 to Kormangala Water Tank which is 8 mins away from NIMHANS."
+      ],
+      "button": {
+        "text":"Bus Timetable",
+        "url": "https://kia.bengawalk.com/"
+      },
+      "backgroundImage": {
+        "url": null,
+        "alt": null
+      }
+    },
+    "location": {
+      "backgroundImage": {
+        "url": "img/nimhans-convention-center.jpeg",
+        "alt": "NIMHANS Convention Center"
+      }
     }
   },
-  "location": {
-    "backgroundImage": {
-      "url": "img/nimhans-convention-center.jpeg",
-      "alt": "Nimhans Convention Center"
+  "devsprint": {
+    "address": [
+      "Scaler School of Technology",
+      "Electronic City Road Electronics City",
+      "Phase 1, Electronic City",
+      "Bengaluru, Karnataka 560100"
+    ],
+    "metro": {
+      "title": "Via Namma Metro",
+      "paragraphs": [
+        "From Yellow Line: Disembark at Infosys Foundation Konappana Agrahara metro station. From the station, you can take a short taxi/auto ride.",
+        "For a list of stations on the Bengaluru Metro Yellow line, you can refer to <a href=\"https://en.wikipedia.org/wiki/Yellow_Line_(Namma_Metro)?oldformat=true\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">Wikipedia</a>."
+      ],
+      "button": {
+        "text":"Yellow Line",
+        "url": "https://en.wikipedia.org/wiki/Yellow_Line_(Namma_Metro)?oldformat=true"
+      },
+      "backgroundImage": {
+        "url": null,
+        "alt": null
+      }
+    },
+    "bus": {
+      "title": "Via Bus",
+      "paragraphs": [
+        "Bus G-3: Disembark at Infosys Foundation Konappana Agrahara bus stop which is a short walk away. G-3 connects Brigade Road, Silk Board and Electronic City.",
+        "Bus 346-K: Disembark at Electronic City Phase 1 bus stop which is a short walk away."
+      ]
+    },
+    "location": {
+      "backgroundImage": {
+        "url": "img/scaler-school-of-technology.jpg",
+        "alt": "Scaler School of Technology"
+      }
     }
   }
 }
