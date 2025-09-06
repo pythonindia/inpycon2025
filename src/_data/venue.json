@@ -37,7 +37,7 @@
   },
   "conference": {
     "address": [
-      "Nimhans Convention Center",
+      "NIMHANS Convention Center",
       "Hosur Road, Lakkasandra",
       "Bengaluru - 560029",
       "Landmark: Near Dairy Circle"
@@ -75,7 +75,7 @@
     "location": {
       "backgroundImage": {
         "url": "img/nimhans-convention-center.jpeg",
-        "alt": "Nimhans Convention Center"
+        "alt": "NIMHANS Convention Center"
       }
     }
   },
@@ -104,7 +104,7 @@
     "bus": {
       "title": "Via Bus",
       "paragraphs": [
-        "Bus G-3: Disembark at Infosys Foundation Konappana Agrahara bus stop which is a short walk away from Scaler Academy. G-3 connects Brigade Road, Silk Board and Electronic City.",
+        "Bus G-3: Disembark at Infosys Foundation Konappana Agrahara bus stop which is a short walk away. G-3 connects Brigade Road, Silk Board and Electronic City.",
         "Bus 346-K: Disembark at Electronic City Phase 1 bus stop which is a short walk away."
       ]
     },
