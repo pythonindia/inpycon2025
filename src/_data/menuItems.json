@@ -8,8 +8,8 @@
                 "link": "attend/tickets"
             },
             {
-                "name": "Venue",
-                "link": "venue"
+                "name": "Venues",
+                "link": "attend/venues"
             },
             {
                 "name": "Scholarships",
