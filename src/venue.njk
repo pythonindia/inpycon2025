@@ -1,5 +1,5 @@
 ---
-title: Venue - PyCon India 2025
+title: Venues - PyCon India 2025
 description: PyCon India 2025 Venues - Workshops, Conference, and Dev Sprint locations
 layout: base.njk
 ---
@@ -12,7 +12,7 @@ layout: base.njk
 </header>
 
 <div class="w-full h-auto -mb-20 bg-pycon-blue">
-    <div class="pt-[200px] mx-[5%] md:mx-[145px]">
+    <div class="pt-[200px] mx-[5%] lg:mx-[145px]">
         <div class="black-han-sans-regular font-normal text-3xl md:text-5xl text-[#FFFFFF] text-center">
             PyCon India 2025 Venues
         </div>
@@ -32,11 +32,11 @@ layout: base.njk
         <!-- Venue Selection Cards -->
         <div class="pt-16 grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             <!-- Workshop Venue -->
-            <div class="venue-card-wrapper" data-venue="workshop">
+            <div class="venue-card-wrapper flex h-full" data-venue="workshop">
                 {% call flatCard(bg="purple") %}
                     <div class="venue-card cursor-pointer p-4" data-venue="workshop">
-                        <div class="black-han-sans-regular text-2xl md:text-3xl text-center mb-3">Workshops</div>
-                        <div class="space-grotesk-regular text-base md:text-lg text-center mb-3">February 12th, 2025</div>
+                        <div class="black-han-sans-regular text-2xl lg:text-3xl text-center mb-3">Workshops</div>
+                        <div class="space-grotesk-regular text-base md:text-lg text-center mb-3">September 12th, 2025</div>
                         <div class="space-grotesk-bold text-lg md:text-xl font-black text-center">St. Francis College</div>
                         <div class="space-grotesk-regular text-sm md:text-base text-center">Koramangala, Bengaluru</div>
                     </div>
@@ -44,23 +44,23 @@ layout: base.njk
             </div>
 
             <!-- Conference Venue -->
-            <div class="venue-card-wrapper selected" data-venue="conference">
+            <div class="venue-card-wrapper flex h-full selected" data-venue="conference">
                 {% call flatCard(bg="lime") %}
                     <div class="venue-card cursor-pointer p-4 selected" data-venue="conference">
-                        <div class="black-han-sans-regular text-2xl md:text-3xl text-center mb-3">Conference</div>
-                        <div class="space-grotesk-regular text-base md:text-lg text-center mb-3">February 13-14th, 2025</div>
-                        <div class="space-grotesk-bold text-lg md:text-xl font-black text-center">Nimhans Convention Center</div>
+                        <div class="black-han-sans-regular text-2xl lg:text-3xl text-center mb-3">Conference</div>
+                        <div class="space-grotesk-regular text-base md:text-lg text-center mb-3">September 13-14th, 2025</div>
+                        <div class="space-grotesk-bold text-lg md:text-xl font-black text-center">NIMHANS Convention Center</div>
                         <div class="space-grotesk-regular text-sm md:text-base text-center">Lakkasandra, Bengaluru</div>
                     </div>
                 {% endcall %}
             </div>
 
             <!-- Dev Sprint Venue -->
-            <div class="venue-card-wrapper" data-venue="devsprint">
+            <div class="venue-card-wrapper flex h-full" data-venue="devsprint">
                 {% call flatCard(bg="purple") %}
                     <div class="venue-card cursor-pointer p-4" data-venue="devsprint">
-                        <div class="black-han-sans-regular text-2xl md:text-3xl text-center mb-3">Dev Sprint</div>
-                        <div class="space-grotesk-regular text-base md:text-lg text-center mb-3">February 15th, 2025</div>
+                        <div class="black-han-sans-regular text-2xl lg:text-3xl text-center mb-3">Dev Sprint</div>
+                        <div class="space-grotesk-regular text-base md:text-lg text-center mb-3">September 15th, 2025</div>
                         <div class="space-grotesk-bold text-lg md:text-xl font-black text-center">Scaler School of Technology</div>
                         <div class="space-grotesk-regular text-sm md:text-base text-center">Electronic City, Bengaluru</div>
                     </div>
