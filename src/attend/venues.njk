@@ -1,6 +1,6 @@
 ---
 title: Venues - PyCon India 2025
-description: PyCon India 2025 Venues - Workshops, Conference, and Dev Sprint locations
+description: PyCon India 2025 Venues - Workshop, Conference, and Dev Sprint locations
 layout: base.njk
 ---
 {% from "components/button.njk" import button %}
@@ -8,7 +8,7 @@ layout: base.njk
 {% from "components/flat-card.njk" import flatCard %}
 
 <header>
-    {% set activePage = 'venue' %} 
+    {% set activePage = 'venues' %}
 </header>
 
 <div class="w-full h-auto -mb-20 bg-pycon-blue">
@@ -35,7 +35,7 @@ layout: base.njk
             <div class="venue-card-wrapper flex h-full" data-venue="workshop">
                 {% call flatCard(bg="purple") %}
                     <div class="venue-card cursor-pointer p-4" data-venue="workshop">
-                        <div class="black-han-sans-regular text-2xl lg:text-3xl text-center mb-3">Workshops</div>
+                        <div class="black-han-sans-regular text-2xl lg:text-3xl text-center mb-3">Workshop</div>
                         <div class="space-grotesk-regular text-base md:text-lg text-center mb-3">September 12th, 2025</div>
                         <div class="space-grotesk-bold text-lg md:text-xl font-black text-center">St. Francis College</div>
                         <div class="space-grotesk-regular text-sm md:text-base text-center">Koramangala, Bengaluru</div>
