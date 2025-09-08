@@ -257,7 +257,7 @@ layout: base.njk
                                 {% for item in mobile_sorting %}
                                     {% if item.type == 'fixed' %}
                                         <div class="w-full p-4 border border-black" style="background-color: {{ item.bg_color }};">
-                                            {% if "Keynote" in item.title %}
+                                            {% if item.start_time in ["09:20", "17:00"] %}
                                             <div class="text-left">
                                                 <p class="font-medium text-sm text-black px-2 mb-0 rounded-lg inline-block" style="background-color: #1FFFB4">
                                                     Keynote
@@ -265,7 +265,7 @@ layout: base.njk
                                             </div>
                                             {% endif %}
                                             <p class="mb-0 font-bold">{{ item.start_time }} - {{ item.end_time }}</p>
-                                            <p class="mb-0 text-lg">{{ item.title|upper }}</p>
+                                            <p class="mb-0 text-lg">{{ item.title }}</p>
                                         </div>
                                     {% else %}
                                         {% if item.url %}

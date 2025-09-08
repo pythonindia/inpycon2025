@@ -29,7 +29,7 @@
 			{
 				"start_time": "09:20",
 				"end_time": "10:00",
-				"title": "Keynote 1",
+				"title": "$ python build reactor.py — Shakthi Kannan",
                 "color": "#E745A0"
 			},
 			{
@@ -53,7 +53,7 @@
 			{
 				"start_time": "17:00",
 				"end_time": "17:40",
-				"title": "Keynote 2",
+				"title": "Dawn Wages",
                 "color": "#E745A0"
 			},
 			{
@@ -86,7 +86,7 @@
 			{
 				"start_time": "09:20",
 				"end_time": "10:00",
-				"title": "Keynote 3",
+				"title": "Artificial Information: How Today’s AI is Changing Information — Katharine Jarmul",
                 "color": "#E745A0"
 			},
 			{
@@ -110,7 +110,7 @@
 			{
 				"start_time": "17:00",
 				"end_time": "17:40",
-				"title": "Keynote 4",
+				"title": "Learning and Coding in the Age of AI — Reuven Lerner",
                 "color": "#E745A0"
 			},
 			{
