@@ -64,8 +64,26 @@ layout: base.njk
             ] %}
             
             <!-- Mobile window -->
-            <div class="block md:hidden overflow-x-auto">
+            <div class="block md:hidden lg:hidden">
                 {% call window(width=300, height=930, depth=20, frontBg="lavender", leftBg="lime", topBg="lime") %}
+                <span class="font-semibold text-black text-sm">What you can expect when you sponsor PyCon India:</span>
+                <ul class="list-none space-y-3 mt-3 text-sm">
+                    {% for benefit in sponsorBenefits %}
+                    <li class="flex items-start">
+                        <div class="w-3 h-3 bg-pycon-lime rounded-full mr-3 mt-1 flex-shrink-0 border-2 border-green-600"></div>
+                        <div>
+                            <span class="font-semibold text-gray-800">{{ benefit.title }}</span>
+                            <span class="text-gray-600"> - {{ benefit.description | safe }}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endcall %}
+            </div>
+
+            <!-- Tablet window -->
+            <div class="hidden md:block lg:hidden">
+                {% call window(width=600, height=550, depth=20, frontBg="lavender", leftBg="lime", topBg="lime") %}
                 <span class="font-semibold text-black text-sm">What you can expect when you sponsor PyCon India:</span>
                 <ul class="list-none space-y-3 mt-3 text-sm">
                     {% for benefit in sponsorBenefits %}
@@ -82,7 +100,7 @@ layout: base.njk
             </div>
             
             <!-- Desktop window -->
-            <div class="hidden md:block">
+            <div class="hidden lg:block">
                 {% call window(width=800, height=550, depth=25, frontBg="lavender", leftBg="lime", topBg="lime") %}
                 <span class="font-semibold text-black">What you can expect when you sponsor PyCon India:</span>
                 <ul class="list-none space-y-4 mt-4">

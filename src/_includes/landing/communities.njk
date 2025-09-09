@@ -5,10 +5,12 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-10">
             <div>
                 <h2 class="black-han-sans-regular text-center lg:text-left font-normal text-4xl lg:text-5xl pb-4">Participating Communities</h2>
-                <p class="text-white text-base mb-6">
+                <p class="text-white text-justify text-base mb-6">
                     Join PyCon India's Community Partner Program and support the vibrant Python community in India. Become a partner and contribute to the growth of Python enthusiasts.
                 </p>
+                <div class="flex my-4 flex-wrap gap-4 scale-75 md:scale-100 justify-start items-start origin-left">
                 {{ button(text="Become a Volunteer", url="https://docs.google.com/forms/d/e/1FAIpQLSdX2LEom11BbWDiLUiQp1rmeNX9l7J8bfszGidsRDoExy0D5A/viewform", lime_bg=true, env = env) }}
+                </div>
             </div>
             <div class="hidden md:flex justify-end -mt-32">
                 <div class="w-96 h-96 bg-contain bg-center bg-no-repeat transition-all duration-300 animate-bounce-slow" style="background-image: url('{{ env.baseUrl }}img/assets/bulb-illustration.svg');"></div>
@@ -34,7 +36,7 @@
     </div>
 </section>
 <!-- TODO: Remove padding once twitter wall is added -->
-<section class="bg-lavender px-[6%] pb-56">
+<section class="bg-lavender px-[6%] pb-72">
     <div class="mx-auto">
         <div class="flex flex-wrap w-full">
             {% for i in range(6, 12) %}
