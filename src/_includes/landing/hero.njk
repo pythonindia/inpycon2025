@@ -6,19 +6,20 @@
 <div class="bg-pycon-blue w-full py-16 px-[6%] -mt-1 flex flex-col md:flex-row gap-2 justify-between">
     <div class="w-full">
         <div class="flex justify-between w-full items-center text-[#FFFFFF]">
-            <h1 class="black-han-sans-regular text-center lg:text-left font-normal text-4xl lg:text-5xl pb-4">
+            <h1 class="black-han-sans-regular text-left font-normal text-4xl lg:text-5xl pb-4">
                 PYCON <br/>
-                <span class="black-han-sans-regular text-center lg:text-left font-normal text-4xl lg:text-5xl pb-4">INDIA 2025</span>
+                <span class="black-han-sans-regular text-left font-normal text-4xl lg:text-5xl pb-4">INDIA 2025</span>
             </h1>
         </div>
-        <p class="text-white text-md sm:text-lg max-w-xl leading-relaxed">
+        <p class="text-white text-justify text-md sm:text-lg">
             PyCon India 2025 is the premier conference for Python enthusiasts and professionals, offering an unparalleled
             opportunity to dive deep into the world of Python and explore its limitless potential. Stay tuned for updates!
         </p>
-        <div class="flex flex-wrap gap-4">
-            {{ button(text="Get Tickets", url=env.baseUrl + "tickets", lime_bg=true)}}
-            {{ button(text="View Schedule", url=env.baseUrl + "program/schedule", lime_bg=true)}}
+        <div class="flex my-4 flex-wrap gap-4 scale-75 md:scale-100 justify-start items-start origin-left">
+            {{ button(text="Get Tickets", url=env.baseUrl ~ "tickets", lime_bg=true) }}
+            {{ button(text="View Schedule", url=env.baseUrl ~ "program/schedule", lime_bg=true) }}
         </div>
+
     </div>
     <div class="grid w-full grid-cols-1 gap-x-1 gap-y-2 lg:grid-cols-12 lg:auto-rows-auto">
         <div class="pb-2 lg:row-start-1 lg:col-start-2 lg:col-end-12 xl:col-start-3 xl:col-end-11">
