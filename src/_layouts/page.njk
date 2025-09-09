@@ -1,10 +1,40 @@
 ---
 layout: base.njk
 ---
+
 <style>
-  h1, h2, h3, h4 {
-    font-size: 1.25rem;
-    font-weight: bold;
+  .page-content ol,
+  .page-content ul,
+  .page-content ol li,
+  .page-content ul li {
+     margin-left: 1.125rem;
+   }
+
+  .page-content ol li { list-style: decimal; }
+  .page-content ul li { list-style: disc; }
+
+  /* Remove extra margin of nesting */
+  .page-content li > ol > li,
+  .page-content li > ul > li {
+     margin-left: 0;
+   }
+
+  .page-content h1, h2, h3, h4 {
+     margin-top: 1.125rem;
+  }
+
+  /* Desktop: h1 starts at text-5xl (3rem) */
+  .page-content h1 { font-size: 3rem; }   /* text-5xl */
+  .page-content h2 { font-size: 2.25rem; }/* text-4xl */
+  .page-content h3 { font-size: 1.5rem; } /* text-2xl */
+  .page-content h4 { font-size: 1.25rem; }/* text-xl */
+
+  @media (max-width: 768px) {
+    /* Phones: h1 starts at text-3xl (1.875rem) */
+    .page-content h1 { font-size: 1.875rem; }/* text-3xl */
+    .page-content h2 { font-size: 1.5rem; }  /* text-2xl */
+    .page-content h3 { font-size: 1.25rem; } /* text-xl */
+    .page-content h4 { font-size: 1rem; }    /* text-base */
   }
 </style>
 
@@ -46,7 +76,7 @@ layout: base.njk
 <div class="main-container pt-16 md:pt-48 bg-lavender w-full h-auto px-[6%]">
     <div class="pb-40 md:pb-60 lg:pb-[20%] w-full text-justify lg:w-[70%]">
         <div class="mt-24 md:-mt-32 lg:-mt-20 text-md lg:text-xl font-light">
-            <div class="font-light text-black text-lg">
+            <div class="font-light text-black text-lg page-content">
               {{ content | safe }}
             </div>
         </div>
