@@ -77,6 +77,12 @@
                     "url": "https://lyric.tech/",
                     "logo": "img/sponsors/lyric.svg",
                     "description": "Lyric develops an enterprise AI platform for supply chains, utilized by Fortune 500 companies such as Coca-Cola and Estée Lauder. Their offerings include decision applications for forecasting, allocation, capacity, order promising, and what-if scenarios, as well as a composable platform that enables teams to build solutions using no-code methods or their own code."
+                },
+                {
+                    "name": "dbt Labs",
+                    "url": "https://www.getdbt.com",
+                    "logo": "img/sponsors/dbt-labs.svg",
+                    "description": "dbt Labs is the pioneer of the analytics engineering workflow, helping data teams transform, test, and document data with confidence and speed. Their open-source framework, dbt Core, brings proven software engineering practices—such as modularity, version control, and testing—into the world of analytics, making data more reliable and accessible for everyone."
                 }
             ]
         },
