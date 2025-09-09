@@ -42,6 +42,10 @@
         "hasSubmenu": true,
         "submenu": [
             {
+                "name": "Program Guide",
+                "link": "program/guide"
+            },
+            {
                 "name": "Schedule",
                 "link": "program/schedule"
             },
