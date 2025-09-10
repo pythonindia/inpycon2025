@@ -84,6 +84,95 @@ module.exports = function (eleventyConfig) {
 		return `${endHourStr}:${endMinuteStr}`;
 	});
 
+    eleventyConfig.addFilter("groupByStartTime", function (events) {
+        if (!Array.isArray(events)) return [];
+
+        const sortedEvents = events.slice().sort((a, b) => {
+            if (a.start_time < b.start_time) return -1;
+            if (a.start_time > b.start_time) return 1;
+            return 0;
+        });
+
+        const grouped = [];
+        let currentGroup = null;
+
+        for (const event of sortedEvents) {
+            if (!currentGroup || currentGroup.start_time !== event.start_time) {
+                currentGroup = {
+                    start_time: event.start_time,
+                    events: []
+                };
+                grouped.push(currentGroup);
+            }
+            currentGroup.events.push(event);
+        }
+
+        return grouped;
+    });
+
+    eleventyConfig.addFilter("groupAndChunkRooms", function (roomEntries) {
+        const grouped = {};
+
+        // Step 1: Group by `start`
+        roomEntries.forEach(([roomName, sessions]) => {
+        sessions.forEach(session => {
+            if (!grouped[session.start]) {
+            grouped[session.start] = [];
+            }
+            grouped[session.start].push({ room: roomName, ...session });
+        });
+        });
+
+        // Helper: chunk into balanced rows
+        function chunkBalanced(arr) {
+        const rows = [];
+        const n = arr.length;
+
+        if (n <= 3) {
+            rows.push(arr);
+        } else if (n === 4) {
+            rows.push(arr.slice(0, 2), arr.slice(2, 4));
+        } else if (n === 5) {
+            rows.push(arr.slice(0, 3), arr.slice(3, 5));
+        } else if (n === 7) {
+            rows.push(arr.slice(0, 2), arr.slice(2, 5), arr.slice(5, 7));
+        } else {
+            for (let i = 0; i < n; i += 3) {
+            rows.push(arr.slice(i, i + 3));
+            }
+        }
+
+        return rows;
+        }
+
+        // Step 2: Convert groups into { start, rows }
+        const result = Object.entries(grouped).map(([start, sessions]) => {
+        return {
+            start,
+            rows: chunkBalanced(sessions)
+        };
+        });
+
+        // Sort by time (start)
+        result.sort((a, b) => a.start.localeCompare(b.start));
+
+        return result;
+    });
+
+    eleventyConfig.addFilter("mobileSorting", (items) => {
+        if (!items || !Array.isArray(items)) return items;
+
+        return items.slice().sort((a, b) => {
+            if (a.start_time < b.start_time) return -1;
+            if (a.start_time > b.start_time) return 1;
+
+            if (a.type === "event" && b.type === "fixed") return -1;
+            if (a.type === "fixed" && b.type === "event") return 1;
+
+            return 0;
+        });
+    });
+
 	// rebuild on CSS changes
 	eleventyConfig.addWatchTarget("./src/_includes/css/");
 
