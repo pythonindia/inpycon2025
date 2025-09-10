@@ -23,7 +23,7 @@ layout: base.njk
     </div>
 </div>
 
-<div class="main-container pt-16 md:pt-12 bg-lavender w-full h-auto px-[6%]">
+<div class="main-container pt-16 md:pt-12 bg-lavender w-full h-auto px-[6%] pb-40">
     <div class="text-md lg:text-xl pt-12 text-black lg:pr-10 text-justify font-light">
         <div class="mb-12">
             <div class="space-y-6 mb-8">
@@ -36,81 +36,23 @@ layout: base.njk
                         <p class="flex items-start">
                             <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
                                 class="w-4 h-4 mr-2 mt-1">
-                            <span>These informal gatherings are perfect for exploring ideas, sharing knowledge, and connecting with others who share your interests. No formal presentations required.</span>
-                        </p>
-                        <p class="flex items-start">
-                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
-                                class="w-4 h-4 mr-2 mt-1">
                             <span>Open Spaces are participant-driven sessions where you can lead discussions, join conversations, or simply observe and learn from the community.</span>
                         </p>
                         <p class="flex items-start">
                             <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
                                 class="w-4 h-4 mr-2 mt-1">
-                            <span>Come with an idea, leave with new connections. Open Spaces are what you make them. Don't be shy to start the conversation!</span>
+                            <span>These informal 30-minute gatherings are perfect for exploring ideas, sharing knowledge, and connecting with others who share your interests. No formal presentations required.</span>
+                        </p>
+                        <p class="flex items-start">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                class="w-4 h-4 mr-2 mt-1">
+                            <span>Before proposing your own session, <a href="{{ env.baseUrl }}program/schedule" class="text-purple-600 underline">check out the current Open Spaces</a> to see what's already planned and discover sessions you might want to attend.</span>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="mb-12">
-            <div class="space-y-6 mb-8">
-                <div>
-                    <div
-                        class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
-                        <p>When & Where</p>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-8 pt-6 text-base md:text-lg">
-                        <div class="flex">
-                            {% call flatCard(bg="lime", class="rounded-2xl shadow-md p-6 flex flex-col justify-between
-                            w-full") -%}
-                            <div>
-                                <div class="flex items-center mb-4">
-                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Schedule Icon"
-                                        class="w-6 h-6 mr-3">
-                                    <h3 class="text-xl md:text-3xl">Schedule</h3>
-                                </div>
-                                <p class="text-2xl text-black mb-4">
-                                    <span class="font-semibold">Dates:</span>
-                                    <span>13 & 14 September 2025</span>
-                                </p>
-                                <p class="text-2xl text-black mb-4">
-                                    <span class="font-semibold">Time:</span>
-                                    <span>Throughout conference days</span>
-                                </p>
-                                <p class="text-2xl text-black">
-                                    <span class="font-semibold">Format:</span>
-                                    <span>Spontaneous & participant-driven</span>
-                                </p>
-                            </div>
-                            {%- endcall %}
-                        </div>
-
-                        <div class="flex">
-                            {% call flatCard(bg="lime", class="rounded-2xl shadow-md p-6 flex flex-col justify-between
-                            w-full") -%}
-                            <div>
-                                <div class="flex items-center mb-4">
-                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Venue Icon"
-                                        class="w-6 h-6 mr-3">
-                                    <h3 class="text-xl md:text-3xl">Location</h3>
-                                </div>
-                                <p class="text-2xl font-semibold mb-2">NIMHANS Convention Centre</p>
-                                <p class="text-2xl text-black leading-relaxed">
-                                    1st Floor<br>
-                                    Dedicated Open Space areas
-                                </p>
-                            </div>
-                            <div class="mt-6">
-                                {{ button(text="Find Directions", url="https://maps.app.goo.gl/zNbpKw76oAFBkxvx6",
-                                lime_bg=false, env=env) }}
-                            </div>
-                            {%- endcall %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="mb-12">
             <div class="space-y-6 mb-8">
@@ -183,24 +125,47 @@ layout: base.njk
             </div>
         </div>
 
+        <div class="mb-12">
+            <div class="space-y-6 mb-8">
+                <div>
+                    <div
+                        class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                        <p>Join the Community</p>
+                    </div>
+                    <div class="pt-4 text-md">
+                        <p class="mb-6 text-lg">Come with an idea, leave with new connections. Open Spaces are what you make them. Don't be shy to start the conversation!</p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <div class="flex flex-col sm:flex-row gap-4 items-start">
+                        {{ button(text="Submit Your Idea",
+                        url="https://in.pycon.org/2025/open-spaces/",
+                        lime_bg=true, env =
+                        env) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="grid md:grid-cols-2 gap-8 mb-24">
             <div>
                 {% call flatCard(bg="purple") -%}
                 <div class="flex items-center mb-4">
-                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Idea Icon" class="w-6 h-6 mr-3">
-                    <h3 class="text-xl md:text-3xl">💡 Have an idea but can't host it?</h3>
+                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Deadline Icon" class="w-6 h-6 mr-3">
+                    <h3 class="text-xl md:text-3xl">Deadline</h3>
                 </div>
-                <p class="text-2xl text-black">Suggest it on the Open Spaces board! Someone else might be inspired to facilitate it.</p>
+                <p class="text-2xl text-black">Submit your Open Space ideas by <strong>8th September,
+                        23:59 IST</strong> to join fellow contributors.</p>
                 {%- endcall %}
             </div>
 
             <div>
                 {% call flatCard(bg="purple") -%}
                 <div class="flex items-center mb-4">
-                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Connections Icon" class="w-6 h-6 mr-3">
-                    <h3 class="text-xl md:text-3xl">Join the Community</h3>
+                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Notification Icon" class="w-6 h-6 mr-3">
+                    <h3 class="text-xl md:text-3xl">Selection Notification</h3>
                 </div>
-                <p class="text-2xl text-black">Come with an idea, leave with new connections. Open Spaces are what you make them. Don't be shy to start the conversation!</p>
+                <p class="text-2xl text-black">Ideas are reviewed on a rolling basis, if your idea is selected you would be contacted by the team.</p>
                 {%- endcall %}
             </div>
         </div>
