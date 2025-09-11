@@ -12,15 +12,15 @@ COVID-19
 
 PyCon India is an international event, and we have attendees traveling from all around the globe. The world is still under the grasp on the COVID-19 pandemic, and from the lessons from the past conference around the globe, we know that conferences are a place where there is a high-change of communicating the disease. We love that people bring their unique perspectives -- but they also bring their local germs and Covid strains. We want PyCon India to be an event that everyone feels safe attending - therefore we are putting out this document for the attendees to follow during their time at PyCon India.
 
-## Vaccination
+### Vaccination
 
 We strongly recommend to take the latest vaccination boosters, and all attendees should be vaccinated. Please keep the your vaccine certificate handy incase asked for during the conference by the organizers. We also suggest you to monitor [WHO travel advice](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/travel-advice) or the local COVID-19 travel advisory.
 
-## Masks during conference
+### Masks during conference
 
 We highly recommend you to wear mask during the conference. This would help you to stay safe while attending the talks, workshops, and Dev Sprint. It's also recommended to wear them at the venue. Masks must be worn over the nose and mouth and must be made of a tight-knit, non-permeable material. N95 or equivalent masks such as KN95 or K95 are recommended.
 
-## Rapid COVID-19 tests
+### Rapid COVID-19 tests
 
 We encourage PyCon India attendees to use at-home, antigen, or rapid tests before arriving and during the event. If you feel sick, exhibit COVID-19 symptoms, or test positive for COVID-19 before or during the conference, you should not attend the event.
 

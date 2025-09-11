@@ -5,7 +5,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const isProd = process.env.ELEVENTY_ENV === "prod";
 const outDir = "public";
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
 	// PLUGINS
 	eleventyConfig.addPlugin(pluginRss);
 
@@ -16,6 +16,10 @@ module.exports = function (eleventyConfig) {
 		});
 		return markdown.render(value);
 	});
+
+    // Get ID for h1 to h6 headings
+    const { IdAttributePlugin } = await import("@11ty/eleventy");
+    eleventyConfig.addPlugin(IdAttributePlugin);
 
 	eleventyConfig.addFilter("dateInfo", function (dateStr) {
 		// Get day of month
