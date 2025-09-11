@@ -80,6 +80,10 @@
             {
                 "name": "Open Spaces",
                 "link": "program/open-spaces"
+            },
+            {
+                "name": "PyLadies Lunch",
+                "link": "program/pyladies-lunch"
             }
         ]
     },
