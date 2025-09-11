@@ -26,17 +26,20 @@ Here are some of the best practices that would help you make your sessions bette
 1. Have an introduction slide where you talk about yourself.  
    *This helps the attendees get to know you, why you are talking about the topic, and also helps them answer “Why should they listen to you?”.*
 2. Add interactive elements to your talk, this can be as simple as asking a show of hands or a quick quiz.
-3. Keep your demos recorded. This can save you at times when things just break, you don’t have Internet connection and so on.
-4. Add slide numbers, this helps attendees to take notes during the session.
-5. A must-read: [Accessible Speaking Best Practices](https://www.deque.com/blog/accessible-speaking-best-practices/) this also has actionable steps.
+3. Keep your demos recorded & make slides available offline.  
+   *This can save you at times when things just break, you don’t have Internet connection and so on.*
+4. Bring your own laptop along with **any adapters** required for presenting via an HDMI connection.
+5. Add slide numbers, this helps attendees to take notes during the session.
+6. A must-read: [Accessible Speaking Best Practices](https://www.deque.com/blog/accessible-speaking-best-practices/) this also has actionable steps.
    1. Ensure the font size is large enough so that it is visible to the attendees from the back.
    2. Consider using a light theme for slides, as the contrast and visibility of the light themes is more in general.
    3. If you are showing code live, close all sidebars, extra tabs etc. to make it distraction free.
 
+---
 
 ## Panel Discussions
 
-**Duration**: 30 minutes (including Q&A)  
+**Duration**: 30 minutes (including Q&A)
 **Format**: Group discussion with 3-4 panelists and a moderator
 
 ### Responsibilities
@@ -98,7 +101,9 @@ Here are some of the best practices that would help you make your sessions bette
 * Focus on one idea: a project, tip, or call to action.  
 * Be energetic and engaging—lightning talks are crowd favorites!
 
-**Note: Talks exceeding 5 minutes will be politely cut off.**
+{% aside %}
+Note: Talks exceeding 5 minutes will be politely cut off.
+{% endaside %}
 
 ---
 
@@ -118,7 +123,9 @@ Here are some of the best practices that would help you make your sessions bette
 * Have a round of introductions as it gives a chance to everyone to speak up and works as an ice-breaker.
 * As the room is shared, respect time limits and clean up afterward.  
 
-**Remember: Open Spaces are community-powered. Come ready to share, listen, and collaborate.**
+{% aside %}
+Remember: Open Spaces are community-powered. Come ready to share, listen, and collaborate.
+{% endaside %}
 
 ---
 
@@ -134,21 +141,23 @@ Here are some of the best practices that would help you make your sessions bette
 * Provide clear setup instructions and documentation.  
 * Be approachable and welcoming to newcomers of all skill levels.
 
-**Goal: Help others contribute meaningfully and grow your community.**
+{% aside %}
+Goal: Help others contribute meaningfully and grow your community.
+{% endaside %}
 
 ---
 
 ## General Guidelines for All Speakers & Hosts
 
-* Code of Conduct: All sessions must adhere to the [PyCon India Code of Conduct](https://in.pycon.org/2025/code-of-conduct).  
-* Accessibility: Use clear language and describe visuals.
-* Recording & Consent: Sessions may be recorded. Inform participants if you plan to record your Open Space or Dev Sprint activity.  
-* Arrival Time: Arrive at least 10–15 minutes before your session starts.  
-* Contact: Reach out to the help desk or volunteer coordinator for any support.
+* **Code of Conduct**: All sessions must adhere to the [PyCon India Code of Conduct](https://in.pycon.org/2025/code-of-conduct).  
+* **Accessibility**: Use clear language and describe visuals.
+* **Recording & Consent**: Sessions may be recorded. Inform participants if you plan to record your Open Space or Dev Sprint activity.  
+* **Arrival Time**: Arrive at least 10–15 minutes before your session starts.  
+* **Contact**: Reach out to the help desk or volunteer coordinator for any support.
 
 ---
 
-Thank you for sharing your knowledge and passion with the Python community!  
+Thank you for sharing your knowledge and passion with the Python community!
 We can’t wait to learn from you at PyCon India 2025.
 
 For questions, email: cfp@in.pycon.org
