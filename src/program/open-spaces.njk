@@ -1,0 +1,172 @@
+---
+title: Open Spaces
+description: PyCon India 2025 Open Spaces
+layout: base.njk
+---
+
+{% from "components/button.njk" import button %}
+{% from "components/flat-card.njk" import flatCard %}
+
+<div class="w-full h-auto bg-pycon-blue px-[6%] -mb-16 md:mb-0 flex flex-col md:flex-row">
+    <div class="pt-32 pb-8 md:pb-32 w-full lg:w-[70%]">
+        <div
+            class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#FFFFFF] text-center lg:text-left">
+            Open Spaces
+        </div>
+        <div class="text-md lg:text-xl pt-12 text-[#FFFFFF] lg:pr-10 text-justify">
+            <p>PyCon India brings together a vibrant and diverse community of Python enthusiasts, from beginners to seasoned developers, educators, researchers, and organizers. To reflect this diversity, Open Spaces provide a dynamic, participant-driven meetup environment where anyone can lead or join spontaneous discussions, workshops, or collaborative sessions.</p>
+        </div>
+    </div>
+    <div class="lg:w-[30%] w-[80%] lg:mt-30 flex items-center justify-center mx-auto">
+        <img src="{{ env.baseUrl }}img/assets/team.svg" alt="Open Spaces"
+            class="w-[80%] transition-transform duration-100" style="animation: floating 2s ease-in-out infinite;">
+    </div>
+</div>
+
+<div class="main-container pt-16 md:pt-12 bg-lavender w-full h-auto px-[6%] pb-40">
+    <div class="text-md lg:text-xl pt-12 text-black lg:pr-10 text-justify font-light">
+        <div class="mb-12">
+            <div class="space-y-6 mb-8">
+                <div>
+                    <div
+                        class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                        <p>What are Open Spaces</p>
+                    </div>
+                    <div class="pt-4 text-md">
+                        <p class="flex items-start">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                class="w-4 h-4 mr-2 mt-1">
+                            <span>Open Spaces are participant-driven sessions where you can lead discussions, join conversations, or simply observe and learn from the community.</span>
+                        </p>
+                        <p class="flex items-start">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                class="w-4 h-4 mr-2 mt-1">
+                            <span>These informal 30-minute gatherings are perfect for exploring ideas, sharing knowledge, and connecting with others who share your interests. No formal presentations required.</span>
+                        </p>
+                        <p class="flex items-start">
+                            <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                class="w-4 h-4 mr-2 mt-1">
+                            <span>Before proposing your own session, <a href="{{ env.baseUrl }}program/schedule" class="text-purple-600 underline">check out the current Open Spaces</a> to see what's already planned and discover sessions you might want to attend.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mb-12">
+            <div class="space-y-6 mb-8">
+                <div>
+                    <div
+                        class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                        <p>Suggested Open Space Topics & Activities</p>
+                    </div>
+                    <div class="pt-4 text-md">
+                        <p class="mb-4">Here are some ideas to inspire your participation:</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <p class="flex items-start mb-3">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                        class="w-4 h-4 mr-2 mt-1">
+                                    <span><strong>Hacking, Networking & DevOps:</strong> Share tips, tools, and war stories from the trenches.</span>
+                                </p>
+                                <p class="flex items-start mb-3">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                        class="w-4 h-4 mr-2 mt-1">
+                                    <span><strong>How to Contribute to Open Source:</strong> A beginner-friendly mentoring session to help newcomers take their first steps in the open source world.</span>
+                                </p>
+                                <p class="flex items-start mb-3">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                        class="w-4 h-4 mr-2 mt-1">
+                                    <span><strong>Framework-Focused Discussions:</strong> Dedicated spaces for communities around Django, Flask, FastAPI, and more.</span>
+                                </p>
+                                <p class="flex items-start mb-3">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                        class="w-4 h-4 mr-2 mt-1">
+                                    <span><strong>Data Science & Visualization:</strong> Dive into data analysis, visualization techniques, and real-world use cases.</span>
+                                </p>
+                                <p class="flex items-start mb-3">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                        class="w-4 h-4 mr-2 mt-1">
+                                    <span><strong>Natural Language Processing and AI:</strong> Explore chatbots, LLMs, text generation, and NLP projects.</span>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="flex items-start mb-3">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                        class="w-4 h-4 mr-2 mt-1">
+                                    <span><strong>Quantified Self & Personal Data:</strong> Track, analyze, and visualize your personal metrics using Python.</span>
+                                </p>
+                                <p class="flex items-start mb-3">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                        class="w-4 h-4 mr-2 mt-1">
+                                    <span><strong>Maker & Hacker Space:</strong> Showcase hardware projects, robotics, or IoT builds powered by Python.</span>
+                                </p>
+                                <p class="flex items-start mb-3">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                        class="w-4 h-4 mr-2 mt-1">
+                                    <span><strong>For Organizers, By Organizers:</strong> A space for conference organizers, workshop leads, and community leads (like PyLadies, Django Girls, etc.) to share experiences and resources.</span>
+                                </p>
+                                <p class="flex items-start mb-3">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                        class="w-4 h-4 mr-2 mt-1">
+                                    <span><strong>Preventing Burnout & Building Sustainable Habits:</strong> Open conversations about mental health, work-life balance, and community support.</span>
+                                </p>
+                                <p class="flex items-start mb-3">
+                                    <img src="{{ env.baseUrl }}img/assets/circle-purple.svg" alt="Bullet Icon"
+                                        class="w-4 h-4 mr-2 mt-1">
+                                    <span><strong>Recruitment & Career Development:</strong> Micro-workshops on hiring practices, resume reviews, or navigating tech careers.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <div class="space-y-6 mb-8">
+                <div>
+                    <div
+                        class="black-han-sans-regular font-normal text-3xl md:text-5xl md:text-center text-[#000000] text-center lg:text-left">
+                        <p>Propose Your Open Space</p>
+                    </div>
+                    <div class="pt-4 text-md">
+                        <p class="mb-6 text-lg">Come with an idea, leave with new connections. Open Spaces are what you make them. Don't be shy to start the conversation!</p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <div class="flex flex-col sm:flex-row gap-4 items-start">
+                        {{ button(text="Submit Your Topic",
+                        url="https://cfp.in.pycon.org/2025/cfp",
+                        lime_bg=true, env =
+                        env, disabled=true) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-24">
+            <div>
+                {% call flatCard(bg="purple") -%}
+                <div class="flex items-center mb-4">
+                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Submissions Icon" class="w-6 h-6 mr-3">
+                    <h3 class="text-xl md:text-3xl">Submissions</h3>
+                </div>
+                <p class="text-2xl text-black">Open Space submissions are open throughout the conference days.</p>
+                {%- endcall %}
+            </div>
+
+            <div>
+                {% call flatCard(bg="purple") -%}
+                <div class="flex items-center mb-4">
+                    <img src="{{ env.baseUrl }}img/assets/circle-lime.svg" alt="Notification Icon" class="w-6 h-6 mr-3">
+                    <h3 class="text-xl md:text-3xl">Selection Notification</h3>
+                </div>
+                <p class="text-2xl text-black">Submissions are reviewed on a rolling basis, if your topic is selected you would be contacted by the team.</p>
+                {%- endcall %}
+            </div>
+        </div>
+    </div>
+</div>
