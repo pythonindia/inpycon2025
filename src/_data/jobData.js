@@ -29,12 +29,13 @@ async function fetchJobPostings(URL) {
             location: row.c[8]?.v || "Unknown",
             description: row.c[7]?.v || "No description available",
             link_to_apply: ensureHttps(row.c[9]?.v) || "#",
+            approved: row.c[12]?.v || false,
         }))
         .filter((job_post) =>
             isValidUrl(job_post.company_website) &&
             isValidUrl(job_post.link_to_apply)
         );
-
+        
         return jobPostings;
     } catch (error) {
         console.error("Error fetching or processing job postings:", error);
