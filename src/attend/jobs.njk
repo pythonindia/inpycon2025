@@ -26,8 +26,8 @@ layout: base.njk
 </div>
 
 
-<div class="job-container bg-lavender w-full h-auto {% if job_postings|length > 0 %} px-[6%] -pt-20 pb-72 md:pb-40 relative {% else %} p-0 {% endif %}">
-    {% if job_postings|length > 0 %}
+<div class="job-container bg-lavender w-full h-auto {% if job_postings | selectattr("approved") | list | length > 0 %} px-[6%] -pt-20 pb-72 md:pb-40 relative {% else %} p-0 {% endif %}">
+    {% if job_postings | selectattr("approved") | list | length > 0 %}
     <div class="flex flex-wrap -mt-24">
         <!-- Column 1 -->
         <div class="w-full lg:w-1/3 px-4 flex flex-col gap-8">
