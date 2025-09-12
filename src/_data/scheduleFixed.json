@@ -1,132 +1,136 @@
 [
     {
-		"index": 1,
-		"title": "Sept. 12th",
-		"day": "Friday",
-		"description": "WORKSHOP DAY",
-		"type": "workshop",
-		"schedule": []
-	},
-	{
-		"index": 2,
-		"title": "Sept. 13th",
-		"day": "Saturday",
-		"description": "CONFERENCE DAY 1",
-		"type": "conference",
-		"schedule": [
-			{
-				"start_time": "07:30",
-				"end_time": "08:45",
-				"title": "Registrations / Breakfast",
-                "color": "#CD89FF"
-			},
-			{
-				"start_time": "09:00",
-				"end_time": "09:15",
-				"title": "Opening Address",
-                "color": "#1FFFB4"
-			},
-			{
-				"start_time": "09:20",
-				"end_time": "10:00",
-				"title": "Keynote 1",
-                "color": "#E745A0"
-			},
-			{
-				"start_time": "12:40",
-				"end_time": "14:00",
-				"title": "Lunch",
-                "color": "#CD89FF"
-			},
-			{
-				"start_time": "14:00",
-				"end_time": "14:40",
-				"title": "Lightning Talks",
-                "color": "#1FFFB4"
-			},
-            {
-				"start_time": "16:00",
-				"end_time": "16:20",
-				"title": "Poster Presentations / High Tea",
-                "color": "#CD89FF"
-			},
-			{
-				"start_time": "17:00",
-				"end_time": "17:40",
-				"title": "Keynote 2",
-                "color": "#E745A0"
-			},
-			{
-				"start_time": "17:45",
-				"end_time": "18:00",
-				"title": "Closing Address",
-                "color": "#1FFFB4"
-			}
-		]
-	},
-	{
-		"index": 3,
-		"title": "Sept. 14th",
-		"day": "Sunday",
-		"description": "CONFERENCE DAY 2",
-		"type": "conference",
-		"schedule": [
-			{
-				"start_time": "07:30",
-				"end_time": "08:45",
-				"title": "Registrations / Breakfast",
-                "color": "#CD89FF"
-			},
-			{
-				"start_time": "09:00",
-				"end_time": "09:15",
-				"title": "Opening Address",
-                "color": "#1FFFB4"
-			},
-			{
-				"start_time": "09:20",
-				"end_time": "10:00",
-				"title": "Keynote 3",
-                "color": "#E745A0"
-			},
-			{
-				"start_time": "12:40",
-				"end_time": "14:00",
-				"title": "Lunch",
-                "color": "#CD89FF"
-			},
-			{
-				"start_time": "14:00",
-				"end_time": "14:40",
-				"title": "Lightning Talks",
-                "color": "#1FFFB4"
-			},
-            {
-				"start_time": "16:00",
-				"end_time": "16:20",
-				"title": "Poster Presentations / High Tea",
-                "color": "#CD89FF"
-			},
-			{
-				"start_time": "17:00",
-				"end_time": "17:40",
-				"title": "Keynote 4",
-                "color": "#E745A0"
-			},
-			{
-				"start_time": "17:45",
-				"end_time": "18:00",
-				"title": "Closing Address",
-                "color": "#1FFFB4"
-			}
-		]
-	},
+        "index": 1,
+        "title": "Sept. 12th",
+        "day": "Friday",
+        "description": "WORKSHOP DAY",
+        "type": "workshop",
+        "schedule": []
+    },
     {
-		"index": 4,
-		"title": "Sept. 15th",
-		"day": "Monday",
-		"description": "Dev Sprint",
-		"type": "devsprint",
-		"schedule": []
-	}
+        "index": 2,
+        "title": "Sept. 13th",
+        "day": "Saturday",
+        "description": "CONFERENCE DAY 1",
+        "type": "conference",
+        "schedule": [
+            {
+                "start_time": "07:30",
+                "end_time": "08:45",
+                "title": "Registrations / Breakfast",
+                "color": "#CD89FF"
+            },
+            {
+                "start_time": "09:00",
+                "end_time": "09:15",
+                "title": "Opening Address",
+                "color": "#1FFFB4"
+            },
+            {
+                "start_time": "09:20",
+                "end_time": "10:00",
+                "title": "$ python build reactor.py",
+                "author": "Shakthi Kannan",
+                "color": "#FF9AD3"
+            },
+            {
+                "start_time": "12:40",
+                "end_time": "14:00",
+                "title": "Lunch",
+                "color": "#CD89FF"
+            },
+            {
+                "start_time": "14:00",
+                "end_time": "14:40",
+                "title": "Lightning Talks",
+                "color": "#1FFFB4"
+            },
+            {
+                "start_time": "16:00",
+                "end_time": "16:20",
+                "title": "Poster Presentations / High Tea",
+                "color": "#CD89FF"
+            },
+            {
+                "start_time": "17:00",
+                "end_time": "17:40",
+                "title": "Dawn Wages",
+                "author": "",
+                "color": "#FF9AD3"
+            },
+            {
+                "start_time": "17:45",
+                "end_time": "18:00",
+                "title": "Closing Address",
+                "color": "#1FFFB4"
+            }
+        ]
+    },
+    {
+        "index": 3,
+        "title": "Sept. 14th",
+        "day": "Sunday",
+        "description": "CONFERENCE DAY 2",
+        "type": "conference",
+        "schedule": [
+            {
+                "start_time": "07:30",
+                "end_time": "08:45",
+                "title": "Registrations / Breakfast",
+                "color": "#CD89FF"
+            },
+            {
+                "start_time": "09:00",
+                "end_time": "09:15",
+                "title": "Opening Address",
+                "color": "#1FFFB4"
+            },
+            {
+                "start_time": "09:20",
+                "end_time": "10:00",
+                "title": "Artificial Information: How Today's AI is Changing Information",
+                "author": "Katharine Jarmul",
+                "color": "#FF9AD3"
+            },
+            {
+                "start_time": "12:40",
+                "end_time": "14:00",
+                "title": "Lunch",
+                "color": "#CD89FF"
+            },
+            {
+                "start_time": "14:00",
+                "end_time": "14:40",
+                "title": "Lightning Talks",
+                "color": "#1FFFB4"
+            },
+            {
+                "start_time": "16:00",
+                "end_time": "16:20",
+                "title": "Poster Presentations / High Tea",
+                "color": "#CD89FF"
+            },
+            {
+                "start_time": "17:00",
+                "end_time": "17:40",
+                "title": "Learning and Coding in the Age of AI",
+                "author": "Reuven Lerner",
+                "color": "#FF9AD3"
+            },
+            {
+                "start_time": "17:45",
+                "end_time": "18:00",
+                "title": "Closing Address",
+                "color": "#1FFFB4"
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "title": "Sept. 15th",
+        "day": "Monday",
+        "description": "Dev Sprint",
+        "type": "devsprint",
+        "schedule": []
+    }
 ]

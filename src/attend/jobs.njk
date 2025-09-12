@@ -26,13 +26,13 @@ layout: base.njk
 </div>
 
 
-<div class="job-container bg-lavender w-full h-auto {% if job_postings %} px-[6%] -pt-20 pb-72 md:pb-40 relative {% else %} p-0 {% endif %}">
-    {% if job_postings %}
+<div class="job-container bg-lavender w-full h-auto {% if job_postings|length > 0 %} px-[6%] -pt-20 pb-72 md:pb-40 relative {% else %} p-0 {% endif %}">
+    {% if job_postings|length > 0 %}
     <div class="flex flex-wrap -mt-24">
         <!-- Column 1 -->
         <div class="w-full lg:w-1/3 px-4 flex flex-col gap-8">
         {% for job_post in job_postings %}
-            {% if loop.index0 % 3 == 0 %}
+            {% if loop.index0 % 3 == 0 and job_post.approved %}
                 {% set bg_color = 'purple' if loop.index0 // 3 % 2 == 0 else 'lime' %}
                 {% call flatCard(bg=bg_color) -%}
                     <div class="p-4">
@@ -65,7 +65,7 @@ layout: base.njk
         <!-- Column 2 -->
         <div class="w-full pt-8 lg:pt-16 lg:w-1/3 px-4 flex flex-col gap-8">
         {% for job_post in job_postings %}
-            {% if loop.index0 % 3 == 1 %}
+            {% if loop.index0 % 3 == 1 and job_post.approved %}
                 {% set bg_color = 'purple' if loop.index0 // 3 % 2 == 1 else 'lime' %}
                 {% call flatCard(bg=bg_color) -%}
                     <div class="p-4">
@@ -98,7 +98,7 @@ layout: base.njk
         <!-- Column 3 -->
         <div class="w-full pt-8 lg:pt-0 lg:w-1/3 px-4 flex flex-col gap-8">
         {% for job_post in job_postings %}
-            {% if loop.index0 % 3 == 2 %}
+            {% if loop.index0 % 3 == 2 and job_post.approved %}
                 {% set bg_color = 'purple' if loop.index0 // 3 % 2 == 0 else 'lime' %}
                 {% call flatCard(bg=bg_color) -%}
                     <div class="p-4">
@@ -130,7 +130,7 @@ layout: base.njk
     </div>
     {% else %}
     <div class="flex items-center -mt-24 bg-pycon-blue justify-center md:justify-start">
-        <p class="px-[6%] text-xl md:text-3xl text-[#FFFFFF] text-center pt-20 pb-48 w-full font-light">Job postings coming soon...</p>
+        <p class="px-[6%] text-xl md:text-3xl text-[#FFFFFF] text-center pt-20 pb-72 w-full font-light">Job postings coming soon...</p>
     </div>
     {% endif %}
 </div>

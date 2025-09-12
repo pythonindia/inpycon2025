@@ -1,475 +1,706 @@
 [
     {
-        "name": "Nabarun Pal",
-        "role": "Chair",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
+        "group": "Chairs",
+        "members": [
+            {
+                "name": "Nabarun Pal",
+                "role": "Chair",
+                "imageLink": "https://avatars.githubusercontent.com/u/10010419",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://linkedin.com/in/palnabarun",
+                    "github": "https://github.com/palnabarun",
+                    "twitter": "https://x.com/theonlynabarun"
+                }
+            },
+            {
+                "name": "Bhavin Gandhi",
+                "role": "Co Chair",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "https://github.com/bhavin192",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Kumar Anirudha",
+                "role": "Chair Emeritus",
+                "imageLink": "https://anirudha.dev/images/ani-24-pfp-0.png",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/kranirudha",
+                    "github": "https://github.com/anistark",
+                    "twitter": "https://x.com/kranirudha"
+                }
+            }
+        ]
     },
     {
-        "name": "Kumar Anirudha ",
-        "role": "Chair Emeritus",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
+        "group": "CoC WG",
+        "members": [
+            {
+                "name": "Sayan Chowdhary",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Praveen Patil",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Shilpi",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Yashavi Misra",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            }
+        ]
     },
     {
-        "name": "Bhavin Gandhi",
-        "role": "Co-Chair",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
+        "group": "Content & Communication WG",
+        "members": [
+            {
+                "name": "Surbhi Kathuria",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/191567328?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/surbhikathuria09/",
+                    "github": "https://github.com/SurbhiK-09/",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "R. Sanjeev Suman",
+                "role": "",
+                "imageLink": "https://media.licdn.com/dms/image/v2/D4D03AQG-rJF4x2fTgA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696758198811?e=1756339200&v=beta&t=_MzFYgjxl7bxOXSzBqkqw44mjjOxSksmIlTSu6vPr3g",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/r-sanjeev-suman-16773612b",
+                    "github": "https://github.com/Sanjeev1019",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Richa Shah",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/109964907?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/richashah1999/",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Arthi murali",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Anshuman",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/36338114?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/anshuman24/",
+                    "github": "https://github.com/anshme",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Tiyasha Banerjee",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Paarthan C",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Inshirah Shaikh",
+                "role": "",
+                "imageLink": "https://drive.google.com/file/d/1kQnTGLDznuIXzXFIugJWS_BSPVoNoUHL/view?usp=drivesdk",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/inshirah-shaikh/",
+                    "github": "",
+                    "twitter": "https://x.com/inshirahtwt?t=Q6KWUViBofaDPS7MM6jaFA&s=09"
+                }
+            },
+            {
+                "name": "Abijith Ajaya Kumar",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/227584204?s=400&u=f212a294caa321287b8ae506cceb7280f912df63&v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/abijith-ajaya-kumar",
+                    "github": "https://github.com/abi0101-dev",
+                    "twitter": ""
+                }
+            }
+        ]
     },
     {
-        "name": "Pratik Anurag",
-        "role": "Logistics WG Lead",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
+        "group": "Design WG",
+        "members": [
+            {
+                "name": "Shabnam",
+                "role": "",
+                "imageLink": "https://0.gravatar.com/avatar/d78d362180cb74f4eb63c0b5d60b695bc4ad251c5402638640325afbbb50b89e?size=256&d=initials",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/shabnam1/",
+                    "github": "https://github.com/shabnam701",
+                    "twitter": "https://x.com/iishabbyii"
+                }
+            },
+            {
+                "name": "Muskan Jain",
+                "role": "",
+                "imageLink": "https://1.gravatar.com/avatar/40708beba53431de928205da06c520ead8d611d1f2cd61b72b33122669b25617?size=1000",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/muskanjain200/",
+                    "github": "",
+                    "twitter": "https://x.com/muskiu20"
+                }
+            },
+            {
+                "name": "Arjun Suresh",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/91949706?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/arjun-suresh108/",
+                    "github": "https://github.com/eaarjun",
+                    "twitter": "https://x.com/whoperpetuity"
+                }
+            },
+            {
+                "name": "Shanah Daniel",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Shaik Neeha Anzum",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/183538133?s=400&u=06a57e1695ddf9ac67f3ed2debfedc34c3d798a7&v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "https://github.com/neehaanzum",
+                    "twitter": ""
+                }
+            }
+        ]
     },
     {
-        "name": "Ashish Kumar Mishra",
-        "role": "Volunteer Management WG Lead",
-        "imageLink": "https://avatars.githubusercontent.com/u/27495644?v=4",
-        "socials": {
-            "insta": "",
-            "linkedin": "https://www.linkedin.com/in/ashish10677",
-            "github": "https://github.com/ashish10677",
-            "twitter": "https://www.x.com/ashish10677"
-        }
+        "group": "Logistics WG",
+        "members": [
+            {
+                "name": "Pratik Anurag",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/57359354?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/pratik-anurag/",
+                    "github": "https://github.com/pratik-anurag",
+                    "twitter": "https://x.com/pratikanurag067"
+                }
+            },
+            {
+                "name": "Arka Saha",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "https://github.com/ArkaSaha30",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Samyak Bardiya",
+                "role": "",
+                "imageLink": "https://0.gravatar.com/avatar/672e15e01adc73ac61fbb4f28416802a?s=1024",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://linkedin.com/in/samyakbardiya",
+                    "github": "https://github.com/samyakbardiya",
+                    "twitter": "https://x.com/samyakbardiya"
+                }
+            },
+            {
+                "name": "Nikhil Mansotra",
+                "role": "",
+                "imageLink": "https://ibb.co/s94YzVzX",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/nikhilmansotra",
+                    "github": "https://github.com/xdnikhil",
+                    "twitter": "https://x.com/NikhilMans54244"
+                }
+            },
+            {
+                "name": "Ganesh Hubale",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "https://github.com/ganeshhubale",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Hardik Sharma",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/97228179?s=96&v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/hardiksharma02/",
+                    "github": "https://github.com/hardiksharma02",
+                    "twitter": "https://x.com/s30349298hardik?s=21"
+                }
+            }
+        ]
     },
     {
-        "name": "Surbhi Kathuria",
-        "role": "Content & Communication WG Lead",
-        "imageLink": "https://drive.google.com/file/d/14M4blLvZk4NbFGFmNJO429DurbwA37II/view?usp=sharing",
-        "socials": {
-            "insta": "",
-            "linkedin": "https://www.linkedin.com/in/surbhikathuria09/",
-            "github": "https://github.com/SurbhiK-09/",
-            "twitter": ""
-        }
+        "group": "On Ground Logistics WG",
+        "members": [
+            {
+                "name": "Pranav p s",
+                "role": "",
+                "imageLink": "https://ps-pranav4.github.io/portfolio/image/FULL_LENGTH.jpg",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/pranav-p-s-236181224",
+                    "github": "https://github.com/PS-PRANAV4",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Moeed Shaik",
+                "role": "",
+                "imageLink": "https://media.licdn.com/dms/image/v2/C5103AQHCWcHjIE28EA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1539083158006?e=2147483647&v=beta&t=tzKn580wgEVYSCaAAjUYit2AaR5FkfAdOd96Si0GG8c",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://in.linkedin.com/in/moeed-shaik-b6959aa3",
+                    "github": "https://github.com/shaikmoeed",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Sayak Ghosh",
+                "role": "",
+                "imageLink": "https://gravatar.com/boldly97fbda065f",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/cybersayak/",
+                    "github": "https://github.com/Cybersayak",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Tushar Sadhwani",
+                "role": "",
+                "imageLink": "https://gravatar.com/tusharsadhwani000",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "https://github.com/tusharsadhwani",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "D Krishnadas",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "https://github.com/Kddipu12",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Naveen Kumar Gupta",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/2761813?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "https://github.com/nvngpt31",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Anjuman",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/anjuman-9b87511b8/",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Prabhav Sharma",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/prabhav-s-a5617817",
+                    "github": "https://github.com/prs12",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Aakash Khandelwal",
+                "role": "",
+                "imageLink": "https://gravatar.com/howdataworks",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/aakashkh284",
+                    "github": "https://github.com/aakashkh",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Rohit Kadam",
+                "role": "",
+                "imageLink": "https://drive.google.com/file/d/1_zRFfAjKCPwp6RfsPc_IBAQ_RGLkJkW7/view?usp=drivesdk",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "https://github.com/rohitkadam1410",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Archit Gupta",
+                "role": "",
+                "imageLink": "https://gravatar.com/avatar/316ad52d78d4f10bd7cd153ce6359be3c455f10d2d95aa8b9bc1d20e93a3b427?v=1757478254000&size=256&d=initials",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/i-archit-gupta",
+                    "github": "https://github.com/i-archit-gupta",
+                    "twitter": "https://x.com/iarchitX"
+                }
+            },
+            {
+                "name": "Ayush Morbar",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/108860844",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/ayushmorbar/",
+                    "github": "https://github.com/ayushmorbar/",
+                    "twitter": "https://x.com/ayush_morbar"
+                }
+            },
+            {
+                "name": "Sai kiran udayana",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/180252532?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/saikiranudayana",
+                    "github": "https://github.com/Saikiranudayana",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Bommineni Sri Harsha",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/180426293?s=400&u=5da58801d0ebcce449acdc36f7564ee0963fda49&v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/harshabommineni/",
+                    "github": "https://github.com/sriharsha1817",
+                    "twitter": "https://x.com/BommineniS44639"
+                }
+            }
+        ]
     },
     {
-        "name": "Farhaan Bukhsh",
-        "role": "Website & Technology WG Lead",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
+        "group": "Program Committee WG",
+        "members": [  
+            {
+                "name": "Arockiaraj",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/18322453?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/arockiaraj-rayappan/",
+                    "github": "https://github.com/arockiaraj1994",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Kiritheka Dhanabalan",
+                "role": "",
+                "imageLink": "https://gravatar.com/dazzling41de7866c4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/kiritheka-dhanabalan",
+                    "github": "https://github.com/kirithekaDhanabalan",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Samhitha Bharthulwar",
+                "role": "",
+                "imageLink": "https://gravatar.com/avatar/abf4d7abc06104c7ef20ca57504ffece0f9043e26b9c198f0b371af9b68638e9?v=1757506885000&size=256&d=initials",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/samhitha-bharthulwar/",
+                    "github": "https://github.com/samhitha-b",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Ananya Maiti",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Prashant Dhameja",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/37273899?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/prashant-dhameja-a25375125/",
+                    "github": "https://github.com/OculusMode",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Mayur Patil",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Akshay Gaikwad",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "https://github.com/akshay196",
+                    "twitter": ""
+                }
+            }
+        ]
     },
     {
-        "name": "Shabnam",
-        "role": "Design WG Lead",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
+        "group": "Sponsorship WG",
+        "members": [
+            {
+                "name": "Mahendra Yadav",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/12096062?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/userimack",
+                    "github": "https://github.com/userimack",
+                    "twitter": "https://x.com/userimack"
+                }
+            },
+            {
+                "name": "Bhushan Kapkar",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/49440262?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/bhushankapkar",
+                    "github": "https://github.com/bpkapkar",
+                    "twitter": "https://x.com/bpkapkar"
+                }
+            },
+            {
+                "name": "Indivar Mishra",
+                "role": "",
+                "imageLink": "https://media.licdn.com/dms/image/v2/D5603AQG0GCpS3x2w2w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725906288517?e=1755734400&v=beta&t=krjRYRV6J1mnJnq1f-Xm61g48q_dw4sIzXo16MrEgS0",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/indivar-mishra/",
+                    "github": "https://github.com/indiVar0508",
+                    "twitter": "https://x.com/indimishra08"
+                }
+            }
+        ]
     },
     {
-        "name": "Rayan Das",
-        "role": "Ticketing WG Lead",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
+        "group": "Ticket WG",
+        "members": [
+            {
+                "name": "Rayan Das",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            }
+        ]
     },
     {
-        "name": "Arockiaraj",
-        "role": "Program Committee WG",
-        "imageLink": "https://avatars.githubusercontent.com/u/18322453?v=4",
-        "socials": {
-            "insta": "",
-            "linkedin": "https://www.linkedin.com/in/arockiaraj-rayappan/",
-            "github": "https://github.com/arockiaraj1994",
-            "twitter": ""
-        }
+        "group": "Volunteer Management WG",
+        "members": [
+            {
+                "name": "Ashish Kumar Mishra",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/27495644?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/ashish10677",
+                    "github": "https://github.com/ashish10677",
+                    "twitter": "https://www.x.com/ashish10677"
+                }
+            }
+        ]
     },
     {
-        "name": "R. Sanjeev Suman",
-        "role": "Content & Communication WG",
-        "imageLink": "https://media.licdn.com/dms/image/v2/D4D03AQG-rJF4x2fTgA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696758198811?e=1756339200&v=beta&t=_MzFYgjxl7bxOXSzBqkqw44mjjOxSksmIlTSu6vPr3g",
-        "socials": {
-            "insta": "https://www.instagram.com/_sanju_symn_",
-            "linkedin": "https://www.linkedin.com/in/r-sanjeev-suman-16773612b",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Richa Shah",
-        "role": "Content & Communication WG",
-        "imageLink": "https://media.licdn.com/dms/image/v2/D4D03AQFrsetM_gmb9w/profile-displayphoto-shrink_800_800/B4DZWI4pR_G4Ag-/0/1741758307184?e=1756339200&v=beta&t=m2IxR1f3kyHLDwQVVbi4MNTQ_rGCE0usaYFImQ-9sk4",
-        "socials": {
-            "insta": "https://www.instagram.com/richashah_07",
-            "linkedin": "http://www.linkedin.com/in/richashah1999",
-            "github": "https://github.com/ShahRicha07",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Indivar Mishra",
-        "role": "Sponsorship WG",
-        "imageLink": "https://media.licdn.com/dms/image/v2/D5603AQG0GCpS3x2w2w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725906288517?e=1755734400&v=beta&t=krjRYRV6J1mnJnq1f-Xm61g48q_dw4sIzXo16MrEgS0",
-        "socials": {
-            "insta": "https://www.instagram.com/indiofcapo/#",
-            "linkedin": "https://www.linkedin.com/in/indivar-mishra/",
-            "github": "https://github.com/indiVar0508",
-            "twitter": "https://x.com/indimishra08"
-        }
-    },
-    {
-        "name": "Gagan S",
-        "role": "Website & Technology WG",
-        "imageLink": "https://sgagan.dev/assets/gagan.jpeg",
-        "socials": {
-            "insta": "",
-            "linkedin": "https://www.linkedin.com/in/gagan-s-105706202/",
-            "github": "https://github.com/Astraxx04",
-            "twitter": "https://x.com/Astrax_04"
-        }
-    },
-    {
-        "name": "Sohom Bhattacharjee",
-        "role": "Website & Technology WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Sayan Chowdhary",
-        "role": "CoC Committee",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Chandan",
-        "role": "CoC Committee",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        } 
-    },
-    {
-        "name": "Kumar Gaurav",
-        "role": "Logistics WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        } 
-    },
-    {
-        "name": "Muskan Jain",
-        "role": "Design WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Arthi murali ",
-        "role": "Content & Communication WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Arjun Suresh ",
-        "role": "Design WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Kiritheka Dhanabalan",
-        "role": "Program Committee WG",
-        "imageLink": "https://drive.google.com/file/d/1jgm94zKKngU8On7C0qw0GOLCAzobI5gj/view?usp=sharing",
-        "socials": {
-            "insta": "",
-            "linkedin": "https://www.linkedin.com/in/kiritheka-dhanabalan",
-            "github": "https://github.com/kirithekaDhanabalan",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Shanah Daniel",
-        "role": "Design WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Samhitha Bharthulwar",
-        "role": "Program Committee WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Shaik Neeha Anzum",
-        "role": "Design WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "https://github.com/neehaanzum",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Arka Saha",
-        "role": "Logistics WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "https://github.com/ArkaSaha30",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Mahendra Yadav",
-        "role": "Sponsorship WG",
-        "imageLink": "https://drive.google.com/file/d/1etmS01eUT41ZvQQ2XF7GgshP2N_0ai6v/view?usp=sharing",
-        "socials": {
-            "insta": "",
-            "linkedin": "https://www.linkedin.com/in/userimack",
-            "github": "https://github.com/userimack",
-            "twitter": "https://x.com/userimack"
-        }
-    },
-    {
-        "name": "Bhushan Kapkar",
-        "role": "Sponsorship WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Anshuman",
-        "role": "Content & Communication WG",
-        "imageLink": "https://lh3.googleusercontent.com/pw/AP1GczOQrpRdn9i_mcmhl84nQPgiO-Wcl9-ESUucJp0dv0fteGBhetMcBpbZEeltkuTA9j_rDV0UmeeCl6MBd2HciETRM2GpCYD8kabzN2WgpQ6Eygq3V8ECbIsOEXT0uNVGV8OCjiXrv40lIcbqog0ogklyyg=w820-h1062-s-no-gm?authuser=0",
-        "socials": {
-            "insta": "https://www.instagram.com/anshuman.me/",
-            "linkedin": "https://www.linkedin.com/in/anshuman24",
-            "github": "https://www.github.com/anshme",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Ananya Maiti",
-        "role": "Keynote",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Samyak Bardiya",
-        "role": "Logistics WG",
-        "imageLink": "https://0.gravatar.com/avatar/672e15e01adc73ac61fbb4f28416802a?s=1024",
-        "socials": {
-            "insta": "https://linkedin.com/in/samyakbardiya",
-            "linkedin": "https://x.com/samyakbardiya",
-            "github": "https://github.com/samyakbardiya",
-            "twitter": "https://links.samyakbardiya.dev/"
-        }
-    },
-    {
-        "name": "Hardik Sharma",
-        "role": "Logistics WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Yashasvi Misra",
-        "role": "Logistics WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Tiyasha Banerjee",
-        "role": "Content & Communication WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Prashant Dhameja",
-        "role": "Program Committee WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Mayur Patil",
-        "role": "Program Committee WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Paarthan C ",
-        "role": "Content & Communication WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Dhanush K",
-        "role": "Website and Technology WG",
-        "imageLink": "https://dhanu.pages.dev/me.jpg",
-        "socials": {
-            "insta": "",
-            "linkedin": "https://www.linkedin.com/in/dhanushkandhan/",
-            "github": "https://github.com/dhanushk-offl",
-            "twitter": "https://x.com/akadhanu"
-        }
-    },
-    {
-        "name": "Akshay Gaikwad",
-        "role": "Program Committee WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "https://github.com/akshay196",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Abijith",
-        "role": "Content & Communication WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Pradhvan Bisht",
-        "role": "Program Committee WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Pratik Mahalle",
-        "role": "Content & Communication WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
-    },
-    {
-        "name": "Koti Vellanki",
-        "role": "Logistics WG",
-        "imageLink": "",
-        "socials": {
-            "insta": "",
-            "linkedin": "",
-            "github": "",
-            "twitter": ""
-        }
+        "group": "Website & Technology WG",
+        "members": [
+            {
+                "name": "Farhaan Bukhsh",
+                "role": "",
+                "imageLink": "https://gravatar.com/avatar/b681ddfaffa293b03c57e5f0ed90eb1e06a8f748f4dccdccef8cdd301c66c9ae?v=1756813169000&size=256&d=initials",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/farhaanbukhsh/",
+                    "github": "https://github.com/farhaanbukhsh",
+                    "twitter": "https://www.x.com/fhackdroid"
+                }
+            },
+            {
+                "name": "NVS Abhilash",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Gagan S",
+                "role": "",
+                "imageLink": "https://sgagan.dev/assets/gagan.jpeg",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/gagan-s-105706202/",
+                    "github": "https://github.com/Astraxx04",
+                    "twitter": "https://x.com/Astrax_04"
+                }
+            },
+            {
+                "name": "Sohom Bhattacharjee",
+                "role": "",
+                "imageLink": "",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "",
+                    "github": "",
+                    "twitter": ""
+                }
+            },
+            {
+                "name": "Mohit Khandelwal",
+                "role": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/19525624?v=4",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/mohitkh7",
+                    "github": "https://github.com/mohitkh7",
+                    "twitter": "https://x.com/mohitkh7"
+                }
+            },
+            {
+                "name": "Dhanush K",
+                "role": "",
+                "imageLink": "https://dhanu.pages.dev/me.jpg",
+                "socials": {
+                    "insta": "",
+                    "linkedin": "https://www.linkedin.com/in/dhanushkandhan/",
+                    "github": "https://github.com/dhanushk-offl",
+                    "twitter": "https://x.com/akadhanu"
+                }
+            }
+        ]
     }
 ]
