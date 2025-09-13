@@ -5,6 +5,7 @@ layout: base.njk
 ---
 
 {% from "components/flat-card.njk" import flatCard %}
+{% from "components/button.njk" import button %}
 
 <div class="w-full h-auto bg-pycon-blue -mb-24 px-[6%] lg:pb-40 pb-72">
     <div class="pt-32 pb-8 md:pb-4 w-full">
@@ -54,9 +55,13 @@ layout: base.njk
             {% endfor %}
         </div>
 
+        <div class="pt-20 flex justify-center">
+            {{ button(text="Program Guide", url=env.baseUrl ~ "program/guide/", lime_bg=true, env=env) }}
+        </div>
+
         <!-- Dynamically display Schedule Content -->
         {% for day in active_days %}
-        <div id="{{ day.index }}" class="schedule-content {% if loop.first %}block{% else %}hidden{% endif %} pt-24 text-center">
+        <div id="{{ day.index }}" class="schedule-content {% if loop.first %}block{% else %}hidden{% endif %} pt-20 text-center">
             {% set dayInfo = day.date | dateInfo %}
             <div>
                 <div class="pb-16">
