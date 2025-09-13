@@ -623,3 +623,12 @@ body:not(.is-home-page) main {
 .window-container:hover .face.left {
   background: color-mix(in srgb, var(--left-bg), #D7FF7B 100%);
 }
+
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
