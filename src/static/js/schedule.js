@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hideAllSchedules();
 
         // Always show FIRST card + its content
-        const firstCard = cards[0];
+        const firstCard = cards[1];
         const firstContentId = firstCard.getAttribute('data-schedule');
 
         highlight(firstCard);
