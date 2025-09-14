@@ -177,6 +177,63 @@ module.exports = async function (eleventyConfig) {
         });
     });
 
+    eleventyConfig.addFilter("extractDevSprintSessions", function(rooms) {
+        let sessions = [];
+
+        if (!rooms) return sessions;
+
+        for (const [track, items] of Object.entries(rooms)) {
+            for (const session of items) {
+                sessions.push({
+                    url: session.url,
+                    title: session.title,
+                    abstract: session.abstract,
+                });
+            }
+        }
+
+        return sessions;
+    });
+
+    eleventyConfig.addFilter("chunkDevSprintSessions", function (rooms) {
+        const allSessions = [];
+
+        // Flatten all sessions
+        for (const [roomName, sessions] of Object.entries(rooms)) {
+            sessions.forEach(session => {
+                allSessions.push({
+                    url: session.url,
+                    title: session.title,
+                    abstract: session.abstract
+                });
+            });
+        }
+
+        // Helper to chunk into balanced rows
+        function chunkBalanced(arr) {
+            const rows = [];
+            const n = arr.length;
+
+            if (n <= 3) {
+                rows.push(arr);
+            } else if (n === 4) {
+                rows.push(arr.slice(0, 2), arr.slice(2, 4));
+            } else if (n === 5) {
+                rows.push(arr.slice(0, 3), arr.slice(3, 5));
+            } else if (n === 7) {
+                rows.push(arr.slice(0, 2), arr.slice(2, 5), arr.slice(5, 7));
+            } else {
+                for (let i = 0; i < n; i += 3) {
+                    rows.push(arr.slice(i, i + 3));
+                }
+            }
+
+            return rows;
+        }
+
+        return chunkBalanced(allSessions);
+    });
+
 	// rebuild on CSS changes
 	eleventyConfig.addWatchTarget("./src/_includes/css/");
 

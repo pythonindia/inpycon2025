@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hideAllSchedules();
 
         // Always show FIRST card + its content
-        const firstCard = cards[1];
+        const firstCard = cards[2];
         const firstContentId = firstCard.getAttribute('data-schedule');
 
         highlight(firstCard);
@@ -60,12 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         card.addEventListener('click', () => {
             const scheduleId = card.getAttribute('data-schedule');
-
-            // Redirect-only card
-            if (scheduleId === '4') {
-                window.location.href = `${baseUrl}program/dev-sprint`;
-                return;
-            }
 
             resetCardBackgrounds();
             hideAllSchedules();

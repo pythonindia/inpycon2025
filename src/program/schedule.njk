@@ -210,7 +210,36 @@ layout: base.njk
                         </div>
 
                         {% elif day.index == 4 %}
-                        <p class="text-2xl font-bold text-gray-700">Dev Sprint Schedule - Coming Soon!</p>
+                        <div class="dev-sprint-day">
+                            {% set dev_sprint_sessions = day.rooms|chunkDevSprintSessions %}
+                            {% for row in dev_sprint_sessions %}    
+                            <div class="grid grid-cols-1 md:grid-cols-{{ row|length }}">
+                                {% for event in row %}
+                                <div class="flex flex-wrap gap-0 py-0">
+                                    {% if event.url %}
+                                    <a href="{{ event.url }}"
+                                    class="w-full p-8 bg-white border border-black transform hover:-translate-y-1 transition duration-500 ease-in-out hover:bg-pycon-lime cursor-pointer no-underline text-inherit md:h-60 lg:h-60 overflow-hidden">
+                                    {% else %}
+                                    <div class="w-full p-8 h-60 overflow-hidden border border-black">
+                                    {% endif %}
+                                    
+                                        <p class="mb-4 text-lg font-bold">
+                                            {{ event.title }}
+                                        </p>
+                                        <p class="mb-1 text-md text-justify line-clamp-4">
+                                            {{ event.abstract }}
+                                        </p>
+                                    
+                                    {% if event.url %}
+                                    </a>
+                                    {% else %}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% endfor %}
+                        </div>
                         
                         {% else %}
                         <div>
