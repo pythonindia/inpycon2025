@@ -28,8 +28,26 @@ document.addEventListener('DOMContentLoaded', () => {
         resetCardBackgrounds();
         hideAllSchedules();
 
-        // Always show FIRST card + its content
-        const firstCard = cards[2];
+        const today = new Date();
+        const day = today.getDate();
+        const month = today.getMonth();
+        const year = today.getFullYear();
+
+        let date_index = 0;
+
+        if (month === 8 && year === 2025) {
+            if (day <= 12) {
+                date_index = 0;
+            } else if (day === 13) {
+                date_index = 1;
+            } else if (day === 14) {
+                date_index = 2;
+            } else if (day >= 15) {
+                date_index = 3;
+            }
+        }
+        
+        const firstCard = cards[date_index];
         const firstContentId = firstCard.getAttribute('data-schedule');
 
         highlight(firstCard);
