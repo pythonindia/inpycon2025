@@ -125,12 +125,12 @@
             {
                 "name": "Arthi murali",
                 "role": "",
-                "imageLink": "",
+                "imageLink": "https://avatars.githubusercontent.com/u/112666126?v=4",
                 "socials": {
-                    "insta": "",
-                    "linkedin": "",
-                    "github": "",
-                    "twitter": ""
+                    "insta": "https://www.instagram.com/arthi_ishita/",
+                    "linkedin": "https://www.linkedin.com/in/meetarthi/",
+                    "github": "https://github.com/meetarthi",
+                    "twitter": "https://x.com/meetarthi"
                 }
             },
             {
@@ -701,6 +701,7 @@
                     "twitter": "https://x.com/akadhanu"
                 }
             }
+            
         ]
     }
 ]
