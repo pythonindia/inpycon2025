@@ -77,11 +77,11 @@ layout: base.njk
                   </li>
                   <li class="flex">
                       <img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                      <span class="font-semibold"><a href="{{ env.baseUrl }}cfp/poster">Poster Presentations</a> (open)</span>
+                      <span class="font-semibold"><a href="{{ env.baseUrl }}cfp/poster">Poster Presentations</a> (closed)</span>
                   </li>
                   <li class="flex">
                       <img src="{{ env.baseUrl }}img/assets/square-lime.svg" alt="Bullet Icon" class="w-4 h-4 mr-2 mt-1">
-                      <span class="font-semibold"><a href="{{ env.baseUrl }}program/dev-sprint">Dev Sprint</a> (open)</span>
+                      <span class="font-semibold"><a href="{{ env.baseUrl }}program/dev-sprint">Dev Sprint</a> (closed)</span>
                   </li>
               </ul>
             </div>
@@ -133,7 +133,7 @@ layout: base.njk
                     </li>
                 </ul>
                 <div class="flex justify-center lg:justify-start pt-8">
-                    {{ button(text="Submit a Proposal", url="https://cfp.in.pycon.org/2025/cfp", lime_bg=true, env = env) }}
+                    {{ button(text="Submit a Proposal", url="https://cfp.in.pycon.org/2025/cfp", lime_bg=true, env = env, disabled=true) }}
                 </div>
                  {#
                  <div class="text-center lg:text-left mt-4 text-red-600 font-semibold">
